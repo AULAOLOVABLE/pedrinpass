@@ -25,7 +25,7 @@ export function DocContent() {
         <div className="space-y-12">
           <DocSection id="introduction" title="Introduction">
             <p>
-              Welcome to the Compass Help Center. This guide will walk you through the essential steps to set up your account and get started with the platform. Whether you're new to Compass or migrating from another tool, this documentation covers everything you need.
+              Welcome to the Pedrinpass Help Center. This guide will walk you through the essential steps to set up your account and get started with the platform. Whether you're new to Pedrinpass or migrating from another tool, this documentation covers everything you need.
             </p>
             <p>
               Before you begin, make sure you have your email address ready and access to your organization's workspace settings if you're joining an existing team.
@@ -34,13 +34,13 @@ export function DocContent() {
 
           <DocSection id="creating-your-account" title="Creating Your Account">
             <p>
-              Setting up your Compass account takes just a few minutes. Follow the steps below to create your account and join or create a workspace for your team.
+              Setting up your Pedrinpass account takes just a few minutes. Follow the steps below to create your account and join or create a workspace for your team.
             </p>
           </DocSection>
 
           <DocSection id="sign-up-process" title="Sign-up Process" level="h3">
             <ol className="list-decimal list-inside space-y-2 ml-2">
-              <li>Navigate to the Compass sign-up page and click "Create Account".</li>
+              <li>Navigate to the Pedrinpass sign-up page and click "Create Account".</li>
               <li>Enter your email address and create a strong password.</li>
               <li>Choose whether to create a new workspace or join an existing one.</li>
               <li>Complete the captcha verification to confirm you're human.</li>
@@ -75,7 +75,7 @@ export function DocContent() {
 
           <DocSection id="supported-regions" title="Supported Regions" level="h3">
             <p>
-              Compass supports data residency in multiple regions to help you comply with local regulations. Currently available regions include:
+              Pedrinpass supports data residency in multiple regions to help you comply with local regulations. Currently available regions include:
             </p>
             <ul className="list-disc list-inside space-y-2 ml-2 mt-4">
               <li>United States (US-East, US-West)</li>
@@ -96,7 +96,7 @@ export function DocContent() {
 
           <DocSection id="security-setup" title="Security Setup">
             <p>
-              Protecting your account and data is crucial. Compass offers multiple layers of security to keep your information safe. We recommend enabling all available security features for maximum protection.
+              Protecting your account and data is crucial. Pedrinpass offers multiple layers of security to keep your information safe. We recommend enabling all available security features for maximum protection.
             </p>
           </DocSection>
 
@@ -124,7 +124,7 @@ export function DocContent() {
 
           <DocSection id="notifications" title="Notifications & Preferences">
             <p>
-              Customize how and when you receive notifications from Compass. You can configure email notifications, in-app alerts, and mobile push notifications separately.
+              Customize how and when you receive notifications from Pedrinpass. You can configure email notifications, in-app alerts, and mobile push notifications separately.
             </p>
             <ul className="list-disc list-inside space-y-2 ml-2 mt-4">
               <li>Email digests: daily, weekly, or real-time notifications</li>
@@ -136,7 +136,7 @@ export function DocContent() {
 
           <DocSection id="reviewing-setup" title="Reviewing Your Setup">
             <p>
-              Before you start using Compass in production, take a moment to review your setup and ensure everything is configured correctly. This will help you avoid issues later.
+              Before you start using Pedrinpass in production, take a moment to review your setup and ensure everything is configured correctly. This will help you avoid issues later.
             </p>
           </DocSection>
 

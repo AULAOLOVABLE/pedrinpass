@@ -11,7 +11,7 @@ const Index = () => {
   return (
     <div className="relative min-h-screen bg-background overflow-x-hidden">
       <Seo
-        title="Central de Documentação e Conhecimento | Compass"
+        title="Central de Documentação e Conhecimento | Pedrinpass"
         description="Monte um site de documentação profissional com busca por command palette, referência de API e changelog. Tema escuro e navegação com scroll-spy."
         path="/"
       />

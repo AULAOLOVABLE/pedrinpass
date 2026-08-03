@@ -17,20 +17,20 @@ export interface DocPageSection {
 export const documentationPages: Record<string, DocPageContent> = {
   overview: {
     title: "Visão Geral",
-    description: "Obtenha um entendimento de alto nível sobre a plataforma Compass e seus principais recursos.",
+    description: "Obtenha um entendimento de alto nível sobre a plataforma Pedrinpass e seus principais recursos.",
     breadcrumb: ["Primeiros Passos", "Visão Geral"],
     sections: [
       {
-        id: "what-is-compass",
-        title: "O que é o Compass?",
+        id: "what-is-pedrinpass",
+        title: "O que é o Pedrinpass?",
         level: "h2",
-        content: "O Compass é uma plataforma moderna de infraestrutura de pagamentos, projetada para simplificar a forma como as empresas lidam com transações, assinaturas e operações financeiras. Desenvolvido pensando nos desenvolvedores, oferece APIs poderosas e painéis intuitivos."
+        content: "O Pedrinpass é uma plataforma moderna de infraestrutura de pagamentos, projetada para simplificar a forma como as empresas lidam com transações, assinaturas e operações financeiras. Desenvolvido pensando nos desenvolvedores, oferece APIs poderosas e painéis intuitivos."
       },
       {
         id: "core-features",
         title: "Recursos Principais",
         level: "h2",
-        content: "Conheça as funcionalidades fundamentais que fazem do Compass a escolha preferida das empresas modernas:",
+        content: "Conheça as funcionalidades fundamentais que fazem do Pedrinpass a escolha preferida das empresas modernas:",
         listItems: [
           "Processamento unificado de pagamentos entre múltiplos provedores",
           "Gerenciamento de assinaturas com ciclos de cobrança flexíveis",
@@ -43,7 +43,7 @@ export const documentationPages: Record<string, DocPageContent> = {
         id: "architecture",
         title: "Arquitetura da Plataforma",
         level: "h2",
-        content: "O Compass é construído sobre uma arquitetura de microsserviços que garante confiabilidade, escalabilidade e desempenho. Cada componente é projetado para lidar com milhões de transações mantendo tempos de resposta abaixo de um segundo."
+        content: "O Pedrinpass é construído sobre uma arquitetura de microsserviços que garante confiabilidade, escalabilidade e desempenho. Cada componente é projetado para lidar com milhões de transações mantendo tempos de resposta abaixo de um segundo."
       },
       {
         id: "getting-help",
@@ -62,7 +62,7 @@ export const documentationPages: Record<string, DocPageContent> = {
         id: "workspace-basics",
         title: "Fundamentos do Workspace",
         level: "h2",
-        content: "Um workspace é a base da sua equipe no Compass. Ele contém todos os seus projetos, membros da equipe, chaves de API e configurações. Cada workspace opera de forma independente, com sua própria cobrança e controles de acesso."
+        content: "Um workspace é a base da sua equipe no Pedrinpass. Ele contém todos os seus projetos, membros da equipe, chaves de API e configurações. Cada workspace opera de forma independente, com sua própria cobrança e controles de acesso."
       },
       {
         id: "creating-workspace",
@@ -101,7 +101,7 @@ export const documentationPages: Record<string, DocPageContent> = {
         id: "understanding-environments",
         title: "Entendendo os Ambientes",
         level: "h2",
-        content: "O Compass fornece dois ambientes separados para desenvolvimento e operações reais. Cada ambiente tem suas próprias chaves de API, dados e configurações para garantir testes seguros sem afetar clientes reais."
+        content: "O Pedrinpass fornece dois ambientes separados para desenvolvimento e operações reais. Cada ambiente tem suas próprias chaves de API, dados e configurações para garantir testes seguros sem afetar clientes reais."
       },
       {
         id: "sandbox-environment",
@@ -139,13 +139,13 @@ export const documentationPages: Record<string, DocPageContent> = {
         id: "introduction",
         title: "Introdução",
         level: "h2",
-        content: "Bem-vindo à Central de Ajuda do Compass. Este guia vai te conduzir pelos passos essenciais para configurar sua conta e começar a usar a plataforma. Seja você novo no Compass ou migrando de outra ferramenta, esta documentação cobre tudo o que você precisa."
+        content: "Bem-vindo à Central de Ajuda do Pedrinpass. Este guia vai te conduzir pelos passos essenciais para configurar sua conta e começar a usar a plataforma. Seja você novo no Pedrinpass ou migrando de outra ferramenta, esta documentação cobre tudo o que você precisa."
       },
       {
         id: "creating-your-account",
         title: "Criando Sua Conta",
         level: "h2",
-        content: "Configurar sua conta Compass leva apenas alguns minutos. Siga os passos abaixo para criar sua conta e entrar ou criar um workspace para sua equipe."
+        content: "Configurar sua conta Pedrinpass leva apenas alguns minutos. Siga os passos abaixo para criar sua conta e entrar ou criar um workspace para sua equipe."
       },
       {
         id: "sign-up-process",
@@ -153,7 +153,7 @@ export const documentationPages: Record<string, DocPageContent> = {
         level: "h3",
         content: "Complete estes passos para criar sua conta:",
         listItems: [
-          "Acesse a página de cadastro do Compass e clique em 'Criar Conta'",
+          "Acesse a página de cadastro do Pedrinpass e clique em 'Criar Conta'",
           "Digite seu endereço de e-mail e crie uma senha forte",
           "Escolha entre criar um novo workspace ou entrar em um existente",
           "Complete a verificação de captcha para confirmar que você é humano",
@@ -171,7 +171,7 @@ export const documentationPages: Record<string, DocPageContent> = {
         id: "security-setup",
         title: "Configuração de Segurança",
         level: "h2",
-        content: "Proteger sua conta e seus dados é fundamental. O Compass oferece múltiplas camadas de segurança, incluindo autenticação de dois fatores, gerenciamento de sessões e registro de atividades."
+        content: "Proteger sua conta e seus dados é fundamental. O Pedrinpass oferece múltiplas camadas de segurança, incluindo autenticação de dois fatores, gerenciamento de sessões e registro de atividades."
       },
       {
         id: "two-factor-auth",
@@ -191,14 +191,14 @@ export const documentationPages: Record<string, DocPageContent> = {
   },
   features: {
     title: "Principais Recursos",
-    description: "Descubra os recursos poderosos que fazem o Compass se destacar.",
+    description: "Descubra os recursos poderosos que fazem o Pedrinpass se destacar.",
     breadcrumb: ["Primeiros Passos", "Principais Recursos"],
     sections: [
       {
         id: "feature-overview",
         title: "Visão Geral dos Recursos",
         level: "h2",
-        content: "O Compass oferece um conjunto completo de ferramentas projetadas para cobrir todos os aspectos da sua infraestrutura de pagamentos. De pagamentos únicos simples a modelos complexos de assinatura, temos tudo o que você precisa."
+        content: "O Pedrinpass oferece um conjunto completo de ferramentas projetadas para cobrir todos os aspectos da sua infraestrutura de pagamentos. De pagamentos únicos simples a modelos complexos de assinatura, temos tudo o que você precisa."
       },
       {
         id: "payment-processing",
@@ -249,7 +249,7 @@ export const documentationPages: Record<string, DocPageContent> = {
         id: "coupon-basics",
         title: "Fundamentos dos Cupons",
         level: "h2",
-        content: "Cupons são ferramentas de marketing poderosas que ajudam a atrair novos clientes e recompensar os fiéis. O Compass suporta descontos baseados em porcentagem e valor fixo, com regras de resgate flexíveis."
+        content: "Cupons são ferramentas de marketing poderosas que ajudam a atrair novos clientes e recompensar os fiéis. O Pedrinpass suporta descontos baseados em porcentagem e valor fixo, com regras de resgate flexíveis."
       },
       {
         id: "creating-coupons",
@@ -288,14 +288,14 @@ export const documentationPages: Record<string, DocPageContent> = {
   },
   pricing: {
     title: "Modelos de Precificação",
-    description: "Explore diferentes estratégias de preços e como implementá-las no Compass.",
+    description: "Explore diferentes estratégias de preços e como implementá-las no Pedrinpass.",
     breadcrumb: ["Produtos e Assinaturas", "Modelos de Precificação"],
     sections: [
       {
         id: "pricing-strategies",
         title: "Estratégias de Precificação",
         level: "h2",
-        content: "Escolha o modelo de precificação que melhor se adapta ao seu negócio. O Compass suporta várias estratégias de preços para maximizar a receita e a satisfação do cliente."
+        content: "Escolha o modelo de precificação que melhor se adapta ao seu negócio. O Pedrinpass suporta várias estratégias de preços para maximizar a receita e a satisfação do cliente."
       },
       {
         id: "flat-rate",
@@ -325,14 +325,14 @@ export const documentationPages: Record<string, DocPageContent> = {
   },
   products: {
     title: "Criando um Produto",
-    description: "Aprenda a criar e configurar produtos no seu catálogo Compass.",
+    description: "Aprenda a criar e configurar produtos no seu catálogo Pedrinpass.",
     breadcrumb: ["Produtos e Assinaturas", "Criando um Produto"],
     sections: [
       {
         id: "product-setup",
         title: "Configuração de Produto",
         level: "h2",
-        content: "Os produtos são a base do seu catálogo Compass. Cada produto representa algo que você vende, seja uma assinatura, uma compra única ou um serviço baseado em uso."
+        content: "Os produtos são a base do seu catálogo Pedrinpass. Cada produto representa algo que você vende, seja uma assinatura, uma compra única ou um serviço baseado em uso."
       },
       {
         id: "create-product",
@@ -372,7 +372,7 @@ export const documentationPages: Record<string, DocPageContent> = {
         id: "subscription-overview",
         title: "Visão Geral das Assinaturas",
         level: "h2",
-        content: "As assinaturas geram receita recorrente cobrando automaticamente dos clientes em intervalos regulares. O Compass lida com a complexidade dos ciclos de cobrança, cobrança proporcional e novas tentativas de pagamento."
+        content: "As assinaturas geram receita recorrente cobrando automaticamente dos clientes em intervalos regulares. O Pedrinpass lida com a complexidade dos ciclos de cobrança, cobrança proporcional e novas tentativas de pagamento."
       },
       {
         id: "creating-subscriptions",
@@ -432,7 +432,7 @@ export const documentationPages: Record<string, DocPageContent> = {
         id: "dunning-management",
         title: "Gerenciamento de Cobrança",
         level: "h2",
-        content: "O Compass tenta automaticamente novamente os pagamentos falhos com base na sua programação de cobrança. Configure intervalos de nova tentativa, notificações por e-mail e períodos de carência para maximizar as taxas de recuperação."
+        content: "O Pedrinpass tenta automaticamente novamente os pagamentos falhos com base na sua programação de cobrança. Configure intervalos de nova tentativa, notificações por e-mail e períodos de carência para maximizar as taxas de recuperação."
       },
       {
         id: "customer-communication",
@@ -464,7 +464,7 @@ export const documentationPages: Record<string, DocPageContent> = {
         id: "security-overview",
         title: "Visão Geral de Segurança",
         level: "h2",
-        content: "A segurança está no centro de tudo o que fazemos. O Compass emprega múltiplas camadas de proteção para garantir que seus dados e as informações de seus clientes permaneçam seguros o tempo todo."
+        content: "A segurança está no centro de tudo o que fazemos. O Pedrinpass emprega múltiplas camadas de proteção para garantir que seus dados e as informações de seus clientes permaneçam seguros o tempo todo."
       },
       {
         id: "data-encryption",
@@ -483,7 +483,7 @@ export const documentationPages: Record<string, DocPageContent> = {
         id: "compliance",
         title: "Conformidade e Certificações",
         level: "h2",
-        content: "O Compass mantém certificações e padrões de conformidade líderes do setor:",
+        content: "O Pedrinpass mantém certificações e padrões de conformidade líderes do setor:",
         listItems: [
           "Certificado PCI DSS Nível 1",
           "Conforme com SOC 2 Type II",
@@ -502,7 +502,7 @@ export const documentationPages: Record<string, DocPageContent> = {
         id: "audit-logging",
         title: "Registro de Auditoria",
         level: "h3",
-        content: "Toda ação no Compass é registrada para fins de responsabilização. Visualize trilhas de auditoria detalhadas mostrando quem fez o quê e quando, ajudando você a manter a conformidade e investigar problemas."
+        content: "Toda ação no Pedrinpass é registrada para fins de responsabilização. Visualize trilhas de auditoria detalhadas mostrando quem fez o quê e quando, ajudando você a manter a conformidade e investigar problemas."
       }
     ]
   }
