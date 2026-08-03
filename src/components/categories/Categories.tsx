@@ -44,7 +44,7 @@ const Categories = () => {
 
         {/* Cards Grid */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 gap-5 auto-rows-fr"
+          className="grid grid-cols-1 md:grid-cols-2 gap-5"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
