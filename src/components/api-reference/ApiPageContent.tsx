@@ -65,7 +65,7 @@ export function ApiPageContent() {
           {/* Headers Section */}
           {endpoint.headers && endpoint.headers.length > 0 && (
             <section id="headers" className="mb-10">
-              <h2 className="text-xl font-semibold text-foreground mb-4">Headers</h2>
+              <h2 className="text-xl font-semibold text-foreground mb-4">Cabeçalhos</h2>
               <ApiTable
                 columns={[
                   { key: "key", label: "Chave" },
