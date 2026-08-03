@@ -116,7 +116,7 @@ const Hero = () => {
         </Link>
 
         {/* Headline */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground text-center tracking-tighter mb-6">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground text-center tracking-tighter mb-6">
           <WaveText text="Central de Documentação" />
         </h1>
 
@@ -132,13 +132,13 @@ const Hero = () => {
 
         {/* Search Shortcuts */}
         <div className="flex flex-col md:flex-row items-center gap-3">
-          <span className="text-sm text-muted-foreground">Atalhos de busca:</span>
+          <span className="eyebrow">Atalhos de busca:</span>
           <div className="flex flex-row items-center gap-3">
             {shortcuts.map((shortcut) => (
               <Link
                 key={shortcut.label}
                 to={shortcut.href}
-                className="inline-flex items-center px-4 py-2 text-sm text-muted-foreground border border-border rounded-xl transition-colors hover:text-foreground hover:border-muted-foreground/50"
+                className="inline-flex items-center px-4 py-2 text-sm text-muted-foreground border border-border rounded-xl bg-background/40 backdrop-blur-sm transition-all hover:text-foreground hover:border-primary/50 hover:bg-primary/10"
               >
                 {shortcut.label}
               </Link>

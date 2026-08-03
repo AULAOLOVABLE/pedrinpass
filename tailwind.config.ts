@@ -14,7 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Satoshi', 'sans-serif'],
+        sans: ['Work Sans', 'Satoshi', 'sans-serif'],
+        display: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+        mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
       },
       colors: {
         border: "hsl(var(--border))",
