@@ -32,7 +32,7 @@ export function DocTableOfContents({ items, className }: DocTableOfContentsProps
     >
       <div className="flex items-center gap-2 text-sm font-semibold mb-4">
         <List className="h-4 w-4" />
-        <span>On this page</span>
+        <span>Nesta página</span>
       </div>
       <nav className="relative">
         {/* Continuous vertical line */}

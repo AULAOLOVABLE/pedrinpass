@@ -10,8 +10,8 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
       <Seo
-        title="Docs & Knowledge Hub Template | Lovable"
-        description="Build a professional documentation site with command palette search, API reference, and changelog. Dark theme, scroll-spy navigation. Ready in hours."
+        title="Central de Documentação e Conhecimento | Compass"
+        description="Monte um site de documentação profissional com busca por command palette, referência de API e changelog. Tema escuro e navegação com scroll-spy."
         path="/"
       />
       <Navbar />

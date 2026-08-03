@@ -33,14 +33,14 @@ export function DocSidebar({ className }: DocSidebarProps) {
           <SheetTrigger asChild>
             <button
               className="p-2 rounded-md bg-background border border-border hover:bg-secondary transition-colors"
-              aria-label="Open navigation"
+              aria-label="Abrir navegação"
             >
               <Menu className="h-5 w-5" />
             </button>
           </SheetTrigger>
           <SheetContent side="left" className="w-72 p-0 bg-background border-sidebar-border">
             <SheetHeader className="p-4 border-b border-sidebar-border">
-              <SheetTitle className="text-sm font-semibold">Documentation</SheetTitle>
+              <SheetTitle className="text-sm font-semibold">Documentação</SheetTitle>
             </SheetHeader>
             <SidebarContent />
           </SheetContent>

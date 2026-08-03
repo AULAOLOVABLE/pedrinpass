@@ -17,10 +17,10 @@ export function ApiPageContent() {
       <main className="flex-1 min-w-0 px-6 lg:px-12 py-10">
         <div className="max-w-3xl">
           <h1 className="text-3xl font-bold tracking-tight text-foreground mb-4">
-            Endpoint not found
+            Endpoint não encontrado
           </h1>
           <p className="text-muted-foreground">
-            The requested API endpoint could not be found.
+            Não foi possível encontrar o endpoint solicitado.
           </p>
         </div>
       </main>
@@ -68,9 +68,9 @@ export function ApiPageContent() {
               <h2 className="text-xl font-semibold text-foreground mb-4">Headers</h2>
               <ApiTable
                 columns={[
-                  { key: "key", label: "Key" },
-                  { key: "value", label: "Value" },
-                  { key: "required", label: "Required" },
+                  { key: "key", label: "Chave" },
+                  { key: "value", label: "Valor" },
+                  { key: "required", label: "Obrigatório" },
                 ]}
                 data={endpoint.headers.map((h) => ({
                   key: h.key,
@@ -84,13 +84,13 @@ export function ApiPageContent() {
           {/* Request Body Section */}
           {endpoint.requestBody && endpoint.requestBody.length > 0 && (
             <section id="request-body" className="mb-10">
-              <h2 className="text-xl font-semibold text-foreground mb-4">Request Body</h2>
+              <h2 className="text-xl font-semibold text-foreground mb-4">Corpo da requisição</h2>
               <ApiTable
                 columns={[
-                  { key: "field", label: "Field" },
-                  { key: "type", label: "Type" },
-                  { key: "required", label: "Required" },
-                  { key: "description", label: "Description" },
+                  { key: "field", label: "Campo" },
+                  { key: "type", label: "Tipo" },
+                  { key: "required", label: "Obrigatório" },
+                  { key: "description", label: "Descrição" },
                 ]}
                 data={endpoint.requestBody.map((b) => ({
                   field: b.field,
@@ -104,13 +104,13 @@ export function ApiPageContent() {
 
           {/* Response Section */}
           <section id="response" className="mb-10">
-            <h2 className="text-xl font-semibold text-foreground mb-4">Response</h2>
+            <h2 className="text-xl font-semibold text-foreground mb-4">Resposta</h2>
             {endpoint.responseBody && endpoint.responseBody.length > 0 ? (
               <ApiTable
                 columns={[
-                  { key: "field", label: "Field" },
-                  { key: "type", label: "Type" },
-                  { key: "description", label: "Description" },
+                  { key: "field", label: "Campo" },
+                  { key: "type", label: "Tipo" },
+                  { key: "description", label: "Descrição" },
                 ]}
                 data={endpoint.responseBody.map((r) => ({
                   field: r.field,
@@ -119,25 +119,25 @@ export function ApiPageContent() {
                 }))}
               />
             ) : (
-              <p className="text-muted-foreground">No response body.</p>
+              <p className="text-muted-foreground">Sem corpo de resposta.</p>
             )}
           </section>
 
           {/* Example Usage Section */}
           {(endpoint.exampleRequest || endpoint.exampleResponse) && (
             <section id="example-usage" className="mb-10">
-              <h2 className="text-xl font-semibold text-foreground mb-4">Example Usage</h2>
+              <h2 className="text-xl font-semibold text-foreground mb-4">Exemplo de uso</h2>
               
               {endpoint.exampleRequest && (
                 <div className="mb-6">
-                  <h3 className="text-sm font-medium text-muted-foreground mb-2">Request</h3>
+                  <h3 className="text-sm font-medium text-muted-foreground mb-2">Requisição</h3>
                   <ApiCodeBlock>{endpoint.exampleRequest}</ApiCodeBlock>
                 </div>
               )}
 
               {endpoint.exampleResponse && (
                 <div>
-                  <h3 className="text-sm font-medium text-muted-foreground mb-2">Response</h3>
+                  <h3 className="text-sm font-medium text-muted-foreground mb-2">Resposta</h3>
                   <ApiCodeBlock>{endpoint.exampleResponse}</ApiCodeBlock>
                 </div>
               )}

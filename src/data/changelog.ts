@@ -21,32 +21,32 @@ export const changelogData: ChangelogEntryData[] = [
   {
     date: "Nov 9, 2025",
     badges: [
-      { variant: "fixes", label: "Fixes" },
-      { variant: "improvements", label: "Improvements" },
+      { variant: "fixes", label: "Correções" },
+      { variant: "improvements", label: "Melhorias" },
     ],
     sections: [
       {
-        title: "Search Experience Updates",
+        title: "Atualizações na Experiência de Busca",
         items: [
-          "Introduced search_filters field in the results response (category, date, relevance).",
-          "Added query_suggestions to auto-complete user searches.",
-          "The x-search-score header is now available in search response callbacks.",
+          "Introduzido o campo search_filters na resposta de resultados (categoria, data, relevância).",
+          "Adicionado query_suggestions para autocompletar as buscas dos usuários.",
+          "O cabeçalho x-search-score agora está disponível nos callbacks de resposta de busca.",
         ],
       },
       {
-        title: "Documentation Upgrades",
+        title: "Melhorias na Documentação",
         items: [
-          "Documentation now supports version_history to track changes.",
-          "You can update article_status directly via the dashboard.",
-          "Added review_period_days for smoother content approval flows.",
+          "A documentação agora suporta version_history para rastrear alterações.",
+          "Você pode atualizar o article_status diretamente pelo painel.",
+          "Adicionado review_period_days para fluxos de aprovação de conteúdo mais fluidos.",
         ],
       },
       {
-        title: "API Enhancements",
+        title: "Melhorias na API",
         items: [
-          "The article_id is now returned in all webhook payloads.",
-          "You can now pass the x-preview-mode header to view draft articles.",
-          "The content.pdf field is now included in GET /articles responses.",
+          "O article_id agora é retornado em todos os payloads de webhook.",
+          "Agora você pode passar o cabeçalho x-preview-mode para visualizar artigos em rascunho.",
+          "O campo content.pdf agora está incluído nas respostas de GET /articles.",
         ],
       },
     ],
@@ -54,24 +54,24 @@ export const changelogData: ChangelogEntryData[] = [
   {
     date: "Nov 4, 2025",
     badges: [
-      { variant: "features", label: "New Features" },
-      { variant: "improvements", label: "Improvements" },
+      { variant: "features", label: "Novos Recursos" },
+      { variant: "improvements", label: "Melhorias" },
     ],
     sections: [
       {
-        title: "Dashboard Upgrades",
+        title: "Atualizações no Painel",
         items: [
-          "Dark mode toggle is now available under Settings > Preferences.",
-          "Export buttons now include csv, xlsx, and json formats.",
-          "The new quick_filters sidebar helps you find articles faster.",
+          "O alternador de modo escuro agora está disponível em Configurações > Preferências.",
+          "Os botões de exportação agora incluem os formatos csv, xlsx e json.",
+          "A nova barra lateral quick_filters ajuda você a encontrar artigos mais rápido.",
         ],
       },
       {
-        title: "Developer Tools",
+        title: "Ferramentas para Desenvolvedores",
         items: [
-          "The x-api-key header has been standardized across API endpoints.",
-          "help-cli now supports environment variables with HELPCENTER_ENV.",
-          "Updated API error codes: E-404 is now ARTICLE_NOT_FOUND.",
+          "O cabeçalho x-api-key foi padronizado em todos os endpoints da API.",
+          "O help-cli agora suporta variáveis de ambiente com HELPCENTER_ENV.",
+          "Códigos de erro da API atualizados: E-404 agora é ARTICLE_NOT_FOUND.",
         ],
       },
     ],
@@ -79,24 +79,24 @@ export const changelogData: ChangelogEntryData[] = [
   {
     date: "Oct 5, 2025",
     badges: [
-      { variant: "fixes", label: "Fixes" },
-      { variant: "features", label: "New Features" },
+      { variant: "fixes", label: "Correções" },
+      { variant: "features", label: "Novos Recursos" },
     ],
     sections: [
       {
-        title: "New Content Request Features",
+        title: "Novos Recursos de Solicitação de Conteúdo",
         items: [
-          "Added support for public and private content request submissions.",
-          "Content links now include ?utm_source parameters for tracking.",
-          "Enhanced article pages with bookmark and share button support.",
+          "Adicionado suporte para envio de solicitações de conteúdo públicas e privadas.",
+          "Os links de conteúdo agora incluem parâmetros ?utm_source para rastreamento.",
+          "Páginas de artigos aprimoradas com suporte a botões de favoritar e compartilhar.",
         ],
       },
       {
-        title: "API Enhancements",
+        title: "Melhorias na API",
         items: [
-          "The article_id is now returned in all webhook payloads.",
-          "You can now pass the x-preview-mode header to view draft content.",
-          "The export.pdf field is now included in GET /exports responses.",
+          "O article_id agora é retornado em todos os payloads de webhook.",
+          "Agora você pode passar o cabeçalho x-preview-mode para visualizar conteúdo em rascunho.",
+          "O campo export.pdf agora está incluído nas respostas de GET /exports.",
         ],
         code: {
           lines: [
@@ -110,19 +110,19 @@ export const changelogData: ChangelogEntryData[] = [
         },
       },
       {
-        title: "Search Detection Improvements",
+        title: "Melhorias na Detecção de Busca",
         items: [
-          "Introduced relevance_score field in the search response (low, medium, high).",
-          "Added user_preferences to session tracking for personalization.",
-          "The x-search-rank header is now available in search callbacks.",
+          "Introduzido o campo relevance_score na resposta de busca (baixa, média, alta).",
+          "Adicionado user_preferences ao rastreamento de sessão para personalização.",
+          "O cabeçalho x-search-rank agora está disponível nos callbacks de busca.",
         ],
       },
       {
-        title: "Content Category Upgrades",
+        title: "Melhorias nas Categorias de Conteúdo",
         items: [
-          "Categories now support nested_levels to organize subcategories.",
-          "You can update category_order directly via the API.",
-          "Added archive_after_days for automatic content archival flows.",
+          "As categorias agora suportam nested_levels para organizar subcategorias.",
+          "Você pode atualizar o category_order diretamente pela API.",
+          "Adicionado archive_after_days para fluxos automáticos de arquivamento de conteúdo.",
         ],
       },
     ],
@@ -130,32 +130,32 @@ export const changelogData: ChangelogEntryData[] = [
   {
     date: "Sep 19, 2025",
     badges: [
-      { variant: "improvements", label: "Improvements" },
-      { variant: "fixes", label: "Fixes" },
+      { variant: "improvements", label: "Melhorias" },
+      { variant: "fixes", label: "Correções" },
     ],
     sections: [
       {
-        title: "Enhanced Export Controls",
+        title: "Controles de Exportação Aprimorados",
         items: [
-          "Added support for scheduled exports (daily, weekly, or monthly).",
-          "Introduced export holds for content under review.",
-          "Improved multi-format linking for faster switching between export types.",
+          "Adicionado suporte para exportações agendadas (diárias, semanais ou mensais).",
+          "Introduzidas retenções de exportação para conteúdo em revisão.",
+          "Melhorada a vinculação multi-formato para alternar mais rápido entre tipos de exportação.",
         ],
       },
       {
-        title: "Analytics Dashboard Improvements",
+        title: "Melhorias no Painel de Análises",
         items: [
-          "New Article Views metric added.",
-          "Enhanced filtering by user cohort and content category.",
-          "Reports can now be exported as PDF in addition to CSV & Excel.",
+          "Nova métrica de Visualizações de Artigos adicionada.",
+          "Filtragem aprimorada por coorte de usuário e categoria de conteúdo.",
+          "Os relatórios agora podem ser exportados em PDF, além de CSV e Excel.",
         ],
       },
       {
-        title: "Developer Updates",
+        title: "Atualizações para Desenvolvedores",
         items: [
-          "Added new Articles Search API endpoint.",
-          "Improved rate limiting with clearer error messages.",
-          "Webhook retry logic now supports exponential backoff.",
+          "Adicionado novo endpoint da API de Busca de Artigos.",
+          "Limitação de taxa aprimorada com mensagens de erro mais claras.",
+          "A lógica de repetição de webhook agora suporta backoff exponencial.",
         ],
       },
     ],
@@ -163,30 +163,30 @@ export const changelogData: ChangelogEntryData[] = [
   {
     date: "Sep 4, 2025",
     badges: [
-      { variant: "features", label: "New Features" },
-      { variant: "improvements", label: "Improvements" },
+      { variant: "features", label: "Novos Recursos" },
+      { variant: "improvements", label: "Melhorias" },
     ],
     sections: [
       {
-        title: "New Features",
+        title: "Novos Recursos",
         items: [
-          "Multi-Language Support: You can now publish content in multiple languages (EN, ES, FR).",
-          "Added automatic language detection based on user browser settings.",
-          "Option to set a default content language in account settings.",
+          "Suporte a Múltiplos Idiomas: agora você pode publicar conteúdo em vários idiomas (EN, ES, FR).",
+          "Adicionada detecção automática de idioma com base nas configurações do navegador do usuário.",
+          "Opção para definir um idioma de conteúdo padrão nas configurações da conta.",
         ],
       },
       {
-        title: "Improvements",
+        title: "Melhorias",
         items: [
-          "Enhanced failed search retries: system will now attempt 3 retries within 7 seconds.",
-          "Optimized analytics dashboard for faster load times.",
+          "Novas tentativas de busca com falha aprimoradas: o sistema agora tentará 3 vezes em até 7 segundos.",
+          "Painel de análises otimizado para tempos de carregamento mais rápidos.",
         ],
       },
       {
-        title: "Fixes",
+        title: "Correções",
         items: [
-          "Fixed an issue where draft articles incorrectly appeared in search results.",
-          "Resolved a bug causing view reports to show duplicated entries.",
+          "Corrigido um problema em que artigos em rascunho apareciam incorretamente nos resultados de busca.",
+          "Resolvido um bug que fazia os relatórios de visualização exibirem entradas duplicadas.",
         ],
       },
     ],
