@@ -10,7 +10,7 @@ const Footer = () => {
 
           {/* Right - Powered by */}
           <span className="text-sm text-muted-foreground">
-            Desenvolvido com Lovable
+            Desenvolvido por Pedrintec
           </span>
         </div>
       </div>
