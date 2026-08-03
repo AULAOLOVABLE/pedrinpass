@@ -40,9 +40,9 @@ export function ApiTable({ columns, data }: ApiTableProps) {
                 <TableCell key={col.key} className="text-sm">
                   {typeof row[col.key] === "boolean" ? (
                     row[col.key] ? (
-                      <span className="text-emerald-400">Required</span>
+                      <span className="text-primary">Obrigatório</span>
                     ) : (
-                      <span className="text-muted-foreground">Optional</span>
+                      <span className="text-muted-foreground">Opcional</span>
                     )
                   ) : (
                     <span className={col.key === "field" || col.key === "key" ? "font-mono text-foreground" : ""}>
