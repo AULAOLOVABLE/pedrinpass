@@ -16,493 +16,493 @@ export interface DocPageSection {
 
 export const documentationPages: Record<string, DocPageContent> = {
   overview: {
-    title: "Overview",
-    description: "Get a high-level understanding of the Compass platform and its core capabilities.",
-    breadcrumb: ["Getting Started", "Overview"],
+    title: "Visão Geral",
+    description: "Obtenha um entendimento de alto nível sobre a plataforma Compass e seus principais recursos.",
+    breadcrumb: ["Primeiros Passos", "Visão Geral"],
     sections: [
       {
         id: "what-is-compass",
-        title: "What is Compass?",
+        title: "O que é o Compass?",
         level: "h2",
-        content: "Compass is a modern payment infrastructure platform designed to simplify how businesses handle transactions, subscriptions, and financial operations. Built with developers in mind, it provides powerful APIs and intuitive dashboards."
+        content: "O Compass é uma plataforma moderna de infraestrutura de pagamentos, projetada para simplificar a forma como as empresas lidam com transações, assinaturas e operações financeiras. Desenvolvido pensando nos desenvolvedores, oferece APIs poderosas e painéis intuitivos."
       },
       {
         id: "core-features",
-        title: "Core Features",
+        title: "Recursos Principais",
         level: "h2",
-        content: "Explore the fundamental capabilities that make Compass the preferred choice for modern businesses:",
+        content: "Conheça as funcionalidades fundamentais que fazem do Compass a escolha preferida das empresas modernas:",
         listItems: [
-          "Unified payment processing across multiple providers",
-          "Subscription management with flexible billing cycles",
-          "Real-time analytics and reporting",
-          "Developer-friendly APIs with comprehensive SDKs",
-          "Enterprise-grade security and compliance"
+          "Processamento unificado de pagamentos entre múltiplos provedores",
+          "Gerenciamento de assinaturas com ciclos de cobrança flexíveis",
+          "Análises e relatórios em tempo real",
+          "APIs amigáveis para desenvolvedores com SDKs completos",
+          "Segurança e conformidade de nível empresarial"
         ]
       },
       {
         id: "architecture",
-        title: "Platform Architecture",
+        title: "Arquitetura da Plataforma",
         level: "h2",
-        content: "Compass is built on a microservices architecture that ensures reliability, scalability, and performance. Each component is designed to handle millions of transactions while maintaining sub-second response times."
+        content: "O Compass é construído sobre uma arquitetura de microsserviços que garante confiabilidade, escalabilidade e desempenho. Cada componente é projetado para lidar com milhões de transações mantendo tempos de resposta abaixo de um segundo."
       },
       {
         id: "getting-help",
-        title: "Getting Help",
+        title: "Obtendo Ajuda",
         level: "h2",
-        content: "If you need assistance, our support team is available 24/7. You can also explore our community forums, developer documentation, and video tutorials for self-service help."
+        content: "Se precisar de assistência, nossa equipe de suporte está disponível 24 horas por dia, 7 dias por semana. Você também pode explorar nossos fóruns da comunidade, documentação para desenvolvedores e tutoriais em vídeo para ajuda autônoma."
       }
     ]
   },
   workspace: {
-    title: "Set Up Your Workspace",
-    description: "Learn how to configure your workspace for optimal collaboration and productivity.",
-    breadcrumb: ["Getting Started", "Set Up Your Workspace"],
+    title: "Configure Seu Workspace",
+    description: "Aprenda a configurar seu workspace para colaboração e produtividade ideais.",
+    breadcrumb: ["Primeiros Passos", "Configure Seu Workspace"],
     sections: [
       {
         id: "workspace-basics",
-        title: "Workspace Basics",
+        title: "Fundamentos do Workspace",
         level: "h2",
-        content: "A workspace is your team's home in Compass. It contains all your projects, team members, API keys, and settings. Each workspace operates independently with its own billing and access controls."
+        content: "Um workspace é a base da sua equipe no Compass. Ele contém todos os seus projetos, membros da equipe, chaves de API e configurações. Cada workspace opera de forma independente, com sua própria cobrança e controles de acesso."
       },
       {
         id: "creating-workspace",
-        title: "Creating a Workspace",
+        title: "Criando um Workspace",
         level: "h2",
-        content: "Follow these steps to create your first workspace:",
+        content: "Siga estes passos para criar seu primeiro workspace:",
         listItems: [
-          "Click 'Create Workspace' from the dashboard",
-          "Enter a descriptive name for your workspace",
-          "Select your primary region for data residency",
-          "Choose your billing plan (you can upgrade later)",
-          "Invite team members with appropriate roles"
+          "Clique em 'Criar Workspace' no painel",
+          "Digite um nome descritivo para o seu workspace",
+          "Selecione sua região principal para residência de dados",
+          "Escolha seu plano de cobrança (você pode fazer upgrade depois)",
+          "Convide membros da equipe com as funções apropriadas"
         ],
         orderedList: true
       },
       {
         id: "workspace-settings",
-        title: "Workspace Settings",
+        title: "Configurações do Workspace",
         level: "h2",
-        content: "Customize your workspace to match your team's workflow. Configure branding, default currencies, notification preferences, and integration settings from the workspace admin panel."
+        content: "Personalize seu workspace de acordo com o fluxo de trabalho da sua equipe. Configure identidade visual, moedas padrão, preferências de notificação e integrações no painel de administração do workspace."
       },
       {
         id: "team-management",
-        title: "Team Management",
+        title: "Gerenciamento de Equipe",
         level: "h3",
-        content: "Add team members and assign roles based on their responsibilities. Available roles include Owner, Admin, Developer, and Viewer. Each role has specific permissions that control access to features and data."
+        content: "Adicione membros da equipe e atribua funções com base em suas responsabilidades. As funções disponíveis incluem Proprietário, Administrador, Desenvolvedor e Visualizador. Cada função tem permissões específicas que controlam o acesso a recursos e dados."
       }
     ]
   },
   sandbox: {
-    title: "Sandbox vs. Production",
-    description: "Understand the differences between sandbox and production environments.",
-    breadcrumb: ["Getting Started", "Sandbox vs. Production"],
+    title: "Sandbox vs. Produção",
+    description: "Entenda as diferenças entre os ambientes de sandbox e produção.",
+    breadcrumb: ["Primeiros Passos", "Sandbox vs. Produção"],
     sections: [
       {
         id: "understanding-environments",
-        title: "Understanding Environments",
+        title: "Entendendo os Ambientes",
         level: "h2",
-        content: "Compass provides two separate environments for development and live operations. Each environment has its own API keys, data, and configurations to ensure safe testing without affecting real customers."
+        content: "O Compass fornece dois ambientes separados para desenvolvimento e operações reais. Cada ambiente tem suas próprias chaves de API, dados e configurações para garantir testes seguros sem afetar clientes reais."
       },
       {
         id: "sandbox-environment",
-        title: "Sandbox Environment",
+        title: "Ambiente de Sandbox",
         level: "h2",
-        content: "The sandbox is your testing playground. Use it to:",
+        content: "O sandbox é seu ambiente de testes. Use-o para:",
         listItems: [
-          "Test payment flows without real money",
-          "Simulate various card scenarios (success, decline, errors)",
-          "Develop and debug integrations safely",
-          "Train team members on the platform",
-          "Validate webhooks and event handling"
+          "Testar fluxos de pagamento sem dinheiro real",
+          "Simular diversos cenários de cartão (sucesso, recusa, erros)",
+          "Desenvolver e depurar integrações com segurança",
+          "Treinar membros da equipe na plataforma",
+          "Validar webhooks e o tratamento de eventos"
         ]
       },
       {
         id: "production-environment",
-        title: "Production Environment",
+        title: "Ambiente de Produção",
         level: "h2",
-        content: "Production handles real transactions with real customers. Before going live, ensure you've completed all compliance requirements and thoroughly tested your integration in sandbox."
+        content: "A produção lida com transações reais e clientes reais. Antes de entrar em produção, certifique-se de ter concluído todos os requisitos de conformidade e testado bem sua integração no sandbox."
       },
       {
         id: "switching-environments",
-        title: "Switching Between Environments",
+        title: "Alternando Entre Ambientes",
         level: "h3",
-        content: "Toggle between sandbox and production using the environment switcher in the dashboard header. Your API keys and data are completely separate between environments for security."
+        content: "Alterne entre sandbox e produção usando o seletor de ambiente no cabeçalho do painel. Suas chaves de API e dados são completamente separados entre os ambientes por segurança."
       }
     ]
   },
   "account-setup": {
-    title: "Account Setup",
-    description: "Learn how to set up your account and configure your workspace for optimal use.",
-    breadcrumb: ["Getting Started", "Account Setup"],
+    title: "Configuração da Conta",
+    description: "Aprenda a configurar sua conta e seu workspace para um uso ideal.",
+    breadcrumb: ["Primeiros Passos", "Configuração da Conta"],
     sections: [
       {
         id: "introduction",
-        title: "Introduction",
+        title: "Introdução",
         level: "h2",
-        content: "Welcome to the Compass Help Center. This guide will walk you through the essential steps to set up your account and get started with the platform. Whether you're new to Compass or migrating from another tool, this documentation covers everything you need."
+        content: "Bem-vindo à Central de Ajuda do Compass. Este guia vai te conduzir pelos passos essenciais para configurar sua conta e começar a usar a plataforma. Seja você novo no Compass ou migrando de outra ferramenta, esta documentação cobre tudo o que você precisa."
       },
       {
         id: "creating-your-account",
-        title: "Creating Your Account",
+        title: "Criando Sua Conta",
         level: "h2",
-        content: "Setting up your Compass account takes just a few minutes. Follow the steps below to create your account and join or create a workspace for your team."
+        content: "Configurar sua conta Compass leva apenas alguns minutos. Siga os passos abaixo para criar sua conta e entrar ou criar um workspace para sua equipe."
       },
       {
         id: "sign-up-process",
-        title: "Sign-up Process",
+        title: "Processo de Cadastro",
         level: "h3",
-        content: "Complete these steps to create your account:",
+        content: "Complete estes passos para criar sua conta:",
         listItems: [
-          "Navigate to the Compass sign-up page and click 'Create Account'",
-          "Enter your email address and create a strong password",
-          "Choose whether to create a new workspace or join an existing one",
-          "Complete the captcha verification to confirm you're human",
-          "Click 'Continue' to proceed to email verification"
+          "Acesse a página de cadastro do Compass e clique em 'Criar Conta'",
+          "Digite seu endereço de e-mail e crie uma senha forte",
+          "Escolha entre criar um novo workspace ou entrar em um existente",
+          "Complete a verificação de captcha para confirmar que você é humano",
+          "Clique em 'Continuar' para prosseguir com a verificação de e-mail"
         ],
         orderedList: true
       },
       {
         id: "account-verification",
-        title: "Account Verification",
+        title: "Verificação da Conta",
         level: "h3",
-        content: "After signing up, you'll receive a verification email. Click the link in the email to verify your account. Verification links expire after 24 hours. If your link has expired, you can request a new one from the sign-in page."
+        content: "Após o cadastro, você receberá um e-mail de verificação. Clique no link do e-mail para verificar sua conta. Os links de verificação expiram após 24 horas. Se o seu link expirou, você pode solicitar um novo na página de login."
       },
       {
         id: "security-setup",
-        title: "Security Setup",
+        title: "Configuração de Segurança",
         level: "h2",
-        content: "Protecting your account and data is crucial. Compass offers multiple layers of security including two-factor authentication, session management, and activity logging."
+        content: "Proteger sua conta e seus dados é fundamental. O Compass oferece múltiplas camadas de segurança, incluindo autenticação de dois fatores, gerenciamento de sessões e registro de atividades."
       },
       {
         id: "two-factor-auth",
-        title: "Two-Factor Authentication",
+        title: "Autenticação de Dois Fatores",
         level: "h3",
-        content: "Enable 2FA for enhanced security:",
+        content: "Ative o 2FA para maior segurança:",
         listItems: [
-          "Navigate to Settings → Security → Two-Factor Authentication",
-          "Choose your preferred method: authenticator app or SMS",
-          "Scan the QR code with your authenticator app",
-          "Enter the verification code to confirm setup",
-          "Save your backup codes in a secure location"
+          "Acesse Configurações → Segurança → Autenticação de Dois Fatores",
+          "Escolha seu método preferido: aplicativo autenticador ou SMS",
+          "Escaneie o código QR com seu aplicativo autenticador",
+          "Digite o código de verificação para confirmar a configuração",
+          "Salve seus códigos de backup em um local seguro"
         ],
         orderedList: true
       }
     ]
   },
   features: {
-    title: "Key Features",
-    description: "Discover the powerful features that make Compass stand out.",
-    breadcrumb: ["Getting Started", "Key Features"],
+    title: "Principais Recursos",
+    description: "Descubra os recursos poderosos que fazem o Compass se destacar.",
+    breadcrumb: ["Primeiros Passos", "Principais Recursos"],
     sections: [
       {
         id: "feature-overview",
-        title: "Feature Overview",
+        title: "Visão Geral dos Recursos",
         level: "h2",
-        content: "Compass provides a comprehensive suite of tools designed to handle every aspect of your payment infrastructure. From simple one-time payments to complex subscription models, we've got you covered."
+        content: "O Compass oferece um conjunto completo de ferramentas projetadas para cobrir todos os aspectos da sua infraestrutura de pagamentos. De pagamentos únicos simples a modelos complexos de assinatura, temos tudo o que você precisa."
       },
       {
         id: "payment-processing",
-        title: "Payment Processing",
+        title: "Processamento de Pagamentos",
         level: "h2",
-        content: "Accept payments from customers worldwide with support for multiple payment methods:",
+        content: "Aceite pagamentos de clientes do mundo todo com suporte a múltiplos métodos de pagamento:",
         listItems: [
-          "Credit and debit cards (Visa, Mastercard, Amex, Discover)",
-          "Digital wallets (Apple Pay, Google Pay, PayPal)",
-          "Bank transfers and ACH payments",
-          "Local payment methods by region",
-          "Cryptocurrency (Beta)"
+          "Cartões de crédito e débito (Visa, Mastercard, Amex, Discover)",
+          "Carteiras digitais (Apple Pay, Google Pay, PayPal)",
+          "Transferências bancárias e pagamentos ACH",
+          "Métodos de pagamento locais por região",
+          "Criptomoeda (Beta)"
         ]
       },
       {
         id: "subscription-billing",
-        title: "Subscription Billing",
+        title: "Cobrança por Assinatura",
         level: "h2",
-        content: "Manage recurring revenue with our flexible subscription engine. Create plans with custom billing cycles, handle upgrades and downgrades, prorate charges, and automate dunning for failed payments."
+        content: "Gerencie receita recorrente com nosso mecanismo flexível de assinaturas. Crie planos com ciclos de cobrança personalizados, gerencie upgrades e downgrades, cobranças proporcionais e automatize a cobrança de pagamentos falhos."
       },
       {
         id: "analytics-dashboard",
-        title: "Analytics Dashboard",
+        title: "Painel de Análises",
         level: "h2",
-        content: "Gain insights into your business with real-time analytics. Track revenue, monitor churn, analyze customer behavior, and export reports for stakeholders."
+        content: "Obtenha insights sobre o seu negócio com análises em tempo real. Acompanhe a receita, monitore o churn, analise o comportamento dos clientes e exporte relatórios para as partes interessadas."
       },
       {
         id: "developer-tools",
-        title: "Developer Tools",
+        title: "Ferramentas para Desenvolvedores",
         level: "h3",
-        content: "Build integrations quickly with our developer-friendly tools:",
+        content: "Construa integrações rapidamente com nossas ferramentas amigáveis para desenvolvedores:",
         listItems: [
-          "RESTful APIs with comprehensive documentation",
-          "Official SDKs for major programming languages",
-          "Webhooks for real-time event notifications",
-          "CLI tools for local development and testing",
-          "Postman collections for API exploration"
+          "APIs RESTful com documentação completa",
+          "SDKs oficiais para as principais linguagens de programação",
+          "Webhooks para notificações de eventos em tempo real",
+          "Ferramentas de CLI para desenvolvimento e testes locais",
+          "Coleções do Postman para exploração da API"
         ]
       }
     ]
   },
   coupons: {
-    title: "Coupons & Discounts",
-    description: "Create and manage promotional coupons to drive customer acquisition and retention.",
-    breadcrumb: ["Products & Subscriptions", "Coupons & Discounts"],
+    title: "Cupons e Descontos",
+    description: "Crie e gerencie cupons promocionais para impulsionar a aquisição e retenção de clientes.",
+    breadcrumb: ["Produtos e Assinaturas", "Cupons e Descontos"],
     sections: [
       {
         id: "coupon-basics",
-        title: "Coupon Basics",
+        title: "Fundamentos dos Cupons",
         level: "h2",
-        content: "Coupons are powerful marketing tools that help you attract new customers and reward loyal ones. Compass supports percentage-based and fixed-amount discounts with flexible redemption rules."
+        content: "Cupons são ferramentas de marketing poderosas que ajudam a atrair novos clientes e recompensar os fiéis. O Compass suporta descontos baseados em porcentagem e valor fixo, com regras de resgate flexíveis."
       },
       {
         id: "creating-coupons",
-        title: "Creating Coupons",
+        title: "Criando Cupons",
         level: "h2",
-        content: "Create a new coupon with these steps:",
+        content: "Crie um novo cupom com estes passos:",
         listItems: [
-          "Navigate to Products → Coupons → Create Coupon",
-          "Enter a unique coupon code (or auto-generate one)",
-          "Choose discount type: percentage or fixed amount",
-          "Set the discount value and applicable products",
-          "Configure usage limits and expiration date"
+          "Acesse Produtos → Cupons → Criar Cupom",
+          "Digite um código de cupom único (ou gere um automaticamente)",
+          "Escolha o tipo de desconto: porcentagem ou valor fixo",
+          "Defina o valor do desconto e os produtos aplicáveis",
+          "Configure limites de uso e data de expiração"
         ],
         orderedList: true
       },
       {
         id: "coupon-restrictions",
-        title: "Coupon Restrictions",
+        title: "Restrições de Cupom",
         level: "h2",
-        content: "Control how coupons are used with restriction settings:",
+        content: "Controle como os cupons são usados com configurações de restrição:",
         listItems: [
-          "Limit total redemptions across all customers",
-          "Restrict to one use per customer",
-          "Apply minimum purchase requirements",
-          "Limit to specific products or plans",
-          "Set date ranges for validity"
+          "Limite o total de resgates entre todos os clientes",
+          "Restrinja a um uso por cliente",
+          "Aplique requisitos mínimos de compra",
+          "Limite a produtos ou planos específicos",
+          "Defina intervalos de datas para validade"
         ]
       },
       {
         id: "tracking-performance",
-        title: "Tracking Performance",
+        title: "Acompanhamento de Desempenho",
         level: "h3",
-        content: "Monitor coupon effectiveness in the analytics dashboard. Track redemption rates, revenue impact, and customer acquisition costs to optimize your promotional strategy."
+        content: "Monitore a eficácia dos cupons no painel de análises. Acompanhe as taxas de resgate, o impacto na receita e os custos de aquisição de clientes para otimizar sua estratégia promocional."
       }
     ]
   },
   pricing: {
-    title: "Pricing Models",
-    description: "Explore different pricing strategies and how to implement them in Compass.",
-    breadcrumb: ["Products & Subscriptions", "Pricing Models"],
+    title: "Modelos de Precificação",
+    description: "Explore diferentes estratégias de preços e como implementá-las no Compass.",
+    breadcrumb: ["Produtos e Assinaturas", "Modelos de Precificação"],
     sections: [
       {
         id: "pricing-strategies",
-        title: "Pricing Strategies",
+        title: "Estratégias de Precificação",
         level: "h2",
-        content: "Choose the pricing model that best fits your business. Compass supports various pricing strategies to maximize revenue and customer satisfaction."
+        content: "Escolha o modelo de precificação que melhor se adapta ao seu negócio. O Compass suporta várias estratégias de preços para maximizar a receita e a satisfação do cliente."
       },
       {
         id: "flat-rate",
-        title: "Flat-Rate Pricing",
+        title: "Preço Fixo",
         level: "h2",
-        content: "Charge a fixed amount for your product or service. Simple and predictable for both you and your customers. Ideal for standardized offerings with consistent value delivery."
+        content: "Cobre um valor fixo pelo seu produto ou serviço. Simples e previsível tanto para você quanto para seus clientes. Ideal para ofertas padronizadas com entrega de valor consistente."
       },
       {
         id: "tiered-pricing",
-        title: "Tiered Pricing",
+        title: "Precificação em Níveis",
         level: "h2",
-        content: "Offer multiple plans at different price points. Each tier includes a specific set of features, allowing customers to choose based on their needs and budget."
+        content: "Ofereça múltiplos planos com diferentes faixas de preço. Cada nível inclui um conjunto específico de recursos, permitindo que os clientes escolham de acordo com suas necessidades e orçamento."
       },
       {
         id: "usage-based",
-        title: "Usage-Based Pricing",
+        title: "Precificação Baseada em Uso",
         level: "h2",
-        content: "Charge based on consumption metrics like API calls, storage, or active users. This model aligns costs with value and scales naturally with customer growth."
+        content: "Cobre com base em métricas de consumo, como chamadas de API, armazenamento ou usuários ativos. Esse modelo alinha os custos ao valor entregue e escala naturalmente com o crescimento do cliente."
       },
       {
         id: "hybrid-models",
-        title: "Hybrid Models",
+        title: "Modelos Híbridos",
         level: "h3",
-        content: "Combine base subscription fees with usage-based charges. This provides predictable recurring revenue while capturing additional value from heavy users."
+        content: "Combine taxas de assinatura base com cobranças baseadas em uso. Isso proporciona receita recorrente previsível enquanto captura valor adicional de usuários intensivos."
       }
     ]
   },
   products: {
-    title: "Creating a Product",
-    description: "Learn how to create and configure products in your Compass catalog.",
-    breadcrumb: ["Products & Subscriptions", "Creating a Product"],
+    title: "Criando um Produto",
+    description: "Aprenda a criar e configurar produtos no seu catálogo Compass.",
+    breadcrumb: ["Produtos e Assinaturas", "Criando um Produto"],
     sections: [
       {
         id: "product-setup",
-        title: "Product Setup",
+        title: "Configuração de Produto",
         level: "h2",
-        content: "Products are the foundation of your Compass catalog. Each product represents something you sell, whether it's a subscription, one-time purchase, or usage-based service."
+        content: "Os produtos são a base do seu catálogo Compass. Cada produto representa algo que você vende, seja uma assinatura, uma compra única ou um serviço baseado em uso."
       },
       {
         id: "create-product",
-        title: "Create a Product",
+        title: "Criar um Produto",
         level: "h2",
-        content: "Follow these steps to create a new product:",
+        content: "Siga estes passos para criar um novo produto:",
         listItems: [
-          "Navigate to Products → Create Product",
-          "Enter a name and description",
-          "Add product images and metadata",
-          "Configure pricing and billing options",
-          "Set up tax settings if applicable",
-          "Publish the product when ready"
+          "Acesse Produtos → Criar Produto",
+          "Digite um nome e uma descrição",
+          "Adicione imagens e metadados do produto",
+          "Configure opções de preço e cobrança",
+          "Configure as definições fiscais, se aplicável",
+          "Publique o produto quando estiver pronto"
         ],
         orderedList: true
       },
       {
         id: "product-variants",
-        title: "Product Variants",
+        title: "Variantes de Produto",
         level: "h2",
-        content: "Create variants for products with different options like size, color, or duration. Each variant can have its own price, SKU, and inventory settings."
+        content: "Crie variantes para produtos com diferentes opções, como tamanho, cor ou duração. Cada variante pode ter seu próprio preço, SKU e configurações de estoque."
       },
       {
         id: "product-metadata",
-        title: "Product Metadata",
+        title: "Metadados do Produto",
         level: "h3",
-        content: "Add custom metadata to products for internal tracking or integration purposes. Metadata is stored as key-value pairs and can be retrieved via the API."
+        content: "Adicione metadados personalizados aos produtos para fins de rastreamento interno ou integração. Os metadados são armazenados como pares chave-valor e podem ser recuperados via API."
       }
     ]
   },
   subscriptions: {
-    title: "Subscriptions",
-    description: "Manage recurring billing and subscription lifecycles effectively.",
-    breadcrumb: ["Products & Subscriptions", "Subscriptions"],
+    title: "Assinaturas",
+    description: "Gerencie cobranças recorrentes e ciclos de vida de assinaturas com eficácia.",
+    breadcrumb: ["Produtos e Assinaturas", "Assinaturas"],
     sections: [
       {
         id: "subscription-overview",
-        title: "Subscription Overview",
+        title: "Visão Geral das Assinaturas",
         level: "h2",
-        content: "Subscriptions enable recurring revenue by automatically charging customers at regular intervals. Compass handles the complexity of billing cycles, proration, and payment retries."
+        content: "As assinaturas geram receita recorrente cobrando automaticamente dos clientes em intervalos regulares. O Compass lida com a complexidade dos ciclos de cobrança, cobrança proporcional e novas tentativas de pagamento."
       },
       {
         id: "creating-subscriptions",
-        title: "Creating Subscriptions",
+        title: "Criando Assinaturas",
         level: "h2",
-        content: "Set up a subscription for a customer:",
+        content: "Configure uma assinatura para um cliente:",
         listItems: [
-          "Select a customer or create a new one",
-          "Choose the product and pricing plan",
-          "Set the billing cycle start date",
-          "Add any applicable coupons or discounts",
-          "Configure trial period if applicable",
-          "Confirm and activate the subscription"
+          "Selecione um cliente ou crie um novo",
+          "Escolha o produto e o plano de preços",
+          "Defina a data de início do ciclo de cobrança",
+          "Adicione cupons ou descontos aplicáveis",
+          "Configure o período de teste, se aplicável",
+          "Confirme e ative a assinatura"
         ],
         orderedList: true
       },
       {
         id: "subscription-lifecycle",
-        title: "Subscription Lifecycle",
+        title: "Ciclo de Vida da Assinatura",
         level: "h2",
-        content: "Understand the subscription states: active, past due, canceled, and paused. Each state triggers different behaviors and webhook events for your integration."
+        content: "Entenda os estados da assinatura: ativa, em atraso, cancelada e pausada. Cada estado dispara comportamentos diferentes e eventos de webhook para a sua integração."
       },
       {
         id: "plan-changes",
-        title: "Upgrades & Downgrades",
+        title: "Upgrades e Downgrades",
         level: "h3",
-        content: "Handle plan changes smoothly with automatic proration. When a customer upgrades, they're charged the difference immediately. Downgrades take effect at the next billing cycle."
+        content: "Lide com mudanças de plano de forma tranquila com cobrança proporcional automática. Quando um cliente faz upgrade, a diferença é cobrada imediatamente. Downgrades entram em vigor no próximo ciclo de cobrança."
       }
     ]
   },
   "failed-payments": {
-    title: "Failed Payments",
-    description: "Handle payment failures and recover revenue with smart dunning strategies.",
-    breadcrumb: ["Products & Subscriptions", "Failed Payments"],
+    title: "Pagamentos Falhos",
+    description: "Lide com falhas de pagamento e recupere receita com estratégias inteligentes de cobrança.",
+    breadcrumb: ["Produtos e Assinaturas", "Pagamentos Falhos"],
     sections: [
       {
         id: "understanding-failures",
-        title: "Understanding Payment Failures",
+        title: "Entendendo Falhas de Pagamento",
         level: "h2",
-        content: "Payment failures happen for various reasons: expired cards, insufficient funds, or bank declines. Understanding why payments fail helps you implement effective recovery strategies."
+        content: "As falhas de pagamento ocorrem por vários motivos: cartões expirados, fundos insuficientes ou recusas do banco. Entender por que os pagamentos falham ajuda a implementar estratégias eficazes de recuperação."
       },
       {
         id: "common-failure-reasons",
-        title: "Common Failure Reasons",
+        title: "Motivos Comuns de Falha",
         level: "h2",
-        content: "The most frequent causes of payment failures include:",
+        content: "As causas mais frequentes de falhas de pagamento incluem:",
         listItems: [
-          "Expired or invalid card information",
-          "Insufficient funds in the account",
-          "Card reported lost or stolen",
-          "Bank fraud prevention blocks",
-          "Exceeded credit limit",
-          "Technical issues with payment network"
+          "Informações de cartão expiradas ou inválidas",
+          "Fundos insuficientes na conta",
+          "Cartão reportado como perdido ou roubado",
+          "Bloqueios de prevenção a fraude do banco",
+          "Limite de crédito excedido",
+          "Problemas técnicos com a rede de pagamento"
         ]
       },
       {
         id: "dunning-management",
-        title: "Dunning Management",
+        title: "Gerenciamento de Cobrança",
         level: "h2",
-        content: "Compass automatically retries failed payments based on your dunning schedule. Configure retry intervals, email notifications, and grace periods to maximize recovery rates."
+        content: "O Compass tenta automaticamente novamente os pagamentos falhos com base na sua programação de cobrança. Configure intervalos de nova tentativa, notificações por e-mail e períodos de carência para maximizar as taxas de recuperação."
       },
       {
         id: "customer-communication",
-        title: "Customer Communication",
+        title: "Comunicação com o Cliente",
         level: "h3",
-        content: "Keep customers informed with automated emails when payments fail. Customize email templates and include direct links for customers to update their payment methods."
+        content: "Mantenha os clientes informados com e-mails automáticos quando os pagamentos falharem. Personalize modelos de e-mail e inclua links diretos para os clientes atualizarem seus métodos de pagamento."
       },
       {
         id: "recovery-strategies",
-        title: "Recovery Strategies",
+        title: "Estratégias de Recuperação",
         level: "h3",
-        content: "Implement proven strategies to recover failed payments:",
+        content: "Implemente estratégias comprovadas para recuperar pagamentos falhos:",
         listItems: [
-          "Send timely email reminders with payment links",
-          "Offer alternative payment methods",
-          "Provide grace periods before cancellation",
-          "Use smart retry timing based on failure reason",
-          "Consider offering temporary discounts to retain customers"
+          "Envie lembretes por e-mail com links de pagamento no momento certo",
+          "Ofereça métodos de pagamento alternativos",
+          "Conceda períodos de carência antes do cancelamento",
+          "Use tempo de nova tentativa inteligente com base no motivo da falha",
+          "Considere oferecer descontos temporários para reter clientes"
         ]
       }
     ]
   },
   encryption: {
-    title: "Security & Encryption",
-    description: "Learn about our security measures and how we protect your data.",
-    breadcrumb: ["Security", "Security & Encryption"],
+    title: "Segurança e Criptografia",
+    description: "Saiba mais sobre nossas medidas de segurança e como protegemos seus dados.",
+    breadcrumb: ["Segurança", "Segurança e Criptografia"],
     sections: [
       {
         id: "security-overview",
-        title: "Security Overview",
+        title: "Visão Geral de Segurança",
         level: "h2",
-        content: "Security is at the core of everything we do. Compass employs multiple layers of protection to ensure your data and your customers' information remain safe at all times."
+        content: "A segurança está no centro de tudo o que fazemos. O Compass emprega múltiplas camadas de proteção para garantir que seus dados e as informações de seus clientes permaneçam seguros o tempo todo."
       },
       {
         id: "data-encryption",
-        title: "Data Encryption",
+        title: "Criptografia de Dados",
         level: "h2",
-        content: "All data is encrypted both in transit and at rest:",
+        content: "Todos os dados são criptografados tanto em trânsito quanto em repouso:",
         listItems: [
-          "TLS 1.3 for all API communications",
-          "AES-256 encryption for stored data",
-          "Hardware security modules (HSM) for key management",
-          "Regular key rotation policies",
-          "End-to-end encryption for sensitive fields"
+          "TLS 1.3 para todas as comunicações de API",
+          "Criptografia AES-256 para dados armazenados",
+          "Módulos de segurança de hardware (HSM) para gerenciamento de chaves",
+          "Políticas regulares de rotação de chaves",
+          "Criptografia de ponta a ponta para campos sensíveis"
         ]
       },
       {
         id: "compliance",
-        title: "Compliance & Certifications",
+        title: "Conformidade e Certificações",
         level: "h2",
-        content: "Compass maintains industry-leading certifications and compliance standards:",
+        content: "O Compass mantém certificações e padrões de conformidade líderes do setor:",
         listItems: [
-          "PCI DSS Level 1 certified",
-          "SOC 2 Type II compliant",
-          "GDPR compliant",
-          "CCPA compliant",
-          "ISO 27001 certified"
+          "Certificado PCI DSS Nível 1",
+          "Conforme com SOC 2 Type II",
+          "Conforme com o GDPR",
+          "Conforme com o CCPA",
+          "Certificado ISO 27001"
         ]
       },
       {
         id: "access-controls",
-        title: "Access Controls",
+        title: "Controles de Acesso",
         level: "h2",
-        content: "Implement granular access controls with role-based permissions. Restrict team member access to specific features, data, and environments based on job responsibilities."
+        content: "Implemente controles de acesso granulares com permissões baseadas em função. Restrinja o acesso dos membros da equipe a recursos, dados e ambientes específicos com base nas responsabilidades do cargo."
       },
       {
         id: "audit-logging",
-        title: "Audit Logging",
+        title: "Registro de Auditoria",
         level: "h3",
-        content: "Every action in Compass is logged for accountability. View detailed audit trails showing who did what and when, helping you maintain compliance and investigate issues."
+        content: "Toda ação no Compass é registrada para fins de responsabilização. Visualize trilhas de auditoria detalhadas mostrando quem fez o quê e quando, ajudando você a manter a conformidade e investigar problemas."
       }
     ]
   }

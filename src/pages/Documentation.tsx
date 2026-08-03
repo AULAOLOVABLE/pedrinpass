@@ -19,8 +19,8 @@ export default function Documentation() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Seo
-        title={`${pageSlug.replace(/-/g, " ")} — Compass Docs`}
-        description="Guides, setup instructions, and reference material for Compass."
+        title={`${pageSlug.replace(/-/g, " ")} — Documentação Compass`}
+        description="Guias, instruções de configuração e material de referência do Compass."
         path={`/docs/${pageSlug}`}
       />
       <Navbar />

@@ -15,9 +15,9 @@ export function DocPageContent() {
     return (
       <main className="flex-1 min-w-0 px-6 lg:px-12 pt-16 lg:pt-10 pb-10">
         <div className="max-w-3xl">
-          <h1 className="text-4xl font-bold tracking-tight mb-4">Page Not Found</h1>
+          <h1 className="text-4xl font-bold tracking-tight mb-4">Página não encontrada</h1>
           <p className="text-lg text-muted-foreground">
-            The documentation page you're looking for doesn't exist.
+            A página de documentação que você procura não existe.
           </p>
         </div>
       </main>

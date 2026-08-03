@@ -13,7 +13,7 @@ export function DocBreadcrumb({ items }: DocBreadcrumbProps) {
         className="hover:text-foreground transition-colors flex items-center gap-1"
       >
         <Home className="h-4 w-4" />
-        <span>Docs</span>
+        <span>Documentação</span>
       </Link>
       {items.map((item, index) => (
         <div key={index} className="flex items-center gap-2">

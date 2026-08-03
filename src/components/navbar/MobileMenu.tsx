@@ -9,9 +9,9 @@ interface NavLinkItem {
 }
 
 const mainLinks: NavLinkItem[] = [
-  { label: "Docs", href: "/docs/overview" },
+  { label: "Documentação", href: "/docs/overview" },
   { label: "API", href: "/api/refresh-token" },
-  { label: "Changelog", href: "/changelog" },
+  { label: "Novidades", href: "/changelog" },
 ];
 
 
@@ -31,7 +31,7 @@ const MobileMenu = () => {
       <button
         onClick={openSearch}
         className="flex items-center justify-center w-10 h-10 rounded-xl border border-border text-muted-foreground transition-colors hover:text-foreground hover:border-muted-foreground/50"
-        aria-label="Search"
+        aria-label="Buscar"
       >
         <Search className="w-5 h-5" />
       </button>
@@ -41,7 +41,7 @@ const MobileMenu = () => {
         <SheetTrigger asChild>
           <button
             className="flex items-center justify-center w-10 h-10 rounded-xl border border-border text-muted-foreground transition-colors hover:text-foreground hover:border-muted-foreground/50"
-            aria-label="Open menu"
+            aria-label="Abrir menu"
           >
             <Menu className="w-5 h-5" />
           </button>

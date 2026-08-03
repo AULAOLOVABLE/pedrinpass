@@ -15,9 +15,9 @@ import {
 } from "@/components/ui/command";
 
 const categoryLabels = {
-  docs: "Documentation",
-  api: "API Reference",
-  changelog: "Changelog",
+  docs: "Documentação",
+  api: "Referência da API",
+  changelog: "Novidades",
 };
 
 const categoryIcons = {
@@ -82,7 +82,7 @@ const SearchModal = () => {
                 <input
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
-                  placeholder="Search documentation..."
+                  placeholder="Buscar na documentação..."
                   className="flex h-14 w-full bg-transparent py-3 text-sm text-foreground placeholder:text-muted-foreground outline-none"
                   autoFocus
                 />
@@ -95,7 +95,7 @@ const SearchModal = () => {
                 {debouncedQuery.length >= 2 && results.length === 0 && (
                   <div className="py-12 text-center">
                     <p className="text-sm text-muted-foreground">
-                      No results found for "{debouncedQuery}"
+                      Nenhum resultado para "{debouncedQuery}"
                     </p>
                   </div>
                 )}
@@ -103,7 +103,7 @@ const SearchModal = () => {
                 {debouncedQuery.length < 2 && (
                   <div className="py-12 text-center">
                     <p className="text-sm text-muted-foreground">
-                      Type at least 2 characters to search...
+                      Digite ao menos 2 caracteres para buscar...
                     </p>
                   </div>
                 )}
@@ -145,16 +145,16 @@ const SearchModal = () => {
               {results.length > 0 && (
                 <div className="border-t border-border px-4 py-2 flex items-center justify-between text-xs text-muted-foreground">
                   <span>
-                    {results.length} result{results.length !== 1 ? "s" : ""}
+                    {results.length} resultado{results.length !== 1 ? "s" : ""}
                   </span>
                   <div className="flex items-center gap-2">
                     <span className="flex items-center gap-1">
                       <kbd className="px-1.5 py-0.5 rounded bg-secondary font-mono">↑↓</kbd>
-                      navigate
+                      navegar
                     </span>
                     <span className="flex items-center gap-1">
                       <kbd className="px-1.5 py-0.5 rounded bg-secondary font-mono">↵</kbd>
-                      select
+                      selecionar
                     </span>
                   </div>
                 </div>

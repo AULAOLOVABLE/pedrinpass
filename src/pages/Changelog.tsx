@@ -9,8 +9,8 @@ const Changelog = () => {
   return (
     <div className="min-h-screen bg-background">
       <Seo
-        title="Changelog — Compass"
-        description="Product updates, new features, improvements, and bug fixes for Compass."
+        title="Novidades — Compass"
+        description="Atualizações do produto, novos recursos, melhorias e correções do Compass."
         path="/changelog"
       />
       <Navbar />
@@ -20,13 +20,13 @@ const Changelog = () => {
           {/* Header */}
           <div className="mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-3 tracking-tight">
-              <WaveText text="Changelog" />
+              <WaveText text="Novidades" />
             </h1>
             <p className="text-xl text-primary font-medium mb-4">
-              <WaveText text="Product updates" staggerDelay={0.02} />
+              <WaveText text="Atualizações do produto" staggerDelay={0.02} />
             </p>
             <p className="text-muted-foreground max-w-2xl">
-              <WaveText text="Stay up to date with the latest product improvements, new features, and bug fixes." staggerDelay={0.01} />
+              <WaveText text="Acompanhe as últimas melhorias, novos recursos e correções do produto." staggerDelay={0.01} />
             </p>
           </div>
 

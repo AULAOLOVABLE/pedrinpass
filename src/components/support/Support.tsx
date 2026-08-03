@@ -7,16 +7,16 @@ import WaveText from "@/components/ui/wave-text";
 const supportOptions = [
   {
     icon: MessageSquare,
-    title: "Join the knowledge hub",
-    description: "Connect with developers in our hub.",
-    linkText: "Join Hub",
+    title: "Entre na comunidade",
+    description: "Conecte-se com outras pessoas desenvolvedoras.",
+    linkText: "Participar",
     href: "/docs/overview",
   },
   {
     icon: Headset,
-    title: "Get guided",
-    description: "Our team is here to guide you.",
-    linkText: "Get Assistance",
+    title: "Receba ajuda",
+    description: "Nosso time está aqui para te orientar.",
+    linkText: "Falar com suporte",
     href: "/docs/account-setup",
   },
 ];
@@ -36,7 +36,7 @@ const Support = () => {
         >
           {/* Section Heading */}
           <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
-            <WaveText text="Community & support" />
+            <WaveText text="Comunidade e suporte" />
           </h2>
 
           {/* Cards Grid */}

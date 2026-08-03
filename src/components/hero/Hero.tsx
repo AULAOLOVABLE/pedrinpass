@@ -7,8 +7,8 @@ import heroGradient from "@/assets/hero-gradient.png";
 import WaveText from "@/components/ui/wave-text";
 
 const shortcuts = [
-  { label: "Overview", href: "/docs/overview" },
-  { label: "Set Up Your Workspace", href: "/docs/workspace" },
+  { label: "Visão geral", href: "/docs/overview" },
+  { label: "Configurar workspace", href: "/docs/workspace" },
 ];
 
 const VIDEO_SRC =
@@ -107,22 +107,22 @@ const Hero = () => {
         {/* Announcement Badge */}
         <Link
           to="/docs/overview"
-          className="inline-flex items-center gap-2 pl-4 pr-2 py-2 mb-8 text-sm text-muted-foreground bg-[#121314] rounded-full"
+          className="inline-flex items-center gap-2 pl-4 pr-2 py-2 mb-8 text-sm text-muted-foreground bg-[#121314] rounded-full border border-primary/30 hover:border-primary/60 transition-colors"
         >
-          <span>Hello, I'm Compass.</span>
-          <span className="flex items-center justify-center w-6 h-6 rounded-full bg-[#1B1C1D]">
+          <span>Olá, eu sou o Compass.</span>
+          <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground">
             <ChevronRight className="w-4 h-4" />
           </span>
         </Link>
 
         {/* Headline */}
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground text-center tracking-tighter mb-6">
-          <WaveText text="Docs & Knowledge Hub" />
+          <WaveText text="Central de Documentação" />
         </h1>
 
         {/* Subheadline */}
         <p className="text-base md:text-lg text-muted-foreground text-center max-w-2xl mb-10">
-          <WaveText text="Dark documentation site template" staggerDelay={0.015} />
+          <WaveText text="Modelo de site de documentação em tema escuro" staggerDelay={0.015} />
         </p>
 
         {/* Search Bar */}
@@ -132,7 +132,7 @@ const Hero = () => {
 
         {/* Search Shortcuts */}
         <div className="flex flex-col md:flex-row items-center gap-3">
-          <span className="text-sm text-muted-foreground">Search shortcuts:</span>
+          <span className="text-sm text-muted-foreground">Atalhos de busca:</span>
           <div className="flex flex-row items-center gap-3">
             {shortcuts.map((shortcut) => (
               <Link

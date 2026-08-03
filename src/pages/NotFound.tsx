@@ -24,13 +24,13 @@ const NotFound = () => {
 
           {/* Title */}
           <h2 className="text-2xl md:text-3xl font-semibold text-foreground tracking-tight mb-4">
-            <WaveText text="Page not found" staggerDelay={0.02} />
+            <WaveText text="Página não encontrada" staggerDelay={0.02} />
           </h2>
 
           {/* Description */}
           <p className="text-muted-foreground mb-8 leading-relaxed">
-            The page you're looking for doesn't exist or has been moved. 
-            Check the URL or head back to the knowledge hub.
+            A página que você procura não existe ou foi movida.
+            Confira a URL ou volte para a central de conhecimento.
           </p>
 
           {/* Action Buttons */}
@@ -40,7 +40,7 @@ const NotFound = () => {
               className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-medium rounded-xl transition-colors hover:bg-primary/90"
             >
               <Home className="w-4 h-4" />
-              Back to Home
+              Voltar ao início
             </Link>
             
             <button
@@ -48,7 +48,7 @@ const NotFound = () => {
               className="inline-flex items-center gap-2 px-6 py-3 border border-border text-muted-foreground font-medium rounded-xl transition-colors hover:bg-secondary hover:text-foreground"
             >
               <ArrowLeft className="w-4 h-4" />
-              Go Back
+              Voltar
             </button>
           </div>
         </motion.div>

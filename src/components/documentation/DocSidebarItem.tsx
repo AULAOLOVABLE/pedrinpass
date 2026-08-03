@@ -29,7 +29,7 @@ export function DocSidebarItem({ item }: DocSidebarItemProps) {
       <span className="truncate">{item.title}</span>
       {item.isNew && (
         <span className="ml-auto text-[10px] font-medium uppercase tracking-wider px-1.5 py-0.5 rounded bg-sidebar-primary/20 text-sidebar-primary">
-          New
+          Novo
         </span>
       )}
     </Link>

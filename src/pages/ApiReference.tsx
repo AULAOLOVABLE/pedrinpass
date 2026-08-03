@@ -14,8 +14,8 @@ export default function ApiReference() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Seo
-        title={`${endpointSlug.replace(/-/g, " ")} — Compass API`}
-        description="REST API reference for Compass: endpoints, headers, request bodies, and response schemas."
+        title={`${endpointSlug.replace(/-/g, " ")} — API Compass`}
+        description="Referência da API REST do Compass: endpoints, headers, corpos de requisição e schemas de resposta."
         path={`/api/${endpointSlug}`}
       />
       <Navbar />
