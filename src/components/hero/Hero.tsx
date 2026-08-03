@@ -109,7 +109,7 @@ const Hero = () => {
           to="/docs/overview"
           className="inline-flex items-center gap-2 pl-4 pr-2 py-2 mb-8 text-sm text-muted-foreground bg-[#121314] rounded-full border border-primary/30 hover:border-primary/60 transition-colors"
         >
-          <span>Olá, eu sou o Compass.</span>
+          <span>Olá, eu sou o Pedrinpass.</span>
           <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground">
             <ChevronRight className="w-4 h-4" />
           </span>

@@ -8,7 +8,7 @@ const Logo = () => {
         <div className="flex items-center justify-center w-8 h-8 rounded-xl bg-gradient-to-br from-primary to-primary-glow">
           <Compass className="w-5 h-5 text-primary-foreground" />
         </div>
-        <span className="text-xl font-bold text-foreground">Compass</span>
+        <span className="text-xl font-bold text-foreground">Pedrinpass</span>
       </div>
     </Link>
   );
