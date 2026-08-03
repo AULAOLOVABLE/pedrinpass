@@ -34,13 +34,17 @@ const Categories = () => {
     <section className="px-4 md:px-8 py-10 md:py-14">
       <div className="max-w-6xl mx-auto">
         {/* Section Heading */}
-        <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-10">
-          <WaveText text="Explore por categoria" />
-        </h2>
+        <div className="mb-10 flex flex-col gap-3">
+          <span className="eyebrow">Navegue</span>
+          <h2 className="text-2xl md:text-4xl font-bold text-foreground">
+            <WaveText text="Explore por categoria" />
+          </h2>
+          <div className="h-px w-full bg-gradient-to-r from-primary/60 via-border to-transparent" />
+        </div>
 
         {/* Cards Grid */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 gap-5 auto-rows-fr"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
@@ -53,9 +57,10 @@ const Categories = () => {
             },
           }}
         >
-          {categories.map((category) => (
+          {categories.map((category, index) => (
             <motion.div
               key={category.title}
+              className={index === 0 ? "md:col-span-2" : ""}
               variants={{
                 hidden: { opacity: 0, y: 20, filter: "blur(8px)" },
                 visible: { 
@@ -72,6 +77,7 @@ const Categories = () => {
                 description={category.description}
                 linkText={category.linkText}
                 href={category.href}
+                featured={index === 0}
               />
             </motion.div>
           ))}

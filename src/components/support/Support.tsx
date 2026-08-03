@@ -27,7 +27,7 @@ const Support = () => {
       <div className="max-w-6xl mx-auto">
         {/* Card Container with Background */}
         <div 
-          className="relative rounded-[2rem] border border-border overflow-hidden p-6 md:p-10"
+          className="relative rounded-[2rem] border border-border overflow-hidden p-6 md:p-10 shadow-[0_40px_80px_-60px_hsl(var(--primary)/0.6)]"
           style={{
             backgroundImage: `url(${supportBg})`,
             backgroundSize: 'cover',
@@ -35,9 +35,12 @@ const Support = () => {
           }}
         >
           {/* Section Heading */}
-          <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-8">
-            <WaveText text="Comunidade e suporte" />
-          </h2>
+          <div className="mb-8 flex flex-col gap-3">
+            <span className="eyebrow">Suporte</span>
+            <h2 className="text-2xl md:text-4xl font-bold text-foreground">
+              <WaveText text="Comunidade e suporte" />
+            </h2>
+          </div>
 
           {/* Cards Grid */}
           <motion.div 
