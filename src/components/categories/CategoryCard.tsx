@@ -20,7 +20,7 @@ const CategoryCard = ({ image, title, description, linkText, href, featured = fa
       <div className={`p-4 pb-0 ${featured ? "md:w-1/2 md:pb-4 md:pr-0" : ""}`}>
         <div
           className={`relative w-full overflow-hidden rounded-[1.25rem] ${
-            featured ? "aspect-[16/10] md:h-full" : "aspect-[16/9]"
+            featured ? "aspect-[16/10] md:aspect-[16/10] md:h-[240px]" : "aspect-[16/9]"
           }`}
         >
           <img
