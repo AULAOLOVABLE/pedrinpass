@@ -135,3 +135,39 @@ All colors MUST be HSL.
     height: 0;
   }
 }
+
+@layer base {
+  h1, h2, h3, .font-display {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    letter-spacing: -0.03em;
+  }
+}
+
+@layer components {
+  /* Bento surface used across the home grid */
+  .bento-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.75rem;
+    border: 1px solid hsl(var(--border));
+    background:
+      radial-gradient(120% 100% at 0% 0%, hsl(var(--primary) / 0.08) 0%, transparent 55%),
+      linear-gradient(180deg, hsl(0 0% 100% / 0.03) 0%, hsl(0 0% 0% / 0.2) 100%);
+    box-shadow: 0 1px 0 0 hsl(0 0% 100% / 0.04) inset, 0 20px 40px -30px hsl(0 0% 0% / 0.9);
+    transition: border-color 300ms ease, box-shadow 300ms ease, transform 300ms ease;
+  }
+
+  .bento-card:hover {
+    border-color: hsl(var(--primary) / 0.45);
+    box-shadow: 0 1px 0 0 hsl(0 0% 100% / 0.06) inset, 0 24px 60px -30px hsl(var(--primary) / 0.45);
+    transform: translateY(-2px);
+  }
+
+  .eyebrow {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 0.6875rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: hsl(var(--primary-glow));
+  }
+}
