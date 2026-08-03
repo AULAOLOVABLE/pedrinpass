@@ -8,9 +8,9 @@ interface ChangelogBadgeProps {
 }
 
 const variantStyles: Record<BadgeVariant, string> = {
-  fixes: "bg-orange-500/10 text-orange-400 border-orange-500/20",
-  improvements: "bg-blue-500/10 text-blue-400 border-blue-500/20",
-  features: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
+  fixes: "bg-primary/5 text-primary/70 border-primary/15",
+  improvements: "bg-primary/10 text-primary border-primary/25",
+  features: "bg-primary/20 text-primary-glow border-primary/40",
 };
 
 const ChangelogBadge = ({ variant, children }: ChangelogBadgeProps) => {
