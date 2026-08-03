@@ -19,7 +19,7 @@ export interface ChangelogEntryData {
 
 export const changelogData: ChangelogEntryData[] = [
   {
-    date: "Nov 9, 2025",
+    date: "9 de nov. de 2025",
     badges: [
       { variant: "fixes", label: "Correções" },
       { variant: "improvements", label: "Melhorias" },
@@ -52,7 +52,7 @@ export const changelogData: ChangelogEntryData[] = [
     ],
   },
   {
-    date: "Nov 4, 2025",
+    date: "4 de nov. de 2025",
     badges: [
       { variant: "features", label: "Novos Recursos" },
       { variant: "improvements", label: "Melhorias" },
@@ -77,7 +77,7 @@ export const changelogData: ChangelogEntryData[] = [
     ],
   },
   {
-    date: "Oct 5, 2025",
+    date: "5 de out. de 2025",
     badges: [
       { variant: "fixes", label: "Correções" },
       { variant: "features", label: "Novos Recursos" },
@@ -128,7 +128,7 @@ export const changelogData: ChangelogEntryData[] = [
     ],
   },
   {
-    date: "Sep 19, 2025",
+    date: "19 de set. de 2025",
     badges: [
       { variant: "improvements", label: "Melhorias" },
       { variant: "fixes", label: "Correções" },
@@ -161,7 +161,7 @@ export const changelogData: ChangelogEntryData[] = [
     ],
   },
   {
-    date: "Sep 4, 2025",
+    date: "4 de set. de 2025",
     badges: [
       { variant: "features", label: "Novos Recursos" },
       { variant: "improvements", label: "Melhorias" },
