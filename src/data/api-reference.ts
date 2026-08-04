@@ -48,6 +48,16 @@ export const apiGroups: ApiGroup[] = [
         method: "POST",
         description: "Executa uma tarefa automatizada via agentes de IA.",
         longDescription: "Despacha um agente inteligente para realizar tarefas complexas em seu nome.",
+      },
+      {
+        id: "premium-prompts-flow",
+        title: "Sequência de Prompts",
+        slug: "prompts-sequence",
+        href: "/api/prompts-sequence",
+        path: "/v1/prompts/sequence",
+        method: "GET",
+        description: "Retorna a sequência lógica de prompts premium.",
+        longDescription: "Acessa o fluxo completo de prompts estruturados para tarefas de alta complexidade.",
       }
     ]
   }
