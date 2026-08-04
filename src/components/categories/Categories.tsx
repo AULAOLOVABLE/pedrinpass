@@ -1,25 +1,24 @@
 import { motion } from "framer-motion";
-import { BookOpen, Terminal, Sparkles } from "lucide-react";
 import CategoryCard from "./CategoryCard";
 import WaveText from "@/components/ui/wave-text";
 
 const categories = [
   {
-    icon: BookOpen,
+    variant: "docs" as const,
     title: "Documentação",
     description: "Guias e boas práticas para começar.",
     linkText: "Ler guias",
     href: "/docs/overview",
   },
   {
-    icon: Terminal,
+    variant: "api" as const,
     title: "Referência da API",
     description: "Tudo o que devs precisam para construir e integrar.",
     linkText: "Ver referência da API",
     href: "/api/refresh-token",
   },
   {
-    icon: Sparkles,
+    variant: "news" as const,
     title: "Novidades",
     description: "As últimas atualizações da sua central de conhecimento.",
     linkText: "Ver novidades",
@@ -71,7 +70,7 @@ const Categories = () => {
               }}
             >
               <CategoryCard
-                icon={category.icon}
+                variant={category.variant}
                 title={category.title}
                 description={category.description}
                 linkText={category.linkText}
