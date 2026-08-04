@@ -1,70 +1,92 @@
 export interface DocumentationPage {
   id: string;
   title: string;
-  content: string;
-  category: string;
   description: string;
-  sections?: { id: string; title: string; content: string }[];
-  listItems?: string[];
+  category: string;
+  breadcrumb: string[];
+  sections: {
+    id: string;
+    title: string;
+    level?: "h2" | "h3";
+    content: string;
+    listItems?: string[];
+    orderedList?: boolean;
+  }[];
 }
 
-export const documentationPages: DocumentationPage[] = [
-  {
+export const documentationPages: Record<string, DocumentationPage> = {
+  overview: {
     id: "overview",
     title: "Plataforma PedrinTEC",
-    description: "Visão geral do ecossistema PedrinTEC.",
-    content: "A PedrinTEC é um ecossistema integrado para a próxima geração de desenvolvedores. Unificamos automação, inteligência e colaboração em uma única interface fluida.",
+    description: "Visão geral do ecossistema PedrinTEC para desenvolvedores e entusiastas de IA.",
     category: "Geral",
+    breadcrumb: ["Geral", "Visão Geral"],
     sections: [
-      { id: "intro", title: "Introdução", content: "Bem-vindo ao futuro do desenvolvimento." }
+      {
+        id: "intro",
+        title: "Introdução",
+        content: "A PedrinTEC é um ecossistema integrado para a próxima geração de desenvolvedores. Unificamos automação, inteligência e colaboração em uma interface fluida, permitindo que você construa, automatize e dimensione projetos com IA."
+      },
+      {
+        id: "features",
+        title: "Principais Recursos",
+        content: "Nossa plataforma oferece ferramentas essenciais para acelerar o desenvolvimento:",
+        listItems: [
+          "Agentes de IA autônomos para tarefas complexas.",
+          "Marketplace de Prompts Premium.",
+          "Templates prontos para produção.",
+          "Workflows automatizados via N8N.",
+          "Integrações nativas com ChatGPT, Claude e Cursor."
+        ]
+      }
     ]
   },
-  {
-    id: "agents",
-    title: "Agentes Inteligentes",
-    description: "Como funcionam nossos agentes de IA.",
-    content: "Nossos agentes não apenas executam tarefas, eles antecipam necessidades. Com base em modelos avançados de raciocínio, a PedrinTEC integra LLMs diretamente no seu fluxo de trabalho.",
-    category: "IA",
+  extensions: {
+    id: "extensions",
+    title: "Extensões",
+    description: "Amplie o poder do seu ambiente de desenvolvimento.",
+    category: "Marketplace",
+    breadcrumb: ["Marketplace", "Extensões"],
+    sections: [
+      {
+        id: "getting-started",
+        title: "Introdução às Extensões",
+        content: "As extensões PedrinTEC permitem que você adicione novas funcionalidades ao seu editor, terminal ou navegador, integrando o ecossistema diretamente ao seu fluxo de trabalho."
+      },
+      {
+        id: "list",
+        title: "Extensões Recomendadas",
+        content: "Confira algumas de nossas extensões mais populares:",
+        listItems: [
+          "PedrinTEC Analyzer: Análise profunda de código com IA.",
+          "Workflow Orchestrator: Gerenciamento visual de processos.",
+          "Prompt Injector: Integração direta de prompts em editores."
+        ]
+      }
+    ]
   },
-  {
-    id: "automation",
-    title: "Automação Pura",
-    description: "Automatize tudo com PedrinTEC.",
-    content: "Esqueça scripts manuais. Use o PedrinTEC Automator para conectar suas ferramentas favoritas com fluxos de trabalho visuais e resilientes.",
-    category: "DevOps",
-  },
-  {
-    id: "premium-prompts",
+  prompts: {
+    id: "prompts",
     title: "Prompts Premium",
     description: "Sequência estratégica de prompts para resultados de alta performance.",
-    category: "Engenharia de Prompts",
-    content: "Nesta seção, você encontrará uma sequência lógica de prompts projetada para guiar modelos de IA através de tarefas complexas, desde o planejamento até a execução final.",
+    category: "Marketplace",
+    breadcrumb: ["Marketplace", "Prompts"],
     sections: [
-      { 
-        id: "context", 
-        title: "1. Definição de Contexto", 
-        content: "O primeiro passo é estabelecer o papel da IA. Exemplo: 'Atue como um Engenheiro de Software Sênior especializado em arquitetura limpa...'" 
+      {
+        id: "context",
+        title: "1. Definição de Contexto",
+        content: "O primeiro passo é estabelecer o papel da IA. Exemplo: 'Atue como um Engenheiro de Software Sênior especializado em arquitetura limpa...'"
       },
-      { 
-        id: "requirements", 
-        title: "2. Especificação Técnica", 
-        content: "Forneça detalhes granulares sobre o que precisa ser construído. Use a técnica de Few-Shot para melhores resultados." 
+      {
+        id: "requirements",
+        title: "2. Especificação Técnica",
+        content: "Forneça detalhes granulares sobre o que precisa ser construído."
       },
-      { 
-        id: "execution", 
-        title: "3. Refinamento e Revisão", 
-        content: "A sequência final foca em revisar o output e aplicar correções de segurança e performance." 
+      {
+        id: "execution",
+        title: "3. Refinamento e Revisão",
+        content: "A sequência final foca em revisar o output e aplicar correções."
       }
     ]
   }
-];
-
-export const generateTableOfContents = (page: DocumentationPage) => {
-  const toc: { id: string; title: string; level: "h2" | "h3" }[] = [];
-  if (page.sections) {
-    page.sections.forEach(section => {
-      toc.push({ id: section.id, title: section.title, level: "h2" as const });
-    });
-  }
-  return toc;
 };
