@@ -78,42 +78,22 @@ export const documentationPages: Record<string, DocPageContent> = {
       }
     ]
   },
-  workspace: {
-    title: "Configure Seu Workspace",
-    description: "Aprenda a configurar seu workspace para colaboração e produtividade ideais.",
-    breadcrumb: ["Primeiros Passos", "Configure Seu Workspace"],
+  workflows: {
+    title: "Workflows de Automação",
+    description: "Conecte ferramentas e crie pipelines de IA poderosos.",
+    breadcrumb: ["Marketplace", "Workflows"],
     sections: [
       {
-        id: "workspace-basics",
-        title: "Fundamentos do Workspace",
+        id: "n8n-flows",
+        title: "Integrações N8N",
         level: "h2",
-        content: "Um workspace é a base da sua equipe no Pedrinpass. Ele contém todos os seus projetos, membros da equipe, chaves de API e configurações. Cada workspace opera de forma independente, com sua própria cobrança e controles de acesso."
+        content: "Nossos workflows para N8N permitem conectar o ChatGPT ao seu Google Drive, Slack e CRM automaticamente. Reduza o trabalho manual em até 80%."
       },
       {
-        id: "creating-workspace",
-        title: "Criando um Workspace",
+        id: "zapier-alternatives",
+        title: "Agentes Autônomos",
         level: "h2",
-        content: "Siga estes passos para criar seu primeiro workspace:",
-        listItems: [
-          "Clique em 'Criar Workspace' no painel",
-          "Digite um nome descritivo para o seu workspace",
-          "Selecione sua região principal para residência de dados",
-          "Escolha seu plano de cobrança (você pode fazer upgrade depois)",
-          "Convide membros da equipe com as funções apropriadas"
-        ],
-        orderedList: true
-      },
-      {
-        id: "workspace-settings",
-        title: "Configurações do Workspace",
-        level: "h2",
-        content: "Personalize seu workspace de acordo com o fluxo de trabalho da sua equipe. Configure identidade visual, moedas padrão, preferências de notificação e integrações no painel de administração do workspace."
-      },
-      {
-        id: "team-management",
-        title: "Gerenciamento de Equipe",
-        level: "h3",
-        content: "Adicione membros da equipe e atribua funções com base em suas responsabilidades. As funções disponíveis incluem Proprietário, Administrador, Desenvolvedor e Visualizador. Cada função tem permissões específicas que controlam o acesso a recursos e dados."
+        content: "Configurações de agentes que executam tarefas complexas de pesquisa e síntese de dados sem intervenção humana constante."
       }
     ]
   },
