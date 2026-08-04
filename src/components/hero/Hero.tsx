@@ -7,8 +7,9 @@ import heroGradient from "@/assets/hero-gradient.png";
 import WaveText from "@/components/ui/wave-text";
 
 const shortcuts = [
-  { label: "Extensões", href: "/docs/extensions" },
-  { label: "Prompts", href: "/docs/prompts" },
+  { label: "Extensões Chrome", href: "/docs/extensions" },
+  { label: "Prompts ChatGPT", href: "/api/premium-prompts" },
+  { label: "Agentes MCP", href: "/docs/claude" },
 ];
 
 const VIDEO_SRC =
