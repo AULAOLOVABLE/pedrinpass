@@ -118,12 +118,12 @@ const Hero = () => {
 
         {/* Headline */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-foreground text-center tracking-tightest mb-8 leading-[0.9]">
-          <WaveText text="PedrinTEC" className="text-primary" />
+          <WaveText text="TechLink" className="text-primary" />
         </h1>
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-muted-foreground text-center max-w-3xl mb-12 leading-relaxed">
-          <WaveText text="Explore o marketplace premium de extensões e ferramentas para IA." staggerDelay={0.015} />
+          <WaveText text="A revolução silenciosa da engenharia de software começou." staggerDelay={0.015} />
         </p>
 
         {/* Search Bar */}
