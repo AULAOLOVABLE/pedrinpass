@@ -59,6 +59,9 @@ All colors MUST be HSL.
     --sidebar-ring: var(--ring);
 
     /* Animation Tokens */
+    --duration-fast: 140ms;
+    --duration-normal: 200ms;
+    --duration-slow: 260ms;
     --spring-duration: 0.4s;
     --spring-bounce: 0.25;
   }
