@@ -8,62 +8,63 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Deep Modern System */
+    /* 2027 Premium Tech Palette: Deep Obsidians and Electric Highlights */
     --background: 240 10% 2%;
     --foreground: 0 0% 100%;
 
     /* Semantic UI Tokens - Ultra Modern High Contrast */
-    --ui-surface: 240 10% 4%;
-    --ui-surface-hover: 240 10% 6%;
-    --ui-surface-active: 240 10% 8%;
+    --ui-surface: 240 10% 3%;
+    --ui-surface-hover: 240 10% 5%;
+    --ui-surface-active: 240 10% 7%;
     
     --ui-border: 240 10% 10%;
-    --ui-border-hover: 25 100% 50% / 0.4; /* Vibrant Orange */
-    --ui-border-active: 25 100% 50% / 0.7;
+    --ui-border-hover: 25 100% 50% / 0.3;
+    --ui-border-active: 25 100% 50% / 0.5;
 
     /* Shadcn/UI Compatibility */
-    --card: var(--ui-surface);
+    --card: 240 10% 4%;
     --card-foreground: var(--foreground);
-    --popover: var(--ui-surface);
+    --popover: 240 10% 3%;
     --popover-foreground: var(--foreground);
 
-    --primary: 25 100% 50%; /* Vibrant Orange */
+    --primary: 25 100% 50%; /* Vibrant Orange Brand */
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 25 100% 70%;
+    --primary-glow: 25 100% 65%;
 
-    --secondary: 240 10% 12%;
+    --secondary: 240 10% 8%;
     --secondary-foreground: var(--foreground);
 
-    --muted: 240 10% 12%;
+    --muted: 240 8% 12%;
     --muted-foreground: 240 5% 65%;
 
-    --accent: 25 100% 15%;
+    --accent: 25 100% 12%;
     --accent-foreground: var(--foreground);
 
-    --destructive: 0 84% 60%;
+    --destructive: 0 84% 55%;
     --destructive-foreground: 0 0% 100%;
 
     --border: var(--ui-border);
-    --input: 240 10% 12%;
+    --input: 240 10% 10%;
     --ring: 25 100% 50%;
 
-    --radius: 2rem;
+    /* Radius: Consistent 1.5rem for a modern, slightly rounded yet precise feel */
+    --radius: 1.5rem;
 
-    --sidebar-background: 240 10% 4%;
+    --sidebar-background: 240 10% 3%;
     --sidebar-foreground: var(--foreground);
     --sidebar-primary: var(--primary);
     --sidebar-primary-foreground: var(--primary-foreground);
-    --sidebar-accent: 25 100% 10%;
+    --sidebar-accent: 25 100% 8%;
     --sidebar-accent-foreground: var(--foreground);
     --sidebar-border: var(--ui-border);
     --sidebar-ring: var(--ring);
 
-    /* Animation Tokens */
-    --duration-fast: 140ms;
-    --duration-normal: 200ms;
-    --duration-slow: 260ms;
-    --spring-duration: 0.4s;
-    --spring-bounce: 0.25;
+    /* Animation Tokens: Cinematic timing */
+    --duration-fast: 160ms;
+    --duration-normal: 240ms;
+    --duration-slow: 320ms;
+    --spring-duration: 0.5s;
+    --spring-bounce: 0.2;
   }
 
   .dark {
@@ -120,8 +121,13 @@ All colors MUST be HSL.
 
 @layer base {
   h1, h2, h3, .font-display {
-    font-family: 'JetBrains Mono', ui-monospace, monospace;
-    letter-spacing: -0.03em;
+    @apply font-display tracking-tighter;
+    letter-spacing: -0.05em;
+  }
+
+  p, .font-sans {
+    @apply font-sans;
+    letter-spacing: -0.01em;
   }
 }
 
