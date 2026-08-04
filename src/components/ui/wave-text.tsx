@@ -59,6 +59,7 @@ const WaveText = ({
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
       aria-label={text}
+      role="text"
     >
       {isMobile ? (
         // Word-based animation for mobile

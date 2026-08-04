@@ -117,7 +117,7 @@ All colors MUST be HSL.
     inset: 0;
     border-radius: 0.75rem;
     padding: 1px;
-    background: linear-gradient(178.8deg, hsl(18 92% 58% / 0.45) 10.85%, rgba(20, 20, 20, 0.46) 24.36%, rgba(50, 50, 50, 0.46) 73.67%, hsl(28 96% 64% / 0.5) 90.68%);
+    background: linear-gradient(178.8deg, hsl(18 92% 58% / 0.6) 10.85%, rgba(60, 60, 60, 0.6) 24.36%, rgba(80, 80, 80, 0.6) 73.67%, hsl(28 96% 64% / 0.6) 90.68%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
     pointer-events: none;

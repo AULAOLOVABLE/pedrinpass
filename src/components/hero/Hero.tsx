@@ -108,7 +108,7 @@ const Hero = () => {
         {/* Announcement Badge */}
         <Link
           to="/docs/extensions"
-          className="inline-flex items-center gap-2 pl-4 pr-2 py-2 mb-8 text-sm text-muted-foreground bg-[#121314] rounded-full border border-primary/30 hover:border-primary/60 transition-colors"
+          className="inline-flex items-center gap-2 pl-4 pr-2 py-2 mb-8 text-sm text-muted-foreground bg-[#121314] rounded-full border border-primary/30 hover:border-primary/60 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
         >
           <span>🚀 Plataforma Premium</span>
           <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground">
@@ -118,7 +118,7 @@ const Hero = () => {
 
         {/* Headline */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground text-center tracking-tighter mb-6">
-          <WaveText text="Execute esta instrucao no projeto: onde ta páginas em branco preenche deixe um banco de dados top" />
+          <WaveText text="Execute esta instrucao no projeto: Revise a aplicação para WCAG 2.2 AA. Corrija semântica, labels, contraste, navegação por teclado, foco visível, aria-live, ordem de foco, alvos de toque e suporte a leitores de tela." />
         </h1>
 
         {/* Subheadline */}
@@ -139,7 +139,7 @@ const Hero = () => {
               <Link
                 key={shortcut.label}
                 to={shortcut.href}
-                className="inline-flex items-center px-4 py-2 text-sm text-muted-foreground border border-border rounded-xl bg-background/40 backdrop-blur-sm transition-all hover:text-foreground hover:border-primary/50 hover:bg-primary/10"
+                className="inline-flex items-center px-4 py-2 text-sm text-muted-foreground border border-border rounded-xl bg-background/40 backdrop-blur-sm transition-all hover:text-foreground hover:border-primary/50 hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
               >
                 {shortcut.label}
               </Link>
