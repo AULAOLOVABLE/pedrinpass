@@ -18,10 +18,10 @@ const AIAssistant = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground tracking-tight mb-4">
-            <WaveText text="Encontre respostas mais rápido com o assistente de IA." />
+            <WaveText text="Execute esta instrucao no projeto: Crie um assistente orientado a tarefas com contexto, limites, streaming, cancelar, tentar novamente, copiar, histórico e ações confirmadas. Proteja dados sensíveis." />
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-            <WaveText text="Um chatbot treinado na nossa documentação e artigos para te ajudar a achar respostas." staggerDelay={0.015} />
+            <WaveText text="Desenvolva um assistente inteligente com suporte a streaming de respostas, cancelamento de tarefas e histórico completo." staggerDelay={0.01} />
           </p>
         </div>
 

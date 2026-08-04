@@ -14,10 +14,10 @@ const ChatBox = () => {
     >
       {/* Messages Area */}
       <div className="flex flex-col gap-4 p-6 min-h-[300px] max-h-[400px] overflow-y-auto">
-        <ChatMessage role="assistant" content="Como posso te ajudar?" />
+        <ChatMessage role="assistant" content="Assistente TecExtension pronto para executar tarefas complexas." />
         <ChatMessage
           role="assistant"
-          content="Prévia de demonstração — este chat ainda não está conectado a um backend. Ative o Lovable Cloud para conectá-lo a um assistente de IA real."
+          content="Posso ajudar com streaming, histórico de conversas e ações seguras. Ative o Lovable Cloud para integração total."
         />
       </div>
 
