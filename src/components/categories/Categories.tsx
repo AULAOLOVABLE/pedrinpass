@@ -15,7 +15,7 @@ const categories = [
     title: "Prompts Premium",
     description: "Coleções prontas para ChatGPT, Claude e Gemini.",
     linkText: "Ver Prompts",
-    href: "/api/premium-prompts",
+    href: "/docs/premium-prompts",
   },
   {
     variant: "news" as const,
