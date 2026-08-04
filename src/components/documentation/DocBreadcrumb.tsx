@@ -9,7 +9,7 @@ export function DocBreadcrumb({ items }: DocBreadcrumbProps) {
   return (
     <nav className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
       <Link
-        to="/docs"
+        to="/docs/overview"
         className="hover:text-foreground transition-colors flex items-center gap-1"
       >
         <Home className="h-4 w-4" />
