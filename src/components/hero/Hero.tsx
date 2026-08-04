@@ -122,8 +122,8 @@ const Hero = () => {
         </h1>
 
         {/* Subheadline */}
-        <p className="text-lg md:text-xl text-muted-foreground text-center max-w-3xl mb-12 leading-relaxed">
-          <WaveText text="A revolução silenciosa da engenharia de software começou." staggerDelay={0.015} />
+        <p className="text-lg md:text-xl text-muted-foreground text-center max-w-4xl mb-12 leading-relaxed">
+          <WaveText text="Construa um dashboard orientado a decisão com KPIs essenciais, comparação temporal, tendências, gargalos e ações recomendadas." staggerDelay={0.01} />
         </p>
 
         {/* Search Bar */}
