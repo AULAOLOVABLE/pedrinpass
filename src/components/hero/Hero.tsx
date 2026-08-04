@@ -110,7 +110,7 @@ const Hero = () => {
           to="/docs/overview"
           className="inline-flex items-center gap-2 pl-4 pr-2 py-2 mb-10 text-xs font-medium uppercase tracking-widest text-primary bg-primary/10 rounded-full border border-primary/20 hover:border-primary/40 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
         >
-          <span>🚀 TechLink v2.0 disponível</span>
+          <span>🚀 PedrinTEC v2.0 disponível</span>
           <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground">
             <ChevronRight className="w-4 h-4" />
           </span>
@@ -118,7 +118,7 @@ const Hero = () => {
 
         {/* Headline */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-foreground text-center tracking-tightest mb-8 leading-[0.9]">
-          <WaveText text="TechLink" className="text-primary" />
+          <WaveText text="PedrinTEC" className="text-primary" />
         </h1>
 
         {/* Subheadline */}

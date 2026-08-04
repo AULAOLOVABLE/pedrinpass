@@ -26,8 +26,8 @@ export interface ApiGroup {
 export const apiGroups: ApiGroup[] = [
   {
     id: "system",
-    name: "Sistema TechLink",
-    title: "Sistema TechLink",
+    name: "Sistema PedrinTEC",
+    title: "Sistema PedrinTEC",
     endpoints: [
       {
         id: "connect",
@@ -36,8 +36,8 @@ export const apiGroups: ApiGroup[] = [
         href: "/api/connect",
         path: "/v1/connect",
         method: "POST",
-        description: "Estabelece uma conexão neural com o ecossistema TechLink.",
-        longDescription: "Use este endpoint para autenticar e iniciar uma sessão neural segura com os servidores TechLink.",
+        description: "Estabelece uma conexão neural com o ecossistema PedrinTEC.",
+        longDescription: "Use este endpoint para autenticar e iniciar uma sessão neural segura com os servidores PedrinTEC.",
       },
       {
         id: "execute",

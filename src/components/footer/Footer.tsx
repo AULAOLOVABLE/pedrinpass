@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Left - Copyright */}
           <p className="text-sm text-muted-foreground">
-            © 2026 TechLink · Todos os direitos reservados
+            © 2026 PedrinTEC · Todos os direitos reservados
           </p>
 
           {/* Right - Powered by */}
