@@ -7,11 +7,9 @@ interface NavLinkItem {
 }
 
 const links: NavLinkItem[] = [
-  { label: "Extensões", href: "/docs/extensions" },
-  { label: "Prompts", href: "/api/premium-prompts" },
-  { label: "Templates", href: "/docs/templates" },
-  { label: "Workflows", href: "/docs/workflows" },
-  { label: "Lançamentos", href: "/changelog" },
+  { label: "Documentação", href: "/docs/overview" },
+  { label: "Referência API", href: "/api/connect" },
+  { label: "Novidades", href: "/changelog" },
 ];
 
 const NavLinks = () => {

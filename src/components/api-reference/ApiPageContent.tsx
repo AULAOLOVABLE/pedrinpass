@@ -8,7 +8,7 @@ import WaveText from "@/components/ui/wave-text";
 
 export function ApiPageContent() {
   const params = useParams();
-  const endpointSlug = params["*"] || "refresh-token";
+  const endpointSlug = params["*"] || "connect";
   const endpoint = getEndpointBySlug(endpointSlug);
   const group = getGroupForEndpoint(endpointSlug);
 
@@ -36,94 +36,73 @@ export function ApiPageContent() {
       className="flex-1 min-w-0 px-4 md:px-6 lg:px-12 pt-16 lg:pt-10 pb-10 overflow-hidden"
     >
         <div className="max-w-3xl w-full">
-          {/* Breadcrumb */}
           {group && (
-            <p className="text-sm text-muted-foreground mb-2">{group.title}</p>
+            <p className="text-sm text-muted-foreground mb-2">{group.name}</p>
           )}
 
-          {/* Title */}
           <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground mb-4">
             <WaveText text={endpoint.title} />
           </h1>
 
-          {/* Short description */}
           <p className="text-muted-foreground mb-8">{endpoint.description}</p>
 
-          {/* Long description */}
           {endpoint.longDescription && (
             <p className="text-muted-foreground mb-10 leading-relaxed">
               {endpoint.longDescription}
             </p>
           )}
 
-          {/* Endpoint Section */}
           <section id="endpoint" className="mb-10">
             <h2 className="text-xl font-semibold text-foreground mb-4">Endpoint</h2>
             <ApiEndpointBlock method={endpoint.method} path={endpoint.path} />
           </section>
 
-          {/* Headers Section */}
           {endpoint.headers && endpoint.headers.length > 0 && (
             <section id="headers" className="mb-10">
               <h2 className="text-xl font-semibold text-foreground mb-4">Cabeçalhos</h2>
               <ApiTable
                 columns={[
-                  { key: "key", label: "Chave" },
-                  { key: "value", label: "Valor" },
+                  { key: "name", label: "Chave" },
+                  { key: "type", label: "Tipo" },
                   { key: "required", label: "Obrigatório" },
+                  { key: "description", label: "Descrição" },
                 ]}
-                data={endpoint.headers.map((h) => ({
-                  key: h.key,
-                  value: h.value,
-                  required: h.required,
-                }))}
+                data={endpoint.headers}
               />
             </section>
           )}
 
-          {/* Request Body Section */}
           {endpoint.requestBody && endpoint.requestBody.length > 0 && (
             <section id="request-body" className="mb-10">
               <h2 className="text-xl font-semibold text-foreground mb-4">Corpo da requisição</h2>
               <ApiTable
                 columns={[
-                  { key: "field", label: "Campo" },
+                  { key: "name", label: "Campo" },
                   { key: "type", label: "Tipo" },
                   { key: "required", label: "Obrigatório" },
                   { key: "description", label: "Descrição" },
                 ]}
-                data={endpoint.requestBody.map((b) => ({
-                  field: b.field,
-                  type: b.type,
-                  required: b.required,
-                  description: b.description,
-                }))}
+                data={endpoint.requestBody}
               />
             </section>
           )}
 
-          {/* Response Section */}
           <section id="response" className="mb-10">
             <h2 className="text-xl font-semibold text-foreground mb-4">Resposta</h2>
             {endpoint.responseBody && endpoint.responseBody.length > 0 ? (
               <ApiTable
                 columns={[
-                  { key: "field", label: "Campo" },
+                  { key: "name", label: "Campo" },
                   { key: "type", label: "Tipo" },
                   { key: "description", label: "Descrição" },
                 ]}
-                data={endpoint.responseBody.map((r) => ({
-                  field: r.field,
-                  type: r.type,
-                  description: r.description,
-                }))}
+                data={endpoint.responseBody}
               />
             ) : (
               <p className="text-muted-foreground">Sem corpo de resposta.</p>
             )}
           </section>
 
-          {/* Example Usage Section */}
           {(endpoint.exampleRequest || endpoint.exampleResponse) && (
             <section id="example-usage" className="mb-10">
               <h2 className="text-xl font-semibold text-foreground mb-4">Exemplo de uso</h2>

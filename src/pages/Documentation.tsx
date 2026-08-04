@@ -3,15 +3,15 @@ import { Navbar } from "@/components/navbar";
 import { DocSidebar, DocTableOfContents } from "@/components/documentation";
 import { DocPageContent } from "@/components/documentation/DocPageContent";
 import { Footer } from "@/components/footer";
-import { generateTableOfContents } from "@/data/documentation-pages";
+import { documentationPages, generateTableOfContents } from "@/data/documentation-pages";
 import { Seo } from "@/components/Seo";
 
 export default function Documentation() {
   const params = useParams();
   const pageSlug = params["*"] || "overview";
-  const tableOfContents = generateTableOfContents(pageSlug);
+  const page = documentationPages.find(p => p.id === pageSlug) || documentationPages[0];
+  const tableOfContents = generateTableOfContents(page);
 
-  // Redirect to default page if no slug provided
   if (!params["*"]) {
     return <Navigate to="/docs/overview" replace />;
   }
@@ -19,8 +19,8 @@ export default function Documentation() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Seo
-        title={`${pageSlug.replace(/-/g, " ")} — Documentação Pedrinpass`}
-        description="Guias, instruções de configuração e material de referência do Pedrinpass."
+        title={`${pageSlug.replace(/-/g, " ")} — Documentação TechLink`}
+        description="Guias, instruções de configuração e material de referência do TechLink."
         path={`/docs/${pageSlug}`}
       />
       <Navbar />

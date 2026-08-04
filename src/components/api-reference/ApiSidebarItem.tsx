@@ -9,11 +9,12 @@ interface ApiSidebarItemProps {
 
 export function ApiSidebarItem({ endpoint }: ApiSidebarItemProps) {
   const location = useLocation();
-  const isActive = location.pathname === endpoint.href;
+  const href = endpoint.href || `/api/${endpoint.slug}`;
+  const isActive = location.pathname === href;
 
   return (
     <Link
-      to={endpoint.href}
+      to={href}
       className={cn(
         "relative flex items-center gap-3 pl-6 pr-3 py-2 text-sm transition-colors",
         isActive

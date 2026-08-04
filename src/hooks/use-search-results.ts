@@ -23,22 +23,22 @@ export function useSearchResults(query: string): SearchResult[] {
     const results: SearchResult[] = [];
 
     // Search documentation pages
-    Object.entries(documentationPages).forEach(([slug, page]) => {
+    documentationPages.forEach((page) => {
       const titleMatch = page.title.toLowerCase().includes(searchTerm);
       const descMatch = page.description.toLowerCase().includes(searchTerm);
-      const contentMatch = page.sections.some(
-        (section) =>
-          section.title.toLowerCase().includes(searchTerm) ||
-          section.content.toLowerCase().includes(searchTerm) ||
-          section.listItems?.some((item) => item.toLowerCase().includes(searchTerm))
-      );
+      const contentMatch = page.content.toLowerCase().includes(searchTerm) || 
+        page.sections?.some(
+          (section) =>
+            section.title.toLowerCase().includes(searchTerm) ||
+            section.content.toLowerCase().includes(searchTerm)
+        );
 
       if (titleMatch || descMatch || contentMatch) {
         results.push({
-          id: `doc-${slug}`,
+          id: `doc-${page.id}`,
           title: page.title,
           description: page.description,
-          href: `/docs/${slug}`,
+          href: `/docs/${page.id}`,
           category: "docs",
           icon: FileText,
         });
@@ -54,10 +54,10 @@ export function useSearchResults(query: string): SearchResult[] {
 
         if (titleMatch || descMatch || pathMatch) {
           results.push({
-            id: `api-${endpoint.id}`,
+            id: `api-${endpoint.slug}`,
             title: endpoint.title,
             description: endpoint.description,
-            href: endpoint.href,
+            href: endpoint.href || `/api/${endpoint.slug}`,
             category: "api",
             icon: Code,
           });
@@ -74,7 +74,6 @@ export function useSearchResults(query: string): SearchResult[] {
       );
 
       if (sectionsMatch) {
-        // Find the matching section for a better title
         const matchingSection = entry.sections.find(
           (section) =>
             section.title.toLowerCase().includes(searchTerm) ||
@@ -92,7 +91,6 @@ export function useSearchResults(query: string): SearchResult[] {
       }
     });
 
-    // Limit results per category
     const docsResults = results.filter((r) => r.category === "docs").slice(0, 5);
     const apiResults = results.filter((r) => r.category === "api").slice(0, 5);
     const changelogResults = results.filter((r) => r.category === "changelog").slice(0, 3);

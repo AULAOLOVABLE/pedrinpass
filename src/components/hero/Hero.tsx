@@ -7,9 +7,9 @@ import bgWaveAsset from "@/assets/bg-wave.png.asset.json";
 import WaveText from "@/components/ui/wave-text";
 
 const shortcuts = [
-  { label: "Extensões Chrome", href: "/docs/extensions" },
-  { label: "Prompts ChatGPT", href: "/api/premium-prompts" },
-  { label: "Agentes MCP", href: "/docs/claude" },
+  { label: "Conexão Neural", href: "/api/connect" },
+  { label: "Agentes IA", href: "/docs/agents" },
+  { label: "Automação", href: "/docs/automation" },
 ];
 
 const VIDEO_SRC =
@@ -107,10 +107,10 @@ const Hero = () => {
       <div className="relative flex flex-col items-center" style={{ zIndex: 2 }}>
         {/* Announcement Badge */}
         <Link
-          to="/docs/extensions"
+          to="/docs/overview"
           className="inline-flex items-center gap-2 pl-4 pr-2 py-2 mb-10 text-xs font-medium uppercase tracking-widest text-primary bg-primary/10 rounded-full border border-primary/20 hover:border-primary/40 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
         >
-          <span>🚀 Plataforma Premium</span>
+          <span>🚀 TechLink v2.0 disponível</span>
           <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground">
             <ChevronRight className="w-4 h-4" />
           </span>
@@ -118,12 +118,12 @@ const Hero = () => {
 
         {/* Headline */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-foreground text-center tracking-tightest mb-8 leading-[0.9]">
-          <WaveText text="PedrinTEC" className="text-primary" />
+          <WaveText text="TechLink" className="text-primary" />
         </h1>
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-muted-foreground text-center max-w-3xl mb-12 leading-relaxed">
-          <WaveText text="Explore o marketplace premium de extensões e ferramentas para IA." staggerDelay={0.015} />
+          <WaveText text="A revolução silenciosa da engenharia de software começou." staggerDelay={0.015} />
         </p>
 
         {/* Search Bar */}
