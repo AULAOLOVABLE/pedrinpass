@@ -118,7 +118,7 @@ const Hero = () => {
 
         {/* Headline */}
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-foreground text-center tracking-tightest mb-8 leading-[0.9]">
-          <WaveText text="TecExtension" className="text-primary-glow" />
+          <WaveText text="TecExtension" className="text-primary" />
         </h1>
 
         {/* Subheadline */}
