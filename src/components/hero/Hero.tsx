@@ -7,8 +7,8 @@ import heroGradient from "@/assets/hero-gradient.png";
 import WaveText from "@/components/ui/wave-text";
 
 const shortcuts = [
-  { label: "Visão geral", href: "/docs/overview" },
-  { label: "Configurar workspace", href: "/docs/workspace" },
+  { label: "Extensões", href: "/docs/extensions" },
+  { label: "Prompts", href: "/docs/prompts" },
 ];
 
 const VIDEO_SRC =
@@ -106,10 +106,10 @@ const Hero = () => {
       <div className="relative flex flex-col items-center" style={{ zIndex: 2 }}>
         {/* Announcement Badge */}
         <Link
-          to="/docs/overview"
+          to="/docs/extensions"
           className="inline-flex items-center gap-2 pl-4 pr-2 py-2 mb-8 text-sm text-muted-foreground bg-[#121314] rounded-full border border-primary/30 hover:border-primary/60 transition-colors"
         >
-          <span>Olá, eu sou o Pedrinpass.</span>
+          <span>🚀 Plataforma Premium</span>
           <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground">
             <ChevronRight className="w-4 h-4" />
           </span>
@@ -117,12 +117,12 @@ const Hero = () => {
 
         {/* Headline */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground text-center tracking-tighter mb-6">
-          <WaveText text="Central de Documentação" />
+          <WaveText text="Tudo para potencializar sua Inteligência Artificial." />
         </h1>
 
         {/* Subheadline */}
         <p className="text-base md:text-lg text-muted-foreground text-center max-w-2xl mb-10">
-          <WaveText text="Modelo de site de documentação em tema escuro" staggerDelay={0.015} />
+          <WaveText text="Descubra extensões, prompts, templates, agentes e automações para ChatGPT, Lovable, Claude, Cursor, VS Code e muito mais." staggerDelay={0.015} />
         </p>
 
         {/* Search Bar */}

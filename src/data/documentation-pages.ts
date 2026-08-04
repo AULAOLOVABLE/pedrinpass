@@ -15,41 +15,42 @@ export interface DocPageSection {
 }
 
 export const documentationPages: Record<string, DocPageContent> = {
-  overview: {
-    title: "Visão Geral",
-    description: "Obtenha um entendimento de alto nível sobre a plataforma Pedrinpass e seus principais recursos.",
-    breadcrumb: ["Primeiros Passos", "Visão Geral"],
+  extensions: {
+    title: "Biblioteca Premium",
+    description: "Mais de centenas de recursos organizados para acelerar seu trabalho.",
+    breadcrumb: ["Extensões", "Biblioteca"],
     sections: [
       {
-        id: "what-is-pedrinpass",
-        title: "O que é o Pedrinpass?",
+        id: "premium-extensions",
+        title: "Extensões Premium",
         level: "h2",
-        content: "O Pedrinpass é uma plataforma moderna de infraestrutura de pagamentos, projetada para simplificar a forma como as empresas lidam com transações, assinaturas e operações financeiras. Desenvolvido pensando nos desenvolvedores, oferece APIs poderosas e painéis intuitivos."
+        content: "Nossa biblioteca oferece ferramentas especializadas para elevar sua produtividade. Cada extensão é testada e otimizada para os fluxos de trabalho mais exigentes de IA."
       },
       {
-        id: "core-features",
-        title: "Recursos Principais",
+        id: "ai-ecosystem",
+        title: "Ecosistema de IA",
         level: "h2",
-        content: "Conheça as funcionalidades fundamentais que fazem do Pedrinpass a escolha preferida das empresas modernas:",
+        content: "Encontre tudo para potencializar sua Inteligência Artificial em um só lugar:",
         listItems: [
-          "Processamento unificado de pagamentos entre múltiplos provedores",
-          "Gerenciamento de assinaturas com ciclos de cobrança flexíveis",
-          "Análises e relatórios em tempo real",
-          "APIs amigáveis para desenvolvedores com SDKs completos",
-          "Segurança e conformidade de nível empresarial"
+          "Extensões para ChatGPT e Chrome",
+          "Rules e Agentes para Cursor e VS Code",
+          "Servidores MCP para integração profunda",
+          "Workflows prontos para N8N",
+          "Prompts e Templates profissionais"
         ]
-      },
+      }
+    ]
+  },
+  prompts: {
+    title: "Prompts Premium",
+    description: "Coleções prontas para ChatGPT, Claude e Gemini.",
+    breadcrumb: ["Prompts", "Destaques"],
+    sections: [
       {
-        id: "architecture",
-        title: "Arquitetura da Plataforma",
+        id: "featured-prompts",
+        title: "Engenharia de Prompts de Elite",
         level: "h2",
-        content: "O Pedrinpass é construído sobre uma arquitetura de microsserviços que garante confiabilidade, escalabilidade e desempenho. Cada componente é projetado para lidar com milhões de transações mantendo tempos de resposta abaixo de um segundo."
-      },
-      {
-        id: "getting-help",
-        title: "Obtendo Ajuda",
-        level: "h2",
-        content: "Se precisar de assistência, nossa equipe de suporte está disponível 24 horas por dia, 7 dias por semana. Você também pode explorar nossos fóruns da comunidade, documentação para desenvolvedores e tutoriais em vídeo para ajuda autônoma."
+        content: "Desenvolvemos prompts que extraem o máximo potencial dos modelos de linguagem. De codificação complexa a redação criativa, nossa curadoria garante resultados consistentes."
       }
     ]
   },

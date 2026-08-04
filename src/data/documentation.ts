@@ -35,32 +35,24 @@ export interface TableOfContentsItem {
 
 export const navigationGroups: NavGroup[] = [
   {
-    id: "getting-started",
-    title: "Primeiros Passos",
+    id: "marketplace",
+    title: "Marketplace",
     items: [
-      { id: "overview", title: "Visão Geral", href: "/docs/overview", icon: FileText },
-      { id: "workspace", title: "Configure Seu Workspace", href: "/docs/workspace", icon: Wrench },
-      { id: "sandbox", title: "Sandbox vs. Produção", href: "/docs/sandbox", icon: Layers },
-      { id: "account-setup", title: "Configuração da Conta", href: "/docs/account-setup", icon: Settings },
-      { id: "features", title: "Principais Recursos", href: "/docs/features", icon: Sparkles },
+      { id: "extensions", title: "Extensões", href: "/docs/extensions", icon: Wrench },
+      { id: "prompts", title: "Prompts", href: "/docs/prompts", icon: Sparkles },
+      { id: "templates", title: "Templates", href: "/docs/templates", icon: Layers },
+      { id: "workflows", title: "Workflows", href: "/docs/workflows", icon: RefreshCw },
     ],
   },
   {
-    id: "products",
-    title: "Produtos e Assinaturas",
+    id: "categories",
+    title: "Categorias",
     items: [
-      { id: "coupons", title: "Cupons e Descontos", href: "/docs/coupons", icon: Tag },
-      { id: "pricing", title: "Modelos de Precificação", href: "/docs/pricing", icon: DollarSign },
-      { id: "products", title: "Criando um Produto", href: "/docs/products", icon: Package },
-      { id: "subscriptions", title: "Assinaturas", href: "/docs/subscriptions", icon: RefreshCw },
-      { id: "failed-payments", title: "Pagamentos Falhos", href: "/docs/failed-payments", icon: AlertTriangle },
-    ],
-  },
-  {
-    id: "security",
-    title: "Segurança",
-    items: [
-      { id: "encryption", title: "Segurança e Criptografia", href: "/docs/encryption", icon: Shield },
+      { id: "chatgpt", title: "ChatGPT", href: "/docs/chatgpt", icon: MessageSquare },
+      { id: "lovable", title: "Lovable", href: "/docs/lovable", icon: Sparkles },
+      { id: "claude", title: "Claude", href: "/docs/claude", icon: Shield },
+      { id: "cursor", title: "Cursor", href: "/docs/cursor", icon: Terminal },
+      { id: "launches", title: "Lançamentos", href: "/changelog", icon: Tag },
     ],
   },
 ];

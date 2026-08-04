@@ -23,16 +23,17 @@ export interface ApiGroup {
 
 export const apiGroups: ApiGroup[] = [
   {
-    id: "authentication",
-    title: "Autenticação",
+    id: "featured",
+    title: "Recursos em Destaque",
     endpoints: [
       {
-        id: "refresh-token",
-        title: "Renovar token",
-        method: "POST",
-        href: "/api/refresh-token",
-        path: "/v1/auth/refresh",
-        description: "Troque um refresh token por um novo access token sem reautenticar.",
+        id: "premium-prompts",
+        title: "Prompts Premium",
+        method: "GET",
+        href: "/api/premium-prompts",
+        path: "/v1/resources/prompts",
+        description: "Acesse nossa coleção de prompts de elite para diversos modelos.",
+
         longDescription: "O endpoint de Renovar Token permite trocar um refresh token válido por um novo access token. Os access tokens geralmente têm vida útil curta, enquanto os refresh tokens permanecem válidos por mais tempo, permitindo autenticação contínua sem exigir que o usuário faça login novamente.",
         headers: [
           { key: "Content-Type", value: "application/json", required: true },

@@ -7,17 +7,17 @@ import WaveText from "@/components/ui/wave-text";
 const supportOptions = [
   {
     icon: MessageSquare,
-    title: "Entre na comunidade",
-    description: "Conecte-se com outras pessoas desenvolvedoras.",
+    title: "Entre na Comunidade",
+    description: "Receba acesso antecipado a novos recursos e novos prompts toda semana.",
     linkText: "Participar",
-    href: "/docs/overview",
+    href: "/docs/community",
   },
   {
     icon: Headset,
-    title: "Receba ajuda",
-    description: "Nosso time está aqui para te orientar.",
-    linkText: "Falar com suporte",
-    href: "/docs/account-setup",
+    title: "Recursos em Destaque",
+    description: "Prompts Premium, Templates Lovable, Cursor Rules e Claude Commands.",
+    linkText: "Ver Recursos",
+    href: "/docs/featured",
   },
 ];
 

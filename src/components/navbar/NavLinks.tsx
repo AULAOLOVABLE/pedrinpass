@@ -7,9 +7,11 @@ interface NavLinkItem {
 }
 
 const links: NavLinkItem[] = [
-  { label: "Documentação", href: "/docs/overview" },
-  { label: "API", href: "/api/refresh-token" },
-  { label: "Novidades", href: "/changelog" },
+  { label: "Extensões", href: "/docs/extensions" },
+  { label: "Prompts", href: "/api/premium-prompts" },
+  { label: "Templates", href: "/docs/templates" },
+  { label: "Workflows", href: "/docs/workflows" },
+  { label: "Lançamentos", href: "/changelog" },
 ];
 
 const NavLinks = () => {
@@ -19,7 +21,7 @@ const NavLinks = () => {
     if (href.startsWith("/docs")) return location.pathname.startsWith("/docs");
     if (href.startsWith("/api")) return location.pathname.startsWith("/api");
     if (href.startsWith("/changelog")) return location.pathname.startsWith("/changelog");
-    return false;
+    return location.pathname === href;
   };
 
   return (
