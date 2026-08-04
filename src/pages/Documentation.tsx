@@ -19,8 +19,8 @@ export default function Documentation() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Seo
-        title={`${pageSlug.replace(/-/g, " ")} — Documentação TechLink`}
-        description="Guias, instruções de configuração e material de referência do TechLink."
+        title={`${pageSlug.replace(/-/g, " ")} — Documentação PedrinTEC`}
+        description="Guias, instruções de configuração e material de referência do PedrinTEC."
         path={`/docs/${pageSlug}`}
       />
       <Navbar />

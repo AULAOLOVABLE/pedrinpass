@@ -9,7 +9,7 @@ import WaveText from "@/components/ui/wave-text";
 const shortcuts = [
   { label: "Conexão Neural", href: "/api/connect" },
   { label: "Agentes IA", href: "/docs/agents" },
-  { label: "Prompts Premium", href: "/docs/premium-prompts" },
+  { label: "Prompts Premium", href: "/docs/prompts" },
 ];
 
 const VIDEO_SRC =

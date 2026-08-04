@@ -26,8 +26,7 @@ export function useSearchResults(query: string): SearchResult[] {
     documentationPages.forEach((page) => {
       const titleMatch = page.title.toLowerCase().includes(searchTerm);
       const descMatch = page.description.toLowerCase().includes(searchTerm);
-      const contentMatch = page.content.toLowerCase().includes(searchTerm) || 
-        page.sections?.some(
+      const contentMatch = page.sections?.some(
           (section) =>
             section.title.toLowerCase().includes(searchTerm) ||
             section.content.toLowerCase().includes(searchTerm)

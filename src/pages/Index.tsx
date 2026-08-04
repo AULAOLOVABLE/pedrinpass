@@ -10,31 +10,62 @@ import { MatrixRain, ScrollProgress, ScrollReveal } from "@/components/effects";
 
 const Index = () => {
   return (
-    <div className="relative min-h-screen bg-background overflow-x-hidden">
+    <div className="relative min-h-screen bg-background overflow-x-hidden selection:bg-primary/30 selection:text-primary-foreground">
       <Seo
-        title="PedrinTEC | Soluções e Recursos Premium para IA"
-        description="Descubra as melhores ferramentas, prompts e extensões para potencializar seu fluxo de trabalho com IA."
+        title="PedrinTEC — Engenharia de Software de Próxima Geração"
+        description="A plataforma definitiva para desenvolvedores: marketplace de prompts, extensões e automação neural."
         path="/"
       />
-      <MatrixRain />
+      
+      {/* Background Effects */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <MatrixRain />
+        <div className="absolute inset-0 bg-radial-at-t from-primary/5 via-transparent to-transparent opacity-50" />
+      </div>
+
       <ScrollProgress />
+      
       <div className="relative z-10">
         <Navbar />
+        
         <main>
-          <Hero />
           <ScrollReveal>
-            <Dashboard />
+            <Hero />
           </ScrollReveal>
-          <ScrollReveal>
-            <Categories />
-          </ScrollReveal>
-          <ScrollReveal>
-            <Support />
-          </ScrollReveal>
-          <ScrollReveal>
-            <AIAssistant />
-          </ScrollReveal>
+          
+          <div className="max-w-7xl mx-auto px-4 md:px-8 space-y-32 pb-32">
+            <ScrollReveal delay={0.2}>
+              <section id="dashboard" className="scroll-mt-24">
+                <div className="mb-12 text-center md:text-left">
+                  <h2 className="text-3xl md:text-5xl font-black tracking-tightest mb-4">Marketplace de Performance</h2>
+                  <p className="text-muted-foreground text-lg max-w-2xl">Dados reais para decisões cirúrgicas. Acompanhe a evolução do seu ecossistema em tempo real.</p>
+                </div>
+                <Dashboard />
+              </section>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.3}>
+              <section id="marketplace" className="scroll-mt-24">
+                <div className="mb-12 text-center md:text-left">
+                  <h2 className="text-3xl md:text-5xl font-black tracking-tightest mb-4">Explore o Ecossistema</h2>
+                  <p className="text-muted-foreground text-lg max-w-2xl">De prompts premium a workflows complexos, tudo o que você precisa para escalar sua produção com IA.</p>
+                </div>
+                <Categories />
+              </section>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.4}>
+              <section id="assistant" className="scroll-mt-24">
+                <AIAssistant />
+              </section>
+            </ScrollReveal>
+
+            <ScrollReveal delay={0.5}>
+              <Support />
+            </ScrollReveal>
+          </div>
         </main>
+
         <Footer />
       </div>
     </div>
