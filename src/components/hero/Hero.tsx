@@ -7,8 +7,9 @@ import heroGradient from "@/assets/hero-gradient.png";
 import WaveText from "@/components/ui/wave-text";
 
 const shortcuts = [
-  { label: "Extensões", href: "/docs/extensions" },
-  { label: "Prompts", href: "/docs/prompts" },
+  { label: "Extensões Chrome", href: "/docs/extensions" },
+  { label: "Prompts ChatGPT", href: "/api/premium-prompts" },
+  { label: "Agentes MCP", href: "/docs/claude" },
 ];
 
 const VIDEO_SRC =
@@ -117,7 +118,7 @@ const Hero = () => {
 
         {/* Headline */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground text-center tracking-tighter mb-6">
-          <WaveText text="Tudo para potencializar sua Inteligência Artificial." />
+          <WaveText text="Execute esta instrucao no projeto: onde ta páginas em branco preenche deixe um banco de dados top" />
         </h1>
 
         {/* Subheadline */}
