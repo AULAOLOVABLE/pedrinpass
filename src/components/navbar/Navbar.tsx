@@ -1,14 +1,39 @@
+import { useState, useEffect } from "react";
 import Logo from "./Logo";
 import SearchBar from "./SearchBar";
 import NavLinks from "./NavLinks";
 import MobileMenu from "./MobileMenu";
+import { cn } from "@/lib/utils";
 
 const Navbar = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl bg-[#000000]/80 backdrop-blur-2xl border border-white/10 rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
-      <nav aria-label="Navegação principal" className="flex items-center justify-between px-8 py-4">
+    <header 
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 flex justify-center",
+        isScrolled ? "pt-4" : "pt-8"
+      )}
+    >
+      <nav 
+        aria-label="Navegação principal" 
+        className={cn(
+          "flex items-center justify-between px-8 py-3 w-[95%] max-w-7xl transition-all duration-500 border border-white/5",
+          isScrolled 
+            ? "bg-black/40 backdrop-blur-2xl rounded-2xl shadow-2xl scale-[0.98] border-white/10" 
+            : "bg-transparent rounded-3xl"
+        )}
+      >
         {/* Left Section: Logo + SearchBar */}
-        <div className="flex items-center gap-12">
+        <div className="flex items-center gap-10">
           <Logo />
           <SearchBar />
         </div>

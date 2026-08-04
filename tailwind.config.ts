@@ -14,9 +14,9 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['Work Sans', 'Satoshi', 'sans-serif'],
-        display: ['JetBrains Mono', 'ui-monospace', 'monospace'],
-        mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+        sans: ['"Inter Tight"', 'Inter', 'system-ui', 'sans-serif'],
+        display: ['"Space Grotesk"', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
       },
       colors: {
         border: "hsl(var(--ui-border))",
