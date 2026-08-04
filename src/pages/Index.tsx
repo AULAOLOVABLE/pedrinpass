@@ -1,6 +1,7 @@
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { Categories } from "@/components/categories";
+import { Dashboard } from "@/components/dashboard";
 import { Support } from "@/components/support";
 import { AIAssistant } from "@/components/ai-assistant";
 import { Footer } from "@/components/footer";
@@ -21,6 +22,9 @@ const Index = () => {
         <Navbar />
         <main>
           <Hero />
+          <ScrollReveal>
+            <Dashboard />
+          </ScrollReveal>
           <ScrollReveal>
             <Categories />
           </ScrollReveal>
