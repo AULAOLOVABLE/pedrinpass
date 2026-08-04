@@ -14,8 +14,8 @@ export interface DocumentationPage {
   }[];
 }
 
-export const documentationPages: Record<string, DocumentationPage> = {
-  overview: {
+export const documentationPages: DocumentationPage[] = [
+  {
     id: "overview",
     title: "Plataforma PedrinTEC",
     description: "Visão geral do ecossistema PedrinTEC para desenvolvedores e entusiastas de IA.",
@@ -38,10 +38,20 @@ export const documentationPages: Record<string, DocumentationPage> = {
           "Workflows automatizados via N8N.",
           "Integrações nativas com ChatGPT, Claude e Cursor."
         ]
+      },
+      {
+        id: "popular",
+        title: "Conteúdos Populares",
+        content: "Explore os recursos mais acessados pela comunidade:",
+        listItems: [
+          "Guia de início rápido para Lovable.",
+          "Automação de leads com N8N.",
+          "Prompts estratégicos para Landing Pages."
+        ]
       }
     ]
   },
-  extensions: {
+  {
     id: "extensions",
     title: "Extensões",
     description: "Amplie o poder do seu ambiente de desenvolvimento.",
@@ -54,18 +64,28 @@ export const documentationPages: Record<string, DocumentationPage> = {
         content: "As extensões PedrinTEC permitem que você adicione novas funcionalidades ao seu editor, terminal ou navegador, integrando o ecossistema diretamente ao seu fluxo de trabalho."
       },
       {
-        id: "list",
-        title: "Extensões Recomendadas",
-        content: "Confira algumas de nossas extensões mais populares:",
+        id: "dev-extensions",
+        title: "Desenvolvimento",
+        content: "Extensões para acelerar seu código:",
         listItems: [
           "PedrinTEC Analyzer: Análise profunda de código com IA.",
-          "Workflow Orchestrator: Gerenciamento visual de processos.",
-          "Prompt Injector: Integração direta de prompts em editores."
+          "DB Visualizer: Gerencie seu Supabase com facilidade.",
+          "Code Formatter Pro: Padrões de estilo automáticos."
+        ]
+      },
+      {
+        id: "ia-extensions",
+        title: "Inteligência Artificial",
+        content: "Ferramentas de IA integradas:",
+        listItems: [
+          "LLM Connector: Conecte qualquer modelo ao seu app.",
+          "Prompt Helper: Assistente de escrita de prompts.",
+          "Vector Search Engine: Busca semântica simplificada."
         ]
       }
     ]
   },
-  prompts: {
+  {
     id: "prompts",
     title: "Prompts Premium",
     description: "Sequência estratégica de prompts para resultados de alta performance.",
@@ -73,20 +93,146 @@ export const documentationPages: Record<string, DocumentationPage> = {
     breadcrumb: ["Marketplace", "Prompts"],
     sections: [
       {
-        id: "context",
-        title: "1. Definição de Contexto",
-        content: "O primeiro passo é estabelecer o papel da IA. Exemplo: 'Atue como um Engenheiro de Software Sênior especializado em arquitetura limpa...'"
+        id: "sequence",
+        title: "Sequência Estratégica",
+        content: "Nossa metodologia de Prompts Premium segue uma ordem lógica para garantir a melhor resposta da IA.",
+        listItems: [
+          "Contextualização (Atuação).",
+          "Especificação (O que fazer).",
+          "Restrição (O que não fazer).",
+          "Refinamento (Iteração)."
+        ]
       },
       {
-        id: "requirements",
-        title: "2. Especificação Técnica",
-        content: "Forneça detalhes granulares sobre o que precisa ser construído."
+        id: "categories",
+        title: "Categorias de Prompts",
+        content: "Escolha a categoria que melhor atende sua necessidade atual:",
+        listItems: [
+          "Criação de sites e Landing Pages.",
+          "UI/UX Design e Prototipação.",
+          "Desenvolvimento e Refatoração de Código.",
+          "Marketing e Copywriting Persuasivo."
+        ]
+      }
+    ]
+  },
+  {
+    id: "templates",
+    title: "Templates",
+    description: "Acelere seu projeto com estruturas prontas para produção.",
+    category: "Marketplace",
+    breadcrumb: ["Marketplace", "Templates"],
+    sections: [
+      {
+        id: "overview",
+        title: "Templates PedrinTEC",
+        content: "Nossos templates são otimizados para performance, acessibilidade e SEO, utilizando as melhores práticas de desenvolvimento moderno."
       },
       {
-        id: "execution",
-        title: "3. Refinamento e Revisão",
-        content: "A sequência final foca em revisar o output e aplicar correções."
+        id: "saas",
+        title: "SaaS e Dashboards",
+        content: "Estruturas completas para seu próximo produto:",
+        listItems: [
+          "Dashboard Administrativo Premium.",
+          "Sistema de Gestão SaaS.",
+          "CRM Minimalista."
+        ]
+      }
+    ]
+  },
+  {
+    id: "workflows",
+    title: "Workflows",
+    description: "Automações visuais para processos complexos.",
+    category: "Marketplace",
+    breadcrumb: ["Marketplace", "Workflows"],
+    sections: [
+      {
+        id: "intro",
+        title: "Automação com Workflows",
+        content: "Conecte ferramentas e crie fluxos que trabalham sozinhos. Ideal para marketing, vendas e suporte."
+      },
+      {
+        id: "examples",
+        title: "Fluxos Disponíveis",
+        content: "Exemplos de automações prontas para importar:",
+        listItems: [
+          "Geração automática de Landing Pages.",
+          "Captação e qualificação de Leads.",
+          "Suporte via WhatsApp com IA."
+        ]
+      }
+    ]
+  },
+  {
+    id: "chatgpt",
+    title: "ChatGPT",
+    description: "Guia avançado para uso do ChatGPT na PedrinTEC.",
+    category: "Ferramentas",
+    breadcrumb: ["Ferramentas", "ChatGPT"],
+    sections: [
+      {
+        id: "structure",
+        title: "Estrutura de Prompts",
+        content: "Aprenda a criar prompts que o GPT entenda perfeitamente.",
+        listItems: [
+          "Use a técnica 'Act as...'",
+          "Defina limites claros.",
+          "Solicite formatos específicos (JSON, Markdown)."
+        ]
+      }
+    ]
+  },
+  {
+    id: "lovable",
+    title: "Lovable",
+    description: "Construa apps incríveis em minutos com Lovable.",
+    category: "Ferramentas",
+    breadcrumb: ["Ferramentas", "Lovable"],
+    sections: [
+      {
+        id: "creation",
+        title: "Criação de Projetos",
+        content: "Como iniciar seu primeiro projeto no Lovable com as melhores práticas de design e código."
+      }
+    ]
+  },
+  {
+    id: "claude",
+    title: "Claude",
+    description: "Uso estratégico do Claude para análise e desenvolvimento.",
+    category: "Ferramentas",
+    breadcrumb: ["Ferramentas", "Claude"],
+    sections: [
+      {
+        id: "analysis",
+        title: "Análise de Documentos",
+        content: "Como usar a janela de contexto expandida do Claude para analisar projetos inteiros."
+      }
+    ]
+  },
+  {
+    id: "cursor",
+    title: "Cursor",
+    description: "Desenvolvimento assistido por IA com o editor Cursor.",
+    category: "Ferramentas",
+    breadcrumb: ["Ferramentas", "Cursor"],
+    sections: [
+      {
+        id: "setup",
+        title: "Configuração Inicial",
+        content: "Otimizando o Cursor para o ecossistema PedrinTEC e integração com IA."
       }
     ]
   }
+];
+
+export const generateTableOfContents = (page: DocumentationPage) => {
+  const toc: { id: string; title: string; level: "h2" | "h3" }[] = [];
+  if (page.sections) {
+    page.sections.forEach(section => {
+      toc.push({ id: section.id, title: section.title, level: section.level || "h2" });
+    });
+  }
+  return toc;
 };
