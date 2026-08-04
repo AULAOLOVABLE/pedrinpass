@@ -42,7 +42,7 @@ const Categories = () => {
 
         {/* Cards Grid */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 gap-5"
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
@@ -58,7 +58,7 @@ const Categories = () => {
           {categories.map((category, index) => (
             <motion.div
               key={category.title}
-              className={index === 0 ? "md:col-span-2" : ""}
+              className=""
               variants={{
                 hidden: { opacity: 0, y: 20, filter: "blur(8px)" },
                 visible: { 
@@ -75,7 +75,7 @@ const Categories = () => {
                 description={category.description}
                 linkText={category.linkText}
                 href={category.href}
-                featured={index === 0}
+                featured={false}
               />
             </motion.div>
           ))}

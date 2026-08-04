@@ -5,8 +5,8 @@ import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 w-full bg-background border-b border-border">
-      <nav aria-label="Navegação principal" className="flex items-center justify-between w-full max-w-[90rem] mx-auto px-4 md:px-8 py-4">
+    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-5xl bg-background/60 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl">
+      <nav aria-label="Navegação principal" className="flex items-center justify-between px-6 py-3">
         {/* Left Section: Logo + SearchBar */}
         <div className="flex items-center gap-6">
           <Logo />

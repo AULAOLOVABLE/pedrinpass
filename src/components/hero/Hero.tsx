@@ -118,12 +118,12 @@ const Hero = () => {
 
         {/* Headline */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground text-center tracking-tighter mb-6">
-          <WaveText text="Tudo para potencializar sua Inteligência Artificial" />
+          <WaveText text="TecExtension" />
         </h1>
 
         {/* Subheadline */}
         <p className="text-base md:text-lg text-muted-foreground text-center max-w-2xl mb-10">
-          <WaveText text="Descubra extensões, prompts, templates, agentes e automações para ChatGPT, Lovable, Claude, Cursor, VS Code e muito mais." staggerDelay={0.015} />
+          <WaveText text="Explore o marketplace premium de extensões e ferramentas para IA." staggerDelay={0.015} />
         </p>
 
         {/* Search Bar */}
