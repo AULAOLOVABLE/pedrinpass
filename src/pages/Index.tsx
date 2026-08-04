@@ -11,8 +11,8 @@ const Index = () => {
   return (
     <div className="relative min-h-screen bg-background overflow-x-hidden">
       <Seo
-        title="TecExtension | Marketplace de Extensões para ChatGPT, Lovable, Claude e Cursor"
-        description="Descubra extensões premium, prompts profissionais, templates, agentes de IA, automações, workflows, MCPs e ferramentas para ChatGPT, Lovable, Claude, Cursor, VS Code e Chrome."
+        title="PedrinTEC | Soluções e Recursos Premium para IA"
+        description="Descubra as melhores ferramentas, prompts e extensões para potencializar seu fluxo de trabalho com IA."
         path="/"
       />
       <MatrixRain />

@@ -9,7 +9,7 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Base Colors - HSL */
-    --background: 240 10% 4%;
+    --background: 240 10% 2%;
     --foreground: 0 0% 100%;
 
     /* Semantic UI Tokens */
@@ -18,8 +18,8 @@ All colors MUST be HSL.
     --ui-surface-active: 240 10% 12%;
     
     --ui-border: 240 10% 12%;
-    --ui-border-hover: 18 92% 58% / 0.4;
-    --ui-border-active: 18 92% 58% / 0.7;
+    --ui-border-hover: 25 100% 50% / 0.4;
+    --ui-border-active: 25 100% 50% / 0.7;
 
     /* Shadcn/UI Compatibility */
     --card: var(--ui-surface);
@@ -27,9 +27,9 @@ All colors MUST be HSL.
     --popover: var(--ui-surface);
     --popover-foreground: var(--foreground);
 
-    --primary: 18 92% 58%;
-    --primary-foreground: 20 15% 8%;
-    --primary-glow: 28 96% 64%;
+    --primary: 25 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 35 100% 60%;
 
     --secondary: 20 8% 14%;
     --secondary-foreground: var(--foreground);
@@ -94,7 +94,7 @@ All colors MUST be HSL.
     inset: 0;
     border-radius: 0.75rem;
     padding: 1px;
-    background: linear-gradient(178.8deg, hsl(18 92% 58% / 0.6) 10.85%, rgba(60, 60, 60, 0.6) 24.36%, rgba(80, 80, 80, 0.6) 73.67%, hsl(28 96% 64% / 0.6) 90.68%);
+    background: linear-gradient(178.8deg, hsl(25 100% 50% / 0.6) 10.85%, rgba(60, 60, 60, 0.6) 24.36%, rgba(80, 80, 80, 0.6) 73.67%, hsl(35 100% 60% / 0.6) 90.68%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
     pointer-events: none;

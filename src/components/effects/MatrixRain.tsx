@@ -67,11 +67,11 @@ const MatrixRain = () => {
         const y = drops[i];
 
         // cabeça mais clara
-        ctx.fillStyle = `hsl(28 96% ${68 + Math.min(boost * 1.5, 20)}% / ${0.75 + Math.min(boost * 0.015, 0.25)})`;
+        ctx.fillStyle = `hsl(35 100% ${68 + Math.min(boost * 1.5, 20)}% / ${0.75 + Math.min(boost * 0.015, 0.25)})`;
         ctx.fillText(char, x, y);
 
         // corpo em laranja suave
-        ctx.fillStyle = `hsl(18 92% 52% / ${0.28 + Math.min(boost * 0.02, 0.3)})`;
+        ctx.fillStyle = `hsl(25 100% 50% / ${0.28 + Math.min(boost * 0.02, 0.3)})`;
         ctx.fillText(GLYPHS[Math.floor(Math.random() * GLYPHS.length)], x, y - fontSize);
 
         drops[i] += (speeds[i] + boost * 0.5) * (prefersReduced ? 0.2 : 1) * fontSize * 0.35;
