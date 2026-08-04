@@ -18,7 +18,7 @@ const ChatInput = () => {
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="Apenas demonstração — ative o Lovable Cloud para conectar a IA"
+          placeholder="Digite uma tarefa ou instrução..."
           maxLength={500}
           aria-label="Mensagem do chat (apenas demonstração)"
           className="flex-1 bg-transparent text-sm text-foreground placeholder:text-muted-foreground outline-none"
