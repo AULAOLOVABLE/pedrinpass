@@ -25,13 +25,13 @@ const NavLinks = () => {
   };
 
   return (
-    <nav className="hidden lg:flex items-center gap-1">
+    <nav className="hidden lg:flex items-center gap-1" aria-label="Links de navegação">
       {links.map((link) => (
         <Link
           key={link.label}
           to={link.href}
           className={cn(
-            "px-3 py-2 text-sm font-medium transition-colors rounded-xl",
+            "px-3 py-2 text-sm font-medium transition-colors rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
             isActive(link.href) ? "text-foreground" : "text-muted-foreground hover:text-foreground"
           )}
         >

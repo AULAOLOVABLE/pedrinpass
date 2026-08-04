@@ -29,7 +29,7 @@ const ChatInput = () => {
           type="submit"
           disabled={!input.trim()}
           aria-label="Enviar mensagem (apenas demonstração)"
-          className="flex items-center justify-center w-8 h-8 rounded-xl bg-primary text-primary-foreground disabled:opacity-50 disabled:cursor-not-allowed transition-opacity"
+          className="flex items-center justify-center w-8 h-8 rounded-xl bg-primary text-primary-foreground disabled:opacity-50 disabled:cursor-not-allowed transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
         >
           <ArrowUp className="w-4 h-4" />
         </button>

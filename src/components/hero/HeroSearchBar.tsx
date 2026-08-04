@@ -9,7 +9,8 @@ const HeroSearchBar = () => {
   return (
     <button
       onClick={openSearch}
-      className="search-bar-gradient-border bg-background rounded-xl inline-flex items-center justify-between py-4 pl-4 md:pl-8 pr-4 w-full max-w-[600px] gap-3 md:gap-5 hover:bg-accent/5 transition-colors cursor-pointer"
+      aria-label="Pesquisar em todo o marketplace (⌘K)"
+      className="search-bar-gradient-border bg-background rounded-xl inline-flex items-center justify-between py-4 pl-4 md:pl-8 pr-4 w-full max-w-[600px] gap-3 md:gap-5 hover:bg-accent/5 transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
     >
       <div className="flex items-center gap-3 flex-1">
         <Search className="w-5 h-5 text-muted-foreground flex-shrink-0" />

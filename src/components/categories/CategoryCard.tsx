@@ -15,7 +15,7 @@ const CategoryCard = ({ variant, title, description, linkText, href, featured = 
   return (
     <Link
       to={href}
-      className={`bento-card group flex h-full flex-col ${featured ? "md:flex-row" : ""}`}
+      className={`bento-card group flex h-full flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ${featured ? "md:flex-row" : ""}`}
     >
       {/* Animated visual */}
       <div className={`p-4 pb-0 ${featured ? "md:w-1/2 md:pb-4 md:pr-0" : ""}`}>
