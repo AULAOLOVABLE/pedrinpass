@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, type LucideIcon } from "lucide-react";
 
 interface CategoryCardProps {
-  image: string;
+  icon: LucideIcon;
   title: string;
   description: string;
   linkText: string;
@@ -10,27 +10,34 @@ interface CategoryCardProps {
   featured?: boolean;
 }
 
-const CategoryCard = ({ image, title, description, linkText, href, featured = false }: CategoryCardProps) => {
+const CategoryCard = ({ icon: Icon, title, description, linkText, href, featured = false }: CategoryCardProps) => {
   return (
     <Link
       to={href}
       className={`bento-card group flex h-full flex-col ${featured ? "md:flex-row" : ""}`}
     >
-      {/* Image Container */}
+      {/* Icon Container */}
       <div className={`p-4 pb-0 ${featured ? "md:w-1/2 md:pb-4 md:pr-0" : ""}`}>
         <div
-          className={`relative w-full overflow-hidden rounded-[1.25rem] ${
+          className={`relative flex w-full items-center justify-center overflow-hidden rounded-[1.25rem] border border-border/60 ${
             featured ? "aspect-[16/10] md:aspect-[16/10] md:h-[240px]" : "aspect-[16/9]"
           }`}
+          style={{
+            backgroundImage:
+              "radial-gradient(120% 120% at 50% 0%, hsl(var(--primary) / 0.18) 0%, transparent 60%), linear-gradient(180deg, hsl(var(--card)) 0%, hsl(var(--background)) 100%)",
+          }}
         >
-          <img
-            src={image}
-            alt={title}
-            loading="lazy"
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+          {/* Glow behind icon */}
+          <div className="pointer-events-none absolute h-24 w-24 rounded-full bg-primary/25 blur-3xl transition-opacity duration-500 opacity-70 group-hover:opacity-100" />
+
+          <Icon
+            className={`relative text-primary-glow drop-shadow-[0_0_18px_hsl(var(--primary)/0.55)] transition-transform duration-500 group-hover:scale-110 ${
+              featured ? "h-14 w-14 md:h-16 md:w-16" : "h-12 w-12"
+            }`}
+            strokeWidth={1.5}
           />
-          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-background/70 via-transparent to-transparent" />
-          <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-gradient-to-tr from-primary/20 to-transparent" />
+
+          <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-gradient-to-tr from-primary/15 to-transparent" />
         </div>
       </div>
 

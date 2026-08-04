@@ -1,33 +1,32 @@
 import { motion } from "framer-motion";
+import { BookOpen, Terminal, Sparkles } from "lucide-react";
 import CategoryCard from "./CategoryCard";
-import cardDocumentation from "@/assets/card-documentation.png";
-import cardApi from "@/assets/card-api.png";
-import cardChangelog from "@/assets/card-changelog.png";
 import WaveText from "@/components/ui/wave-text";
 
 const categories = [
   {
-    image: cardDocumentation,
+    icon: BookOpen,
     title: "Documentação",
     description: "Guias e boas práticas para começar.",
     linkText: "Ler guias",
     href: "/docs/overview",
   },
   {
-    image: cardApi,
+    icon: Terminal,
     title: "Referência da API",
     description: "Tudo o que devs precisam para construir e integrar.",
     linkText: "Ver referência da API",
     href: "/api/refresh-token",
   },
   {
-    image: cardChangelog,
+    icon: Sparkles,
     title: "Novidades",
     description: "As últimas atualizações da sua central de conhecimento.",
     linkText: "Ver novidades",
     href: "/changelog",
   },
 ];
+
 
 const Categories = () => {
   return (
