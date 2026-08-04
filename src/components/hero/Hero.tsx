@@ -118,7 +118,7 @@ const Hero = () => {
 
         {/* Headline */}
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground text-center tracking-tighter mb-6">
-          <WaveText text="Execute esta instrucao no projeto: Otimize JavaScript inicial, dependências, code splitting, lazy loading, cache, mídia e renderizações. Priorize LCP, INP e CLS sem sacrificar acessibilidade." />
+          <WaveText text="Tudo para potencializar sua Inteligência Artificial" />
         </h1>
 
         {/* Subheadline */}
