@@ -11,8 +11,8 @@ const Index = () => {
   return (
     <div className="relative min-h-screen bg-background overflow-x-hidden">
       <Seo
-        title="Central de Documentação e Conhecimento | Pedrinpass"
-        description="Monte um site de documentação profissional com busca por command palette, referência de API e changelog. Tema escuro e navegação com scroll-spy."
+        title="TecExtension | Marketplace de Extensões para ChatGPT, Lovable, Claude e Cursor"
+        description="Descubra extensões premium, prompts profissionais, templates, agentes de IA, automações, workflows, MCPs e ferramentas para ChatGPT, Lovable, Claude, Cursor, VS Code e Chrome."
         path="/"
       />
       <MatrixRain />

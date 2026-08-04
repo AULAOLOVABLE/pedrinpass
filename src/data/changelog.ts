@@ -19,34 +19,20 @@ export interface ChangelogEntryData {
 
 export const changelogData: ChangelogEntryData[] = [
   {
-    date: "9 de nov. de 2025",
+    date: "14 de ago. de 2026",
     badges: [
-      { variant: "fixes", label: "Correções" },
-      { variant: "improvements", label: "Melhorias" },
+      { variant: "features", label: "Lançamento" },
+      { variant: "improvements", label: "Premium" },
     ],
     sections: [
       {
-        title: "Atualizações na Experiência de Busca",
+        title: "Últimos Recursos",
         items: [
-          "Introduzido o campo search_filters na resposta de resultados (categoria, data, relevância).",
-          "Adicionado query_suggestions para autocompletar as buscas dos usuários.",
-          "O cabeçalho x-search-score agora está disponível nos callbacks de resposta de busca.",
-        ],
-      },
-      {
-        title: "Melhorias na Documentação",
-        items: [
-          "A documentação agora suporta version_history para rastrear alterações.",
-          "Você pode atualizar o article_status diretamente pelo painel.",
-          "Adicionado review_period_days para fluxos de aprovação de conteúdo mais fluidos.",
-        ],
-      },
-      {
-        title: "Melhorias na API",
-        items: [
-          "O article_id agora é retornado em todos os payloads de webhook.",
-          "Agora você pode passar o cabeçalho x-preview-mode para visualizar artigos em rascunho.",
-          "O campo content.pdf agora está incluído nas respostas de GET /articles.",
+          "Novo Prompt Pack ChatGPT para Engenharia de Software.",
+          "Template SaaS Lovable v2.0 lançado.",
+          "Agente Comercial IA para automação de vendas.",
+          "Workflow N8N para processamento de leads.",
+          "Claude MCP: Novo servidor para busca local.",
         ],
       },
     ],

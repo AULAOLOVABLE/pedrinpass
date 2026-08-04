@@ -14,7 +14,7 @@ const HeroSearchBar = () => {
       <div className="flex items-center gap-3 flex-1">
         <Search className="w-5 h-5 text-muted-foreground flex-shrink-0" />
         <span className="text-base text-muted-foreground">
-          {isMobile ? "Buscar" : "Buscar (ex.: integrações, API)"}
+          {isMobile ? "Buscar" : "Buscar extensão, prompt, agente, template..."}
         </span>
       </div>
       
