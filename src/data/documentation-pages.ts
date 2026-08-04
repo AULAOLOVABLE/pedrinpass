@@ -16,41 +16,65 @@ export interface DocPageSection {
 
 export const documentationPages: Record<string, DocPageContent> = {
   extensions: {
-    title: "Biblioteca Premium",
-    description: "Mais de centenas de recursos organizados para acelerar seu trabalho.",
-    breadcrumb: ["Extensões", "Biblioteca"],
+    title: "Biblioteca de Extensões",
+    description: "Explore nossa curadoria de extensões para turbinar sua IA.",
+    breadcrumb: ["Marketplace", "Extensões"],
     sections: [
       {
-        id: "premium-extensions",
-        title: "Extensões Premium",
+        id: "chatgpt-extensions",
+        title: "Extensões para ChatGPT",
         level: "h2",
-        content: "Nossa biblioteca oferece ferramentas especializadas para elevar sua produtividade. Cada extensão é testada e otimizada para os fluxos de trabalho mais exigentes de IA."
+        content: "Melhore sua experiência no ChatGPT com plugins e extensões que adicionam funcionalidades de busca em tempo real, análise de dados avançada e integração com ferramentas externas."
       },
       {
-        id: "ai-ecosystem",
-        title: "Ecosistema de IA",
+        id: "chrome-extensions",
+        title: "Google Chrome",
         level: "h2",
-        content: "Encontre tudo para potencializar sua Inteligência Artificial em um só lugar:",
-        listItems: [
-          "Extensões para ChatGPT e Chrome",
-          "Rules e Agentes para Cursor e VS Code",
-          "Servidores MCP para integração profunda",
-          "Workflows prontos para N8N",
-          "Prompts e Templates profissionais"
-        ]
+        content: "Nossas extensões para Chrome permitem que você utilize o poder da IA diretamente em qualquer página da web, facilitando resumos, traduções e automação de tarefas no navegador."
+      },
+      {
+        id: "vscode-extensions",
+        title: "VS Code & Cursor",
+        level: "h2",
+        content: "Extensões otimizadas para desenvolvedores. Adicione snippets inteligentes, suporte a novas linguagens e integração profunda com modelos de codificação."
       }
     ]
   },
   prompts: {
-    title: "Prompts Premium",
-    description: "Coleções prontas para ChatGPT, Claude e Gemini.",
-    breadcrumb: ["Prompts", "Destaques"],
+    title: "Engenharia de Prompts",
+    description: "Modelos testados para extrair o máximo dos LLMs.",
+    breadcrumb: ["Marketplace", "Prompts"],
     sections: [
       {
-        id: "featured-prompts",
-        title: "Engenharia de Prompts de Elite",
+        id: "coding-prompts",
+        title: "Codificação & Arquitetura",
         level: "h2",
-        content: "Desenvolvemos prompts que extraem o máximo potencial dos modelos de linguagem. De codificação complexa a redação criativa, nossa curadoria garante resultados consistentes."
+        content: "Prompts estruturados para revisão de código, geração de testes unitários e design de sistemas complexos. Compatíveis com Claude 3.5 Sonnet e GPT-4o."
+      },
+      {
+        id: "creative-prompts",
+        title: "Escrita Criativa & Copywriting",
+        level: "h2",
+        content: "Frameworks para criação de conteúdo que não parecem gerados por IA. Foque em tom de voz, persona e engajamento."
+      }
+    ]
+  },
+  templates: {
+    title: "Templates & Projetos",
+    description: "Acelere seu desenvolvimento com estruturas prontas.",
+    breadcrumb: ["Marketplace", "Templates"],
+    sections: [
+      {
+        id: "lovable-templates",
+        title: "Lovable & React",
+        level: "h2",
+        content: "Projetos completos configurados com Tailwind, Shadcn/UI e Supabase. Basta clonar e começar a construir sua ideia em minutos."
+      },
+      {
+        id: "workflow-templates",
+        title: "N8N & Automações",
+        level: "h2",
+        content: "Fluxos de trabalho JSON prontos para importar. Automatize seu funil de vendas, suporte ao cliente e processamento de documentos."
       }
     ]
   },
