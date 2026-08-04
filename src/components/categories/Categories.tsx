@@ -71,7 +71,7 @@ const Categories = () => {
               }}
             >
               <CategoryCard
-                image={category.image}
+                icon={category.icon}
                 title={category.title}
                 description={category.description}
                 linkText={category.linkText}
