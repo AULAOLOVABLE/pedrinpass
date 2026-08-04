@@ -1,59 +1,23 @@
+# Trocar as imagens dos cards de categoria por ícones
 
-# Fix Plan: API Page Mobile Horizontal Overflow
+Na home, os três cards — Documentação, Referência da API e Novidades — usam imagens (o visual de foguete). Elas serão substituídas por ícones Lucide com tratamento visual próprio.
 
-## Problem Identified
-The API Reference page has horizontal overflow on mobile while the Documentation page works correctly. The root cause is a structural difference between the two pages:
+## O que muda
 
-**Documentation Page**: Uses `motion.main` directly with `overflow-hidden`
-**API Page**: Wraps content in `ScrollArea` component which creates a different overflow context
+- Documentação: ícone `BookOpen`
+- Referência da API: ícone `Terminal`
+- Novidades: ícone `Sparkles`
 
-Additionally, the `ApiTable` component has nested overflow wrappers that conflict with each other.
+Cada card ganha, no lugar da imagem:
+- um bloco com fundo em gradiente sutil (vermelho/laranja do tema) e borda arredondada, mantendo a mesma proporção atual;
+- o ícone centralizado, grande, em cor de destaque, com brilho leve;
+- animação de hover: leve escala e aumento do brilho, no lugar do zoom da imagem.
 
----
+Texto, links, ordem dos cards, card em destaque e toda a lógica permanecem iguais.
 
-## Solution
+## Detalhes técnicos
 
-### 1. Remove ScrollArea Wrapper from ApiPageContent
-Replace the `ScrollArea` wrapper with a regular container that matches the Documentation page structure.
-
-**File**: `src/components/api-reference/ApiPageContent.tsx`
-
-**Changes**:
-- Remove the `ScrollArea` import and wrapper
-- Use `motion.main` directly as the root element (same as DocPageContent)
-
-```text
-Before:
-<ScrollArea className="flex-1 min-w-0 w-full">
-  <motion.main ...>
-    ...
-  </motion.main>
-</ScrollArea>
-
-After:
-<motion.main className="flex-1 min-w-0 px-4 md:px-6 lg:px-12 pt-16 lg:pt-10 pb-10 overflow-hidden">
-  ...
-</motion.main>
-```
-
----
-
-### 2. Fix ApiTable Nested Overflow
-The Table UI component already has `overflow-auto` built in. The outer wrapper in ApiTable should only handle visual styling, not overflow.
-
-**File**: `src/components/api-reference/ApiTable.tsx`
-
-**Changes**:
-- Remove `overflow-x-auto` from the outer div wrapper (keep `overflow-hidden` for border-radius clipping)
-- The inner Table component already handles horizontal scrolling
-
----
-
-## Summary of Changes
-
-| File | Change |
-|------|--------|
-| `ApiPageContent.tsx` | Remove `ScrollArea` wrapper, use `motion.main` directly |
-| `ApiTable.tsx` | Remove `overflow-x-auto` from outer div |
-
-This aligns the API page structure with the Documentation page, which is already working correctly on mobile.
+- `src/components/categories/Categories.tsx`: trocar as chaves `image` por `icon` (componentes Lucide), removendo os imports de `card-documentation.png`, `card-api.png` e `card-changelog.png`.
+- `src/components/categories/CategoryCard.tsx`: trocar a prop `image: string` por `icon: LucideIcon` e renderizar o bloco de ícone no lugar da `<img>`, mantendo `featured`, classes `bento-card` e os overlays de gradiente existentes.
+- Cores via tokens (`primary`, `primary-glow`), sem valores fixos.
+- Arquivos de imagem permanecem no projeto (não usados pelos cards).
