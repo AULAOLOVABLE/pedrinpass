@@ -120,13 +120,14 @@ All colors MUST be HSL.
 }
 
 @layer base {
-  h1, h2, h3, .font-display {
-    @apply font-display tracking-tighter;
+  h1, h2, h3 {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    @apply tracking-tighter;
     letter-spacing: -0.05em;
   }
 
-  p, .font-sans {
-    @apply font-sans;
+  p {
+    font-family: "Inter Tight", Inter, system-ui, sans-serif;
     letter-spacing: -0.01em;
   }
 }
