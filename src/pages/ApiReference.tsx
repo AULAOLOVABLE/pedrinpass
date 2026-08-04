@@ -14,8 +14,8 @@ export default function ApiReference() {
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Seo
-        title={`${endpointSlug.replace(/-/g, " ")} — API TechLink`}
-        description="Referência da API REST do TechLink: endpoints, headers, corpos de requisição e schemas de resposta."
+        title={`${endpointSlug.replace(/-/g, " ")} — API PedrinTEC`}
+        description="Referência da API REST do PedrinTEC: endpoints, headers, corpos de requisição e schemas de resposta."
         path={`/api/${endpointSlug}`}
       />
       <Navbar />
