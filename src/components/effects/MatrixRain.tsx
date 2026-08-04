@@ -61,12 +61,12 @@ const MatrixRain = () => {
         const x = i * fontSize;
         const y = drops[i];
 
-        // Cyan/Electric Blue colors for head
-        ctx.fillStyle = `hsl(190 100% ${68 + Math.min(boost * 1.5, 20)}% / ${0.75 + Math.min(boost * 0.015, 0.25)})`;
+        // PedrinTEC Orange head
+        ctx.fillStyle = `hsl(25 100% ${68 + Math.min(boost * 1.5, 20)}% / ${0.75 + Math.min(boost * 0.015, 0.25)})`;
         ctx.fillText(char, x, y);
 
-        // Body in muted cyan
-        ctx.fillStyle = `hsl(190 100% 50% / ${0.28 + Math.min(boost * 0.02, 0.3)})`;
+        // Body in muted orange
+        ctx.fillStyle = `hsl(25 100% 50% / ${0.28 + Math.min(boost * 0.02, 0.3)})`;
         ctx.fillText(GLYPHS[Math.floor(Math.random() * GLYPHS.length)], x, y - fontSize);
 
         drops[i] += (speeds[i] + boost * 0.5) * (prefersReduced ? 0.2 : 1) * fontSize * 0.35;

@@ -18,8 +18,8 @@ All colors MUST be HSL.
     --ui-surface-active: 240 10% 8%;
     
     --ui-border: 240 10% 10%;
-    --ui-border-hover: 190 100% 50% / 0.4; /* Electric Cyan */
-    --ui-border-active: 190 100% 50% / 0.7;
+    --ui-border-hover: 25 100% 50% / 0.4; /* Vibrant Orange */
+    --ui-border-active: 25 100% 50% / 0.7;
 
     /* Shadcn/UI Compatibility */
     --card: var(--ui-surface);
@@ -27,9 +27,9 @@ All colors MUST be HSL.
     --popover: var(--ui-surface);
     --popover-foreground: var(--foreground);
 
-    --primary: 190 100% 50%; /* Electric Cyan */
-    --primary-foreground: 0 0% 0%;
-    --primary-glow: 190 100% 70%;
+    --primary: 25 100% 50%; /* Vibrant Orange */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 25 100% 70%;
 
     --secondary: 240 10% 12%;
     --secondary-foreground: var(--foreground);
@@ -37,7 +37,7 @@ All colors MUST be HSL.
     --muted: 240 10% 12%;
     --muted-foreground: 240 5% 65%;
 
-    --accent: 190 100% 15%;
+    --accent: 25 100% 15%;
     --accent-foreground: var(--foreground);
 
     --destructive: 0 84% 60%;
@@ -45,7 +45,7 @@ All colors MUST be HSL.
 
     --border: var(--ui-border);
     --input: 240 10% 12%;
-    --ring: 190 100% 50%;
+    --ring: 25 100% 50%;
 
     --radius: 2rem;
 
@@ -53,7 +53,7 @@ All colors MUST be HSL.
     --sidebar-foreground: var(--foreground);
     --sidebar-primary: var(--primary);
     --sidebar-primary-foreground: var(--primary-foreground);
-    --sidebar-accent: 190 100% 10%;
+    --sidebar-accent: 25 100% 10%;
     --sidebar-accent-foreground: var(--foreground);
     --sidebar-border: var(--ui-border);
     --sidebar-ring: var(--ring);
@@ -97,7 +97,7 @@ All colors MUST be HSL.
     inset: 0;
     border-radius: 0.75rem;
     padding: 1px;
-    background: linear-gradient(178.8deg, hsl(190 100% 50% / 0.6) 10.85%, rgba(60, 60, 60, 0.6) 24.36%, rgba(80, 80, 80, 0.6) 73.67%, hsl(190 100% 70% / 0.6) 90.68%);
+    background: linear-gradient(178.8deg, hsl(25 100% 50% / 0.6) 10.85%, rgba(60, 60, 60, 0.6) 24.36%, rgba(80, 80, 80, 0.6) 73.67%, hsl(25 100% 70% / 0.6) 90.68%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
     pointer-events: none;
