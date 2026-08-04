@@ -19,11 +19,19 @@ export default {
         mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
       },
       colors: {
-        border: "hsl(var(--border))",
-        input: "hsl(var(--input))",
+        border: "hsl(var(--ui-border))",
+        input: "hsl(var(--ui-border))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        ui: {
+          surface: "hsl(var(--ui-surface))",
+          "surface-hover": "hsl(var(--ui-surface-hover))",
+          "surface-active": "hsl(var(--ui-surface-active))",
+          border: "hsl(var(--ui-border))",
+          "border-hover": "hsl(var(--ui-border-hover))",
+          "border-active": "hsl(var(--ui-border-active))",
+        },
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
