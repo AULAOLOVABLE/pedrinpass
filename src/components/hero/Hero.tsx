@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Hls from "hls.js";
 import HeroSearchBar from "./HeroSearchBar";
 import { ChevronRight } from "lucide-react";
-import heroGradient from "@/assets/hero-gradient.png";
+import bgWaveAsset from "@/assets/bg-wave.png.asset.json";
 import WaveText from "@/components/ui/wave-text";
 
 const shortcuts = [
@@ -89,11 +89,11 @@ const Hero = () => {
         style={{ zIndex: 1 }}
       />
 
-      {/* Gradient overlay */}
+      {/* Background Wave Image */}
       <img 
-        src={heroGradient}
+        src={bgWaveAsset.url}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none"
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-60 mix-blend-screen"
         style={{ zIndex: 1 }}
       />
 
