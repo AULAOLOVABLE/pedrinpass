@@ -55,7 +55,7 @@ const Dashboard = () => {
         <div className="mb-10 flex flex-col gap-3">
           <span className="eyebrow">Monitoramento</span>
           <h2 className="text-2xl md:text-4xl font-bold text-foreground">
-            <WaveText text="Dashboard de Decisão" StaggerDelay={0.01} />
+            <WaveText text="Dashboard de Decisão" staggerDelay={0.01} />
           </h2>
           <div className="h-px w-full bg-gradient-to-r from-primary/60 via-border to-transparent" />
         </div>
