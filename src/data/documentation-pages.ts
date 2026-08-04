@@ -97,87 +97,84 @@ export const documentationPages: Record<string, DocPageContent> = {
       }
     ]
   },
-  sandbox: {
-    title: "Sandbox vs. Produção",
-    description: "Entenda as diferenças entre os ambientes de sandbox e produção.",
-    breadcrumb: ["Primeiros Passos", "Sandbox vs. Produção"],
+  chatgpt: {
+    title: "Recursos ChatGPT",
+    description: "Tudo para a maior plataforma de IA do mundo.",
+    breadcrumb: ["Categorias", "ChatGPT"],
     sections: [
       {
-        id: "understanding-environments",
-        title: "Entendendo os Ambientes",
+        id: "gpts-custom",
+        title: "GPTs Personalizados",
         level: "h2",
-        content: "O Pedrinpass fornece dois ambientes separados para desenvolvimento e operações reais. Cada ambiente tem suas próprias chaves de API, dados e configurações para garantir testes seguros sem afetar clientes reais."
-      },
-      {
-        id: "sandbox-environment",
-        title: "Ambiente de Sandbox",
-        level: "h2",
-        content: "O sandbox é seu ambiente de testes. Use-o para:",
-        listItems: [
-          "Testar fluxos de pagamento sem dinheiro real",
-          "Simular diversos cenários de cartão (sucesso, recusa, erros)",
-          "Desenvolver e depurar integrações com segurança",
-          "Treinar membros da equipe na plataforma",
-          "Validar webhooks e o tratamento de eventos"
-        ]
-      },
-      {
-        id: "production-environment",
-        title: "Ambiente de Produção",
-        level: "h2",
-        content: "A produção lida com transações reais e clientes reais. Antes de entrar em produção, certifique-se de ter concluído todos os requisitos de conformidade e testado bem sua integração no sandbox."
-      },
-      {
-        id: "switching-environments",
-        title: "Alternando Entre Ambientes",
-        level: "h3",
-        content: "Alterne entre sandbox e produção usando o seletor de ambiente no cabeçalho do painel. Suas chaves de API e dados são completamente separados entre os ambientes por segurança."
+        content: "Uma lista curada de GPTs focados em produtividade, análise técnica e aprendizado acelerado."
       }
     ]
   },
-  "account-setup": {
-    title: "Configuração da Conta",
-    description: "Aprenda a configurar sua conta e seu workspace para um uso ideal.",
-    breadcrumb: ["Primeiros Passos", "Configuração da Conta"],
+  lovable: {
+    title: "Desenvolvimento Lovable",
+    description: "Crie apps full-stack em segundos.",
+    breadcrumb: ["Categorias", "Lovable"],
     sections: [
       {
-        id: "introduction",
-        title: "Introdução",
+        id: "lovable-components",
+        title: "Componentes UI",
         level: "h2",
-        content: "Bem-vindo à Central de Ajuda do Pedrinpass. Este guia vai te conduzir pelos passos essenciais para configurar sua conta e começar a usar a plataforma. Seja você novo no Pedrinpass ou migrando de outra ferramenta, esta documentação cobre tudo o que você precisa."
-      },
+        content: "Biblioteca de componentes React/Tailwind prontos para serem usados no Lovable via copy-paste inteligente."
+      }
+    ]
+  },
+  claude: {
+    title: "Poder do Claude",
+    description: "Domine o modelo mais inteligente da Anthropic.",
+    breadcrumb: ["Categorias", "Claude"],
+    sections: [
       {
-        id: "creating-your-account",
-        title: "Criando Sua Conta",
+        id: "claude-mcp",
+        title: "Protocolo MCP",
         level: "h2",
-        content: "Configurar sua conta Pedrinpass leva apenas alguns minutos. Siga os passos abaixo para criar sua conta e entrar ou criar um workspace para sua equipe."
-      },
+        content: "Instruções e servidores para usar o Model Context Protocol com o Claude Desktop, dando à IA acesso ao seu sistema de arquivos e ferramentas locais."
+      }
+    ]
+  },
+  cursor: {
+    title: "Setup Cursor",
+    description: "A melhor IDE de IA configurada para você.",
+    breadcrumb: ["Categorias", "Cursor"],
+    sections: [
       {
-        id: "sign-up-process",
-        title: "Processo de Cadastro",
-        level: "h3",
-        content: "Complete estes passos para criar sua conta:",
-        listItems: [
-          "Acesse a página de cadastro do Pedrinpass e clique em 'Criar Conta'",
-          "Digite seu endereço de e-mail e crie uma senha forte",
-          "Escolha entre criar um novo workspace ou entrar em um existente",
-          "Complete a verificação de captcha para confirmar que você é humano",
-          "Clique em 'Continuar' para prosseguir com a verificação de e-mail"
-        ],
-        orderedList: true
-      },
-      {
-        id: "account-verification",
-        title: "Verificação da Conta",
-        level: "h3",
-        content: "Após o cadastro, você receberá um e-mail de verificação. Clique no link do e-mail para verificar sua conta. Os links de verificação expiram após 24 horas. Se o seu link expirou, você pode solicitar um novo na página de login."
-      },
-      {
-        id: "security-setup",
-        title: "Configuração de Segurança",
+        id: "cursor-rules",
+        title: ".cursorrules de Elite",
         level: "h2",
-        content: "Proteger sua conta e seus dados é fundamental. O Pedrinpass oferece múltiplas camadas de segurança, incluindo autenticação de dois fatores, gerenciamento de sessões e registro de atividades."
-      },
+        content: "Arquivos de configuração que ensinam o Cursor exatamente como você gosta de codar, quais padrões seguir e quais bibliotecas evitar."
+      }
+    ]
+  },
+  community: {
+    title: "Comunidade TecExtension",
+    description: "Conecte-se com outros entusiastas de IA.",
+    breadcrumb: ["Suporte", "Comunidade"],
+    sections: [
+      {
+        id: "discord-access",
+        title: "Servidor Discord",
+        level: "h2",
+        content: "Entre no nosso Discord para trocar prompts, pedir ajuda com automações e receber novidades em primeira mão."
+      }
+    ]
+  },
+  featured: {
+    title: "Recursos em Destaque",
+    description: "O melhor do nosso marketplace selecionado para você.",
+    breadcrumb: ["Suporte", "Destaques"],
+    sections: [
+      {
+        id: "top-picks",
+        title: "Escolha dos Editores",
+        level: "h2",
+        content: "Os recursos que mais geraram valor para nossos usuários este mês."
+      }
+    ]
+  },
       {
         id: "two-factor-auth",
         title: "Autenticação de Dois Fatores",
