@@ -10,6 +10,8 @@ import {
   RefreshCw,
   AlertTriangle,
   Shield,
+  MessageSquare,
+  Terminal,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
