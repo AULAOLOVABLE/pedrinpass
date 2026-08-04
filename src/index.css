@@ -9,7 +9,7 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Base Colors - HSL */
-    --background: 240 10% 4%;
+    --background: 240 10% 2%;
     --foreground: 0 0% 100%;
 
     /* Semantic UI Tokens */
@@ -27,9 +27,9 @@ All colors MUST be HSL.
     --popover: var(--ui-surface);
     --popover-foreground: var(--foreground);
 
-    --primary: 18 92% 58%;
-    --primary-foreground: 20 15% 8%;
-    --primary-glow: 28 96% 64%;
+    --primary: 25 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 35 100% 60%;
 
     --secondary: 20 8% 14%;
     --secondary-foreground: var(--foreground);
