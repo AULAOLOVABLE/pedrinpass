@@ -32,6 +32,30 @@ export const documentationPages: DocumentationPage[] = [
     description: "Automatize tudo com PedrinTEC.",
     content: "Esqueça scripts manuais. Use o PedrinTEC Automator para conectar suas ferramentas favoritas com fluxos de trabalho visuais e resilientes.",
     category: "DevOps",
+  },
+  {
+    id: "premium-prompts",
+    title: "Prompts Premium",
+    description: "Sequência estratégica de prompts para resultados de alta performance.",
+    category: "Engenharia de Prompts",
+    content: "Nesta seção, você encontrará uma sequência lógica de prompts projetada para guiar modelos de IA através de tarefas complexas, desde o planejamento até a execução final.",
+    sections: [
+      { 
+        id: "context", 
+        title: "1. Definição de Contexto", 
+        content: "O primeiro passo é estabelecer o papel da IA. Exemplo: 'Atue como um Engenheiro de Software Sênior especializado em arquitetura limpa...'" 
+      },
+      { 
+        id: "requirements", 
+        title: "2. Especificação Técnica", 
+        content: "Forneça detalhes granulares sobre o que precisa ser construído. Use a técnica de Few-Shot para melhores resultados." 
+      },
+      { 
+        id: "execution", 
+        title: "3. Refinamento e Revisão", 
+        content: "A sequência final foca em revisar o output e aplicar correções de segurança e performance." 
+      }
+    ]
   }
 ];
 
