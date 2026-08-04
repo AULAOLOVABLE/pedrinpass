@@ -108,7 +108,7 @@ const Hero = () => {
         {/* Announcement Badge */}
         <Link
           to="/docs/extensions"
-          className="inline-flex items-center gap-2 pl-4 pr-2 py-2 mb-8 text-sm text-muted-foreground bg-[#121314] rounded-full border border-primary/30 hover:border-primary/60 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          className="inline-flex items-center gap-2 pl-4 pr-2 py-2 mb-10 text-xs font-medium uppercase tracking-widest text-primary bg-primary/10 rounded-full border border-primary/20 hover:border-primary/40 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
         >
           <span>🚀 Plataforma Premium</span>
           <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground">
@@ -117,12 +117,12 @@ const Hero = () => {
         </Link>
 
         {/* Headline */}
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-foreground text-center tracking-tighter mb-6">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-black text-foreground text-center tracking-tightest mb-8 leading-[0.9]">
           <WaveText text="TecExtension" />
         </h1>
 
         {/* Subheadline */}
-        <p className="text-base md:text-lg text-muted-foreground text-center max-w-2xl mb-10">
+        <p className="text-lg md:text-xl text-muted-foreground text-center max-w-3xl mb-12 leading-relaxed">
           <WaveText text="Explore o marketplace premium de extensões e ferramentas para IA." staggerDelay={0.015} />
         </p>
 
@@ -139,7 +139,7 @@ const Hero = () => {
               <Link
                 key={shortcut.label}
                 to={shortcut.href}
-                className="inline-flex items-center px-4 py-2 text-sm text-muted-foreground border border-border rounded-xl bg-background/40 backdrop-blur-sm transition-all hover:text-foreground hover:border-primary/50 hover:bg-primary/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                className="inline-flex items-center px-5 py-2.5 text-xs font-medium text-muted-foreground border border-white/5 rounded-full bg-white/5 backdrop-blur-md transition-all hover:text-foreground hover:border-primary/40 hover:bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
               >
                 {shortcut.label}
               </Link>
