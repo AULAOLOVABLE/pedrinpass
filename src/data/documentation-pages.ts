@@ -5,6 +5,7 @@ export interface DocumentationPage {
   category: string;
   description: string;
   sections?: { id: string; title: string; content: string }[];
+  listItems?: string[];
 }
 
 export const documentationPages: DocumentationPage[] = [
@@ -35,10 +36,10 @@ export const documentationPages: DocumentationPage[] = [
 ];
 
 export const generateTableOfContents = (page: DocumentationPage) => {
-  const toc = [{ id: "top", title: page.title, level: 1 }];
+  const toc: { id: string; title: string; level: "h2" | "h3" }[] = [];
   if (page.sections) {
     page.sections.forEach(section => {
-      toc.push({ id: section.id, title: section.title, level: 2 });
+      toc.push({ id: section.id, title: section.title, level: "h2" as const });
     });
   }
   return toc;

@@ -2,10 +2,6 @@ import { useEffect, useRef } from "react";
 
 const GLYPHS = "01アイウエオカキクケコサシスセソタチツテトナニヌネノABCDEFGHIJKLMNOPQRSTUVWXYZ{}[]<>/*+-=$#";
 
-/**
- * Fundo animado de "letras caindo" (matrix) que reage ao scroll:
- * quanto mais rápido o scroll, mais rápido e mais brilhante o efeito.
- */
 const MatrixRain = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const boostRef = useRef(0);
@@ -54,7 +50,6 @@ const MatrixRain = () => {
 
     let raf = 0;
     const render = () => {
-      // rastro
       ctx.fillStyle = "rgba(0, 0, 0, 0.09)";
       ctx.fillRect(0, 0, width, height);
 
@@ -66,12 +61,12 @@ const MatrixRain = () => {
         const x = i * fontSize;
         const y = drops[i];
 
-        // cabeça mais clara
-        ctx.fillStyle = `hsl(35 100% ${68 + Math.min(boost * 1.5, 20)}% / ${0.75 + Math.min(boost * 0.015, 0.25)})`;
+        // Cyan/Electric Blue colors for head
+        ctx.fillStyle = `hsl(190 100% ${68 + Math.min(boost * 1.5, 20)}% / ${0.75 + Math.min(boost * 0.015, 0.25)})`;
         ctx.fillText(char, x, y);
 
-        // corpo em laranja suave
-        ctx.fillStyle = `hsl(25 100% 50% / ${0.28 + Math.min(boost * 0.02, 0.3)})`;
+        // Body in muted cyan
+        ctx.fillStyle = `hsl(190 100% 50% / ${0.28 + Math.min(boost * 0.02, 0.3)})`;
         ctx.fillText(GLYPHS[Math.floor(Math.random() * GLYPHS.length)], x, y - fontSize);
 
         drops[i] += (speeds[i] + boost * 0.5) * (prefersReduced ? 0.2 : 1) * fontSize * 0.35;
