@@ -9,7 +9,7 @@ export function DocPageContent() {
   const params = useParams();
   const pageSlug = params["*"] || "overview";
   
-  const page = documentationPages[pageSlug] || documentationPages["overview"];
+  const page = documentationPages.find(p => p.id === pageSlug) || documentationPages.find(p => p.id === "overview");
   
   if (!page) {
     return (

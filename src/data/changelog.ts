@@ -21,53 +21,36 @@ export const changelogData: ChangelogEntryData[] = [
   {
     date: "14 de ago. de 2026",
     badges: [
-      { variant: "features", label: "Lançamento" },
-      { variant: "improvements", label: "Premium" },
+      { variant: "features", label: "Marketplace" },
+      { variant: "improvements", label: "Premium Content" },
     ],
     sections: [
       {
-        title: "Últimos Recursos",
+        title: "Lançamento do Ecossistema Completo",
         items: [
-          "Novo Prompt Pack ChatGPT para Engenharia de Software.",
-          "Template SaaS Lovable v2.0 lançado.",
-          "Agente Comercial IA para automação de vendas.",
-          "Workflow N8N para processamento de leads.",
-          "Claude MCP: Novo servidor para busca local.",
+          "Preenchimento integral de Documentação, Prompts e Templates.",
+          "Nova rota de API Connect com exemplos interativos.",
+          "Sistema de busca global otimizado com atalhos Command+K.",
+          "Interface responsiva aprimorada para dispositivos mobile.",
+          "Novos pacotes de Prompts Premium para Lovable e ChatGPT."
         ],
       },
     ],
   },
   {
-    date: "28 de jul. de 2026",
+    date: "05 de ago. de 2026",
     badges: [
-      { variant: "features", label: "Novas Extensões" },
-      { variant: "improvements", label: "Database Update" },
+      { variant: "improvements", label: "Visual 2027" },
+      { variant: "fixes", label: "Performance" },
     ],
     sections: [
       {
-        title: "Banco de Dados de Extensões",
+        title: "Padrão Visual Futuro",
         items: [
-          "Adicionadas 50 novas extensões para Chrome focadas em análise de dados.",
-          "Novo servidor MCP para integração com bancos de dados SQL no Claude.",
-          "Otimização da busca no marketplace para resultados instantâneos.",
-          "Atualização dos pacotes de prompts para suporte ao Llama 3.1.",
-        ],
-      },
-    ],
-  },
-  {
-    date: "10 de jul. de 2026",
-    badges: [
-      { variant: "fixes", label: "Estabilidade" },
-      { variant: "features", label: "Automações" },
-    ],
-    sections: [
-      {
-        title: "Workflows N8N",
-        items: [
-          "Lançamento do template de automação para suporte ao cliente via WhatsApp.",
-          "Corrigido erro de sincronização em templates Lovable com Supabase.",
-          "Melhoria no tempo de resposta do assistente de IA durante o streaming.",
+          "Implementação da estética premium com tipografia Space Grotesk.",
+          "Otimização de carregamento com lazy loading em todas as rotas.",
+          "Novos efeitos de Matrix Rain e microinterações fluidas.",
+          "Correção de bugs na navegação lateral da documentação."
         ],
       },
     ],
