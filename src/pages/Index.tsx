@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Navbar } from "@/components/navbar";
 import { Hero } from "@/components/hero";
 import { Categories } from "@/components/categories";
@@ -7,8 +8,18 @@ import { AIAssistant } from "@/components/ai-assistant";
 import { Footer } from "@/components/footer";
 import { Seo } from "@/components/Seo";
 import { MatrixRain, ScrollProgress, ScrollReveal } from "@/components/effects";
+import { ArrowRight } from "lucide-react";
 
 const Index = () => {
+  const [showStickyCTA, setShowStickyCTA] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowStickyCTA(window.scrollY > 600);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
     <div className="relative min-h-screen bg-background overflow-x-hidden selection:bg-primary/30 selection:text-primary-foreground">
       <Seo
@@ -67,6 +78,13 @@ const Index = () => {
         </main>
 
         <Footer />
+        
+        {/* Sticky Mobile CTA */}
+        <div className={`sticky-cta-mobile ${showStickyCTA ? 'visible' : ''}`}>
+          <button className="w-full bg-primary text-primary-foreground py-4 rounded-2xl font-black text-lg shadow-[0_20px_40px_rgba(var(--primary),0.3)] flex items-center justify-center gap-2 active:scale-[0.98] transition-all">
+            Começar Agora <ArrowRight className="w-5 h-5" />
+          </button>
+        </div>
       </div>
     </div>
   );
