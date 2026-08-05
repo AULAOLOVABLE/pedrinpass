@@ -9,62 +9,62 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* 2027 Premium Tech Palette: Deep Obsidians and Electric Highlights */
-    --background: 240 10% 2%;
+    --background: 240 10% 1.5%;
     --foreground: 0 0% 100%;
 
     /* Semantic UI Tokens - Ultra Modern High Contrast */
-    --ui-surface: 240 10% 3%;
-    --ui-surface-hover: 240 10% 5%;
-    --ui-surface-active: 240 10% 7%;
+    --ui-surface: 240 10% 2.5%;
+    --ui-surface-hover: 240 10% 4%;
+    --ui-surface-active: 240 10% 6%;
     
-    --ui-border: 240 10% 10%;
-    --ui-border-hover: 25 100% 50% / 0.3;
-    --ui-border-active: 25 100% 50% / 0.5;
+    --ui-border: 240 10% 8%;
+    --ui-border-hover: 25 100% 50% / 0.4;
+    --ui-border-active: 25 100% 50% / 0.6;
 
     /* Shadcn/UI Compatibility */
-    --card: 240 10% 4%;
+    --card: 240 10% 3%;
     --card-foreground: var(--foreground);
-    --popover: 240 10% 3%;
+    --popover: 240 10% 2%;
     --popover-foreground: var(--foreground);
 
     --primary: 25 100% 50%; /* Vibrant Orange Brand */
     --primary-foreground: 0 0% 100%;
     --primary-glow: 25 100% 65%;
 
-    --secondary: 240 10% 8%;
+    --secondary: 240 10% 6%;
     --secondary-foreground: var(--foreground);
 
-    --muted: 240 8% 12%;
-    --muted-foreground: 240 5% 65%;
+    --muted: 240 8% 10%;
+    --muted-foreground: 240 5% 60%;
 
-    --accent: 25 100% 12%;
+    --accent: 25 100% 10%;
     --accent-foreground: var(--foreground);
 
     --destructive: 0 84% 55%;
     --destructive-foreground: 0 0% 100%;
 
     --border: var(--ui-border);
-    --input: 240 10% 10%;
+    --input: 240 10% 8%;
     --ring: 25 100% 50%;
 
     /* Radius: Consistent 1.5rem for a modern, slightly rounded yet precise feel */
     --radius: 1.5rem;
 
-    --sidebar-background: 240 10% 3%;
+    --sidebar-background: 240 10% 2.5%;
     --sidebar-foreground: var(--foreground);
     --sidebar-primary: var(--primary);
     --sidebar-primary-foreground: var(--primary-foreground);
-    --sidebar-accent: 25 100% 8%;
+    --sidebar-accent: 25 100% 6%;
     --sidebar-accent-foreground: var(--foreground);
     --sidebar-border: var(--ui-border);
     --sidebar-ring: var(--ring);
 
     /* Animation Tokens: Cinematic timing */
-    --duration-fast: 160ms;
-    --duration-normal: 240ms;
-    --duration-slow: 320ms;
-    --spring-duration: 0.5s;
-    --spring-bounce: 0.2;
+    --duration-fast: 120ms;
+    --duration-normal: 200ms;
+    --duration-slow: 400ms;
+    --spring-duration: 0.4s;
+    --spring-bounce: 0.15;
   }
 
   .dark {
@@ -149,16 +149,23 @@ All colors MUST be HSL.
     border-radius: 2rem;
     border: 1px solid hsl(var(--ui-border));
     background:
-      radial-gradient(120% 100% at 50% 0%, hsl(var(--primary) / 0.12) 0%, transparent 60%),
-      linear-gradient(180deg, hsl(0 0% 100% / 0.04) 0%, hsl(0 0% 0% / 0.4) 100%);
-    box-shadow: 0 1px 0 0 hsl(0 0% 100% / 0.04) inset, 0 20px 40px -30px hsl(0 0% 0% / 0.9);
-    transition: border-color 300ms ease, box-shadow 300ms ease, transform 300ms ease;
+      radial-gradient(120% 120% at 50% 0%, hsl(var(--primary) / 0.15) 0%, transparent 70%),
+      linear-gradient(180deg, hsl(0 0% 100% / 0.05) 0%, hsl(0 0% 0% / 0.5) 100%);
+    box-shadow: 
+      0 1px 0 0 hsl(0 0% 100% / 0.05) inset, 
+      0 0 0 1px hsl(var(--primary) / 0.05),
+      0 20px 40px -30px hsl(0 0% 0% / 1);
+    transition: all 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    backdrop-filter: blur(12px);
   }
 
   .bento-card:hover {
-    border-color: hsl(var(--primary) / 0.45);
-    box-shadow: 0 1px 0 0 hsl(0 0% 100% / 0.06) inset, 0 24px 60px -30px hsl(var(--primary) / 0.45);
-    transform: translateY(-2px);
+    border-color: hsl(var(--primary) / 0.5);
+    box-shadow: 
+      0 1px 0 0 hsl(0 0% 100% / 0.08) inset, 
+      0 0 20px 2px hsl(var(--primary) / 0.1),
+      0 32px 64px -32px hsl(var(--primary) / 0.5);
+    transform: translateY(-4px) scale(1.01);
   }
 
   .eyebrow {
