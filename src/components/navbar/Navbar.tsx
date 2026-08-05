@@ -42,7 +42,7 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           <NavLinks />
           <div className="hidden md:flex items-center">
-            <button className="bg-primary text-primary-foreground px-5 py-2 rounded-xl text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all active:scale-95">
+            <button className="bg-primary text-primary-foreground px-5 py-2 rounded-xl text-sm font-bold shadow-[0_8px_30px_rgba(var(--primary),0.3)] hover:bg-primary/90 hover:shadow-[0_12px_40px_rgba(var(--primary),0.6)] hover:-translate-y-1 transition-all active:scale-95 duration-[var(--duration-normal)] ease-[cubic-bezier(0.23,1,0.32,1)]">
               Começar Agora — Grátis
             </button>
           </div>
