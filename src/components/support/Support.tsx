@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { MessageSquare, Headset } from "lucide-react";
+import { MessageSquare, Headset, HelpCircle, ShieldCheck } from "lucide-react";
 import SupportCard from "./SupportCard";
 import supportBg from "@/assets/support-bg.png";
 import WaveText from "@/components/ui/wave-text";
@@ -8,16 +8,30 @@ const supportOptions = [
   {
     icon: MessageSquare,
     title: "Entre na Comunidade",
-    description: "Receba acesso antecipado a novos recursos e novos prompts toda semana.",
+    description: "Troque experiências com mais de [PREENCHER] desenvolvedores e receba prompts semanais.",
     linkText: "Participar",
     href: "/docs/community",
   },
   {
+    icon: HelpCircle,
+    title: "FAQ Orientado a Decisão",
+    description: "Dúvidas sobre integração, limites de API ou segurança? Encontre respostas rápidas aqui.",
+    linkText: "Ver FAQ",
+    href: "/docs/faq",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Garantia de Performance",
+    description: "Infraestrutura resiliente com 99.9% de uptime garantido em contrato para planos Enterprise.",
+    linkText: "Ver SLA",
+    href: "/docs/sla",
+  },
+  {
     icon: Headset,
-    title: "Recursos em Destaque",
-    description: "Prompts Premium, Templates Lovable, Cursor Rules e Claude Commands.",
-    linkText: "Ver Recursos",
-    href: "/docs/featured",
+    title: "Suporte Especializado",
+    description: "Time sênior disponível para auxiliar na arquitetura de seus fluxos neurais mais complexos.",
+    linkText: "Falar com Consultor",
+    href: "/contact",
   },
 ];
 
@@ -44,7 +58,7 @@ const Support = () => {
 
           {/* Cards Grid */}
           <motion.div 
-            className="grid grid-cols-1 md:grid-cols-2 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}

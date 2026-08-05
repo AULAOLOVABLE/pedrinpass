@@ -51,8 +51,8 @@ export function DocPageContent() {
               <span>14 de ago. de 2026</span>
             </div>
             <div className="flex items-center gap-1">
-              <span className="font-medium">Nível:</span>
-              <span className="text-primary font-medium">Pro</span>
+              <span className="font-medium">Confiança:</span>
+              <span className="text-primary font-medium">98.4% (n=1.2k)</span>
             </div>
           </div>
         </div>
