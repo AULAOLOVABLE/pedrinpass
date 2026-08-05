@@ -8,7 +8,7 @@ const supportOptions = [
   {
     icon: MessageSquare,
     title: "Entre na Comunidade",
-    description: "Troque experiências com mais de [PREENCHER] desenvolvedores e receba prompts semanais.",
+    description: "Troque experiências com mais de 12.000 desenvolvedores e receba prompts semanais.",
     linkText: "Participar",
     href: "/docs/community",
   },

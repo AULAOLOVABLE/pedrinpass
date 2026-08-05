@@ -82,7 +82,7 @@ const Index = () => {
         {/* Sticky Mobile CTA */}
         <div className={`sticky-cta-mobile ${showStickyCTA ? 'visible' : ''}`}>
           <button className="w-full bg-primary text-primary-foreground py-4 rounded-2xl font-black text-lg shadow-[0_20px_40px_rgba(var(--primary),0.3)] flex items-center justify-center gap-2 active:scale-[0.98] transition-all">
-            Começar Agora <ArrowRight className="w-5 h-5" />
+            Criar Minha Extensão <ArrowRight className="w-5 h-5" />
           </button>
         </div>
       </div>
