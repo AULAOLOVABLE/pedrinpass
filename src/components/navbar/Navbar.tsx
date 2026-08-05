@@ -41,6 +41,11 @@ const Navbar = () => {
         {/* Right Section: NavLinks + CTA */}
         <div className="flex items-center gap-4">
           <NavLinks />
+          <div className="hidden md:flex items-center">
+            <button className="bg-primary text-primary-foreground px-5 py-2 rounded-xl text-sm font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all active:scale-95">
+              Começar Agora
+            </button>
+          </div>
           <MobileMenu />
         </div>
       </nav>
