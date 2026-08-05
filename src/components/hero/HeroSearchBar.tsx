@@ -12,9 +12,9 @@ const HeroSearchBar = () => {
       ref={containerRef}
       onClick={openSearch}
       className={cn(
-        "group relative flex items-center w-full h-16 md:h-20 px-6 rounded-2xl cursor-text transition-all duration-300",
-        "bg-white/[0.03] border border-white/10 backdrop-blur-xl",
-        "hover:bg-white/[0.06] hover:border-primary/40 hover:shadow-[0_0_40px_rgba(var(--primary),0.1)]",
+        "group relative flex items-center w-full h-16 md:h-20 px-6 rounded-2xl cursor-text transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)]",
+        "bg-white/[0.02] border border-white/5 backdrop-blur-xl",
+        "hover:bg-white/[0.05] hover:border-primary/50 hover:shadow-[0_0_60px_rgba(var(--primary),0.2)] hover:-translate-y-1",
         "search-bar-gradient-border"
       )}
     >
@@ -29,7 +29,7 @@ const HeroSearchBar = () => {
         </span>
       </div>
 
-      <div className="hidden md:flex items-center justify-center h-10 px-4 rounded-xl bg-primary text-primary-foreground text-sm font-bold shadow-lg shadow-primary/20 transition-transform group-hover:scale-105 active:scale-95">
+      <div className="hidden md:flex items-center justify-center h-10 px-4 rounded-xl bg-primary text-primary-foreground text-sm font-bold shadow-[0_8px_20px_rgba(var(--primary),0.3)] transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_12px_30px_rgba(var(--primary),0.5)] active:scale-95">
         Buscar Agora
       </div>
     </div>
