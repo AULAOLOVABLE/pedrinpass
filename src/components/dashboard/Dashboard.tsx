@@ -8,10 +8,10 @@ const stats = [
     value: "R$ 124.500",
     trend: "+12.5%",
     trendUp: true,
-    description: "vs. mês anterior",
+    description: "n=12k clientes",
   },
   {
-    label: "Taxa de Conversão",
+    label: "Conversão",
     value: "3.2%",
     trend: "-0.4%",
     trendUp: false,
@@ -22,7 +22,7 @@ const stats = [
     value: "1,284",
     trend: "+18%",
     trendUp: true,
-    description: "Tempo real",
+    description: "Agora",
   },
 ];
 
