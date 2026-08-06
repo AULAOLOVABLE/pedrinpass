@@ -26,10 +26,10 @@ const Navbar = () => {
       <nav 
         aria-label="Navegação principal" 
         className={cn(
-          "flex items-center justify-between px-8 py-3 w-[95%] max-w-7xl transition-all duration-500 border border-white/5",
+          "flex items-center justify-between px-8 py-3 w-[95%] max-w-[1400px] transition-all duration-700 border border-white/5",
           isScrolled 
-            ? "bg-black/60 backdrop-blur-3xl rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] scale-[0.96] border-white/10" 
-            : "bg-transparent rounded-3xl"
+            ? "bg-[#121212]/80 backdrop-blur-2xl rounded-full shadow-2xl scale-[0.98] border-white/10" 
+            : "bg-transparent rounded-full"
         )}
       >
         {/* Left Section: Logo + SearchBar */}
@@ -42,8 +42,8 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           <NavLinks />
           <div className="hidden md:flex items-center">
-            <button className="bg-primary text-primary-foreground px-5 py-2 rounded-xl text-sm font-bold shadow-[0_8px_30px_rgba(var(--primary),0.3)] hover:bg-primary/90 hover:shadow-[0_12px_40px_rgba(var(--primary),0.6)] hover:-translate-y-1 transition-all active:scale-95 duration-[var(--duration-normal)] ease-[cubic-bezier(0.23,1,0.32,1)]">
-              Começar Agora — Grátis
+            <button className="bg-[#E0E0E0] text-[#121212] px-6 py-2.5 rounded-full text-xs font-medium tracking-wider uppercase hover:bg-white transition-all active:scale-95 duration-300">
+              Começar Agora
             </button>
           </div>
           <MobileMenu />

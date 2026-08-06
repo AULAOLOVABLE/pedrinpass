@@ -2,11 +2,11 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border py-12 md:py-20 bg-ui-surface/30">
+    <footer className="border-t border-white/5 py-24 bg-transparent">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-2">
-            <h3 className="text-xl font-black tracking-tighter text-foreground mb-4">PedrinTEC</h3>
+            <h3 className="text-xl font-medium tracking-tight text-[#E0E0E0] mb-4">PedrinTEC</h3>
             <p className="text-muted-foreground text-sm max-w-xs leading-relaxed">
               Líder em infraestrutura para agentes de IA e engenharia de software de alta performance. 
               [PREENCHER] endereço ou detalhes adicionais.
@@ -30,7 +30,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-8 border-t border-border/50">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-12 border-t border-white/5">
           <p className="text-sm text-muted-foreground">
             © 2026 PedrinTEC · Desenvolvido por Pedrintec. Todos os direitos reservados.
           </p>

@@ -132,9 +132,8 @@ All colors MUST be HSL.
 @layer base {
   h1, h2, h3 {
     font-family: "Space Grotesk", system-ui, sans-serif;
-    @apply tracking-tighter;
-    letter-spacing: -0.06em;
-    font-weight: 900;
+    @apply tracking-tight;
+    font-weight: 500;
   }
 
   p {
