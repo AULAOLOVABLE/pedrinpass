@@ -70,7 +70,8 @@ export const documentationPages: DocumentationPage[] = [
         listItems: [
           "PedrinTEC Analyzer: Análise profunda de código com IA.",
           "DB Visualizer: Gerencie seu Supabase com facilidade.",
-          "Code Formatter Pro: Padrões de estilo automáticos."
+          "Code Formatter Pro: Padrões de estilo automáticos.",
+          "V3 Extension Optimizer: Redução de polling, chamadas de storage, listeners duplicados, objetos grandes e permissões desnecessárias. Mantém o service worker stateless."
         ]
       },
       {
