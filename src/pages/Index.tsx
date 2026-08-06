@@ -36,42 +36,46 @@ const Index = () => {
 
       <ScrollProgress />
       
-      <div className="relative z-10">
+      <div className="relative z-10 flex flex-col min-h-screen">
         <Navbar />
         
-        <main>
-          <ScrollReveal>
-            <Hero />
-          </ScrollReveal>
+        <main className="flex-grow">
+          <Hero />
           
-          <div className="max-w-7xl mx-auto px-4 md:px-8 space-y-32 pb-32">
-            <ScrollReveal delay={0.2}>
-              <section id="dashboard" className="scroll-mt-24">
-                <div className="mb-12 text-center md:text-left">
-                  <h2 className="text-3xl md:text-5xl font-black tracking-tightest mb-4">Marketplace de Performance</h2>
-                  <p className="text-muted-foreground text-lg max-w-2xl">Dados reais para decisões cirúrgicas. Acompanhe a evolução do seu ecossistema em tempo real.</p>
+          <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-48 py-32">
+            <ScrollReveal delay={0.2} yOffset={40}>
+              <section id="dashboard" className="scroll-mt-32">
+                <div className="mb-16">
+                  <span className="eyebrow block mb-4">Métricas de Precisão</span>
+                  <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-6">Marketplace de Performance</h2>
+                  <p className="text-[#888] text-lg max-w-2xl leading-relaxed">
+                    Dados reais para decisões cirúrgicas. Acompanhe a evolução do seu ecossistema em tempo real com transparência absoluta.
+                  </p>
                 </div>
                 <Dashboard />
               </section>
             </ScrollReveal>
 
-            <ScrollReveal delay={0.3}>
-              <section id="marketplace" className="scroll-mt-24">
-                <div className="mb-12 text-center md:text-left">
-                  <h2 className="text-3xl md:text-5xl font-black tracking-tightest mb-4">Explore o Ecossistema</h2>
-                  <p className="text-muted-foreground text-lg max-w-2xl">De prompts premium a workflows complexos, tudo o que você precisa para escalar sua produção com IA.</p>
+            <ScrollReveal delay={0.3} yOffset={40}>
+              <section id="marketplace" className="scroll-mt-32">
+                <div className="mb-16">
+                  <span className="eyebrow block mb-4">Catálogo Premium</span>
+                  <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-6">Explore o Ecossistema</h2>
+                  <p className="text-[#888] text-lg max-w-2xl leading-relaxed">
+                    De prompts premium a workflows complexos, tudo o que você precisa para escalar sua produção com IA em um único lugar.
+                  </p>
                 </div>
                 <Categories />
               </section>
             </ScrollReveal>
 
-            <ScrollReveal delay={0.4}>
-              <section id="assistant" className="scroll-mt-24">
+            <ScrollReveal delay={0.4} yOffset={40}>
+              <section id="assistant" className="scroll-mt-32">
                 <AIAssistant />
               </section>
             </ScrollReveal>
 
-            <ScrollReveal delay={0.5}>
+            <ScrollReveal delay={0.5} yOffset={40}>
               <Support />
             </ScrollReveal>
           </div>
@@ -79,10 +83,10 @@ const Index = () => {
 
         <Footer />
         
-        {/* Sticky Mobile CTA */}
-        <div className={`sticky-cta-mobile ${showStickyCTA ? 'visible' : ''}`}>
-          <button className="w-full bg-primary text-primary-foreground py-4 rounded-2xl font-black text-lg shadow-[0_20px_40px_rgba(var(--primary),0.3)] flex items-center justify-center gap-2 active:scale-[0.98] transition-all">
-            Criar Minha Extensão <ArrowRight className="w-5 h-5" />
+        {/* Sticky Mobile CTA - Refined for Minimalist look */}
+        <div className={`sticky-cta-mobile px-6 ${showStickyCTA ? 'visible' : ''}`}>
+          <button className="w-full bg-[#E0E0E0] text-[#121212] py-4 rounded-full font-medium text-base shadow-2xl flex items-center justify-center gap-2 active:scale-[0.98] transition-all">
+            Começar Agora <ArrowRight className="w-4 h-4" />
           </button>
         </div>
       </div>
