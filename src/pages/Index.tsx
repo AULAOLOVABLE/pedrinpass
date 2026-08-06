@@ -48,7 +48,7 @@ const Index = () => {
                 <div className="mb-16">
                   <span className="eyebrow block mb-4">Métricas de Precisão</span>
                   <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-6">Marketplace de Performance</h2>
-                  <p className="text-[#888] text-lg max-w-2xl leading-relaxed">
+                  <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
                     Dados reais para decisões cirúrgicas. Acompanhe a evolução do seu ecossistema em tempo real com transparência absoluta.
                   </p>
                 </div>
@@ -61,7 +61,7 @@ const Index = () => {
                 <div className="mb-16">
                   <span className="eyebrow block mb-4">Catálogo Premium</span>
                   <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-6">Explore o Ecossistema</h2>
-                  <p className="text-[#888] text-lg max-w-2xl leading-relaxed">
+                  <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
                     De prompts premium a workflows complexos, tudo o que você precisa para escalar sua produção com IA em um único lugar.
                   </p>
                 </div>
@@ -85,7 +85,7 @@ const Index = () => {
         
         {/* Sticky Mobile CTA - Refined for Minimalist look */}
         <div className={`sticky-cta-mobile px-6 ${showStickyCTA ? 'visible' : ''}`}>
-          <button className="w-full bg-[#E0E0E0] text-[#121212] py-4 rounded-full font-medium text-base shadow-2xl flex items-center justify-center gap-2 active:scale-[0.98] transition-all">
+          <button className="w-full bg-primary text-primary-foreground py-5 rounded-full font-bold text-base shadow-2xl flex items-center justify-center gap-2 active:scale-[0.98] transition-all">
             Começar Agora <ArrowRight className="w-4 h-4" />
           </button>
         </div>

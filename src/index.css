@@ -8,15 +8,15 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Minimalist High-End Palette: Editorial Dark */
-    --background: 240 10% 3.9%; /* #121212 approx */
-    --foreground: 0 0% 88%;    /* #E0E0E0 approx */
-    --muted-foreground: 0 0% 53%; /* #888 approx */
+    /* Cinematic Dark Palette - Refined Contrast */
+    --background: 240 10% 2%; 
+    --foreground: 0 0% 98%;
+    --muted-foreground: 240 5% 65%;
 
     /* Semantic UI Tokens - Ultra Modern High Contrast */
-    --ui-surface: 240 10% 2.5%;
-    --ui-surface-hover: 240 10% 4%;
-    --ui-surface-active: 240 10% 6%;
+    --ui-surface: 240 10% 3.5%;
+    --ui-surface-hover: 240 10% 5%;
+    --ui-surface-active: 240 10% 7%;
     
     --ui-border: 240 10% 8%;
     --ui-border-hover: 25 100% 50% / 0.4;
@@ -132,8 +132,8 @@ All colors MUST be HSL.
 @layer base {
   h1, h2, h3 {
     font-family: "Space Grotesk", system-ui, sans-serif;
-    @apply tracking-tight;
-    font-weight: 500;
+    @apply tracking-tighter;
+    font-weight: 700;
   }
 
   p {
