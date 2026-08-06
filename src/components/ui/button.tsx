@@ -9,7 +9,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground shadow-[0_8px_30px_rgba(var(--primary),0.3)] hover:bg-primary/90 hover:shadow-[0_12px_40px_rgba(var(--primary),0.6)] hover:-translate-y-1",
+        default: "bg-primary text-primary-foreground shadow-[0_8px_30px_rgba(var(--primary),0.4)] hover:bg-primary/90 hover:shadow-[0_15px_50px_rgba(var(--primary),0.7)] hover:-translate-y-1.5 active:translate-y-0.5",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-[0_8px_30px_rgba(var(--destructive),0.2)]",
         outline: "border border-ui-border bg-transparent hover:bg-ui-surface-hover hover:text-accent-foreground hover:border-ui-border-hover hover:shadow-lg hover:-translate-y-0.5",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-white/5 shadow-sm",

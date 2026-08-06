@@ -28,7 +28,7 @@ const Navbar = () => {
         className={cn(
           "flex items-center justify-between px-8 py-3 w-[95%] max-w-7xl transition-all duration-500 border border-white/5",
           isScrolled 
-            ? "bg-black/40 backdrop-blur-2xl rounded-2xl shadow-2xl scale-[0.98] border-white/10" 
+            ? "bg-black/60 backdrop-blur-3xl rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] scale-[0.96] border-white/10" 
             : "bg-transparent rounded-3xl"
         )}
       >

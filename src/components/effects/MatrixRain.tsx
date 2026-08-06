@@ -50,7 +50,7 @@ const MatrixRain = () => {
 
     let raf = 0;
     const render = () => {
-      ctx.fillStyle = "rgba(0, 0, 0, 0.09)";
+      ctx.fillStyle = "rgba(0, 0, 0, 0.07)";
       ctx.fillRect(0, 0, width, height);
 
       const boost = boostRef.current;

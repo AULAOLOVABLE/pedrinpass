@@ -37,7 +37,7 @@ const WaveText = ({
     hidden: {
       y: yOffset,
       opacity: 0,
-      filter: "blur(8px)",
+      filter: "blur(20px) scale(0.8) translateY(20px)",
     },
     visible: {
       y: 0,
