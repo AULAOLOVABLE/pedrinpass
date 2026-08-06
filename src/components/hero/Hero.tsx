@@ -79,7 +79,7 @@ const Hero = () => {
           </p>
         </motion.div>
 
-        {/* Call to action or secondary text */}
+        {/* Primary Call to Action */}
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -88,10 +88,22 @@ const Hero = () => {
             delay: 0.5, 
             ease: [0.19, 1, 0.22, 1] 
           }}
-          className="mt-12"
+          className="mt-16 flex flex-col md:flex-row items-center gap-6"
         >
-          <button className="px-10 py-4 bg-primary text-primary-foreground rounded-full text-sm font-bold uppercase tracking-widest hover:scale-105 hover:shadow-[0_0_30px_rgba(255,107,74,0.3)] active:scale-95 transition-all duration-300">
-            Explorar Ecossistema
+          <button className="glass-button glass-button-primary group">
+            Ver Demonstração
+            <motion.div
+              animate={{ x: [0, 4, 0] }}
+              transition={{ repeat: Infinity, duration: 1.5 }}
+            >
+              <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14m-7-7 7 7-7 7"/>
+              </svg>
+            </motion.div>
+          </button>
+          
+          <button className="glass-button group">
+            <span className="opacity-70 group-hover:opacity-100 transition-opacity">Documentação Neural</span>
           </button>
         </motion.div>
       </motion.div>
