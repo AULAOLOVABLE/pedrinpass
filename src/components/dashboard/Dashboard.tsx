@@ -50,7 +50,7 @@ const insights = [
 const Dashboard = () => {
   return (
     <section className="px-4 md:px-8 py-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-full">
         {/* Header Section from Image Reference */}
         <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-2">
