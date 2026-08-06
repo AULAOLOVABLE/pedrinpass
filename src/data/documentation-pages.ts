@@ -127,6 +127,11 @@ export const documentationPages: DocumentationPage[] = [
     breadcrumb: ["Marketplace", "Templates"],
     sections: [
       {
+        id: "demo-ready",
+        title: "Demo Engine",
+        content: "Prepare o produto para uma demonstração comercial forte. Use dados realistas, estados completos, narrativa visual, restauração de dados demo e fluxo demonstrável em menos de três minutos."
+      },
+      {
         id: "overview",
         title: "Templates PedrinTEC",
         content: "Nossos templates são otimizados para performance, acessibilidade e SEO, utilizando as melhores práticas de desenvolvimento moderno."
