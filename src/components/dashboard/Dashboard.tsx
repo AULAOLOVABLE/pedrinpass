@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { TrendingUp, Activity, AlertCircle, CheckCircle2, ChevronRight } from "lucide-react";
+import { TrendingUp, Activity, AlertCircle, CheckCircle2, ChevronRight, Search, Bell } from "lucide-react";
 import WaveText from "@/components/ui/wave-text";
 
 const stats = [
@@ -51,129 +51,161 @@ const Dashboard = () => {
   return (
     <section className="px-4 md:px-8 py-10 md:py-14">
       <div className="max-w-6xl mx-auto">
-        {/* Section Heading */}
-        <div className="mb-10 flex flex-col gap-3">
-          <span className="eyebrow">Monitoramento</span>
-          <h2 className="text-2xl md:text-4xl font-bold text-foreground">
-            <WaveText text="Dashboard de Decisão" staggerDelay={0.01} />
-          </h2>
-          <div className="h-px w-full bg-gradient-to-r from-primary/60 via-border to-transparent" />
+        {/* Header Section from Image Reference */}
+        <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div className="space-y-2">
+            <h2 className="text-4xl font-bold tracking-tight text-white">Dashboard</h2>
+            <p className="text-sm text-muted-foreground">Ter, 06 Ago 2026</p>
+          </div>
+          
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 text-muted-foreground">
+              <button className="hover:text-primary transition-colors"><Search className="w-5 h-5" /></button>
+              <button className="hover:text-primary transition-colors relative">
+                <Bell className="w-5 h-5" />
+                <span className="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full" />
+              </button>
+            </div>
+            <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-purple-500 shadow-lg shadow-primary/20" />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Main Metrics */}
-          <div className="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-6">
-            {stats.map((stat, i) => (
-              <motion.div
-                key={stat.label}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                viewport={{ once: true }}
-                className="bento-card p-6 flex flex-col justify-between"
-              >
-                <div>
-                  <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
-                    {stat.label}
-                  </span>
-                  <div className="mt-2 text-2xl font-black text-foreground">
-                    {stat.value}
+          {/* Main Metrics Area */}
+          <div className="lg:col-span-2 space-y-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {stats.map((stat, i) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bento-card p-6 flex flex-col justify-between group"
+                >
+                  <div className="relative z-10">
+                    <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                      {stat.label}
+                    </span>
+                    <div className="mt-2 text-3xl font-black text-foreground group-hover:text-primary transition-colors">
+                      {stat.value}
+                    </div>
                   </div>
-                </div>
-                <div className="mt-4 flex items-center justify-between">
-                  <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${
-                    stat.trendUp ? 'bg-green-500/10 text-green-500' : 'bg-red-500/10 text-red-500'
-                  }`}>
-                    {stat.trend}
-                  </span>
-                  <span className="text-[10px] text-muted-foreground">
-                    {stat.description}
-                  </span>
-                </div>
-              </motion.div>
-            ))}
-            
-            {/* Decision Area / Trends */}
+                  <div className="mt-4 flex items-center justify-between relative z-10">
+                    <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${
+                      stat.trendUp ? 'bg-green-500/10 text-green-500' : 'bg-red-500/10 text-red-500'
+                    }`}>
+                      {stat.trend}
+                    </span>
+                    <div className="h-1 w-12 bg-white/5 rounded-full overflow-hidden">
+                       <motion.div 
+                        className="h-full bg-primary" 
+                        initial={{ width: 0 }}
+                        whileInView={{ width: "60%" }}
+                        transition={{ duration: 1, delay: 0.5 }}
+                       />
+                    </div>
+                  </div>
+                  {/* Decorative Glow */}
+                  <div className="absolute -bottom-10 -right-10 w-24 h-24 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/20 transition-all duration-500" />
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Main Project Table / List */}
             <motion.div 
-              className="md:col-span-3 bento-card p-6 overflow-hidden relative"
-              initial={{ opacity: 0, scale: 0.98 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              className="bento-card p-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="font-bold flex items-center gap-2">
-                  <Activity className="w-4 h-4 text-primary" />
-                  Fluxo de Decisão Recomendado
-                </h3>
-                <span className="text-[10px] uppercase tracking-tighter text-muted-foreground bg-white/5 px-2 py-1 rounded">
-                  Filtro: Últimas 24h
-                </span>
+              <div className="flex items-center justify-between mb-8">
+                <h3 className="text-xl font-bold">Projetos Ativos</h3>
+                <button className="text-xs text-muted-foreground hover:text-primary flex items-center gap-1 transition-colors">
+                  Ver todos <ChevronRight className="w-3 h-3" />
+                </button>
               </div>
-              
-              <div className="space-y-4">
-                <div className="p-4 rounded-2xl bg-primary/5 border border-primary/10 flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0">
-                    <span className="text-xs font-bold text-primary-foreground">1</span>
-                  </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-foreground">Otimizar Checkout Mobile</h4>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      Ações recomendadas: Reduzir campos obrigatórios e habilitar Apple Pay. Impacto esperado: +R$ 12k/mês.
-                    </p>
-                  </div>
-                  <button className="ml-auto p-2 rounded-full hover:bg-primary/20 transition-colors">
-                    <ChevronRight className="w-4 h-4" />
-                  </button>
-                </div>
 
-                <div className="p-4 rounded-2xl bg-white/5 border border-white/5 flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                    <span className="text-xs font-bold text-muted-foreground">2</span>
+              <div className="space-y-6">
+                {[
+                  { name: "Neural Interface V2", tasks: 42, status: "Em progresso", statusColor: "text-amber-500" },
+                  { name: "Quantum Bot Extension", tasks: 12, status: "Finalizado", statusColor: "text-green-500" },
+                  { name: "Data Matrix Core", tasks: 8, status: "Pendente", statusColor: "text-blue-500" }
+                ].map((project, idx) => (
+                  <div key={idx} className="flex items-center justify-between py-4 border-b border-white/5 last:border-0 group cursor-pointer">
+                    <div className="flex items-center gap-4">
+                      <div className="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center group-hover:border-primary/40 transition-colors">
+                        <Activity className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-sm group-hover:text-primary transition-colors">{project.name}</h4>
+                        <p className="text-xs text-muted-foreground">{project.tasks} tarefas mapeadas</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-8">
+                      <span className={`text-[10px] font-bold uppercase tracking-widest ${project.statusColor}`}>
+                        {project.status}
+                      </span>
+                      <div className="flex gap-2">
+                        <div className="w-8 h-8 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors">
+                          <Activity className="w-4 h-4" />
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="text-sm font-bold text-foreground">Escalar Campanha IA</h4>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      CPC atual R$ 0,45. ROAS de 4.8. Recomenda-se aumentar orçamento em 20%.
-                    </p>
-                  </div>
-                  <button className="ml-auto p-2 rounded-full hover:bg-white/10 transition-colors">
-                    <ChevronRight className="w-4 h-4" />
-                  </button>
-                </div>
+                ))}
               </div>
             </motion.div>
           </div>
 
-          {/* Insights / Bottlenecks */}
-          <div className="flex flex-col gap-6">
-            <h3 className="text-sm font-bold uppercase tracking-widest text-muted-foreground mb-[-12px] px-2">
-              Insights Críticos
-            </h3>
-            {insights.map((insight, i) => {
-              const Icon = insight.icon;
-              return (
-                <motion.div
-                  key={insight.title}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2 + i * 0.1 }}
-                  viewport={{ once: true }}
-                  className="bento-card p-5 group transition-all hover:border-primary/40"
-                >
-                  <div className="flex items-start gap-4">
-                    <div className={`p-2 rounded-xl bg-background border border-border group-hover:border-primary/20`}>
-                      <Icon className={`w-5 h-5 ${insight.color}`} />
+          {/* Insights & Actions Side Panel */}
+          <div className="space-y-6">
+             <div className="bento-card p-6 bg-primary/5 border-primary/20 relative overflow-hidden group">
+               <div className="absolute top-0 right-0 p-4">
+                 <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+               </div>
+               <h3 className="font-bold text-sm mb-4 flex items-center gap-2">
+                 <Activity className="w-4 h-4 text-primary" />
+                 Próxima Recomendação
+               </h3>
+               <p className="text-xs text-muted-foreground leading-relaxed mb-6">
+                 Otimize o tempo de resposta da API para reduzir o churn em 12%.
+               </p>
+               <button className="w-full py-3 bg-primary text-primary-foreground rounded-xl text-xs font-bold hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-primary/20">
+                 Executar Otimização
+               </button>
+             </div>
+
+            <div className="space-y-4">
+              <h3 className="text-xs font-bold uppercase tracking-widest text-muted-foreground px-2">
+                Alertas de Sistema
+              </h3>
+              {insights.map((insight, i) => {
+                const Icon = insight.icon;
+                return (
+                  <motion.div
+                    key={insight.title}
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.2 + i * 0.1 }}
+                    viewport={{ once: true }}
+                    className="bento-card p-5 group transition-all hover:border-primary/40"
+                  >
+                    <div className="flex items-start gap-4">
+                      <div className={`p-2 rounded-xl bg-background border border-border group-hover:border-primary/20`}>
+                        <Icon className={`w-5 h-5 ${insight.color}`} />
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-bold text-foreground">{insight.title}</h4>
+                        <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
+                          {insight.description}
+                        </p>
+                      </div>
                     </div>
-                    <div>
-                      <h4 className="text-sm font-bold text-foreground">{insight.title}</h4>
-                      <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
-                        {insight.description}
-                      </p>
-                    </div>
-                  </div>
-                </motion.div>
-              );
-            })}
+                  </motion.div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </div>
