@@ -51,27 +51,23 @@ const Dashboard = () => {
   return (
     <section className="px-4 md:px-8 py-10 md:py-14">
       <div className="max-w-6xl mx-auto">
-        {/* Section Heading */}
-        <div className="mb-10 flex flex-col gap-3">
-          <span className="eyebrow">Monitoramento Neural</span>
-          <div className="flex items-center justify-between">
-            <h2 className="text-2xl md:text-4xl font-bold text-foreground">
-              <WaveText text="Dashboard de Decisão" staggerDelay={0.01} />
-            </h2>
-            <div className="flex items-center gap-4">
-              <div className="flex -space-x-2">
-                {[1, 2, 3].map((i) => (
-                  <div key={i} className="w-8 h-8 rounded-full border-2 border-background bg-muted-foreground/20 overflow-hidden">
-                    <img src={`https://i.pravatar.cc/150?u=${i + 10}`} alt="User" className="w-full h-full object-cover grayscale opacity-80" />
-                  </div>
-                ))}
-                <div className="w-8 h-8 rounded-full border-2 border-background bg-primary flex items-center justify-center text-[10px] font-bold">
-                  +12k
-                </div>
-              </div>
-            </div>
+        {/* Header Section from Image Reference */}
+        <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
+          <div className="space-y-2">
+            <h2 className="text-4xl font-bold tracking-tight text-white">Dashboard</h2>
+            <p className="text-sm text-muted-foreground">Ter, 06 Ago 2026</p>
           </div>
-          <div className="h-px w-full bg-gradient-to-r from-primary/60 via-border to-transparent" />
+          
+          <div className="flex items-center gap-6">
+            <div className="flex items-center gap-4 text-muted-foreground">
+              <button className="hover:text-primary transition-colors"><Search className="w-5 h-5" /></button>
+              <button className="hover:text-primary transition-colors relative">
+                <Bell className="w-5 h-5" />
+                <span className="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full" />
+              </button>
+            </div>
+            <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-purple-500 shadow-lg shadow-primary/20" />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
