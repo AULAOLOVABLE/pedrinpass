@@ -20,10 +20,16 @@ const Index = () => {
       
       const dashboardSection = document.getElementById("dashboard-trigger");
       if (dashboardSection) {
-        const rect = dashboardSection.getBoundingClientRect();
+        const sectionTop = dashboardSection.offsetTop;
+        const sectionHeight = dashboardSection.offsetHeight;
         const windowHeight = window.innerHeight;
-        // Calculate progress from 0 (start of section) to 1 (passed section)
-        const progress = Math.min(Math.max((windowHeight - rect.top) / (windowHeight + rect.height), 0), 1);
+        
+        // Match the logic from the instruction: progress = scrolled / (height - windowHeight)
+        // We use scroll position relative to the section start
+        const relativeScroll = window.scrollY - sectionTop;
+        const scrollRange = sectionHeight - windowHeight;
+        const progress = Math.min(Math.max(relativeScroll / scrollRange, 0), 1);
+        
         setScrollProgress(progress);
       }
     };
