@@ -12,10 +12,20 @@ import { ArrowRight } from "lucide-react";
 
 const Index = () => {
   const [showStickyCTA, setShowStickyCTA] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       setShowStickyCTA(window.scrollY > 600);
+      
+      const dashboardSection = document.getElementById("dashboard-trigger");
+      if (dashboardSection) {
+        const rect = dashboardSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        // Calculate progress from 0 (start of section) to 1 (passed section)
+        const progress = Math.min(Math.max((windowHeight - rect.top) / (windowHeight + rect.height), 0), 1);
+        setScrollProgress(progress);
+      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -44,18 +54,26 @@ const Index = () => {
           <Hero />
           
           <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-48 py-32">
-            <ScrollReveal delay={0.2} yOffset={40}>
-              <section id="dashboard" className="scroll-mt-32">
-                <div className="mb-16">
-                  <span className="eyebrow block mb-4">Métricas de Precisão</span>
-                  <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-6">Marketplace de Performance</h2>
-                  <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
-                    Dados reais para decisões cirúrgicas. Acompanhe a evolução do seu ecossistema em tempo real com transparência absoluta.
-                  </p>
+            <section id="dashboard-trigger" className="reveal-wrapper">
+              <div 
+                className="crm-container"
+                style={{
+                  transform: `scale(${0.7 + (scrollProgress * 0.3)}) translateY(${(1 - scrollProgress) * 100}px)`,
+                  opacity: Math.min(scrollProgress * 2, 1)
+                }}
+              >
+                <div id="dashboard" className="scroll-mt-32">
+                  <div className="p-8 md:p-12 pb-0">
+                    <span className="eyebrow block mb-4">Métricas de Precisão</span>
+                    <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-4">Marketplace de Performance</h2>
+                    <p className="text-muted-foreground text-base max-w-2xl leading-relaxed">
+                      Dados reais para decisões cirúrgicas. Acompanhe a evolução do seu ecossistema em tempo real com transparência absoluta.
+                    </p>
+                  </div>
+                  <Dashboard />
                 </div>
-                <Dashboard />
-              </section>
-            </ScrollReveal>
+              </div>
+            </section>
 
             <ScrollReveal delay={0.3} yOffset={40}>
               <section id="marketplace" className="scroll-mt-32">
