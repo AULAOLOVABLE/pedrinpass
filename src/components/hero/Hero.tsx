@@ -1,153 +1,110 @@
-import { useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
-import Hls from "hls.js";
-import HeroSearchBar from "./HeroSearchBar";
-import { ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import bgWaveAsset from "@/assets/bg-wave.png.asset.json";
-import WaveText from "@/components/ui/wave-text";
-
-const shortcuts = [
-  { label: "Conexão Neural", href: "/api/connect" },
-  { label: "Agentes IA", href: "/docs/agents" },
-  { label: "Prompts Premium", href: "/docs/prompts" },
-];
-
-const VIDEO_SRC =
-  "https://customer-cbeadsgr09pnsezs.cloudflarestream.com/74cb72d57c6a6d6d7807693d02e6707b/manifest/video.m3u8";
 
 const Hero = () => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    // Ensure video is muted for autoplay to work
-    video.muted = true;
-
-    if (Hls.isSupported()) {
-      const hls = new Hls({
-        enableWorker: true,
-        lowLatencyMode: true,
-      });
-
-      hls.loadSource(VIDEO_SRC);
-      hls.attachMedia(video);
-
-      hls.on(Hls.Events.MANIFEST_PARSED, () => {
-        video.play().catch(() => {
-          // Autoplay failed silently
-        });
-      });
-
-      hls.on(Hls.Events.ERROR, (_event, data) => {
-        if (data.fatal) {
-          switch (data.type) {
-            case Hls.ErrorTypes.NETWORK_ERROR:
-              hls.startLoad();
-              break;
-            case Hls.ErrorTypes.MEDIA_ERROR:
-              hls.recoverMediaError();
-              break;
-            default:
-              hls.destroy();
-              break;
-          }
-        }
-      });
-
-      return () => {
-        hls.destroy();
-      };
-    } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
-      // Native HLS support (Safari)
-      video.src = VIDEO_SRC;
-      video.addEventListener("loadedmetadata", () => {
-        video.play().catch(() => {
-          // Autoplay failed silently
-        });
-      });
-    }
-  }, []);
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="relative flex flex-col items-center justify-center px-4 md:px-8 pt-32 md:pt-40 pb-12 md:pb-16 overflow-hidden min-h-[500px]">
-      {/* Video Background */}
-      <video
-        ref={videoRef}
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover grayscale"
-        style={{ zIndex: 0 }}
-      />
+    <section className="global-wrapper relative w-full h-screen overflow-hidden bg-[#121212] flex flex-col justify-end items-start p-[64px_24px_48px] md:p-[64px_80px_60px]">
+      {/* Background with Ken Burns effect */}
+      <motion.div 
+        className="absolute inset-0 z-0 pointer-events-none"
+        initial={{ scale: 1.1, opacity: 0 }}
+        animate={{ 
+          scale: 1, 
+          opacity: 0.4,
+          transition: { duration: 10, ease: "linear" } 
+        }}
+      >
+        <img 
+          src={bgWaveAsset.url} 
+          alt="" 
+          className="w-full h-full object-cover mix-blend-screen grayscale"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#121212] via-transparent to-transparent" />
+      </motion.div>
 
-      {/* Dark overlay for readability */}
-      <div 
-        className="absolute inset-0 bg-background/70"
-        style={{ zIndex: 1 }}
-      />
-
-      {/* Background Wave Image */}
-      <img 
-        src={bgWaveAsset.url}
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover pointer-events-none opacity-60 mix-blend-screen"
-        style={{ zIndex: 1 }}
-      />
-
-      {/* Bottom fade gradient */}
-      <div 
-        className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent"
-        style={{ zIndex: 1 }}
-      />
-
-      {/* Content */}
-      <div className="relative flex flex-col items-center" style={{ zIndex: 2 }}>
-        {/* Announcement Badge */}
-        <Link
-          to="/docs/overview"
-          className="inline-flex items-center gap-2 pl-4 pr-2 py-2 mb-10 text-xs font-medium uppercase tracking-widest text-primary bg-primary/10 rounded-full border border-primary/20 hover:border-primary/40 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+      {/* Content Container */}
+      <motion.div 
+        className="relative z-10 flex flex-col items-start max-w-4xl cursor-default group"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+        animate={{ 
+          x: isHovered ? 10 : 0,
+          transition: { duration: 0.4, ease: [0.19, 1, 0.22, 1] }
+        }}
+      >
+        {/* Headline with Staggered Reveal */}
+        <motion.div
+          initial={{ y: 40, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ 
+            duration: 1.2, 
+            delay: 0.1, 
+            ease: [0.19, 1, 0.22, 1] 
+          }}
         >
-          <span>🚀 PedrinTEC v2.0 disponível</span>
-          <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary text-primary-foreground">
-            <ChevronRight className="w-4 h-4" />
-          </span>
-        </Link>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-[#E0E0E0] leading-[1.1] mb-6 relative inline-block">
+            PedrinTEC
+            {/* Animated Underline */}
+            <motion.span 
+              className="absolute bottom-0 left-0 h-[2px] bg-[#888]"
+              initial={{ width: 0, left: "50%" }}
+              animate={{ 
+                width: isHovered ? "100%" : "0%",
+                left: isHovered ? "0%" : "50%"
+              }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+            />
+          </h1>
+        </motion.div>
 
-        {/* Headline */}
-        <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-black text-foreground text-center tracking-tightest mb-8 leading-[0.8] filter drop-shadow-[0_0_50px_rgba(var(--primary),0.25)]">
-          <span className="block text-xl md:text-2xl font-bold tracking-[0.2em] uppercase mb-8 text-primary-glow animate-pulse">Engenharia de Elite</span>
-          <WaveText text="PedrinTEC" className="text-primary" staggerDelay={0.06} />
-        </h1>
+        {/* Subheadline with Delay */}
+        <motion.div
+          initial={{ y: 30, opacity: 0 }}
+          animate={{ y: 0, opacity: isHovered ? 1 : 0.7 }}
+          transition={{ 
+            duration: 1.2, 
+            delay: 0.3, 
+            ease: [0.19, 1, 0.22, 1] 
+          }}
+        >
+          <p className="text-lg md:text-xl text-[#888] font-light tracking-wide max-w-2xl leading-[1.4] transition-all duration-300">
+            Construindo a próxima geração de ecossistemas digitais. 
+            Uma fusão entre engenharia de precisão e design minimalista 
+            para operações de alto impacto.
+          </p>
+        </motion.div>
 
-        {/* Subheadline */}
-        <p className="text-xl md:text-2xl text-muted-foreground text-center max-w-3xl mb-12 leading-tight font-medium">
-          <WaveText text="Construa, automatize e dimensione sua operação de IA com a plataforma líder em engenharia de prompts e fluxos neurais." staggerDelay={0.01} />
-        </p>
+        {/* Call to action or secondary text */}
+        <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ 
+            duration: 1.2, 
+            delay: 0.5, 
+            ease: [0.19, 1, 0.22, 1] 
+          }}
+          className="mt-12"
+        >
+          <button className="text-sm uppercase tracking-[0.2em] text-[#E0E0E0] border-b border-[#E0E0E0]/20 pb-1 hover:border-[#E0E0E0] transition-colors duration-300">
+            Explorar Ecossistema
+          </button>
+        </motion.div>
+      </motion.div>
 
-        {/* Search Bar */}
-        <div className="w-full max-w-[600px] mb-8 px-0 md:px-4">
-          <HeroSearchBar />
-        </div>
-
-        {/* Search Shortcuts */}
-        <div className="flex flex-col md:flex-row items-center gap-3">
-          <span className="eyebrow">Atalhos de busca:</span>
-          <div className="flex flex-row items-center gap-3">
-            {shortcuts.map((shortcut) => (
-              <Link
-                key={shortcut.label}
-                to={shortcut.href}
-                className="inline-flex items-center px-5 py-2.5 text-xs font-medium text-muted-foreground border border-white/5 rounded-full bg-white/5 backdrop-blur-md transition-all hover:text-foreground hover:border-primary/40 hover:bg-primary/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-              >
-                {shortcut.label}
-              </Link>
-            ))}
-          </div>
-        </div>
-      </div>
+      {/* Subtle bottom indicator */}
+      <motion.div 
+        className="absolute bottom-12 right-12 hidden md:block"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+      >
+        <span className="text-[10px] uppercase tracking-[0.4em] text-[#888]/50 rotate-90 origin-right">
+          Est. 2026 / PT-BR
+        </span>
+      </motion.div>
     </section>
   );
 };
