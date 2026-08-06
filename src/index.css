@@ -119,6 +119,30 @@ All colors MUST be HSL.
     height: 0;
   }
 
+  .glass-button {
+    @apply relative px-8 py-4 rounded-full font-bold transition-all duration-300 overflow-hidden flex items-center gap-2;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  }
+
+  .glass-button:hover {
+    @apply -translate-y-1;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+    border-color: hsl(var(--primary) / 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 15px hsl(var(--primary) / 0.2);
+  }
+
+  .glass-button-primary {
+    @apply bg-white text-black border-white/20;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-button-primary:hover {
+    @apply bg-white/90;
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.15);
+  }
+
   /* Sticky CTA for Mobile */
   .sticky-cta-mobile {
     @apply fixed bottom-6 left-6 right-6 z-[60] md:hidden transform transition-all duration-300 translate-y-20 opacity-0;
