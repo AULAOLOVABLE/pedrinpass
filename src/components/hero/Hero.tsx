@@ -117,9 +117,9 @@ const Hero = () => {
         </Link>
 
         {/* Headline */}
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-foreground text-center tracking-tightest mb-8 leading-[0.85] filter drop-shadow-[0_0_30px_rgba(var(--primary),0.2)]">
-          <span className="block text-xl md:text-2xl font-bold tracking-normal mb-6 text-primary-glow">Resultados Superiores com IA</span>
-          <WaveText text="PedrinTEC" className="text-primary" />
+        <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-black text-foreground text-center tracking-tightest mb-8 leading-[0.8] filter drop-shadow-[0_0_50px_rgba(var(--primary),0.25)]">
+          <span className="block text-xl md:text-2xl font-bold tracking-[0.2em] uppercase mb-8 text-primary-glow animate-pulse">Engenharia de Elite</span>
+          <WaveText text="PedrinTEC" className="text-primary" staggerDelay={0.06} />
         </h1>
 
         {/* Subheadline */}
