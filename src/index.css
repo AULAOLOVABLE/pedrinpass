@@ -8,9 +8,10 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* 2027 Premium Tech Palette: Deep Obsidians and Electric Highlights */
-    --background: 240 10% 1.5%;
-    --foreground: 0 0% 100%;
+    /* Minimalist High-End Palette: Editorial Dark */
+    --background: 240 10% 3.9%; /* #121212 approx */
+    --foreground: 0 0% 88%;    /* #E0E0E0 approx */
+    --muted-foreground: 0 0% 53%; /* #888 approx */
 
     /* Semantic UI Tokens - Ultra Modern High Contrast */
     --ui-surface: 240 10% 2.5%;
