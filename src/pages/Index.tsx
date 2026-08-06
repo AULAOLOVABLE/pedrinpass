@@ -12,10 +12,20 @@ import { ArrowRight } from "lucide-react";
 
 const Index = () => {
   const [showStickyCTA, setShowStickyCTA] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       setShowStickyCTA(window.scrollY > 600);
+      
+      const dashboardSection = document.getElementById("dashboard-trigger");
+      if (dashboardSection) {
+        const rect = dashboardSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+        // Calculate progress from 0 (start of section) to 1 (passed section)
+        const progress = Math.min(Math.max((windowHeight - rect.top) / (windowHeight + rect.height), 0), 1);
+        setScrollProgress(progress);
+      }
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
