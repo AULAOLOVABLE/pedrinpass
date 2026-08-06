@@ -72,7 +72,8 @@ export const documentationPages: DocumentationPage[] = [
           "DB Visualizer: Gerencie seu Supabase com facilidade.",
           "Code Formatter Pro: Padrões de estilo automáticos.",
           "V3 Extension Optimizer: Redução de polling, chamadas de storage, listeners duplicados, objetos grandes e permissões desnecessárias. Mantém o service worker stateless.",
-          "Debug System Pro: Faça debug sistemático. Reproduza o problema, identifique a primeira falha observável, diferencie sintoma de causa raiz, analise logs, rede, estado e dependências e aplique a menor correção confiável."
+          "Debug System Pro: Faça debug sistemático. Reproduza o problema, identifique a primeira falha observável, diferencie sintoma de causa raiz, analise logs, rede, estado e dependências e aplique a menor correção confiável.",
+          "Performance Engine: Otimização de JavaScript inicial, dependências, code splitting, lazy loading, cache, mídia e renderizações. Priorize LCP, INP e CLS sem sacrificar acessibilidade."
         ]
       },
       {
