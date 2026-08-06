@@ -38,8 +38,8 @@ export function ApiSidebar({ className }: ApiSidebarProps) {
               <Menu className="h-5 w-5" />
             </button>
           </SheetTrigger>
-          <SheetContent side="left" className="w-72 p-0 bg-background border-sidebar-border">
-            <SheetHeader className="p-4 border-b border-sidebar-border">
+          <SheetContent side="left" className="w-72 p-0 bg-background/95 backdrop-blur-xl border-sidebar-border">
+            <SheetHeader className="p-4 border-b border-sidebar-border bg-ui-surface/20">
               <SheetTitle className="text-sm font-semibold">Referência da API</SheetTitle>
             </SheetHeader>
             <SidebarContent />
@@ -50,7 +50,7 @@ export function ApiSidebar({ className }: ApiSidebarProps) {
       {/* Desktop sidebar */}
       <aside
         className={cn(
-          "hidden lg:block w-64 shrink-0 border-r border-sidebar-border bg-sidebar-background sticky top-16 h-[calc(100vh-4rem)]",
+          "hidden lg:block w-64 shrink-0 border-r border-sidebar-border bg-sidebar-background/50 backdrop-blur-md sticky top-16 h-[calc(100vh-4rem)]",
           className
         )}
       >

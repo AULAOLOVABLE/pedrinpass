@@ -19,14 +19,14 @@ interface ApiTableProps {
 
 export function ApiTable({ columns, data }: ApiTableProps) {
   return (
-    <div className="border border-border rounded-xl overflow-hidden">
+    <div className="border border-ui-border rounded-xl overflow-hidden backdrop-blur-sm bg-ui-surface/20 shadow-sm">
       <Table className="min-w-[400px]">
         <TableHeader>
-          <TableRow className="border-border hover:bg-transparent">
+          <TableRow className="border-ui-border hover:bg-transparent">
             {columns.map((col) => (
               <TableHead
                 key={col.key}
-                className="text-xs font-semibold uppercase tracking-wider text-muted-foreground bg-secondary/30 whitespace-nowrap"
+                className="text-xs font-semibold uppercase tracking-wider text-muted-foreground bg-ui-surface/40 whitespace-nowrap py-4"
               >
                 {col.label}
               </TableHead>
@@ -35,7 +35,7 @@ export function ApiTable({ columns, data }: ApiTableProps) {
         </TableHeader>
         <TableBody>
           {data.map((row, index) => (
-            <TableRow key={index} className="border-border hover:bg-secondary/20">
+            <TableRow key={index} className="border-ui-border hover:bg-ui-surface-hover/30 transition-colors">
               {columns.map((col) => (
                 <TableCell key={col.key} className="text-sm">
                   {typeof row[col.key] === "boolean" ? (
