@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { LucideIcon, ArrowUpRight } from "lucide-react";
+import { useState, useRef } from "react";
 
 interface SupportCardProps {
   icon: LucideIcon;
@@ -10,11 +11,36 @@ interface SupportCardProps {
 }
 
 const SupportCard = ({ icon: Icon, title, description, linkText, href }: SupportCardProps) => {
+  const cardRef = useRef<HTMLAnchorElement>(null);
+  const [tilt, setTilt] = useState("perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)");
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!cardRef.current) return;
+    
+    const rect = cardRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    const rotateX = ((y / rect.height) - 0.5) * 15;
+    const rotateY = ((x / rect.width) - 0.5) * -15;
+    
+    setTilt(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`);
+  };
+
+  const handleMouseLeave = () => {
+    setTilt("perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)");
+  };
+
   return (
     <Link
+      ref={cardRef}
       to={href}
-      className="bento-card group flex flex-col lg:flex-row items-center gap-4 p-5 bg-background/60 backdrop-blur-sm"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className="bento-card group flex flex-col lg:flex-row items-center gap-4 p-5 bg-background/60 backdrop-blur-sm transition-transform duration-200 ease-out"
       style={{
+        transform: tilt,
+        willChange: "transform",
         boxShadow: `0px 3px 6px 0px rgba(0, 0, 0, 0.1), 
                     inset 0px -3px 2px 0px rgba(255, 255, 255, 0.03), 
                     inset 0px 0.6px 0.36px -1.17px rgba(255, 255, 255, 0.10), 

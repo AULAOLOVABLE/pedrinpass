@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import { useState, useRef } from "react";
 import CardVisual, { type CardVisualVariant } from "./CardVisual";
 
 interface CategoryCardProps {
@@ -12,10 +13,34 @@ interface CategoryCardProps {
 }
 
 const CategoryCard = ({ variant, title, description, linkText, href, featured = false }: CategoryCardProps) => {
+  const cardRef = useRef<HTMLAnchorElement>(null);
+  const [transform, setTransform] = useState("perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)");
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!cardRef.current) return;
+    
+    const rect = cardRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    
+    const rotateX = ((y / rect.height) - 0.5) * 15; // Inclinação X
+    const rotateY = ((x / rect.width) - 0.5) * -15; // Inclinação Y
+    
+    setTransform(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`);
+  };
+
+  const handleMouseLeave = () => {
+    setTransform("perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)");
+  };
+
   return (
     <Link
+      ref={cardRef}
       to={href}
-      className={`card-animado group flex h-full flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-[2rem] ${featured ? "md:flex-row" : ""}`}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      className={`card-animado group flex h-full flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-[2rem] transition-transform duration-200 ease-out ${featured ? "md:flex-row" : ""}`}
+      style={{ transform, willChange: "transform" }}
     >
       <div className="card-inner rounded-[2rem] overflow-hidden">
         {/* Animated visual */}
