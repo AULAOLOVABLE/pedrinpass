@@ -82,6 +82,27 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
+  /* Reveal Effect Wrapper for Dashboard */
+  .reveal-wrapper {
+    height: 140vh;
+    position: relative;
+    margin-top: -20vh;
+  }
+
+  .crm-container {
+    position: sticky;
+    top: 15vh;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 2.5rem;
+    box-shadow: 0 40px 100px -20px rgba(0,0,0,0.8);
+    overflow: hidden;
+    background: hsl(var(--background));
+    border: 1px solid hsl(var(--ui-border));
+    z-index: 20;
+    will-change: transform, opacity;
+  }
 }
 
 @layer components {
