@@ -71,7 +71,8 @@ export const documentationPages: DocumentationPage[] = [
           "PedrinTEC Analyzer: Análise profunda de código com IA.",
           "DB Visualizer: Gerencie seu Supabase com facilidade.",
           "Code Formatter Pro: Padrões de estilo automáticos.",
-          "V3 Extension Optimizer: Redução de polling, chamadas de storage, listeners duplicados, objetos grandes e permissões desnecessárias. Mantém o service worker stateless."
+          "V3 Extension Optimizer: Redução de polling, chamadas de storage, listeners duplicados, objetos grandes e permissões desnecessárias. Mantém o service worker stateless.",
+          "Debug System Pro: Faça debug sistemático. Reproduza o problema, identifique a primeira falha observável, diferencie sintoma de causa raiz, analise logs, rede, estado e dependências e aplique a menor correção confiável."
         ]
       },
       {
