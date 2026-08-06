@@ -6,7 +6,7 @@ const Hero = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <section className="global-wrapper relative w-full h-screen overflow-hidden bg-[#121212] flex flex-col justify-end items-start p-[64px_24px_48px] md:p-[64px_80px_60px]">
+    <section className="global-wrapper relative w-full h-screen overflow-hidden bg-background flex flex-col justify-center items-center text-center p-6 md:p-12">
       {/* Background with Ken Burns effect */}
       <motion.div 
         className="absolute inset-0 z-0 pointer-events-none"
@@ -27,11 +27,11 @@ const Hero = () => {
 
       {/* Content Container */}
       <motion.div 
-        className="relative z-10 flex flex-col items-start max-w-4xl cursor-default group"
+        className="relative z-10 flex flex-col items-center max-w-5xl cursor-default group"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         animate={{ 
-          x: isHovered ? 10 : 0,
+          scale: isHovered ? 1.02 : 1,
           transition: { duration: 0.4, ease: [0.19, 1, 0.22, 1] }
         }}
       >
@@ -45,11 +45,11 @@ const Hero = () => {
             ease: [0.19, 1, 0.22, 1] 
           }}
         >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tight text-[#E0E0E0] leading-[1.1] mb-6 relative inline-block">
+          <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-bold tracking-tighter text-foreground leading-[0.9] mb-8 relative inline-block">
             PedrinTEC
             {/* Animated Underline */}
             <motion.span 
-              className="absolute bottom-0 left-0 h-[2px] bg-[#888]"
+              className="absolute -bottom-2 left-0 h-[4px] bg-primary shadow-[0_0_20px_rgba(255,107,74,0.5)]"
               initial={{ width: 0, left: "50%" }}
               animate={{ 
                 width: isHovered ? "100%" : "0%",
@@ -70,7 +70,7 @@ const Hero = () => {
             ease: [0.19, 1, 0.22, 1] 
           }}
         >
-          <p className="text-lg md:text-xl text-[#888] font-light tracking-wide max-w-2xl leading-[1.4] transition-all duration-300">
+          <p className="text-xl md:text-2xl text-muted-foreground font-light tracking-tight max-w-3xl leading-[1.4] transition-all duration-300">
             Construindo a próxima geração de ecossistemas digitais. 
             Uma fusão entre engenharia de precisão e design minimalista 
             para operações de alto impacto.
@@ -88,7 +88,7 @@ const Hero = () => {
           }}
           className="mt-12"
         >
-          <button className="text-sm uppercase tracking-[0.2em] text-[#E0E0E0] border-b border-[#E0E0E0]/20 pb-1 hover:border-[#E0E0E0] transition-colors duration-300">
+          <button className="px-10 py-4 bg-primary text-primary-foreground rounded-full text-sm font-bold uppercase tracking-widest hover:scale-105 hover:shadow-[0_0_30px_rgba(255,107,74,0.3)] active:scale-95 transition-all duration-300">
             Explorar Ecossistema
           </button>
         </motion.div>
