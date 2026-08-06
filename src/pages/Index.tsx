@@ -31,6 +31,7 @@ const Index = () => {
       {/* Background Effects */}
       <div className="fixed inset-0 pointer-events-none z-0">
         <MatrixRain />
+        <div className="bg-gradient-animated" />
         <div className="absolute inset-0 bg-radial-at-t from-primary/5 via-transparent to-transparent opacity-50" />
       </div>
 
