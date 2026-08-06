@@ -55,9 +55,8 @@ export const CustomCursor = () => {
     <div
       className={`cursor-follower ${isActive ? "cursor-active" : ""}`}
       style={{
-        left: `${position.x}px`,
-        top: `${position.y}px`,
-        transform: `translate(-50%, -50%) ${isActive ? "scale(2)" : "scale(1)"}`,
+        transform: `translate3d(${position.x}px, ${position.y}px, 0) translate3d(-50%, -50%, 0) ${isActive ? "scale(2)" : "scale(1)"}`,
+        opacity: isVisible ? 1 : 0,
       }}
     />
   );
