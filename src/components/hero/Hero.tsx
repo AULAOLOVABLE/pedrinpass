@@ -45,11 +45,13 @@ const Hero = () => {
             ease: [0.19, 1, 0.22, 1] 
           }}
         >
-          <h1 className="text-6xl md:text-8xl lg:text-[10rem] font-bold tracking-tighter text-foreground leading-[0.9] mb-8 relative inline-block">
+          <h1 className="text-6xl md:text-8xl lg:text-[11rem] font-bold tracking-tighter text-foreground leading-[0.85] mb-12 relative inline-block">
             PedrinTEC
+            {/* Ultra High-End Glow Effect */}
+            <div className="absolute inset-0 bg-primary/20 blur-[120px] -z-10 animate-pulse pointer-events-none" />
             {/* Animated Underline */}
             <motion.span 
-              className="absolute -bottom-2 left-0 h-[4px] bg-primary shadow-[0_0_20px_rgba(255,107,74,0.5)]"
+              className="absolute -bottom-4 left-0 h-[6px] bg-primary shadow-[0_0_40px_rgba(255,107,74,0.8)]"
               initial={{ width: 0, left: "50%" }}
               animate={{ 
                 width: isHovered ? "100%" : "0%",
