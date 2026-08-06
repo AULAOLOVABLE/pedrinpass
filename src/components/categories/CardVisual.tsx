@@ -115,7 +115,7 @@ const CardVisual = ({ variant, featured = false }: CardVisualProps) => {
       {variant === "api" && <ApiVisual />}
       {variant === "news" && <NewsVisual />}
 
-      <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100 bg-gradient-to-tr from-primary/20 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-700 group-hover:opacity-100 bg-gradient-to-tr from-primary/30 via-transparent to-primary/5" />
     </div>
   );
 };
