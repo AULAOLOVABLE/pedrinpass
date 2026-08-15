@@ -11,8 +11,8 @@ const ChatInput = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="search-bar-gradient-border bg-black rounded-xl">
-      <div className="flex items-center gap-3 px-4 py-3">
+    <form onSubmit={handleSubmit} className="search-bar-gradient-border bg-black/40 backdrop-blur-xl rounded-xl border border-ui-border group focus-within:border-primary/50 transition-colors">
+      <div className="flex items-center gap-3 px-4 py-4">
         {/* Input */}
         <input
           type="text"
@@ -29,7 +29,7 @@ const ChatInput = () => {
           type="submit"
           disabled={!input.trim()}
           aria-label="Enviar mensagem (apenas demonstração)"
-          className="flex items-center justify-center w-8 h-8 rounded-xl bg-primary text-primary-foreground disabled:opacity-50 disabled:cursor-not-allowed transition-opacity focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+          className="flex items-center justify-center w-9 h-9 rounded-xl bg-primary text-primary-foreground disabled:opacity-30 disabled:cursor-not-allowed transition-all hover:scale-105 active:scale-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary shadow-lg shadow-primary/20"
         >
           <ArrowUp className="w-4 h-4" />
         </button>

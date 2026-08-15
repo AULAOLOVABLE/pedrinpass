@@ -44,7 +44,7 @@ const Navbar = () => {
           <NavLinks />
           <div className="hidden md:flex items-center">
             <MagneticButton>
-              <button className="bg-primary text-primary-foreground px-8 py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:scale-105 shadow-lg shadow-primary/20 transition-all active:scale-95 duration-300">
+              <button className="bg-primary text-primary-foreground px-10 py-3.5 rounded-full text-[10px] font-black tracking-[0.2em] uppercase hover:scale-105 active:scale-95 shadow-xl shadow-primary/25 transition-all duration-300 border border-primary/20">
                 Começar Agora
               </button>
             </MagneticButton>

@@ -81,40 +81,42 @@ const Dashboard = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
                   viewport={{ once: true }}
-                  className="bento-card p-6 flex flex-col justify-between group"
+                  className="bento-card p-6 flex flex-col justify-between group active:scale-[0.98] transition-all"
                 >
                   <div className="relative z-10">
-                    <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                    <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.2em]">
                       {stat.label}
                     </span>
-                    <div className="mt-2 text-3xl font-black text-foreground group-hover:text-primary transition-colors">
+                    <div className="mt-3 text-4xl font-black text-foreground group-hover:text-primary transition-colors tracking-tighter">
                       {stat.value}
                     </div>
                   </div>
-                  <div className="mt-4 flex items-center justify-between relative z-10">
-                    <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${
-                      stat.trendUp ? 'bg-green-500/10 text-green-500' : 'bg-red-500/10 text-red-500'
+                  <div className="mt-6 flex items-center justify-between relative z-10">
+                    <span className={`text-[10px] font-black px-3 py-1 rounded-full border ${
+                      stat.trendUp 
+                        ? 'bg-green-500/5 text-green-500 border-green-500/20' 
+                        : 'bg-red-500/5 text-red-500 border-red-500/20'
                     }`}>
                       {stat.trend}
                     </span>
-                    <div className="h-1 w-12 bg-white/5 rounded-full overflow-hidden">
+                    <div className="h-1.5 w-16 bg-white/5 rounded-full overflow-hidden border border-white/5">
                        <motion.div 
-                        className="h-full bg-primary" 
+                        className="h-full bg-primary shadow-[0_0_10px_rgba(255,107,74,0.5)]" 
                         initial={{ width: 0 }}
                         whileInView={{ width: "60%" }}
-                        transition={{ duration: 1, delay: 0.5 }}
+                        transition={{ duration: 1.2, delay: 0.5, ease: "circOut" }}
                        />
                     </div>
                   </div>
                   {/* Decorative Glow */}
-                  <div className="absolute -bottom-10 -right-10 w-24 h-24 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/20 transition-all duration-500" />
+                  <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-primary/5 rounded-full blur-[60px] group-hover:bg-primary/10 transition-all duration-700" />
                 </motion.div>
               ))}
             </div>
 
             {/* Main Project Table / List */}
             <motion.div 
-              className="bento-card p-8"
+              className="bento-card p-8 border-ui-border hover:border-primary/20 transition-colors"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -171,9 +173,9 @@ const Dashboard = () => {
                <p className="text-xs text-muted-foreground leading-relaxed mb-6">
                  Otimize o tempo de resposta da API para reduzir o churn em 12%.
                </p>
-               <button className="w-full py-3 bg-primary text-primary-foreground rounded-xl text-xs font-bold hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-primary/20">
-                 Executar Otimização
-               </button>
+                <button className="w-full py-4 bg-primary text-primary-foreground rounded-xl text-xs font-black uppercase tracking-widest hover:scale-[1.02] active:scale-[0.95] transition-all shadow-xl shadow-primary/20 border border-primary/20">
+                  Executar Otimização
+                </button>
              </div>
 
             <div className="space-y-4">

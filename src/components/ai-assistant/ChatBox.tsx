@@ -5,11 +5,12 @@ import supportBg from "@/assets/support-bg.png";
 const ChatBox = () => {
   return (
     <div 
-      className="flex flex-col w-full max-w-2xl mx-auto rounded-3xl border border-border overflow-hidden"
+      className="flex flex-col w-full max-w-2xl mx-auto rounded-[2rem] border border-ui-border overflow-hidden backdrop-blur-3xl bg-ui-surface/30 shadow-2xl"
       style={{
-        backgroundImage: `url(${supportBg})`,
+        backgroundImage: `radial-gradient(circle at top, hsl(var(--primary)/0.05), transparent), url(${supportBg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        backgroundBlendMode: 'overlay',
       }}
     >
       {/* Messages Area */}

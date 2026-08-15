@@ -79,7 +79,7 @@ export const CinematicHero = () => {
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <MagneticButton>
               <button 
-                className="glass-button glass-button-primary group px-12 py-5 text-lg"
+                className="glass-button glass-button-primary group px-12 py-5 text-base font-black tracking-widest uppercase active:scale-95"
                 onClick={() => document.getElementById('marketplace')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Explorar Ecossistema
@@ -90,7 +90,7 @@ export const CinematicHero = () => {
             </MagneticButton>
             <MagneticButton>
               <button 
-                className="glass-button group px-12 py-5 text-lg"
+                className="glass-button group px-12 py-5 text-base font-black tracking-widest uppercase active:scale-95"
                 onClick={() => window.open('/docs', '_blank')}
               >
                 <span className="opacity-70 group-hover:opacity-100 transition-opacity">Documentação</span>
