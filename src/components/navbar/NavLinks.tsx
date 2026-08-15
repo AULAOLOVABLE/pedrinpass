@@ -29,7 +29,7 @@ const NavLinks = () => {
           key={link.label}
           to={link.href}
           className={cn(
-            "px-3 py-2 text-sm font-medium transition-colors rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+            "px-4 py-2 text-[10px] font-black uppercase tracking-widest transition-all rounded-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary active:scale-95",
             isActive(link.href) ? "text-foreground" : "text-muted-foreground hover:text-foreground"
           )}
         >
