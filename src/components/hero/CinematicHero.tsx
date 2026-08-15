@@ -72,8 +72,8 @@ export const CinematicHero = () => {
             PedrinTEC
           </h1>
           
-          <p className="text-xl md:text-2xl text-muted-foreground font-light tracking-tight max-w-2xl mx-auto leading-relaxed mb-16">
-            A convergência entre <span className="text-primary font-medium italic">design minimalista</span> e <span className="text-primary font-medium italic">engenharia neural</span>. O futuro do desenvolvimento começa aqui.
+          <p className="text-sm md:text-base text-muted-foreground font-bold tracking-[0.2em] uppercase max-w-2xl mx-auto leading-relaxed mb-16">
+            A convergência entre <span className="text-primary italic">design minimalista</span> e <span className="text-primary italic">engenharia neural</span>.
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
