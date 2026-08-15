@@ -117,8 +117,8 @@ const Index = () => {
             <ScrollReveal delay={0.3} yOffset={40}>
               <section id="marketplace" className="scroll-mt-32">
                 <div className="mb-16">
-                  <span className="eyebrow block mb-4">Catálogo Premium</span>
-                  <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-6">Explore o Ecossistema</h2>
+                  <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary block mb-4">Catálogo Premium</span>
+                  <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter mb-6">Explore o Ecossistema</h2>
                   <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
                     De prompts premium a workflows complexos, tudo o que você precisa para escalar sua produção com IA em um único lugar.
                   </p>
