@@ -50,9 +50,9 @@ const Support = () => {
         >
           {/* Section Heading */}
           <div className="mb-8 flex flex-col gap-3">
-            <span className="eyebrow">Suporte</span>
-            <h2 className="text-2xl md:text-4xl font-bold text-foreground">
-              <WaveText text="Comunidade e suporte" />
+            <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary">Suporte</span>
+            <h2 className="text-2xl md:text-5xl font-black text-foreground uppercase tracking-tighter">
+              Comunidade e Suporte
             </h2>
           </div>
 
