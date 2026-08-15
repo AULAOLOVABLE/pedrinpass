@@ -1,35 +1,84 @@
 import React, { useRef, useMemo, Suspense, useState, useEffect } from 'react';
+import { Canvas, useFrame } from '@react-three/fiber';
+import { Float, MeshDistortMaterial, PerspectiveCamera, Stars, Environment } from '@react-three/drei';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import * as THREE from 'three';
 
-// Simple fallback particle system for when WebGL is not preferred or failing
-const FallbackBackground = () => {
+const AnimatedShape = () => {
+  const meshRef = useRef<THREE.Mesh>(null);
+  
+  useFrame((state) => {
+    if (!meshRef.current) return;
+    meshRef.current.rotation.x = state.clock.getElapsedTime() * 0.2;
+    meshRef.current.rotation.y = state.clock.getElapsedTime() * 0.3;
+  });
+
   return (
-    <div className="absolute inset-0 bg-[#0a0a0a] overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,107,74,0.1)_0%,transparent_70%)]" />
-      <div className="stars-container absolute inset-0 opacity-30">
-        {Array.from({ length: 50 }).map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute bg-white rounded-full"
-            style={{
-              width: Math.random() * 2 + 1,
-              height: Math.random() * 2 + 1,
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-            animate={{
-              opacity: [0.2, 0.8, 0.2],
-              scale: [1, 1.5, 1],
-            }}
-            transition={{
-              duration: Math.random() * 3 + 2,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-        ))}
-      </div>
-    </div>
+    <Float speed={2} rotationIntensity={1} floatIntensity={1}>
+      <mesh ref={meshRef}>
+        <icosahedronGeometry args={[1, 15]} />
+        <MeshDistortMaterial
+          color="#ff6b4a"
+          speed={3}
+          distort={0.4}
+          radius={1}
+          metalness={0.8}
+          roughness={0.2}
+          emissive="#ff6b4a"
+          emissiveIntensity={0.2}
+        />
+      </mesh>
+    </Float>
+  );
+};
+
+const Particles = ({ count = 5000 }) => {
+  const points = useMemo(() => {
+    const p = new Float32Array(count * 3);
+    for (let i = 0; i < count; i++) {
+      p[i * 3] = (Math.random() - 0.5) * 10;
+      p[i * 3 + 1] = (Math.random() - 0.5) * 10;
+      p[i * 3 + 2] = (Math.random() - 0.5) * 10;
+    }
+    return p;
+  }, [count]);
+
+  return (
+    <points>
+      <bufferGeometry>
+        <bufferAttribute
+          attach="attributes-position"
+          count={points.length / 3}
+          array={points}
+          itemSize={3}
+        />
+      </bufferGeometry>
+      <pointsMaterial
+        size={0.015}
+        color="#ff6b4a"
+        transparent
+        opacity={0.4}
+        sizeAttenuation
+      />
+    </points>
+  );
+};
+
+const Scene = () => {
+  return (
+    <>
+      <PerspectiveCamera makeDefault position={[0, 0, 5]} />
+      <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
+      <ambientLight intensity={0.5} />
+      <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} color="#ff6b4a" />
+      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#ff6b4a" />
+      
+      <Suspense fallback={null}>
+        <AnimatedShape />
+        <Particles />
+        <Environment preset="city" />
+      </Suspense>
+    </>
   );
 };
 
@@ -38,12 +87,22 @@ export const CinematicHero = () => {
   const y1 = useTransform(scrollY, [0, 500], [0, 200]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
   const scale = useTransform(scrollY, [0, 300], [1, 0.8]);
+  
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
   return (
     <section className="relative w-full h-screen overflow-hidden bg-background">
-      {/* Background Layer */}
+      {/* 3D Canvas Layer */}
       <div className="absolute inset-0 z-0">
-        <FallbackBackground />
+        {isLoaded && (
+          <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 5], fov: 75 }}>
+            <Scene />
+          </Canvas>
+        )}
       </div>
 
       {/* Content Overlay */}
