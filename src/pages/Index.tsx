@@ -143,7 +143,7 @@ const Index = () => {
         
         {/* Sticky Mobile CTA - Refined for Minimalist look */}
         <div className={`sticky-cta-mobile px-6 ${showStickyCTA ? 'visible' : ''}`}>
-          <button className="w-full bg-primary text-primary-foreground py-5 rounded-full font-bold text-base shadow-2xl flex items-center justify-center gap-2 active:scale-[0.98] transition-all">
+          <button className="w-full bg-primary text-primary-foreground py-5 rounded-2xl font-black text-xs uppercase tracking-widest shadow-2xl flex items-center justify-center gap-2 active:scale-[0.95] transition-all border border-primary/20">
             Começar Agora <ArrowRight className="w-4 h-4" />
           </button>
         </div>
