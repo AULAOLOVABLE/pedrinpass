@@ -140,7 +140,7 @@ const Dashboard = () => {
                         <Activity className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                       </div>
                       <div>
-                        <h4 className="font-bold text-sm group-hover:text-primary transition-colors">{project.name}</h4>
+                        <h4 className="font-black text-[10px] uppercase tracking-widest group-hover:text-primary transition-colors">{project.name}</h4>
                         <p className="text-xs text-muted-foreground">{project.tasks} tarefas mapeadas</p>
                       </div>
                     </div>
