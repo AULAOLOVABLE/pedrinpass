@@ -58,7 +58,7 @@ const CategoryCard = ({ variant, title, description, linkText, href, featured = 
           </div>
 
           {/* CTA Link */}
-          <span className="inline-flex items-center gap-2 text-sm font-medium text-foreground transition-colors group-hover:text-primary-glow">
+          <span className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest text-foreground transition-colors group-hover:text-primary-glow">
             <span>{linkText}</span>
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </span>
