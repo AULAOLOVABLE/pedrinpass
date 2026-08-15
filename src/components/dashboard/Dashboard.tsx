@@ -198,7 +198,7 @@ const Dashboard = () => {
                         <Icon className={`w-5 h-5 ${insight.color}`} />
                       </div>
                       <div>
-                        <h4 className="text-sm font-bold text-foreground">{insight.title}</h4>
+                        <h4 className="text-[10px] font-black uppercase tracking-widest text-foreground">{insight.title}</h4>
                         <p className="text-xs text-muted-foreground mt-1 leading-relaxed">
                           {insight.description}
                         </p>
