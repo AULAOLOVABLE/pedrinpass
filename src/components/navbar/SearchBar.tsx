@@ -18,10 +18,10 @@ const SearchBar = () => {
       </div>
       
       <div className="flex items-center gap-1 flex-shrink-0">
-        <kbd className="flex items-center justify-center w-6 h-6 rounded-md bg-secondary text-xs font-semibold text-muted-foreground">
+        <kbd className="flex items-center justify-center w-6 h-6 rounded-md bg-ui-surface border border-ui-border text-[10px] font-black text-muted-foreground">
           ⌘
         </kbd>
-        <kbd className="flex items-center justify-center w-6 h-6 rounded-md bg-secondary text-xs font-semibold text-muted-foreground">
+        <kbd className="flex items-center justify-center w-6 h-6 rounded-md bg-ui-surface border border-ui-border text-[10px] font-black text-muted-foreground">
           K
         </kbd>
       </div>
