@@ -103,8 +103,8 @@ const Index = () => {
               >
                 <div id="dashboard" className="scroll-mt-32">
                   <div className="p-8 md:p-12 pb-0">
-                    <span className="eyebrow block mb-4">Métricas de Precisão</span>
-                    <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-4">Marketplace de Performance</h2>
+                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary block mb-4">Métricas de Precisão</span>
+                    <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4">Marketplace de Performance</h2>
                     <p className="text-muted-foreground text-base max-w-2xl leading-relaxed">
                       Dados reais para decisões cirúrgicas. Acompanhe a evolução do seu ecossistema em tempo real com transparência absoluta.
                     </p>
