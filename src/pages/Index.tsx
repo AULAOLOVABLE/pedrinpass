@@ -45,19 +45,22 @@ const Index = () => {
       });
 
       // Dashboard sticky reveal sync
-      ScrollTrigger.create({
-        trigger: "#dashboard-trigger",
-        start: "top center",
-        end: "bottom center",
-        onUpdate: (self) => {
-          const container = document.querySelector('.crm-container') as HTMLElement;
-          if (container) {
+      const dashboardTrigger = document.querySelector("#dashboard-trigger");
+      const crmContainer = document.querySelector(".crm-container") as HTMLElement;
+      
+      if (dashboardTrigger && crmContainer) {
+        ScrollTrigger.create({
+          trigger: dashboardTrigger,
+          start: "top center",
+          end: "bottom center",
+          scrub: true,
+          onUpdate: (self) => {
             const progress = self.progress;
-            container.style.transform = `scale(${0.7 + (progress * 0.3)}) translateY(${(1 - progress) * 100}px)`;
-            container.style.opacity = `${Math.min(progress * 2, 1)}`;
+            crmContainer.style.transform = `scale(${0.7 + (progress * 0.3)}) translateY(${(1 - progress) * 100}px)`;
+            crmContainer.style.opacity = `${Math.min(progress * 2, 1)}`;
           }
-        }
-      });
+        });
+      }
     }, mainRef);
 
     return () => {
