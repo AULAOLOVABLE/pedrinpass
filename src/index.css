@@ -83,7 +83,10 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
+    width: 100%;
+    position: relative;
+    overscroll-behavior: none;
   }
   /* Reveal Effect Wrapper for Dashboard */
   .reveal-wrapper {

@@ -25,17 +25,12 @@ export const SmoothScroll = () => {
 
     requestAnimationFrame(raf);
 
-    lenis.on('scroll', ScrollTrigger.update);
-
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
+    lenis.on('scroll', () => ScrollTrigger.update());
 
     gsap.ticker.lagSmoothing(0);
 
     return () => {
       lenis.destroy();
-      gsap.ticker.remove(lenis.raf);
     };
   }, []);
 
