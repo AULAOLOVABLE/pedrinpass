@@ -1,86 +1,36 @@
 import React, { useRef, useMemo, Suspense, useState, useEffect } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import { Float, MeshDistortMaterial, PerspectiveCamera, Stars, Environment } from '@react-three/drei';
-import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
-import * as THREE from 'three';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
-const AnimatedShape = () => {
-  const meshRef = useRef<THREE.Mesh>(null);
-  
-  useFrame((state) => {
-    if (!meshRef.current) return;
-    meshRef.current.rotation.x = state.clock.getElapsedTime() * 0.2;
-    meshRef.current.rotation.y = state.clock.getElapsedTime() * 0.3;
-  });
 
-  return (
-    <Float speed={2} rotationIntensity={1} floatIntensity={1}>
-      <mesh ref={meshRef}>
-        <icosahedronGeometry args={[1, 15]} />
-        <MeshDistortMaterial
-          color="#ff6b4a"
-          speed={3}
-          distort={0.4}
-          radius={1}
-          metalness={0.8}
-          roughness={0.2}
-          emissive="#ff6b4a"
-          emissiveIntensity={0.2}
+const FallbackBackground = () => (
+  <div className="absolute inset-0 bg-[#0a0a0a] overflow-hidden">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,107,74,0.15)_0%,transparent_80%)]" />
+    <div className="absolute inset-0 opacity-20">
+      {Array.from({ length: 40 }).map((_, i) => (
+        <motion.div
+          key={i}
+          className="absolute bg-primary rounded-full blur-[1px]"
+          style={{
+            width: Math.random() * 3 + 1,
+            height: Math.random() * 3 + 1,
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+          }}
+          animate={{
+            opacity: [0.1, 0.6, 0.1],
+            scale: [1, 1.5, 1],
+          }}
+          transition={{
+            duration: Math.random() * 4 + 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }}
         />
-      </mesh>
-    </Float>
-  );
-};
+      ))}
+    </div>
+  </div>
+);
 
-const Particles = ({ count = 5000 }) => {
-  const points = useMemo(() => {
-    const p = new Float32Array(count * 3);
-    for (let i = 0; i < count; i++) {
-      p[i * 3] = (Math.random() - 0.5) * 10;
-      p[i * 3 + 1] = (Math.random() - 0.5) * 10;
-      p[i * 3 + 2] = (Math.random() - 0.5) * 10;
-    }
-    return p;
-  }, [count]);
-
-  return (
-    <points>
-      <bufferGeometry>
-        <bufferAttribute
-          attach="attributes-position"
-          count={points.length / 3}
-          array={points}
-          itemSize={3}
-        />
-      </bufferGeometry>
-      <pointsMaterial
-        size={0.015}
-        color="#ff6b4a"
-        transparent
-        opacity={0.4}
-        sizeAttenuation
-      />
-    </points>
-  );
-};
-
-const Scene = () => {
-  return (
-    <>
-      <PerspectiveCamera makeDefault position={[0, 0, 5]} />
-      <Stars radius={100} depth={50} count={5000} factor={4} saturation={0} fade speed={1} />
-      <ambientLight intensity={0.5} />
-      <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} intensity={1} color="#ff6b4a" />
-      <pointLight position={[-10, -10, -10]} intensity={0.5} color="#ff6b4a" />
-      
-      <Suspense fallback={null}>
-        <AnimatedShape />
-        <Particles />
-        <Environment preset="city" />
-      </Suspense>
-    </>
-  );
-};
 
 export const CinematicHero = () => {
   const { scrollY } = useScroll();
@@ -96,14 +46,11 @@ export const CinematicHero = () => {
 
   return (
     <section className="relative w-full h-screen overflow-hidden bg-background">
-      {/* 3D Canvas Layer */}
+      {/* Background Layer */}
       <div className="absolute inset-0 z-0">
-        {isLoaded && (
-          <Canvas dpr={[1, 2]} camera={{ position: [0, 0, 5], fov: 75 }}>
-            <Scene />
-          </Canvas>
-        )}
+        <FallbackBackground />
       </div>
+
 
       {/* Content Overlay */}
       <motion.div 
