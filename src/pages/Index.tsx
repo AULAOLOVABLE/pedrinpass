@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Navbar } from "@/components/navbar";
-import { Hero } from "@/components/hero";
+import { CinematicHero as Hero } from "@/components/hero/CinematicHero";
 import { Categories } from "@/components/categories";
 import { Dashboard } from "@/components/dashboard";
 import { Support } from "@/components/support";
