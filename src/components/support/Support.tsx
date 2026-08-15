@@ -41,7 +41,7 @@ const Support = () => {
       <div className="max-w-6xl mx-auto">
         {/* Card Container with Background */}
         <div 
-          className="relative rounded-[2rem] border border-border overflow-hidden p-6 md:p-10 shadow-[0_40px_80px_-60px_hsl(var(--primary)/0.6)]"
+          className="relative rounded-xl border border-ui-border overflow-hidden p-6 md:p-10 shadow-2xl"
           style={{
             backgroundImage: `url(${supportBg})`,
             backgroundSize: 'cover',
