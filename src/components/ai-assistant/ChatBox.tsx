@@ -15,7 +15,7 @@ const ChatBox = () => {
     >
       {/* Messages Area */}
       <div className="flex flex-col gap-4 p-6 min-h-[300px] max-h-[400px] overflow-y-auto">
-        <ChatMessage role="assistant" content="Assistente TecExtension pronto para executar tarefas complexas." />
+        <ChatMessage role="assistant" content="Assistente PedrinTEC pronto para executar tarefas complexas." />
         <ChatMessage
           role="assistant"
           content="Posso ajudar com streaming, histórico de conversas e ações seguras. Ative o Lovable Cloud para integração total."
