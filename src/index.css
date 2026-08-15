@@ -66,6 +66,9 @@ All colors MUST be HSL.
     --duration-slow: 400ms;
     --spring-duration: 0.4s;
     --spring-bounce: 0.15;
+    --ease-cinematic: cubic-bezier(0.25, 0.1, 0.25, 1);
+    --reveal-distance: 20px;
+    --parallax-distance: 40px;
   }
 
   .dark {
