@@ -13,8 +13,8 @@ const Footer = () => {
             </p>
           </div>
           <div>
-            <h4 className="font-semibold text-sm text-foreground mb-4">Plataforma</h4>
-            <ul className="space-y-2 text-sm text-muted-foreground">
+            <h4 className="text-[10px] font-black text-primary uppercase tracking-widest mb-6">Plataforma</h4>
+            <ul className="space-y-3 text-[13px] text-muted-foreground">
               <li><Link to="/docs/overview" className="hover:text-primary transition-colors">Documentação</Link></li>
               <li><Link to="/api/connect" className="hover:text-primary transition-colors">Referência API</Link></li>
               <li><Link to="/changelog" className="hover:text-primary transition-colors">Novidades</Link></li>
