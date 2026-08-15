@@ -7,7 +7,7 @@ const ChatMessage = ({ role, content }: ChatMessageProps) => {
   if (role === "assistant") {
     return (
       <div className="text-center">
-        <span className="text-sm bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">
+        <span className="text-[13px] font-bold text-primary tracking-tight">
           {content}
         </span>
       </div>
