@@ -37,7 +37,7 @@ const SupportCard = ({ icon: Icon, title, description, linkText, href }: Support
       to={href}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="bento-card group flex flex-col lg:flex-row items-center gap-4 p-5 bg-background/60 backdrop-blur-sm transition-transform duration-200 ease-out"
+      className="bento-card group flex flex-col lg:flex-row items-center gap-4 p-6 bg-background/60 backdrop-blur-sm transition-transform duration-200 ease-out active:scale-95"
       style={{
         transform: tilt,
         willChange: "transform",
@@ -55,12 +55,12 @@ const SupportCard = ({ icon: Icon, title, description, linkText, href }: Support
 
       {/* Content */}
       <div className="flex flex-col gap-0.5 flex-1 min-w-0 text-center lg:text-left">
-        <h3 className="font-display text-sm font-semibold text-foreground">{title}</h3>
+        <h3 className="font-display text-base font-black uppercase tracking-tighter text-foreground">{title}</h3>
         <p className="text-sm text-muted-foreground lg:truncate">{description}</p>
       </div>
 
       {/* CTA Link */}
-      <div className="flex items-center gap-1 text-sm text-muted-foreground shrink-0 transition-colors group-hover:text-primary-glow">
+      <div className="flex items-center gap-1 text-[10px] font-black uppercase tracking-widest text-muted-foreground shrink-0 transition-colors group-hover:text-primary-glow">
         <span>{linkText}</span>
         <ArrowUpRight className="w-4 h-4" />
       </div>

@@ -29,7 +29,9 @@ const App = () => (
           <SearchModal />
           <Suspense fallback={
             <div className="fixed inset-0 flex items-center justify-center bg-background">
-              <div className="w-12 h-12 border-4 border-primary border-t-transparent rounded-full animate-spin" />
+              <div className="w-16 h-1 bg-ui-border overflow-hidden rounded-full">
+                <div className="w-full h-full bg-primary origin-left animate-loading-bar" />
+              </div>
             </div>
           }>
             <Routes>
