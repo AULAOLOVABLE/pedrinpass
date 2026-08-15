@@ -279,32 +279,32 @@ export const documentationPages: DocumentationPage[] = [
   }
   ,
   {
-    id: "portfolio-cinematografico",
-    title: "Portfólio Cinematográfico",
-    description: "Crie uma experiência completa no formato “Portfólio Cinematográfico” para a PedrinTEC.",
+    id: "consultoria-executiva",
+    title: "Consultoria Executiva",
+    description: "Crie uma experiência completa no formato “Consultoria Executiva”. Tipo: Consultoria. Direção visual: Minimal Premium Interface. Combine Masked Text Reveal, Parallax Image Gallery, Microinteractions com intensidade 38% e prioridade em clareza. Stack: React + TypeScript + Motion. Estruture a página como uma narrativa orientada ao produto, com hero, demonstração, benefícios, prova, objeções, CTA e estados responsivos. Preserve todas as funcionalidades existentes. Use componentes React + TypeScript reutilizáveis, tokens de motion, carregamento progressivo, acessibilidade, prefers-reduced-motion, fallback sem WebGL e nível de qualidade adaptativo. Não copie marcas ou assets de referências; traduza apenas os princípios de composição e movimento. Entregue implementação funcional, dependências necessárias e checklist de performance.",
     category: "Engenharia",
-    breadcrumb: ["Engenharia", "Portfólio"],
+    breadcrumb: ["Engenharia", "Consultoria"],
     sections: [
       {
         id: "visual-direction",
         title: "Direção Visual",
-        content: "High-End Motion Design com foco em narrativa orientada ao produto. O objetivo é criar um impacto visual imediato que comunique sofisticação técnica e atenção aos detalhes.",
+        content: "Minimal Premium Interface com foco em clareza absoluta e microinterações de alta precisão (38% de intensidade). A narrativa é orientada ao produto, guiando o usuário através de uma jornada sofisticada e funcional.",
         listItems: [
-          "WebGL Gallery: Galeria imersiva com distorção de shader no hover.",
-          "Kinetic Typography: Tipografia dinâmica que reage ao scroll com intensidade 78%.",
-          "Transições de Página: Morphing entre estados de visualização.",
-          "Feedback Tátil: Microinterações baseadas em física real."
+          "Masked Text Reveal: Revelação de texto elegante para títulos de impacto.",
+          "Parallax Image Gallery: Profundidade visual sem comprometer a performance.",
+          "Microinteractions: Respostas táteis discretas mas perceptíveis.",
+          "Narrativa de Produto: Fluxo lógico do hero ao CTA final."
         ]
       },
       {
         id: "technical-spec",
         title: "Especificação Técnica",
-        content: "Implementação robusta focada em performance e compatibilidade.",
+        content: "Stack moderna e resiliente para uma entrega impecável.",
         listItems: [
-          "Carregamento progressivo de texturas via instanced meshes.",
-          "Fallback sem WebGL: Layout estático otimizado para SEO.",
-          "Checklist de Performance: 60fps constantes em mobile, LCP < 1.5s.",
-          "Acessibilidade: Suporte completo a leitores de tela em elementos interativos."
+          "React + TypeScript + Motion: Base técnica de alta confiabilidade.",
+          "Carregamento Progressivo: Priorização de recursos críticos para LCP otimizado.",
+          "Acessibilidade Premium: WCAG 2.2 e suporte a leitores de tela nativo.",
+          "Performance Adaptativa: Nível de qualidade ajustado ao dispositivo do usuário."
         ]
       }
     ]
