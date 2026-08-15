@@ -29,7 +29,7 @@ const Navbar = () => {
         className={cn(
           "flex items-center justify-between px-8 py-3 w-[95%] max-w-[1400px] transition-all duration-700 border border-white/5",
           isScrolled 
-            ? "bg-background/40 backdrop-blur-3xl rounded-full shadow-2xl scale-[0.98] border-white/10" 
+            ? "bg-ui-surface/60 backdrop-blur-3xl rounded-full shadow-2xl scale-[0.98] border-ui-border-hover/30" 
             : "bg-transparent rounded-full border-transparent"
         )}
       >
