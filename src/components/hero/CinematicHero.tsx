@@ -1,6 +1,6 @@
 import React, { useRef, useMemo, Suspense, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-
+import { Hero3D } from './Hero3D';
 
 const FallbackBackground = () => (
   <div className="absolute inset-0 bg-[#0a0a0a] overflow-hidden">
@@ -49,7 +49,9 @@ export const CinematicHero = () => {
     <section className="relative w-full h-screen overflow-hidden bg-background">
       {/* Background Layer */}
       <div className="absolute inset-0 z-0">
-        <FallbackBackground />
+        <Suspense fallback={<FallbackBackground />}>
+          <Hero3D />
+        </Suspense>
       </div>
 
 

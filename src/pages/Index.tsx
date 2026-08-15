@@ -7,7 +7,7 @@ import { Support } from "@/components/support";
 import { AIAssistant } from "@/components/ai-assistant";
 import { Footer } from "@/components/footer";
 import { Seo } from "@/components/Seo";
-import { MatrixRain, ScrollProgress, ScrollReveal } from "@/components/effects";
+import { MatrixRain, ScrollProgress, ScrollReveal, SmoothScroll } from "@/components/effects";
 import { ArrowRight } from "lucide-react";
 
 const Index = () => {
@@ -43,6 +43,8 @@ const Index = () => {
         description="A plataforma definitiva para desenvolvedores: marketplace de prompts, extensões e automação neural."
         path="/"
       />
+      
+      <SmoothScroll />
       
       {/* Background Effects */}
       <div className="fixed inset-0 pointer-events-none z-0">
