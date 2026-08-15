@@ -12,7 +12,7 @@ const SearchBar = () => {
     >
       <div className="flex items-center gap-2 flex-1">
         <Search className="w-4 h-4 text-muted-foreground flex-shrink-0" />
-        <span className="text-sm text-muted-foreground">
+        <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">
           Buscar recurso...
         </span>
       </div>
