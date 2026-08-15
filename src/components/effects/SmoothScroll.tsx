@@ -25,7 +25,7 @@ export const SmoothScroll = () => {
 
     requestAnimationFrame(raf);
 
-    lenis.on('scroll', ScrollTrigger.update);
+    lenis.on('scroll', () => ScrollTrigger.update());
 
     gsap.ticker.lagSmoothing(0);
 
