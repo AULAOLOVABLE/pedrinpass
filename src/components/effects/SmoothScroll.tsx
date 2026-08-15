@@ -31,7 +31,6 @@ export const SmoothScroll = () => {
 
     return () => {
       lenis.destroy();
-      gsap.ticker.remove(lenis.raf);
     };
   }, []);
 
