@@ -9,7 +9,7 @@ const Footer = () => {
             <h3 className="text-2xl font-black tracking-tighter text-foreground uppercase mb-4">PedrinTEC</h3>
             <p className="text-muted-foreground text-[13px] max-w-xs leading-relaxed">
               Líder em infraestrutura para agentes de IA e engenharia de software de alta performance. 
-              [PREENCHER] endereço ou detalhes adicionais.
+              Líder em infraestrutura para agentes de IA e engenharia de software de alta performance. Estruturas modulares e escaláveis para o futuro digital.
             </p>
           </div>
           <div>
