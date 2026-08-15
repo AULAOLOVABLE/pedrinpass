@@ -4,6 +4,7 @@ import SearchBar from "./SearchBar";
 import NavLinks from "./NavLinks";
 import MobileMenu from "./MobileMenu";
 import { cn } from "@/lib/utils";
+import { MagneticButton } from "../motion";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,9 +43,11 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           <NavLinks />
           <div className="hidden md:flex items-center">
-            <button className="bg-primary text-primary-foreground px-8 py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:scale-105 shadow-lg shadow-primary/20 transition-all active:scale-95 duration-300">
-              Começar Agora
-            </button>
+            <MagneticButton>
+              <button className="bg-primary text-primary-foreground px-8 py-3 rounded-full text-xs font-bold tracking-widest uppercase hover:scale-105 shadow-lg shadow-primary/20 transition-all active:scale-95 duration-300">
+                Começar Agora
+              </button>
+            </MagneticButton>
           </div>
           <MobileMenu />
         </div>

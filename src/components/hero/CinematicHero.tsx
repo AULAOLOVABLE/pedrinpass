@@ -1,6 +1,7 @@
 import React, { useRef, useMemo, Suspense, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-
+import { Hero3D } from './Hero3D';
+import { MagneticButton } from '../motion';
 
 const FallbackBackground = () => (
   <div className="absolute inset-0 bg-[#0a0a0a] overflow-hidden">
@@ -49,7 +50,9 @@ export const CinematicHero = () => {
     <section className="relative w-full h-screen overflow-hidden bg-background">
       {/* Background Layer */}
       <div className="absolute inset-0 z-0">
-        <FallbackBackground />
+        <Suspense fallback={<FallbackBackground />}>
+          <Hero3D />
+        </Suspense>
       </div>
 
 
@@ -74,21 +77,25 @@ export const CinematicHero = () => {
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-            <button 
-              className="glass-button glass-button-primary group px-12 py-5 text-lg"
-              onClick={() => document.getElementById('marketplace')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Explorar Ecossistema
-              <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                <path d="M5 12h14m-7-7 7 7-7 7"/>
-              </svg>
-            </button>
-            <button 
-              className="glass-button group px-12 py-5 text-lg"
-              onClick={() => window.open('/docs', '_blank')}
-            >
-              <span className="opacity-70 group-hover:opacity-100 transition-opacity">Documentação</span>
-            </button>
+            <MagneticButton>
+              <button 
+                className="glass-button glass-button-primary group px-12 py-5 text-lg"
+                onClick={() => document.getElementById('marketplace')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Explorar Ecossistema
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <path d="M5 12h14m-7-7 7 7-7 7"/>
+                </svg>
+              </button>
+            </MagneticButton>
+            <MagneticButton>
+              <button 
+                className="glass-button group px-12 py-5 text-lg"
+                onClick={() => window.open('/docs', '_blank')}
+              >
+                <span className="opacity-70 group-hover:opacity-100 transition-opacity">Documentação</span>
+              </button>
+            </MagneticButton>
           </div>
         </motion.div>
       </motion.div>
