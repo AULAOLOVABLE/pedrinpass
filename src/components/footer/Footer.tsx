@@ -31,12 +31,12 @@ const Footer = () => {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-12 border-t border-white/5">
-          <p className="text-sm text-muted-foreground">
+          <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">
             © 2026 PedrinTEC · Desenvolvido por Pedrintec. Todos os direitos reservados.
           </p>
-          <div className="flex gap-6 text-sm text-muted-foreground">
-            <span className="text-xs eyebrow !text-muted-foreground">LCP: 1.2s</span>
-            <span className="text-xs eyebrow !text-muted-foreground">INP: 80ms</span>
+          <div className="flex gap-6">
+            <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/50">LCP: 1.2s</span>
+            <span className="text-[10px] font-black uppercase tracking-widest text-muted-foreground/50">INP: 80ms</span>
           </div>
         </div>
       </div>
