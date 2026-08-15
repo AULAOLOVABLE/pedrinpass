@@ -277,6 +277,38 @@ export const documentationPages: DocumentationPage[] = [
       }
     ]
   }
+  ,
+  {
+    id: "portfolio-cinematografico",
+    title: "Portfólio Cinematográfico",
+    description: "Crie uma experiência completa no formato “Portfólio Cinematográfico” para a PedrinTEC.",
+    category: "Engenharia",
+    breadcrumb: ["Engenharia", "Portfólio"],
+    sections: [
+      {
+        id: "visual-direction",
+        title: "Direção Visual",
+        content: "High-End Motion Design com foco em narrativa orientada ao produto. O objetivo é criar um impacto visual imediato que comunique sofisticação técnica e atenção aos detalhes.",
+        listItems: [
+          "WebGL Gallery: Galeria imersiva com distorção de shader no hover.",
+          "Kinetic Typography: Tipografia dinâmica que reage ao scroll com intensidade 78%.",
+          "Transições de Página: Morphing entre estados de visualização.",
+          "Feedback Tátil: Microinterações baseadas em física real."
+        ]
+      },
+      {
+        id: "technical-spec",
+        title: "Especificação Técnica",
+        content: "Implementação robusta focada em performance e compatibilidade.",
+        listItems: [
+          "Carregamento progressivo de texturas via instanced meshes.",
+          "Fallback sem WebGL: Layout estático otimizado para SEO.",
+          "Checklist de Performance: 60fps constantes em mobile, LCP < 1.5s.",
+          "Acessibilidade: Suporte completo a leitores de tela em elementos interativos."
+        ]
+      }
+    ]
+  }
 ];
 
 export const generateTableOfContents = (page: DocumentationPage) => {
