@@ -69,14 +69,14 @@ const MatrixRain = () => {
         ctx.fillStyle = `hsl(25 100% 50% / ${0.28 + Math.min(boost * 0.02, 0.3)})`;
         ctx.fillText(GLYPHS[Math.floor(Math.random() * GLYPHS.length)], x, y - fontSize);
 
-        drops[i] += (speeds[i] + boost * 0.5) * (prefersReduced ? 0.2 : 1) * fontSize * 0.35;
+        drops[i] += (speeds[i] + boost * 0.8) * (prefersReduced ? 0.2 : 1) * fontSize * 0.45;
 
         if (drops[i] > height && Math.random() > 0.975) {
           drops[i] = Math.random() * -200;
         }
       }
 
-      boostRef.current *= 0.92;
+      boostRef.current *= 0.94;
       raf = requestAnimationFrame(render);
     };
 
