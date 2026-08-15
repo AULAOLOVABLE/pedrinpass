@@ -166,10 +166,10 @@ const Dashboard = () => {
                <div className="absolute top-0 right-0 p-4">
                  <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                </div>
-               <h3 className="font-bold text-sm mb-4 flex items-center gap-2">
-                 <Activity className="w-4 h-4 text-primary" />
-                 Próxima Recomendação
-               </h3>
+                <h3 className="font-black text-[10px] uppercase tracking-widest mb-4 flex items-center gap-2">
+                  <Activity className="w-4 h-4 text-primary" />
+                  Próxima Recomendação
+                </h3>
                <p className="text-xs text-muted-foreground leading-relaxed mb-6">
                  Otimize o tempo de resposta da API para reduzir o churn em 12%.
                </p>
