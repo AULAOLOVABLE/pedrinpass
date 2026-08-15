@@ -277,6 +277,7 @@ export const documentationPages: DocumentationPage[] = [
       }
     ]
   }
+  ,
   {
     id: "portfolio-cinematografico",
     title: "Portfólio Cinematográfico",
