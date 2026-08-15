@@ -33,11 +33,11 @@ const Categories = () => {
       <div className="max-w-6xl mx-auto">
         {/* Section Heading */}
         <div className="mb-10 flex flex-col gap-3">
-          <span className="eyebrow">Navegue</span>
-          <h2 className="text-2xl md:text-4xl font-bold text-foreground">
-            <WaveText text="Explore por categoria" />
+          <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary">Navegue</span>
+          <h2 className="text-2xl md:text-5xl font-black text-foreground uppercase tracking-tighter">
+            Explore por Categoria
           </h2>
-          <div className="h-px w-full bg-gradient-to-r from-primary/60 via-border to-transparent" />
+          <div className="h-px w-full bg-ui-border" />
         </div>
 
         {/* Cards Grid */}
