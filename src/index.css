@@ -66,6 +66,15 @@ All colors MUST be HSL.
     --sidebar-border: var(--ui-border);
     --sidebar-ring: var(--ring);
 
+    @keyframes loading-bar {
+      0% { transform: scaleX(0); }
+      50% { transform: scaleX(0.5); }
+      100% { transform: scaleX(1); }
+    }
+    .animate-loading-bar {
+      animation: loading-bar 1.5s ease-in-out infinite;
+    }
+
     /* Animation Tokens */
     --duration-fast: 150ms;
     --duration-normal: 250ms;
