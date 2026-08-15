@@ -118,13 +118,13 @@ export const CinematicHero = () => {
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-            <button className="glass-button glass-button-primary group px-12 py-5 text-lg">
+            <button className="glass-button glass-button-primary group px-12 py-5 text-lg" onClick={() => document.getElementById('marketplace')?.scrollIntoView({ behavior: 'smooth' })}>
               Explorar Ecossistema
               <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M5 12h14m-7-7 7 7-7 7"/>
               </svg>
             </button>
-            <button className="glass-button group px-12 py-5 text-lg">
+            <button className="glass-button group px-12 py-5 text-lg" onClick={() => window.open('/docs', '_blank')}>
               <span className="opacity-70 group-hover:opacity-100 transition-opacity">Documentação</span>
             </button>
           </div>
