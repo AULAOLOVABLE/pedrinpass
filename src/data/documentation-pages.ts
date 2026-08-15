@@ -232,7 +232,7 @@ export const documentationPages: DocumentationPage[] = [
         content: "Otimizando o Cursor para o ecossistema PedrinTEC e integração com IA."
       }
     ]
-  }
+  },
   {
     id: "motion-design",
     title: "Sistema de Motion Design",
