@@ -17,13 +17,14 @@ const FallbackBackground = () => (
             top: `${Math.random() * 100}%`,
           }}
           animate={{
-            opacity: [0.1, 0.6, 0.1],
-            scale: [1, 1.5, 1],
+            opacity: [0.2, 0.8, 0.2],
+            scale: [1, 1.8, 1],
+            y: [0, -20, 0]
           }}
           transition={{
-            duration: Math.random() * 4 + 3,
+            duration: Math.random() * 2 + 1.5,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: "linear",
           }}
         />
       ))}
