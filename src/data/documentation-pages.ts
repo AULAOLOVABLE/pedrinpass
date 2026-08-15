@@ -233,6 +233,50 @@ export const documentationPages: DocumentationPage[] = [
       }
     ]
   }
+  {
+    id: "motion-design",
+    title: "Sistema de Motion Design",
+    description: "Framework de animação reutilizável para a plataforma PedrinTEC.",
+    category: "Engenharia",
+    breadcrumb: ["Engenharia", "Motion Design"],
+    sections: [
+      {
+        id: "tokens",
+        title: "Tokens de Movimento",
+        content: "Definições semânticas para garantir consistência visual em toda a interface.",
+        listItems: [
+          "Duração: Fast (120ms), Normal (200ms), Slow (400ms).",
+          "Easing: Cubic-bezier(0.25, 0.1, 0.25, 1).",
+          "Distância: Reveal (20px), Parallax (40px).",
+          "Escala: Active (0.95), Hover (1.02).",
+          "Blur: Glass (12px), Focus (4px)."
+        ]
+      },
+      {
+        id: "components",
+        title: "Componentes Disponíveis",
+        content: "Crie um sistema de motion design reutilizável para a aplicação. Defina tokens de duração, easing, distância, escala, blur e stagger; componentes para Reveal, Stagger, Parallax, MagneticButton, TiltCard, Marquee, PageTransition e ScrollProgress; hooks com cleanup; suporte a prefers-reduced-motion; limites para mobile; e documentação curta de uso. Use Motion for React para layout e microinterações, GSAP para timelines complexas e CSS para animações simples. Evite bibliotecas duplicadas e preserve todas as funcionalidades existentes.",
+        listItems: [
+          "Reveal: Entrada suave de elementos com direção controlada.",
+          "Stagger: Cascata de animações para listas.",
+          "MagneticButton: Botões que atraem o cursor do usuário.",
+          "TiltCard: Interação 3D baseada no movimento do mouse.",
+          "PageTransition: Transições fluidas entre rotas."
+        ]
+      },
+      {
+        id: "best-practices",
+        title: "Melhores Práticas",
+        content: "Diretrizes para manter a performance e acessibilidade:",
+        listItems: [
+          "Sempre use transform e opacity para animações suaves via GPU.",
+          "Respeite o hook useReducedMotion para acessibilidade.",
+          "Evite animações persistentes em dispositivos móveis para poupar bateria.",
+          "Limpe listeners de GSAP e Scroll no cleanup dos componentes."
+        ]
+      }
+    ]
+  }
 ];
 
 export const generateTableOfContents = (page: DocumentationPage) => {

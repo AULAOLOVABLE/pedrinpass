@@ -44,6 +44,7 @@ export const navigationGroups: NavGroup[] = [
       { id: "prompts", title: "Prompts", href: "/docs/prompts", icon: Sparkles },
       { id: "templates", title: "Templates", href: "/docs/templates", icon: Layers },
       { id: "workflows", title: "Workflows", href: "/docs/workflows", icon: RefreshCw },
+      { id: "motion", title: "Motion Design", href: "/docs/motion-design", icon: Sparkles },
     ],
   },
   {
