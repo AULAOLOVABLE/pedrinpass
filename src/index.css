@@ -190,6 +190,13 @@ All colors MUST be HSL.
   }
 }
 
+/* ScrollTrigger Styles */
+.gsap-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  filter: blur(10px);
+}
+
 @layer components {
   /* Bento surface used across the home grid */
   .bento-card {

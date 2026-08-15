@@ -1,8 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Navbar } from "@/components/navbar";
 import { CinematicHero as Hero } from "@/components/hero/CinematicHero";
 import { Categories } from "@/components/categories";
 import { Dashboard } from "@/components/dashboard";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 import { Support } from "@/components/support";
 import { AIAssistant } from "@/components/ai-assistant";
 import { Footer } from "@/components/footer";
@@ -12,32 +16,57 @@ import { ArrowRight } from "lucide-react";
 
 const Index = () => {
   const [showStickyCTA, setShowStickyCTA] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
+  const mainRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setShowStickyCTA(window.scrollY > 600);
-      
-      const dashboardSection = document.getElementById("dashboard-trigger");
-      if (dashboardSection) {
-        const sectionTop = dashboardSection.offsetTop;
-        const sectionHeight = dashboardSection.offsetHeight;
-        const windowHeight = window.innerHeight;
-        
-        // Match the logic from the instruction: progress = scrolled / (height - windowHeight)
-        // We use scroll position relative to the section start
-        const relativeScroll = window.scrollY - sectionTop;
-        const scrollRange = sectionHeight - windowHeight;
-        const progress = Math.min(Math.max(relativeScroll / scrollRange, 0), 1);
-        
-        setScrollProgress(progress);
-      }
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+
+    // GSAP ScrollTrigger for parallax and reveals
+    const ctx = gsap.context(() => {
+      // Parallax for Bento cards
+      gsap.utils.toArray<HTMLElement>('.bento-card').forEach((card) => {
+        gsap.fromTo(card, 
+          { y: 50, opacity: 0 },
+          { 
+            y: 0, 
+            opacity: 1, 
+            duration: 1.2,
+            ease: "power4.out",
+            scrollTrigger: {
+              trigger: card,
+              start: "top bottom-=100",
+              toggleActions: "play none none reverse"
+            }
+          }
+        );
+      });
+
+      // Dashboard sticky reveal sync
+      ScrollTrigger.create({
+        trigger: "#dashboard-trigger",
+        start: "top center",
+        end: "bottom center",
+        onUpdate: (self) => {
+          const container = document.querySelector('.crm-container') as HTMLElement;
+          if (container) {
+            const progress = self.progress;
+            container.style.transform = `scale(${0.7 + (progress * 0.3)}) translateY(${(1 - progress) * 100}px)`;
+            container.style.opacity = `${Math.min(progress * 2, 1)}`;
+          }
+        }
+      });
+    }, mainRef);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      ctx.revert();
+    };
   }, []);
   return (
-    <div className="relative min-h-screen bg-background overflow-x-hidden selection:bg-primary/30 selection:text-primary-foreground">
+    <div ref={mainRef} className="relative min-h-screen bg-background overflow-x-hidden selection:bg-primary/30 selection:text-primary-foreground">
       <Seo
         title="PedrinTEC — Engenharia de Software de Próxima Geração"
         description="A plataforma definitiva para desenvolvedores: marketplace de prompts, extensões e automação neural."
@@ -64,10 +93,9 @@ const Index = () => {
           <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-48 py-32">
             <section id="dashboard-trigger" className="reveal-wrapper">
               <div 
-                className="crm-container"
+                className="crm-container opacity-0"
                 style={{
-                  transform: `scale(${0.7 + (scrollProgress * 0.3)}) translateY(${(1 - scrollProgress) * 100}px)`,
-                  opacity: Math.min(scrollProgress * 2, 1)
+                  transform: `scale(0.7) translateY(100px)`,
                 }}
               >
                 <div id="dashboard" className="scroll-mt-32">
