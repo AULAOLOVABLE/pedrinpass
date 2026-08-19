@@ -51,10 +51,10 @@ const CategoryCard = ({ variant, title, description, linkText, href, featured = 
         {/* Content */}
         <div className={`flex flex-1 flex-col justify-center gap-4 p-6 ${featured ? "md:w-1/2" : ""}`}>
           <div className="flex flex-col gap-2">
-            <h3 className={`font-display font-black text-foreground uppercase tracking-tight ${featured ? "text-xl md:text-2xl" : "text-lg"}`}>
+            <h3 className={`font-display font-black text-foreground uppercase tracking-tight ${featured ? "text-lg md:text-xl" : "text-base"}`}>
               {title}
             </h3>
-            <p className="text-sm leading-relaxed text-muted-foreground">{description}</p>
+            <p className="text-[11px] leading-relaxed text-muted-foreground">{description}</p>
           </div>
 
           {/* CTA Link */}

@@ -8,7 +8,7 @@ const Logo = () => {
         <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-primary shadow-lg shadow-primary/20 border border-primary/20 group-hover:scale-105 transition-transform">
           <Terminal className="w-5 h-5 text-primary-foreground" />
         </div>
-        <span className="text-2xl font-black tracking-tighter text-foreground uppercase">PedrinTEC</span>
+        <span className="text-lg font-black tracking-tighter text-foreground uppercase">PedrinTEC</span>
       </div>
     </Link>
   );

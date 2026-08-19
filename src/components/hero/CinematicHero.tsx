@@ -67,19 +67,19 @@ export const CinematicHero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-5xl"
         >
-          <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary block mb-12 animate-pulse">Engenharia de Elite</span>
-          <h1 className="text-6xl md:text-8xl lg:text-[13rem] font-black tracking-tighter text-foreground leading-[0.8] mb-12 drop-shadow-[0_0_30px_rgba(255,107,74,0.4)] uppercase">
+          <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary block mb-8 animate-pulse">Engenharia de Elite</span>
+          <h1 className="text-5xl md:text-7xl lg:text-[10rem] font-black tracking-tighter text-foreground leading-[0.8] mb-8 drop-shadow-[0_0_30px_rgba(255,107,74,0.4)] uppercase">
             PedrinTEC
           </h1>
           
-          <p className="text-sm md:text-base text-muted-foreground font-bold tracking-[0.2em] uppercase max-w-2xl mx-auto leading-relaxed mb-16">
+          <p className="text-[10px] md:text-xs text-muted-foreground font-bold tracking-[0.2em] uppercase max-w-2xl mx-auto leading-relaxed mb-12">
             A convergência entre <span className="text-primary italic">design minimalista</span> e <span className="text-primary italic">engenharia neural</span>.
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
             <MagneticButton>
               <button 
-                className="glass-button glass-button-primary group px-12 py-5 text-base font-black tracking-widest uppercase active:scale-95"
+                className="glass-button glass-button-primary group px-8 py-4 text-xs font-black tracking-widest uppercase active:scale-95"
                 onClick={() => document.getElementById('marketplace')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 Explorar Ecossistema
@@ -90,7 +90,7 @@ export const CinematicHero = () => {
             </MagneticButton>
             <MagneticButton>
               <button 
-                className="glass-button group px-12 py-5 text-base font-black tracking-widest uppercase active:scale-95"
+                className="glass-button group px-8 py-4 text-xs font-black tracking-widest uppercase active:scale-95"
                 onClick={() => window.open('/docs', '_blank')}
               >
                 <span className="opacity-70 group-hover:opacity-100 transition-opacity">Documentação</span>

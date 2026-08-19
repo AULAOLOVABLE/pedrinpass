@@ -55,8 +55,8 @@ const SupportCard = ({ icon: Icon, title, description, linkText, href }: Support
 
       {/* Content */}
       <div className="flex flex-col gap-0.5 flex-1 min-w-0 text-center lg:text-left">
-        <h3 className="font-display text-base font-black uppercase tracking-tighter text-foreground">{title}</h3>
-        <p className="text-sm text-muted-foreground lg:truncate">{description}</p>
+        <h3 className="font-display text-sm font-black uppercase tracking-tighter text-foreground">{title}</h3>
+        <p className="text-[11px] text-muted-foreground lg:truncate">{description}</p>
       </div>
 
       {/* CTA Link */}

@@ -54,8 +54,8 @@ const Dashboard = () => {
         {/* Header Section from Image Reference */}
         <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="space-y-2">
-            <h2 className="text-4xl font-bold tracking-tight text-white">Dashboard</h2>
-            <p className="text-sm text-muted-foreground">Ter, 06 Ago 2026</p>
+            <h2 className="text-2xl font-bold tracking-tight text-white">Dashboard</h2>
+            <p className="text-[10px] text-muted-foreground">Ter, 06 Ago 2026</p>
           </div>
           
           <div className="flex items-center gap-6">
@@ -87,7 +87,7 @@ const Dashboard = () => {
                     <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.2em]">
                       {stat.label}
                     </span>
-                    <div className="mt-3 text-4xl font-black text-foreground group-hover:text-primary transition-colors tracking-tighter">
+                    <div className="mt-3 text-2xl font-black text-foreground group-hover:text-primary transition-colors tracking-tighter">
                       {stat.value}
                     </div>
                   </div>
@@ -122,7 +122,7 @@ const Dashboard = () => {
               viewport={{ once: true }}
             >
               <div className="flex items-center justify-between mb-8">
-                <h3 className="text-xl font-bold">Projetos Ativos</h3>
+                <h3 className="text-base font-bold">Projetos Ativos</h3>
                 <button className="text-xs text-muted-foreground hover:text-primary flex items-center gap-1 transition-colors">
                   Ver todos <ChevronRight className="w-3 h-3" />
                 </button>
