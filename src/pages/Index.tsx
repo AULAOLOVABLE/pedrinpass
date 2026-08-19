@@ -21,23 +21,43 @@ const Index = () => {
   useEffect(() => {
     const handleScroll = () => {
       setShowStickyCTA(window.scrollY > 600);
+      
+      // Update mouse-based background glow if needed or just use scroll for subtle shifts
+      document.documentElement.style.setProperty('--scroll-y', `${window.scrollY}px`);
     };
     window.addEventListener("scroll", handleScroll);
 
+    const handleMouseMove = (e: MouseEvent) => {
+      const x = (e.clientX / window.innerWidth) * 100;
+      const y = (e.clientY / window.innerHeight) * 100;
+      document.documentElement.style.setProperty('--mouse-x', `${x}%`);
+      document.documentElement.style.setProperty('--mouse-y', `${y}%`);
+    };
+    window.addEventListener("mousemove", handleMouseMove);
+
     // GSAP ScrollTrigger for parallax and reveals
     const ctx = gsap.context(() => {
-      // Parallax for Bento cards
+      // Parallax and Reveal for Bento cards
       gsap.utils.toArray<HTMLElement>('.bento-card').forEach((card) => {
         gsap.fromTo(card, 
-          { y: 50, opacity: 0 },
+          { 
+            y: 100, 
+            opacity: 0,
+            scale: 0.9,
+            filter: "blur(10px)"
+          },
           { 
             y: 0, 
             opacity: 1, 
-            duration: 1.2,
-            ease: "power4.out",
+            scale: 1,
+            filter: "blur(0px)",
+            duration: 1.5,
+            ease: "expo.out",
             scrollTrigger: {
               trigger: card,
-              start: "top bottom-=100",
+              start: "top bottom-=50",
+              end: "top center",
+              scrub: 1, // Smooth scrub for interactive feel
               toggleActions: "play none none reverse"
             }
           }
@@ -56,8 +76,9 @@ const Index = () => {
           scrub: true,
           onUpdate: (self) => {
             const progress = self.progress;
-            crmContainer.style.transform = `scale(${0.7 + (progress * 0.3)}) translateY(${(1 - progress) * 100}px)`;
-            crmContainer.style.opacity = `${Math.min(progress * 2, 1)}`;
+            crmContainer.style.transform = `scale(${0.6 + (progress * 0.4)}) translateY(${(1 - progress) * 150}px) perspective(1000px) rotateX(${(1 - progress) * 10}deg)`;
+            crmContainer.style.opacity = `${Math.min(progress * 2.5, 1)}`;
+            crmContainer.style.filter = `blur(${(1 - progress) * 10}px)`;
           }
         });
       }
@@ -65,6 +86,7 @@ const Index = () => {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("mousemove", handleMouseMove);
       ctx.revert();
     };
   }, []);
@@ -82,7 +104,8 @@ const Index = () => {
       <div className="fixed inset-0 pointer-events-none z-0">
         <MatrixRain />
         <div className="bg-gradient-animated" />
-        <div className="absolute inset-0 bg-radial-at-t from-primary/10 via-transparent to-transparent opacity-40" />
+        <div className="absolute inset-0 bg-radial-at-t from-primary/20 via-transparent to-transparent opacity-40 transition-opacity duration-1000" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_var(--mouse-x,50%)_var(--mouse-y,50%),hsl(var(--primary)/0.15)_0%,transparent_50%)]" />
       </div>
 
       <ScrollProgress />
