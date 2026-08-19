@@ -62,11 +62,11 @@ const MatrixRain = () => {
         const y = drops[i];
 
         // PedrinTEC Orange head
-        ctx.fillStyle = `hsl(25 100% ${68 + Math.min(boost * 1.5, 20)}% / ${0.75 + Math.min(boost * 0.015, 0.25)})`;
+        ctx.fillStyle = `hsl(270 100% ${68 + Math.min(boost * 1.5, 20)}% / ${0.75 + Math.min(boost * 0.015, 0.25)})`;
         ctx.fillText(char, x, y);
 
         // Body in muted orange
-        ctx.fillStyle = `hsl(25 100% 50% / ${0.28 + Math.min(boost * 0.02, 0.3)})`;
+        ctx.fillStyle = `hsl(270 100% 60% / ${0.28 + Math.min(boost * 0.02, 0.3)})`;
         ctx.fillText(GLYPHS[Math.floor(Math.random() * GLYPHS.length)], x, y - fontSize);
 
         drops[i] += (speeds[i] + boost * 0.8) * (prefersReduced ? 0.2 : 1) * fontSize * 0.45;
@@ -92,7 +92,7 @@ const MatrixRain = () => {
   return (
     <div className="pointer-events-none fixed inset-0 z-0" aria-hidden="true">
       <canvas ref={canvasRef} className="h-full w-full opacity-[0.12] will-change-transform" />
-      <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_0%,transparent_0%,hsl(var(--background)/0.6)_50%,hsl(var(--background)/0.98)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_0%,transparent_0%,hsl(var(--background)/0.8)_50%,hsl(var(--background)/0.99)_100%)]" />
     </div>
   );
 };

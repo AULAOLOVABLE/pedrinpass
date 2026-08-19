@@ -19,8 +19,8 @@ All colors MUST be HSL.
     --ui-surface-active: 240 10% 8%;
     
     --ui-border: 240 10% 10%;
-    --ui-border-hover: 25 100% 50% / 0.5;
-    --ui-border-active: 25 100% 50% / 0.8;
+    --ui-border-hover: 270 100% 60% / 0.5;
+    --ui-border-active: 270 100% 60% / 0.8;
 
     /* Shadcn/UI Compatibility */
     --card: 240 10% 4%;
@@ -28,9 +28,9 @@ All colors MUST be HSL.
     --popover: 240 10% 3%;
     --popover-foreground: var(--foreground);
 
-    --primary: 25 100% 50%; /* Vibrant Orange Brand */
+    --primary: 270 100% 60%; /* Deep Purple Brand */
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 25 100% 65%;
+    --primary-glow: 270 100% 75%;
 
     --secondary: 240 10% 8%;
     --secondary-foreground: var(--foreground);
@@ -38,7 +38,7 @@ All colors MUST be HSL.
     --muted: 240 10% 10%;
     --muted-foreground: 240 5% 60%;
 
-    --accent: 25 100% 12%;
+    --accent: 270 100% 12%;
     --accent-foreground: var(--foreground);
 
     --destructive: 0 84% 55%;
@@ -46,7 +46,7 @@ All colors MUST be HSL.
 
     --border: var(--ui-border);
     --input: 240 10% 10%;
-    --ring: 25 100% 50%;
+    --ring: 270 100% 60%;
 
     /* States & Feedback */
     --success: 142 76% 45%;
@@ -138,7 +138,7 @@ All colors MUST be HSL.
     inset: 0;
     border-radius: 0.75rem;
     padding: 1px;
-    background: linear-gradient(178.8deg, hsl(25 100% 50% / 0.6) 10.85%, rgba(60, 60, 60, 0.6) 24.36%, rgba(80, 80, 80, 0.6) 73.67%, hsl(25 100% 70% / 0.6) 90.68%);
+    background: linear-gradient(178.8deg, hsl(270 100% 60% / 0.6) 10.85%, rgba(60, 60, 60, 0.6) 24.36%, rgba(80, 80, 80, 0.6) 73.67%, hsl(270 100% 75% / 0.6) 90.68%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
     pointer-events: none;
@@ -304,7 +304,7 @@ a, button, [role="button"], input, textarea, select {
   top: 0;
   width: 16px;
   height: 16px;
-  background-color: hsl(var(--primary)); /* Laranja PedrinTEC */
+  background-color: hsl(var(--primary)); /* Purple PedrinTEC */
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;

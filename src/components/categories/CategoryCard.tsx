@@ -23,8 +23,8 @@ const CategoryCard = ({ variant, title, description, linkText, href, featured = 
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     
-    const rotateX = ((y / rect.height) - 0.5) * 15; // Inclinação X
-    const rotateY = ((x / rect.width) - 0.5) * -15; // Inclinação Y
+    const rotateX = ((y / rect.height) - 0.5) * 8; // Inclinação X reduzida para mais elegância
+    const rotateY = ((x / rect.width) - 0.5) * -8; // Inclinação Y reduzida
     
     setTransform(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`);
   };
