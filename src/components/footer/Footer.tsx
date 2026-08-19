@@ -6,10 +6,10 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="md:col-span-2">
-            <h3 className="text-2xl font-black tracking-tighter text-foreground uppercase mb-4">PedrinTEC</h3>
-            <p className="text-muted-foreground text-[13px] max-w-xs leading-relaxed">
+            <h3 className="text-lg font-black tracking-tighter text-foreground uppercase mb-2">PedrinTEC</h3>
+            <p className="text-muted-foreground text-[11px] max-w-xs leading-relaxed">
               Líder em infraestrutura para agentes de IA e engenharia de software de alta performance. 
-              Líder em infraestrutura para agentes de IA e engenharia de software de alta performance. Estruturas modulares e escaláveis para o futuro digital.
+              Estruturas modulares e escaláveis para o futuro digital.
             </p>
           </div>
           <div>

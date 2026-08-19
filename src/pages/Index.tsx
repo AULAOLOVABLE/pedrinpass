@@ -103,9 +103,9 @@ const Index = () => {
               >
                 <div id="dashboard" className="scroll-mt-32">
                   <div className="p-8 md:p-12 pb-0">
-                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary block mb-4">Métricas de Precisão</span>
-                    <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter mb-4">Marketplace de Performance</h2>
-                    <p className="text-muted-foreground text-base max-w-2xl leading-relaxed">
+                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary block mb-2">Métricas de Precisão</span>
+                    <h2 className="text-2xl md:text-4xl font-black uppercase tracking-tighter mb-2">Marketplace de Performance</h2>
+                    <p className="text-muted-foreground text-xs max-w-2xl leading-relaxed">
                       Dados reais para decisões cirúrgicas. Acompanhe a evolução do seu ecossistema em tempo real com transparência absoluta.
                     </p>
                   </div>
@@ -117,9 +117,9 @@ const Index = () => {
             <ScrollReveal delay={0.3} yOffset={40}>
               <section id="marketplace" className="scroll-mt-32">
                 <div className="mb-16">
-                  <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary block mb-4">Catálogo Premium</span>
-                  <h2 className="text-4xl md:text-7xl font-black uppercase tracking-tighter mb-6">Explore o Ecossistema</h2>
-                  <p className="text-muted-foreground text-lg max-w-2xl leading-relaxed">
+                  <span className="text-[10px] font-black uppercase tracking-[0.2em] text-primary block mb-2">Catálogo Premium</span>
+                  <h2 className="text-2xl md:text-5xl font-black uppercase tracking-tighter mb-4">Explore o Ecossistema</h2>
+                  <p className="text-muted-foreground text-sm max-w-2xl leading-relaxed">
                     De prompts premium a workflows complexos, tudo o que você precisa para escalar sua produção com IA em um único lugar.
                   </p>
                 </div>
