@@ -113,7 +113,7 @@ export const documentationPages: DocumentationPage[] = [
         listItems: [
           "Criação de sites e Landing Pages.",
           "UI/UX Design e Prototipação.",
-          "Desenvolvimento e Refatoração de Código.",
+          "Desenvolvimento e Refatoração de Código (Analise a estrutura do código e proponha uma refatoração completa).",
           "Marketing e Copywriting Persuasivo."
         ]
       }
@@ -305,6 +305,37 @@ export const documentationPages: DocumentationPage[] = [
           "Carregamento Progressivo: Priorização de recursos críticos para LCP otimizado.",
           "Acessibilidade Premium: WCAG 2.2 e suporte a leitores de tela nativo.",
           "Performance Adaptativa: Nível de qualidade ajustado ao dispositivo do usuário."
+        ]
+      }
+    ]
+  },
+  {
+    id: "refatoracao-completa",
+    title: "Refatoração Completa",
+    description: "Analise a estrutura do código e proponha uma refatoração completa com foco em modularidade, redução de complexidade ciclomática, aplicação de princípios SOLID e Clean Code.",
+    category: "Engenharia",
+    breadcrumb: ["Engenharia", "Refatoração"],
+    sections: [
+      {
+        id: "analise-modular",
+        title: "Análise de Modularidade",
+        content: "A desconstrução do monólito em módulos independentes é o primeiro passo para uma escala sustentável. Avaliamos a coesão e o acoplamento para garantir que cada componente tenha uma única responsabilidade clara.",
+        listItems: [
+          "Identificação de domínios isoláveis.",
+          "Extração de lógica de negócio para Hooks personalizados.",
+          "Padronização de interfaces de comunicação entre módulos.",
+          "Eliminação de dependências circulares."
+        ]
+      },
+      {
+        id: "qualidade-codigo",
+        title: "Qualidade e Manutenibilidade",
+        content: "Aplicação rigorosa de padrões para um código que se documenta sozinho e resiste ao tempo.",
+        listItems: [
+          "Redução da Complexidade Ciclomática via guard clauses.",
+          "Implementação de SOLID (especialmente Inversão de Dependência).",
+          "Refatoração seguindo os princípios de Clean Code (Nomes significativos, funções pequenas).",
+          "Checklist de Code Review automatizado."
         ]
       }
     ]
