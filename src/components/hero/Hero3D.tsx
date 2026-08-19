@@ -35,7 +35,7 @@ const ParticleField = ({ count = 2000 }) => {
       </bufferGeometry>
       <pointsMaterial
         size={0.05}
-        color="#ff6b4a"
+        color="#a855f7"
         transparent
         opacity={0.6}
         sizeAttenuation
@@ -58,7 +58,7 @@ const FloatingCore = () => {
     <Float speed={2} rotationIntensity={1} floatIntensity={2}>
       <Sphere ref={mesh} args={[1, 64, 64]}>
         <MeshDistortMaterial
-          color="#ff6b4a"
+          color="#a855f7"
           speed={3}
           distort={0.4}
           radius={1}
@@ -74,7 +74,7 @@ export const Hero3D = () => {
       <Canvas>
         <PerspectiveCamera makeDefault position={[0, 0, 8]} fov={75} />
         <ambientLight intensity={0.5} />
-        <pointLight position={[10, 10, 10]} intensity={1} color="#ff6b4a" />
+        <pointLight position={[10, 10, 10]} intensity={1} color="#a855f7" />
         <pointLight position={[-10, -10, -10]} intensity={0.5} color="#ffffff" />
         
         <ParticleField />
