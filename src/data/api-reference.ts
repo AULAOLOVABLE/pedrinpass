@@ -1,62 +1,97 @@
-import { DocumentationPage } from "./documentation-pages";
+export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH';
 
-export const apiReferencePages: DocumentationPage[] = [
+export interface ApiEndpoint {
+  id?: string;
+  path: string;
+  method: HttpMethod;
+  description: string;
+  title: string;
+  slug: string;
+  href?: string;
+  longDescription?: string;
+  headers?: { name: string; type: string; required: boolean; description: string }[];
+  requestBody?: { name: string; type: string; required: boolean; description: string }[];
+  responseBody?: { name: string; type: string; required: boolean; description: string }[];
+  exampleRequest?: string;
+  exampleResponse?: string;
+}
+
+export interface ApiGroup {
+  id: string;
+  name: string;
+  title?: string;
+  endpoints: ApiEndpoint[];
+}
+
+export const apiGroups: ApiGroup[] = [
   {
-    id: "world-class-engineering",
-    title: "World-Class Engineering",
-    description: "Diretrizes para transformar sistemas em referências globais de engenharia.",
-    category: "Engenharia",
-    breadcrumb: ["Engenharia", "World-Class"],
-    sections: [
+    id: "general",
+    name: "Introdução",
+    title: "Conexão PedrinTEC",
+    endpoints: [
       {
-        id: "role-definition",
-        title: "Papel do Engenheiro Principal",
-        content: "Você é um Engenheiro de Software Principal (L6/L7) especializado em sistemas reativos de alta escala e otimização de infraestrutura frontend/backend. Seu objetivo é transformar o código atual em um estado de \"World-Class Engineering\"."
-      },
+        id: "auth",
+        title: "Autenticação",
+        slug: "connect",
+        href: "/api/connect",
+        path: "/v1/auth",
+        method: "POST",
+        description: "Autenticação segura na plataforma.",
+        longDescription: "Utilize este endpoint para obter um token de acesso Bearer e interagir com as funcionalidades premium da PedrinTEC.",
+        headers: [
+          { name: "Content-Type", type: "string", required: true, description: "application/json" }
+        ],
+        requestBody: [
+          { name: "api_key", type: "string", required: true, description: "Sua chave de API privada." }
+        ],
+        exampleRequest: "curl -X POST https://api.pedrintec.com/v1/auth \\\n  -H 'Content-Type: application/json' \\\n  -d '{\"api_key\": \"pt_live_...\"}'",
+        exampleResponse: "{\n  \"token\": \"ey...\",\n  \"expires_in\": 3600\n}"
+      }
+    ]
+  },
+  {
+    id: "ai",
+    name: "Agentes e Prompts",
+    title: "IA Core",
+    endpoints: [
       {
-        id: "performance-audit",
-        title: "1. Auditoria e Diagnóstico de Performance (Critical Path)",
-        content: "Foco total em métricas de vitalidade e eficiência de rede.",
-        listItems: [
-          "Core Web Vitals: Analise e corrija LCP, FID e CLS. Reduza o Total Blocking Time (TBT).",
-          "Network Efficiency: Implemente estratégias de cache agressivas (Stale-While-Revalidate), compressão de assets e otimização de payloads JSON.",
-          "Bundle Analysis: Identifique e elimine dead code. Implemente Code Splitting por rota e por componente de baixa prioridade."
-        ]
-      },
-      {
-        id: "architectural-refactoring",
-        title: "2. Refatoração Arquitetural (Robustez e Escalabilidade)",
-        content: "Construção de bases sólidas para crescimento sustentável.",
-        listItems: [
-          "Design Patterns: Aplique padrões apropriados (Factory, Observer, Strategy) para eliminar condicionais complexas e acoplamento rígido.",
-          "State Management: Otimize o fluxo de dados. Substitua contextos globais pesados por estados atômicos ou bibliotecas de busca de dados (ex: TanStack Query) para gerenciar cache local e sincronização.",
-          "Type Safety: Eleve a cobertura de TypeScript para strict: true, eliminando any e garantindo contratos de interface rigorosos entre frontend e API."
-        ]
-      },
-      {
-        id: "resilience-debugging",
-        title: "3. Resiliência e Debugging Avançado",
-        content: "Sistemas à prova de falhas com telemetria detalhada.",
-        listItems: [
-          "Error Handling: Implemente uma camada de abstração para erros que capture falhas silenciosas e forneça feedback elegante ao usuário, além de telemetria.",
-          "Race Conditions: Identifique e neutralize condições de corrida em chamadas assíncronas e atualizações de estado concorrentes.",
-          "Security: Audite o código em busca de vulnerabilidades de injeção, XSS e vazamento de dados sensíveis no client-side."
-        ]
-      },
-      {
-        id: "ui-ux-optimization",
-        title: "4. Otimização de UI/UX Engine",
-        content: "Experiência do usuário fluida com renderização otimizada.",
-        listItems: [
-          "Rendering: Minimize re-renders desnecessários usando Profiling. Implemente virtualização para listas extensas e lazy-loading para elementos fora da viewport.",
-          "Asset Pipeline: Garanta que todas as imagens usem formatos modernos (WebP/Avif), tamanhos responsivos (srcset) e decodificação assíncrona."
-        ]
-      },
-      {
-        id: "response-guideline",
-        title: "Diretriz de Resposta",
-        content: "Não apenas corrija o código; explique a decisão arquitetural tomada, o impacto esperado em milissegundos ou bytes, e como essa mudança previne débitos técnicos futuros. Se houver um trade-off entre legibilidade e performance extrema, justifique a escolha."
+        id: "execute-prompt",
+        title: "Executar Prompt",
+        slug: "execute",
+        href: "/api/execute",
+        path: "/v1/ai/execute",
+        method: "POST",
+        description: "Envia um prompt para processamento neural.",
+        longDescription: "Interface direta com nossos modelos otimizados para engenharia de software e automação.",
+        requestBody: [
+          { name: "prompt_id", type: "string", required: true, description: "ID do prompt premium." },
+          { name: "variables", type: "object", required: false, description: "Variáveis para o prompt." }
+        ],
+        exampleRequest: "fetch('https://api.pedrintec.com/v1/ai/execute', {\n  method: 'POST',\n  body: JSON.stringify({ prompt_id: 'site-gen-01' })\n})",
+        exampleResponse: "{\n  \"status\": \"processing\",\n  \"task_id\": \"tk_123\"\n}"
       }
     ]
   }
 ];
+
+export const getEndpointBySlug = (slug: string) => {
+  for (const group of apiGroups) {
+    const endpoint = group.endpoints.find(e => e.slug === slug);
+    if (endpoint) return endpoint;
+  }
+  return null;
+};
+
+export const getGroupForEndpoint = (slug: string) => {
+  return apiGroups.find(group => group.endpoints.some(e => e.slug === slug)) || null;
+};
+
+export const generateApiTableOfContents = (groups: ApiGroup[]) => {
+  return groups.flatMap(group => 
+    group.endpoints.map(endpoint => ({
+      id: endpoint.slug,
+      title: endpoint.title,
+      level: "h2" as const
+    }))
+  );
+};
