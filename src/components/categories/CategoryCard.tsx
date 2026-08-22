@@ -23,10 +23,10 @@ const CategoryCard = ({ variant, title, description, linkText, href, featured = 
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     
-    const rotateX = ((y / rect.height) - 0.5) * 6; // Reduced for premium feel
-    const rotateY = ((x / rect.width) - 0.5) * -6; 
+    const rotateX = ((y / rect.height) - 0.5) * 12; // Increased for "Energetic" pulse
+    const rotateY = ((x / rect.width) - 0.5) * -12; 
     
-    setTransform(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.01, 1.01, 1.01)`);
+    setTransform(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`);
   };
 
   const handleMouseLeave = () => {
