@@ -464,6 +464,86 @@ export const documentationPages: DocumentationPage[] = [
         content: "Analise o código atual e identify elementos com larguras fixas ou posicionamento absoluto que quebram o layout. Entregue a versão refatorada com comentários técnicos sobre a hierarquia visual adotada e como a legibilidade foi preservada em cada nível de largura."
       }
     ]
+  },
+  {
+    id: "growth-hacking",
+    title: "Growth Hacking AI",
+    description: "Estratégias avançadas de crescimento escaladas por inteligência artificial.",
+    category: "Marketing",
+    breadcrumb: ["Marketing", "Growth"],
+    sections: [
+      {
+        id: "intro",
+        title: "Growth com IA",
+        content: "O Growth Hacking moderno não é apenas sobre criativos; é sobre automação de funis e experimentação em massa guiada por dados.",
+        listItems: [
+          "Automação de Cold Outreach: Gere mensagens personalizadas em escala.",
+          "Lead Scoring Preditivo: Priorize leads com maior probabilidade de conversão.",
+          "A/B Testing Automatizado: Use IA para gerar variantes de copy e design.",
+          "SEO Programático: Crie milhares de páginas otimizadas com conteúdo de qualidade."
+        ]
+      }
+    ]
+  },
+  {
+    id: "devops-cicd",
+    title: "DevOps & Automação CI/CD",
+    description: "Infraestrutura moderna e entrega contínua para projetos de alta escala.",
+    category: "Engenharia",
+    breadcrumb: ["Engenharia", "DevOps"],
+    sections: [
+      {
+        id: "cicd",
+        title: "Pipeline de Entrega",
+        content: "Garanta que seu código chegue em produção de forma segura e rápida.",
+        listItems: [
+          "GitHub Actions: Workflows para build, test e deploy automático.",
+          "Dockerization: Containerize sua aplicação para ambientes consistentes.",
+          "Terraform (IaC): Provisionamento de infraestrutura como código.",
+          "Monitoramento e Logging: Datadog, Sentry e Prometheus."
+        ]
+      }
+    ]
+  },
+  {
+    id: "cyber-security",
+    title: "Cyber Security & Hardening",
+    description: "Proteção avançada contra ameaças modernas e conformidade de dados.",
+    category: "Engenharia",
+    breadcrumb: ["Engenharia", "Segurança"],
+    sections: [
+      {
+        id: "hardening",
+        title: "Segurança de Aplicação",
+        content: "Blindagem técnica para evitar invasões e vazamentos.",
+        listItems: [
+          "OWASP Top 10: Prevenção contra as vulnerabilidades mais comuns.",
+          "Autenticação Multifator (MFA): Camadas extras de segurança.",
+          "Criptografia de Dados: Repouso e trânsito (AES-256, TLS 1.3).",
+          "Pentesting com IA: Use modelos para simular ataques e encontrar falhas."
+        ]
+      }
+    ]
+  },
+  {
+    id: "advanced-n8n",
+    title: "N8N Avançado",
+    description: "Construção de fluxos complexos e integração profunda de sistemas.",
+    category: "Marketplace",
+    breadcrumb: ["Marketplace", "N8N"],
+    sections: [
+      {
+        id: "nodes",
+        title: "Nós e Funções Customizadas",
+        content: "Vá além dos nós básicos e crie automações inteligentes.",
+        listItems: [
+          "Code Node (JS/Python): Lógica complexa dentro do workflow.",
+          "Webhook Triggers: Integre qualquer serviço externo.",
+          "Error Trigger: Tratamento de falhas e retentativas automáticas.",
+          "Data Transformation: Manipulação avançada de JSON e XML."
+        ]
+      }
+    ]
   }
 ];
 
