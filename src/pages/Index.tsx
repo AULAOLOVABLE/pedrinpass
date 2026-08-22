@@ -111,8 +111,7 @@ const Index = () => {
       <div className="relative z-10 flex flex-col min-h-screen">
         <Sidebar />
         <Navbar />
-        
-        <main className="flex-grow">
+        <main className="flex-grow w-full max-w-full overflow-x-hidden">
           <Hero />
           
           <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-48 py-32">
