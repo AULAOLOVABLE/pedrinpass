@@ -41,9 +41,7 @@ const Navbar = () => {
 
         {/* Right Section: NavLinks + CTA */}
         <div className="flex items-center gap-4">
-          <div className="hidden lg:flex">
-            <NavLinks />
-          </div>
+          <NavLinks />
           <div className="hidden md:flex items-center">
             <MagneticButton>
               <button className="bg-primary text-primary-foreground px-10 py-3.5 rounded-full text-[10px] font-black tracking-[0.2em] uppercase hover:scale-105 active:scale-95 shadow-xl shadow-primary/25 transition-all duration-300 border border-primary/20">
