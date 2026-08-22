@@ -23,10 +23,10 @@ const CategoryCard = ({ variant, title, description, linkText, href, featured = 
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     
-    const rotateX = ((y / rect.height) - 0.5) * 8; // Inclinação X reduzida para mais elegância
-    const rotateY = ((x / rect.width) - 0.5) * -8; // Inclinação Y reduzida
+    const rotateX = ((y / rect.height) - 0.5) * 6; // Reduced for premium feel
+    const rotateY = ((x / rect.width) - 0.5) * -6; 
     
-    setTransform(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`);
+    setTransform(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.01, 1.01, 1.01)`);
   };
 
   const handleMouseLeave = () => {
