@@ -38,16 +38,43 @@ export const documentationPages: DocumentationPage[] = [
           "Workflows automatizados via N8N.",
           "Integrações nativas com ChatGPT, Claude e Cursor."
         ]
+      }
+    ]
+  },
+  {
+    id: "premium-prompts",
+    title: "Prompts Premium",
+    description: "Sequência estratégica de prompts para resultados de alta performance.",
+    category: "Marketplace",
+    breadcrumb: ["Marketplace", "Prompts Premium"],
+    sections: [
+      {
+        id: "prompts-list",
+        title: "Catálogo de Prompts",
+        content: "Abaixo estão os prompts estruturados para máxima eficiência em suas tarefas diárias:",
+        listItems: [
+          "Engenheiro Principal (L6/L7): Transforme código em World-Class Engineering.",
+          "Especialista em Interfaces: Refatoração para responsividade 100%.",
+          "Arquiteto de Performance: Otimização de Web Vitals e renderização.",
+          "Master Copywriter: Criação de landing pages persuasivas com foco em CRO.",
+          "Prompt de Refatoração: Aplicação de SOLID, Clean Code e redução de complexidade."
+        ]
       },
       {
-        id: "popular",
-        title: "Conteúdos Populares",
-        content: "Explore os recursos mais acessados pela comunidade:",
+        id: "sequence",
+        title: "Metodologia de Sequência",
+        content: "Nossa metodologia segue uma ordem lógica para garantir a melhor resposta da IA:",
         listItems: [
-          "Guia de início rápido para Lovable.",
-          "Automação de leads com N8N.",
-          "Prompts estratégicos para Landing Pages."
+          "1. Atuação (Persona/Contexto).",
+          "2. Especificação (Objetivo claro).",
+          "3. Restrição (O que evitar).",
+          "4. Refinamento (Iteração contínua)."
         ]
+      },
+      {
+        id: "copy-instruction",
+        title: "Como usar",
+        content: "Selecione o prompt desejado no marketplace ou no assistente lateral, copie o conteúdo e utilize no seu modelo de IA preferido (ChatGPT, Claude ou Gemini)."
       }
     ]
   },
@@ -61,7 +88,7 @@ export const documentationPages: DocumentationPage[] = [
       {
         id: "getting-started",
         title: "Introdução às Extensões",
-        content: "As extensões PedrinTEC permitem que você adicione novas funcionalidades ao seu editor, terminal ou navegador, integrando o ecossistema diretamente ao seu fluxo de trabalho."
+        content: "As extensões PedrinTEC permitem que você adicione novas funcionalidades ao seu editor, terminal ou navegador."
       },
       {
         id: "dev-extensions",
@@ -71,51 +98,22 @@ export const documentationPages: DocumentationPage[] = [
           "PedrinTEC Analyzer: Análise profunda de código com IA.",
           "DB Visualizer: Gerencie seu Supabase com facilidade.",
           "Code Formatter Pro: Padrões de estilo automáticos.",
-          "V3 Extension Optimizer: Redução de polling, chamadas de storage, listeners duplicados, objetos grandes e permissões desnecessárias. Mantém o service worker stateless.",
-          "Debug System Pro: Identifique falhas, erros de lógica e bugs no código fornecido. Forneça a correção exata para cada problema encontrado, acompanhada de uma explicação clara sobre a causa raiz e a solução aplicada, garantindo que o código funcione perfeitamente e sem erros.",
-          "Performance Engine: Otimização de JavaScript inicial, dependências, code splitting, lazy loading, cache, mídia e renderizações. Priorize LCP, INP e CLS sem sacrificar acessibilidade."
-        ]
-      },
-      {
-        id: "ia-extensions",
-        title: "Inteligência Artificial",
-        content: "Ferramentas de IA integradas:",
-        listItems: [
-          "LLM Connector: Conecte qualquer modelo ao seu app.",
-          "Prompt Helper: Assistente de escrita de prompts.",
-          "Vector Search Engine: Busca semântica simplificada."
+          "V3 Extension Optimizer: Redução de overhead em service workers."
         ]
       }
     ]
   },
   {
     id: "prompts",
-    title: "Prompts Premium",
-    description: "Sequência estratégica de prompts para resultados de alta performance.",
+    title: "Documentação de Prompts",
+    description: "Entenda a lógica por trás da criação de prompts de alta performance.",
     category: "Marketplace",
-    breadcrumb: ["Marketplace", "Prompts"],
+    breadcrumb: ["Marketplace", "Documentação"],
     sections: [
       {
-        id: "sequence",
-        title: "Sequência Estratégica",
-        content: "Nossa metodologia de Prompts Premium segue uma ordem lógica para garantir a melhor resposta da IA.",
-        listItems: [
-          "Contextualização (Atuação).",
-          "Especificação (O que fazer).",
-          "Restrição (O que não fazer).",
-          "Refinamento (Iteração)."
-        ]
-      },
-      {
-        id: "categories",
-        title: "Categorias de Prompts",
-        content: "Escolha a categoria que melhor atende sua necessidade atual:",
-        listItems: [
-          "Criação de sites e Landing Pages.",
-          "UI/UX Design e Prototipação.",
-          "Desenvolvimento e Refatoração de Código (Analise a estrutura do código e proponha uma refatoração completa).",
-          "Marketing e Copywriting Persuasivo."
-        ]
+        id: "logic",
+        title: "Lógica de Escrita",
+        content: "A qualidade da saída da IA é diretamente proporcional à qualidade do prompt. Foque em ser específico e fornecer contexto."
       }
     ]
   },

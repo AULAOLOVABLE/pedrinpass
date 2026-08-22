@@ -41,7 +41,7 @@ export const navigationGroups: NavGroup[] = [
     title: "Marketplace",
     items: [
       { id: "extensions", title: "Extensões", href: "/docs/extensions", icon: Wrench },
-      { id: "prompts", title: "Prompts", href: "/docs/prompts", icon: Sparkles },
+      { id: "prompts", title: "Prompts", href: "/docs/premium-prompts", icon: Sparkles },
       { id: "templates", title: "Templates", href: "/docs/templates", icon: Layers },
       { id: "workflows", title: "Workflows", href: "/docs/workflows", icon: RefreshCw },
       { id: "motion", title: "Motion Design", href: "/docs/motion-design", icon: Sparkles },
