@@ -101,7 +101,7 @@ const Dashboard = () => {
                     </span>
                     <div className="h-1.5 w-16 bg-white/5 rounded-full overflow-hidden border border-white/5">
                        <motion.div 
-                        className="h-full bg-primary shadow-[0_0_10px_rgba(255,107,74,0.5)]" 
+                        className="h-full bg-primary shadow-[0_0_10px_hsla(var(--primary)/0.5)]" 
                         initial={{ width: 0 }}
                         whileInView={{ width: "60%" }}
                         transition={{ duration: 1.2, delay: 0.5, ease: "circOut" }}

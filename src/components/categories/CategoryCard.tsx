@@ -23,10 +23,10 @@ const CategoryCard = ({ variant, title, description, linkText, href, featured = 
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
     
-    const rotateX = ((y / rect.height) - 0.5) * 6; // Reduced for premium feel
-    const rotateY = ((x / rect.width) - 0.5) * -6; 
+    const rotateX = ((y / rect.height) - 0.5) * 12; // Increased for "Energetic" pulse
+    const rotateY = ((x / rect.width) - 0.5) * -12; 
     
-    setTransform(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.01, 1.01, 1.01)`);
+    setTransform(`perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.03, 1.03, 1.03)`);
   };
 
   const handleMouseLeave = () => {
@@ -39,7 +39,7 @@ const CategoryCard = ({ variant, title, description, linkText, href, featured = 
       to={href}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={`card-animado group flex h-full flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-2xl transition-all duration-500 ease-cinematic border border-ui-border bg-ui-surface/30 backdrop-blur-xl ${featured ? "md:flex-row" : ""}`}
+      className={`card-animado glass-card electric-glow group flex h-full flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ${featured ? "md:flex-row" : ""}`}
       style={{ transform, willChange: "transform" }}
     >
       <div className="card-inner rounded-xl overflow-hidden flex flex-col flex-1">

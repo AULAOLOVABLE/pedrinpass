@@ -5,7 +5,7 @@ import { MagneticButton } from '../motion';
 
 const FallbackBackground = () => (
   <div className="absolute inset-0 bg-[#0a0a0a] overflow-hidden">
-    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,107,74,0.15)_0%,transparent_80%)]" />
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.15)_0%,transparent_80%)]" />
     <div className="absolute inset-0 opacity-20">
       {Array.from({ length: 40 }).map((_, i) => (
         <motion.div
