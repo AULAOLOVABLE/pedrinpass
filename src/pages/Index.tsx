@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Navbar } from "@/components/navbar";
+import { Navbar, Sidebar } from "@/components/navbar";
 import { CinematicHero as Hero } from "@/components/hero/CinematicHero";
 import { Categories } from "@/components/categories";
 import { Dashboard } from "@/components/dashboard";
@@ -89,7 +89,7 @@ const Index = () => {
     };
   }, []);
   return (
-    <div ref={mainRef} className="relative min-h-screen bg-background selection:bg-primary/30 selection:text-primary-foreground">
+    <div ref={mainRef} className="relative min-h-screen bg-background selection:bg-primary/30 selection:text-primary-foreground lg:pl-64">
       <Seo
         title="PedrinTEC — Engenharia de Software de Próxima Geração"
         description="A plataforma definitiva para desenvolvedores: marketplace de prompts, extensões e automação neural."
@@ -109,6 +109,7 @@ const Index = () => {
       <ScrollProgress />
       
       <div className="relative z-10 flex flex-col min-h-screen">
+        <Sidebar />
         <Navbar />
         
         <main className="flex-grow">
