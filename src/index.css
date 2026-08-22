@@ -8,60 +8,60 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Cinematic Dark Palette - Obsidian Base */
-    --background: 240 10% 2%; 
-    --foreground: 0 0% 98%;
-    --muted-foreground: 240 5% 65%;
+    /* Midnight Cyan Palette - Obsidian Base */
+    --background: 222 47% 4%; /* #020617 */
+    --foreground: 210 40% 98%; /* #f8fafc */
+    --muted-foreground: 215 20% 65%;
 
-    /* Semantic UI Tokens - Premium Obsidian */
-    --ui-surface: 240 10% 4%;
-    --ui-surface-hover: 240 10% 6%;
-    --ui-surface-active: 240 10% 8%;
+    /* Semantic UI Tokens - Midnight Cyan */
+    --ui-surface: 222 47% 7%; /* Ligeiramente mais claro que o bg */
+    --ui-surface-hover: 222 47% 10%;
+    --ui-surface-active: 222 47% 12%;
     
-    --ui-border: 240 10% 10%;
-    --ui-border-hover: 270 100% 60% / 0.5;
-    --ui-border-active: 270 100% 60% / 0.8;
+    --ui-border: 217 33% 17%; /* #1e293b approx */
+    --ui-border-hover: 199 89% 60% / 0.5; /* Cyan primary */
+    --ui-border-active: 199 89% 60% / 0.8;
 
     /* Shadcn/UI Compatibility */
-    --card: 240 10% 4%;
+    --card: 222 47% 6%;
     --card-foreground: var(--foreground);
-    --popover: 240 10% 3%;
+    --popover: 222 47% 5%;
     --popover-foreground: var(--foreground);
 
-    --primary: 270 100% 60%; /* Deep Purple Brand */
-    --primary-foreground: 0 0% 100%;
-    --primary-glow: 270 100% 75%;
+    --primary: 199 89% 60%; /* Electric Cyan #38bdf8 */
+    --primary-foreground: 222 47% 4%;
+    --primary-glow: 199 89% 75%;
 
-    --secondary: 240 10% 8%;
+    --secondary: 222 47% 10%;
     --secondary-foreground: var(--foreground);
 
-    --muted: 240 10% 10%;
-    --muted-foreground: 240 5% 60%;
+    --muted: 222 47% 12%;
+    --muted-foreground: 215 16% 57%;
 
-    --accent: 270 100% 12%;
+    --accent: 199 89% 15%;
     --accent-foreground: var(--foreground);
 
     --destructive: 0 84% 55%;
     --destructive-foreground: 0 0% 100%;
 
     --border: var(--ui-border);
-    --input: 240 10% 10%;
-    --ring: 270 100% 60%;
+    --input: 222 47% 10%;
+    --ring: 199 89% 60%;
 
     /* States & Feedback */
     --success: 142 76% 45%;
     --warning: 48 96% 53%;
     --error: 0 84% 60%;
-    --info: 199 89% 48%;
+    --info: 199 89% 60%;
 
     /* Radius: Unified 1.25rem for precision */
     --radius: 1.25rem;
 
-    --sidebar-background: 240 10% 3%;
+    --sidebar-background: 222 47% 5%;
     --sidebar-foreground: var(--foreground);
     --sidebar-primary: var(--primary);
     --sidebar-primary-foreground: var(--primary-foreground);
-    --sidebar-accent: 240 10% 6%;
+    --sidebar-accent: 222 47% 8%;
     --sidebar-accent-foreground: var(--foreground);
     --sidebar-border: var(--ui-border);
     --sidebar-ring: var(--ring);
@@ -138,7 +138,7 @@ All colors MUST be HSL.
     inset: 0;
     border-radius: 0.75rem;
     padding: 1px;
-    background: linear-gradient(178.8deg, hsl(270 100% 60% / 0.6) 10.85%, rgba(60, 60, 60, 0.6) 24.36%, rgba(80, 80, 80, 0.6) 73.67%, hsl(270 100% 75% / 0.6) 90.68%);
+    background: linear-gradient(178.8deg, hsl(199 89% 60% / 0.6) 10.85%, rgba(60, 60, 60, 0.6) 24.36%, rgba(80, 80, 80, 0.6) 73.67%, hsl(199 89% 75% / 0.6) 90.68%);
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
     pointer-events: none;
@@ -214,13 +214,13 @@ All colors MUST be HSL.
 
 @layer base {
   h1, h2, h3 {
-    font-family: "Space Grotesk", system-ui, sans-serif;
+    font-family: "Archivo Black", system-ui, sans-serif;
     @apply tracking-tighter;
-    font-weight: 700;
+    font-weight: 900;
   }
 
-  p {
-    font-family: "Inter Tight", Inter, system-ui, sans-serif;
+  p, span, div, a, button {
+    font-family: "Hind", system-ui, sans-serif;
     letter-spacing: -0.01em;
   }
 }
@@ -304,7 +304,7 @@ a, button, [role="button"], input, textarea, select {
   top: 0;
   width: 16px;
   height: 16px;
-  background-color: hsl(var(--primary)); /* Purple PedrinTEC */
+  background-color: hsl(var(--primary)); /* Cyan PedrinTEC */
   border-radius: 50%;
   pointer-events: none;
   z-index: 9999;

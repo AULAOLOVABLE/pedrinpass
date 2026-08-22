@@ -67,13 +67,13 @@ export const CinematicHero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-5xl"
         >
-          <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary block mb-8">Engenharia de Elite</span>
+          <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary block mb-8">PedrinTEC Engineering</span>
           <h1 className="text-5xl md:text-7xl lg:text-[10rem] font-black tracking-tighter text-foreground leading-[0.8] mb-8 uppercase">
-            PedrinTEC
+            NEURAL<br/>SYNC
           </h1>
           
           <p className="text-[10px] md:text-xs text-muted-foreground font-bold tracking-[0.2em] uppercase max-w-2xl mx-auto leading-relaxed mb-12">
-            A convergência entre <span className="text-primary italic">design minimalista</span> e <span className="text-primary italic">engenharia neural</span>.
+            Alta performance em <span className="text-primary italic">sistemas distribuídos</span> e <span className="text-primary italic">automação inteligente</span>.
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">

@@ -20,7 +20,7 @@ const Navbar = () => {
   return (
     <header 
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 flex justify-center",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-500 flex justify-center lg:left-64",
         isScrolled ? "pt-4" : "pt-8"
       )}
     >
@@ -33,19 +33,23 @@ const Navbar = () => {
             : "bg-transparent rounded-full border-transparent"
         )}
       >
-        {/* Left Section: Logo + SearchBar */}
+        {/* Left Section: Mobile Logo + SearchBar */}
         <div className="flex items-center gap-10">
-          <Logo />
+          <div className="lg:hidden">
+            <Logo />
+          </div>
           <SearchBar />
         </div>
 
         {/* Right Section: NavLinks + CTA */}
         <div className="flex items-center gap-4">
-          <NavLinks />
+          <div className="lg:hidden">
+            <NavLinks />
+          </div>
           <div className="hidden md:flex items-center">
             <MagneticButton>
               <button className="bg-primary text-primary-foreground px-10 py-3.5 rounded-full text-[10px] font-black tracking-[0.2em] uppercase hover:scale-105 active:scale-95 shadow-xl shadow-primary/25 transition-all duration-300 border border-primary/20">
-                Começar Agora
+                Acessar Portal
               </button>
             </MagneticButton>
           </div>

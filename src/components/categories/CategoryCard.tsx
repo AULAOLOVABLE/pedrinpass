@@ -39,7 +39,7 @@ const CategoryCard = ({ variant, title, description, linkText, href, featured = 
       to={href}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={`card-animado group flex h-full flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-xl transition-transform duration-200 ease-out border border-ui-border bg-ui-surface/40 backdrop-blur-xl ${featured ? "md:flex-row" : ""}`}
+      className={`card-animado group flex h-full flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-2xl transition-all duration-500 ease-cinematic border border-ui-border bg-ui-surface/30 backdrop-blur-xl ${featured ? "md:flex-row" : ""}`}
       style={{ transform, willChange: "transform" }}
     >
       <div className="card-inner rounded-xl overflow-hidden flex flex-col flex-1">
