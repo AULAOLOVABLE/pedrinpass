@@ -35,9 +35,7 @@ const Navbar = () => {
       >
         {/* Left Section: Mobile Logo + SearchBar */}
         <div className="flex items-center gap-10">
-          <div className="lg:hidden">
-            <Logo />
-          </div>
+          <Logo />
           <SearchBar />
         </div>
 
