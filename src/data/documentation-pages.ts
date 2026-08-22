@@ -398,6 +398,64 @@ export const documentationPages: DocumentationPage[] = [
       }
     ]
   }
+  ,
+  {
+    id: "interfaces-adaptativas",
+    title: "Especialista em Interfaces Adaptativas",
+    description: "Refatoração de estrutura para responsividade 100%, garantindo experiência nativa em qualquer resolução.",
+    category: "Engenharia",
+    breadcrumb: ["Engenharia", "Mobile-First"],
+    sections: [
+      {
+        id: "missao",
+        title: "Missão",
+        content: "Você é um Especialista em Interfaces Adaptativas com foco em acessibilidade e performance mobile. Sua missão é refatorar a estrutura de uma página para que ela seja 100% responsiva, garantindo uma experiência nativa em qualquer resolução, de relógios inteligentes a monitores ultrawide."
+      },
+      {
+        id: "mobile-first",
+        title: "1. Estratégia \"Mobile-First\" e Arquitetura Fluida",
+        content: "Reestruture o código priorizando dispositivos móveis e layouts bidimensionais complexos.",
+        listItems: [
+          "Refatoração CSS/Tailwind: Reestruture o código priorizando dispositivos móveis. Use unidades relativas (rem, em, vh, vw, %) em vez de valores fixos (px).",
+          "Layout Engine: Implemente CSS Grid para layouts bidimensionais complexos e Flexbox para componentes unidimensionais, garantindo que o conteúdo se ajuste organicamente ao container pai.",
+          "Fluid Typography: Utilize funções como clamp() para que fontes e espaçamentos escalem suavemente entre breakpoints, eliminando degraus visuais bruscos."
+        ]
+      },
+      {
+        id: "assets-media",
+        title: "2. Otimização de Assets e Mídia",
+        content: "Implemente aspect-ratio e breakpoints estratégicos para integridade visual.",
+        listItems: [
+          "Imagens Adaptativas: Implemente aspect-ratio para evitar saltos de layout (CLS). Configure object-fit: cover/contain e garanta que imagens pesadas sejam redimensionadas ou ocultadas em telas menores.",
+          "Breakpoints Estratégicos: Não foque apenas em dispositivos comuns (iPhone/Pixel). Crie breakpoints baseados no \"ponto de quebra\" do conteúdo, garantindo integridade visual em resoluções intermediárias (tablets em modo paisagem, dobráveis)."
+        ]
+      },
+      {
+        id: "ergonomia-touch",
+        title: "3. Ergonomia e Interação Touch",
+        content: "Garanta usabilidade em dispositivos móveis sem comprometer o desktop.",
+        listItems: [
+          "Touch Targets: Garanta que todos os elementos clicáveis tenham uma área mínima de 44x44px.",
+          "Interações de Dispositivo: Ajuste estados de hover para não serem disparados acidentalmente no toque. Implemente menus hamburger ou bottom bars intuitivos para mobile sem comprometer a versão desktop.",
+          "Overflow Control: Identifique e corrija qualquer \"scroll horizontal\" indesejado, garantindo que o viewport seja respeitado rigorosamente."
+        ]
+      },
+      {
+        id: "componentes-complexos",
+        title: "4. Resiliência de Componentes Complexos",
+        content: "Transforme elementos pesados em estruturas flexíveis.",
+        listItems: [
+          "Data Tables: Transforme tabelas complexas em cards empilháveis ou implemente containers com scroll horizontal controlado em telas pequenas.",
+          "Modais e Overlays: Garanta que diálogos ocupem a tela cheia em mobile com scroll interno, evitando que o fundo da página role simultaneamente."
+        ]
+      },
+      {
+        id: "execucao",
+        title: "Instrução de Execução",
+        content: "Analise o código atual e identify elementos com larguras fixas ou posicionamento absoluto que quebram o layout. Entregue a versão refatorada com comentários técnicos sobre a hierarquia visual adotada e como a legibilidade foi preservada em cada nível de largura."
+      }
+    ]
+  }
 ];
 
 export const generateTableOfContents = (page: DocumentationPage) => {
