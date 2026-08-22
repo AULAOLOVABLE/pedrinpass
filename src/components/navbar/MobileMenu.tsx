@@ -9,9 +9,9 @@ interface NavLinkItem {
 }
 
 const mainLinks: NavLinkItem[] = [
-  { label: "Documentação", href: "/docs/overview" },
-  { label: "API", href: "/api/refresh-token" },
-  { label: "Novidades", href: "/changelog" },
+  { label: "Doc", href: "/docs/overview" },
+  { label: "API", href: "/api/connect" },
+  { label: "Log", href: "/changelog" },
 ];
 
 
