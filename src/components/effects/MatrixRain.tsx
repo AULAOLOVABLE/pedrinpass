@@ -91,8 +91,8 @@ const MatrixRain = () => {
 
   return (
     <div className="pointer-events-none fixed inset-0 z-0" aria-hidden="true">
-      <canvas ref={canvasRef} className="h-full w-full opacity-[0.25] will-change-transform" />
-      <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_0%,transparent_0%,hsl(var(--background)/0.6)_50%,hsl(var(--background)/0.9)_100%)]" />
+      <canvas ref={canvasRef} className="h-full w-full opacity-[0.08] will-change-transform" />
+      <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_0%,transparent_0%,hsl(var(--background)/0.9)_50%,hsl(var(--background)/0.99)_100%)]" />
     </div>
   );
 };
