@@ -41,7 +41,7 @@ const Navbar = () => {
 
         {/* Right Section: NavLinks + CTA */}
         <div className="flex items-center gap-4">
-          <div className="lg:hidden">
+          <div className="hidden lg:flex">
             <NavLinks />
           </div>
           <div className="hidden md:flex items-center">
