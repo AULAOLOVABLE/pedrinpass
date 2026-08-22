@@ -57,7 +57,17 @@ export const documentationPages: DocumentationPage[] = [
           "Especialista em Interfaces: Refatoração para responsividade 100%.",
           "Arquiteto de Performance: Otimização de Web Vitals e renderização.",
           "Master Copywriter: Criação de landing pages persuasivas com foco em CRO.",
-          "Prompt de Refatoração: Aplicação de SOLID, Clean Code e redução de complexidade."
+          "Prompt de Refatoração: Aplicação de SOLID, Clean Code e redução de complexidade.",
+          "Especialista em N8N: Automações complexas e integração de APIs.",
+          "Growth Hacker AI: Estratégias de escala e aquisição automatizada.",
+          "DevOps Architect: CI/CD, Docker e orquestração de microserviços.",
+          "Security Auditor: Identificação de brechas e hardening de aplicações.",
+          "Data Scientist Prompt: Limpeza de dados, análise preditiva e visualização.",
+          "Mobile App Expert: React Native e Flutter optimization prompts.",
+          "Backend Lead: Node.js, Go e Python architecture patterns.",
+          "Cloud Specialist: AWS, Azure e GCP infrastructure as code.",
+          "Testing Engineer: Unit, Integration e E2E testing strategies.",
+          "UI Designer AI: Design tokens, acessibilidade e componentes premium."
         ]
       },
       {
@@ -68,7 +78,8 @@ export const documentationPages: DocumentationPage[] = [
           "1. Atuação (Persona/Contexto).",
           "2. Especificação (Objetivo claro).",
           "3. Restrição (O que evitar).",
-          "4. Refinamento (Iteração contínua)."
+          "4. Refinamento (Iteração contínua).",
+          "5. Formatação (Saída desejada: JSON, Markdown, Code)."
         ]
       },
       {

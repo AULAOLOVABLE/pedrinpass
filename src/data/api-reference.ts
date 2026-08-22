@@ -69,6 +69,57 @@ export const apiGroups: ApiGroup[] = [
         ],
         exampleRequest: "fetch('https://api.pedrintec.com/v1/ai/execute', {\n  method: 'POST',\n  body: JSON.stringify({ prompt_id: 'site-gen-01' })\n})",
         exampleResponse: "{\n  \"status\": \"processing\",\n  \"task_id\": \"tk_123\"\n}"
+      },
+      {
+        id: "list-prompts",
+        title: "Listar Prompts",
+        slug: "list",
+        href: "/api/list",
+        path: "/v1/ai/prompts",
+        method: "GET",
+        description: "Retorna a lista de todos os prompts disponíveis.",
+        longDescription: "Obtenha metadados, versões e categorias de todos os prompts premium ativos no sistema.",
+        exampleRequest: "curl -X GET https://api.pedrintec.com/v1/ai/prompts \\\n  -H 'Authorization: Bearer YOUR_TOKEN'",
+        exampleResponse: "[\n  { \"id\": \"eng-l7\", \"name\": \"Principal Engineer\", \"category\": \"Engineering\" },\n  { \"id\": \"ux-pro\", \"name\": \"UX Specialist\", \"category\": \"Design\" }\n]"
+      },
+      {
+        id: "train-agent",
+        title: "Treinar Agente",
+        slug: "train",
+        href: "/api/train",
+        path: "/v1/ai/agents/train",
+        method: "POST",
+        description: "Inicia o treinamento de um agente customizado.",
+        longDescription: "Forneça seu conjunto de dados e parâmetros para criar uma instância de IA especializada no seu domínio.",
+        requestBody: [
+          { name: "dataset_url", type: "string", required: true, description: "URL do dataset (CSV/JSON)." },
+          { name: "model", type: "string", required: true, description: "Modelo base (gpt-4o, claude-3-5)." }
+        ],
+        exampleRequest: "fetch('https://api.pedrintec.com/v1/ai/agents/train', {\n  method: 'POST',\n  headers: { 'Content-Type': 'application/json' },\n  body: JSON.stringify({ dataset_url: '...', model: 'gpt-4o' })\n})",
+        exampleResponse: "{\n  \"training_id\": \"tr_789\",\n  \"eta\": \"45m\"\n}"
+      }
+    ]
+  },
+  {
+    id: "automation",
+    name: "Automações e N8N",
+    title: "Workflow Engine",
+    endpoints: [
+      {
+        id: "trigger-workflow",
+        title: "Disparar Workflow",
+        slug: "trigger",
+        href: "/api/trigger",
+        path: "/v1/workflows/trigger",
+        method: "POST",
+        description: "Inicia a execução de um workflow automatizado.",
+        longDescription: "Acione fluxos do N8N ou automações internas via Webhook com payloads dinâmicos.",
+        requestBody: [
+          { name: "workflow_id", type: "string", required: true, description: "ID do workflow no N8N." },
+          { name: "payload", type: "object", required: true, description: "Dados de entrada para o fluxo." }
+        ],
+        exampleRequest: "curl -X POST https://api.pedrintec.com/v1/workflows/trigger \\\n  -d '{\"workflow_id\": \"123\", \"payload\": {\"email\": \"test@example.com\"}}'",
+        exampleResponse: "{\n  \"execution_id\": \"ex_456\",\n  \"status\": \"queued\"\n}"
       }
     ]
   }
