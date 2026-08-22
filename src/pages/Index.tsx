@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { Navbar, Sidebar } from "@/components/navbar";
+import { Navbar } from "@/components/navbar";
 import { CinematicHero as Hero } from "@/components/hero/CinematicHero";
 import { Categories } from "@/components/categories";
 import { Dashboard } from "@/components/dashboard";
