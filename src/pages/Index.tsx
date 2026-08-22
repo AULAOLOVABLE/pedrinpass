@@ -89,7 +89,7 @@ const Index = () => {
     };
   }, []);
   return (
-    <div ref={mainRef} className="relative min-h-screen bg-background selection:bg-primary/30 selection:text-primary-foreground lg:pl-64">
+    <div ref={mainRef} className="relative min-h-screen bg-background selection:bg-primary/30 selection:text-primary-foreground">
       <Seo
         title="PedrinTEC — Engenharia de Software de Próxima Geração"
         description="A plataforma definitiva para desenvolvedores: marketplace de prompts, extensões e automação neural."
@@ -109,7 +109,7 @@ const Index = () => {
       <ScrollProgress />
       
       <div className="relative z-10 flex flex-col min-h-screen">
-        <Sidebar />
+        <div className="grain-overlay" />
         <Navbar />
         <main className="flex-grow w-full max-w-full overflow-x-hidden">
           <Hero />
