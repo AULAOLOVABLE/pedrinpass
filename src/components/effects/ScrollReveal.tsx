@@ -1,5 +1,5 @@
 import { useRef, ReactNode } from "react";
-import { motion, useScroll, useTransform, useSpring, useReducedMotion } from "framer-motion";
+import { motion, useScroll, useTransform, useSpring, useReducedMotion, useMotionTemplate } from "framer-motion";
 
 export interface ScrollRevealProps {
   children: ReactNode;
