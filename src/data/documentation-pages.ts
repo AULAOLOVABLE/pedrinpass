@@ -57,7 +57,17 @@ export const documentationPages: DocumentationPage[] = [
           "Especialista em Interfaces: Refatoração para responsividade 100%.",
           "Arquiteto de Performance: Otimização de Web Vitals e renderização.",
           "Master Copywriter: Criação de landing pages persuasivas com foco em CRO.",
-          "Prompt de Refatoração: Aplicação de SOLID, Clean Code e redução de complexidade."
+          "Prompt de Refatoração: Aplicação de SOLID, Clean Code e redução de complexidade.",
+          "Especialista em N8N: Automações complexas e integração de APIs.",
+          "Growth Hacker AI: Estratégias de escala e aquisição automatizada.",
+          "DevOps Architect: CI/CD, Docker e orquestração de microserviços.",
+          "Security Auditor: Identificação de brechas e hardening de aplicações.",
+          "Data Scientist Prompt: Limpeza de dados, análise preditiva e visualização.",
+          "Mobile App Expert: React Native e Flutter optimization prompts.",
+          "Backend Lead: Node.js, Go e Python architecture patterns.",
+          "Cloud Specialist: AWS, Azure e GCP infrastructure as code.",
+          "Testing Engineer: Unit, Integration e E2E testing strategies.",
+          "UI Designer AI: Design tokens, acessibilidade e componentes premium."
         ]
       },
       {
@@ -68,7 +78,8 @@ export const documentationPages: DocumentationPage[] = [
           "1. Atuação (Persona/Contexto).",
           "2. Especificação (Objetivo claro).",
           "3. Restrição (O que evitar).",
-          "4. Refinamento (Iteração contínua)."
+          "4. Refinamento (Iteração contínua).",
+          "5. Formatação (Saída desejada: JSON, Markdown, Code)."
         ]
       },
       {
@@ -451,6 +462,86 @@ export const documentationPages: DocumentationPage[] = [
         id: "execucao",
         title: "Instrução de Execução",
         content: "Analise o código atual e identify elementos com larguras fixas ou posicionamento absoluto que quebram o layout. Entregue a versão refatorada com comentários técnicos sobre a hierarquia visual adotada e como a legibilidade foi preservada em cada nível de largura."
+      }
+    ]
+  },
+  {
+    id: "growth-hacking",
+    title: "Growth Hacking AI",
+    description: "Estratégias avançadas de crescimento escaladas por inteligência artificial.",
+    category: "Marketing",
+    breadcrumb: ["Marketing", "Growth"],
+    sections: [
+      {
+        id: "intro",
+        title: "Growth com IA",
+        content: "O Growth Hacking moderno não é apenas sobre criativos; é sobre automação de funis e experimentação em massa guiada por dados.",
+        listItems: [
+          "Automação de Cold Outreach: Gere mensagens personalizadas em escala.",
+          "Lead Scoring Preditivo: Priorize leads com maior probabilidade de conversão.",
+          "A/B Testing Automatizado: Use IA para gerar variantes de copy e design.",
+          "SEO Programático: Crie milhares de páginas otimizadas com conteúdo de qualidade."
+        ]
+      }
+    ]
+  },
+  {
+    id: "devops-cicd",
+    title: "DevOps & Automação CI/CD",
+    description: "Infraestrutura moderna e entrega contínua para projetos de alta escala.",
+    category: "Engenharia",
+    breadcrumb: ["Engenharia", "DevOps"],
+    sections: [
+      {
+        id: "cicd",
+        title: "Pipeline de Entrega",
+        content: "Garanta que seu código chegue em produção de forma segura e rápida.",
+        listItems: [
+          "GitHub Actions: Workflows para build, test e deploy automático.",
+          "Dockerization: Containerize sua aplicação para ambientes consistentes.",
+          "Terraform (IaC): Provisionamento de infraestrutura como código.",
+          "Monitoramento e Logging: Datadog, Sentry e Prometheus."
+        ]
+      }
+    ]
+  },
+  {
+    id: "cyber-security",
+    title: "Cyber Security & Hardening",
+    description: "Proteção avançada contra ameaças modernas e conformidade de dados.",
+    category: "Engenharia",
+    breadcrumb: ["Engenharia", "Segurança"],
+    sections: [
+      {
+        id: "hardening",
+        title: "Segurança de Aplicação",
+        content: "Blindagem técnica para evitar invasões e vazamentos.",
+        listItems: [
+          "OWASP Top 10: Prevenção contra as vulnerabilidades mais comuns.",
+          "Autenticação Multifator (MFA): Camadas extras de segurança.",
+          "Criptografia de Dados: Repouso e trânsito (AES-256, TLS 1.3).",
+          "Pentesting com IA: Use modelos para simular ataques e encontrar falhas."
+        ]
+      }
+    ]
+  },
+  {
+    id: "advanced-n8n",
+    title: "N8N Avançado",
+    description: "Construção de fluxos complexos e integração profunda de sistemas.",
+    category: "Marketplace",
+    breadcrumb: ["Marketplace", "N8N"],
+    sections: [
+      {
+        id: "nodes",
+        title: "Nós e Funções Customizadas",
+        content: "Vá além dos nós básicos e crie automações inteligentes.",
+        listItems: [
+          "Code Node (JS/Python): Lógica complexa dentro do workflow.",
+          "Webhook Triggers: Integre qualquer serviço externo.",
+          "Error Trigger: Tratamento de falhas e retentativas automáticas.",
+          "Data Transformation: Manipulação avançada de JSON e XML."
+        ]
       }
     ]
   }

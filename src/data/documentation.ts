@@ -41,22 +41,30 @@ export const navigationGroups: NavGroup[] = [
     title: "Marketplace",
     items: [
       { id: "extensions", title: "Extensões", href: "/docs/extensions", icon: Wrench },
-      { id: "prompts", title: "Prompts", href: "/docs/premium-prompts", icon: Sparkles },
+      { id: "prompts", title: "Prompts Premium", href: "/docs/premium-prompts", icon: Sparkles },
       { id: "templates", title: "Templates", href: "/docs/templates", icon: Layers },
       { id: "workflows", title: "Workflows", href: "/docs/workflows", icon: RefreshCw },
-      { id: "motion", title: "Motion Design", href: "/docs/motion-design", icon: Sparkles },
-      { id: "consultoria", title: "Consultoria Executiva", href: "/docs/consultoria-executiva", icon: Layers },
+      { id: "n8n", title: "N8N Avançado", href: "/docs/advanced-n8n", icon: Terminal },
+    ],
+  },
+  {
+    id: "engineering",
+    title: "Engenharia",
+    items: [
+      { id: "world-class", title: "World-Class Eng", href: "/docs/world-class-engineering", icon: Shield },
+      { id: "devops", title: "DevOps", href: "/docs/devops-cicd", icon: Settings },
+      { id: "security", title: "Segurança", href: "/docs/cyber-security", icon: Shield },
+      { id: "refactoring", title: "Refatoração", href: "/docs/refatoracao-completa", icon: RefreshCw },
     ],
   },
   {
     id: "categories",
-    title: "Categorias",
+    title: "Especialidades",
     items: [
+      { id: "growth", title: "Growth AI", href: "/docs/growth-hacking", icon: Sparkles },
+      { id: "motion", title: "Motion Design", href: "/docs/motion-design", icon: Sparkles },
+      { id: "consultoria", title: "Consultoria", href: "/docs/consultoria-executiva", icon: Layers },
       { id: "chatgpt", title: "ChatGPT", href: "/docs/chatgpt", icon: MessageSquare },
-      { id: "lovable", title: "Lovable", href: "/docs/lovable", icon: Sparkles },
-      { id: "claude", title: "Claude", href: "/docs/claude", icon: Shield },
-      { id: "cursor", title: "Cursor", href: "/docs/cursor", icon: Terminal },
-      { id: "launches", title: "Lançamentos", href: "/changelog", icon: Tag },
     ],
   },
 ];
