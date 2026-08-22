@@ -44,13 +44,11 @@ const Index = () => {
             y: 100, 
             opacity: 0,
             scale: 0.9,
-            filter: "blur(10px)"
           },
           { 
             y: 0, 
             opacity: 1, 
             scale: 1,
-            filter: "blur(0px)",
             duration: 1.5,
             ease: "expo.out",
             scrollTrigger: {
@@ -78,7 +76,7 @@ const Index = () => {
             const progress = self.progress;
             crmContainer.style.transform = `scale(${0.6 + (progress * 0.4)}) translateY(${(1 - progress) * 150}px) perspective(1000px) rotateX(${(1 - progress) * 10}deg)`;
             crmContainer.style.opacity = `${Math.min(progress * 2.5, 1)}`;
-            crmContainer.style.filter = `blur(${(1 - progress) * 10}px)`;
+            crmContainer.style.filter = `none`;
           }
         });
       }

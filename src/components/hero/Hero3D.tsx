@@ -34,10 +34,10 @@ const ParticleField = ({ count = 2000 }) => {
         />
       </bufferGeometry>
       <pointsMaterial
-        size={0.05}
+        size={0.08}
         color="#a855f7"
         transparent
-        opacity={0.6}
+        opacity={0.8}
         sizeAttenuation
       />
     </points>

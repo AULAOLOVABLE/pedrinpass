@@ -68,7 +68,7 @@ export const CinematicHero = () => {
           className="max-w-5xl"
         >
           <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary block mb-8 animate-pulse">Engenharia de Elite</span>
-          <h1 className="text-5xl md:text-7xl lg:text-[10rem] font-black tracking-tighter text-foreground leading-[0.8] mb-8 drop-shadow-[0_0_30px_rgba(255,107,74,0.4)] uppercase">
+          <h1 className="text-5xl md:text-7xl lg:text-[10rem] font-black tracking-tighter text-foreground leading-[0.8] mb-8 uppercase">
             PedrinTEC
           </h1>
           
