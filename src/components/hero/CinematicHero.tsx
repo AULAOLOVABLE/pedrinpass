@@ -67,7 +67,7 @@ export const CinematicHero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-5xl"
         >
-          <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary block mb-8 animate-pulse">Engenharia de Elite</span>
+          <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary block mb-8">Engenharia de Elite</span>
           <h1 className="text-5xl md:text-7xl lg:text-[10rem] font-black tracking-tighter text-foreground leading-[0.8] mb-8 uppercase">
             PedrinTEC
           </h1>
