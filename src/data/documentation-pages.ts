@@ -312,7 +312,7 @@ export const documentationPages: DocumentationPage[] = [
   {
     id: "refatoracao-completa",
     title: "Refatoração Completa",
-    description: "Analise a estrutura do código e proponha uma refatoração completa com foco em modularidade, redução de complexidade ciclomática, aplicação de princípios SOLID e Clean Code.",
+    description: "Analise a estrutura do código e proponha uma refatoração completa para torná-lo mais limpo, modular e seguindo os princípios SOLID e Clean Code. Reduza a complexidade ciclomática e melhore a legibilidade e manutenibilidade sem alterar a funcionalidade original.",
     category: "Engenharia",
     breadcrumb: ["Engenharia", "Refatoração"],
     sections: [
