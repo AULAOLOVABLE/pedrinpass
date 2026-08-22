@@ -7,9 +7,9 @@ interface NavLinkItem {
 }
 
 const links: NavLinkItem[] = [
-  { label: "Documentação", href: "/docs/overview" },
-  { label: "Referência API", href: "/api/connect" },
-  { label: "Novidades", href: "/changelog" },
+  { label: "Doc", href: "/docs/overview" },
+  { label: "API", href: "/api/connect" },
+  { label: "Log", href: "/changelog" },
 ];
 
 const NavLinks = () => {
