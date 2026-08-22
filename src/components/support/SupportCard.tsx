@@ -37,7 +37,7 @@ const SupportCard = ({ icon: Icon, title, description, linkText, href }: Support
       to={href}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="bento-card group flex flex-col lg:flex-row items-center gap-4 p-6 bg-background/60 backdrop-blur-sm transition-transform duration-200 ease-out active:scale-95"
+      className="glass-card electric-glow group flex flex-col lg:flex-row items-center gap-4 p-6 active:scale-95"
       style={{
         transform: tilt,
         willChange: "transform",
