@@ -102,8 +102,8 @@ const Index = () => {
       <div className="fixed inset-0 pointer-events-none z-0">
         <MatrixRain />
         <div className="bg-gradient-animated" />
-        <div className="absolute inset-0 bg-radial-at-t from-primary/20 via-transparent to-transparent opacity-40 transition-opacity duration-1000" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_var(--mouse-x,50%)_var(--mouse-y,50%),hsl(var(--primary)/0.15)_0%,transparent_50%)]" />
+        <div className="absolute inset-0 bg-radial-at-t from-primary/5 via-transparent to-transparent opacity-20 transition-opacity duration-1000" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_var(--mouse-x,50%)_var(--mouse-y,50%),hsl(var(--primary)/0.05)_0%,transparent_50%)]" />
       </div>
 
       <ScrollProgress />
