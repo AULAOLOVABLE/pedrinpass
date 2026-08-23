@@ -95,13 +95,14 @@
   }
 
   .glass-premium {
-    @apply bg-ui-surface/60 backdrop-blur-[120px] border border-white/5 rounded-[var(--radius)] transition-all duration-700;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+    @apply bg-ui-surface/20 backdrop-blur-[60px] border border-white/5 rounded-[48px] transition-all duration-700;
+    box-shadow: 0 24px 80px -20px rgba(0, 0, 0, 0.6);
   }
 
   .glass-premium:hover {
-    @apply border-primary/20 bg-ui-surface/80;
-    box-shadow: 0 20px 60px -10px rgba(0, 0, 0, 0.9), 0 0 40px 0 hsl(var(--primary) / 0.05);
+    @apply border-primary/20 bg-ui-surface/40;
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 40px 100px -30px rgba(0, 0, 0, 0.8), 0 0 40px 0 hsl(var(--primary) / 0.1);
   }
 
   .glow-neural {
