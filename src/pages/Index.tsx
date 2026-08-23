@@ -40,7 +40,7 @@ const Index = () => {
     // GSAP ScrollTrigger for parallax and reveals
     const ctx = gsap.context(() => {
       // Parallax and Reveal for Bento cards
-      gsap.utils.toArray<HTMLElement>('.bento-card').forEach((card) => {
+      gsap.utils.toArray<HTMLElement>('.glass-premium').forEach((card) => {
         gsap.fromTo(card, 
           { 
             y: 100, 
