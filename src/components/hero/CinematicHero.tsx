@@ -67,13 +67,13 @@ export const CinematicHero = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-5xl"
         >
-          <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary block mb-8">PedrinTEC Engineering</span>
+          <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary block mb-8">PedrinTEC Technology Hub</span>
           <h1 className="text-5xl md:text-7xl lg:text-[10rem] font-black tracking-tighter text-foreground leading-[0.8] mb-8 uppercase">
-            NEURAL<br/>SYNC
+            CONSTRUA.<br/>APRENDA.<br/>AUTOMATIZE.
           </h1>
           
           <p className="text-[10px] md:text-xs text-muted-foreground font-bold tracking-[0.2em] uppercase max-w-2xl mx-auto leading-relaxed mb-12">
-            Alta performance em <span className="text-primary italic">sistemas distribuídos</span> e <span className="text-primary italic">automação inteligente</span>.
+            Engenharia de software, IA, prompts, ferramentas e recursos para <span className="text-primary italic">transformar ideias em produtos reais</span>.
           </p>
 
           <div className="flex flex-col md:flex-row items-center justify-center gap-6">
@@ -93,7 +93,7 @@ export const CinematicHero = () => {
                 className="glass-button group px-8 py-4 text-xs font-black tracking-widest uppercase active:scale-95"
                 onClick={() => window.open('/docs', '_blank')}
               >
-                <span className="opacity-70 group-hover:opacity-100 transition-opacity">Documentação</span>
+                <span className="opacity-70 group-hover:opacity-100 transition-opacity">Ver Recursos</span>
               </button>
             </MagneticButton>
           </div>

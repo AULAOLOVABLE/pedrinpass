@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { SearchProvider } from "@/contexts/SearchContext";
 import { SearchModal } from "@/components/search";
-import { CustomCursor } from "@/components/CustomCursor";
+
 import { lazy, Suspense } from "react";
 
 const Index = lazy(() => import("./pages/Index"));
@@ -24,7 +24,7 @@ const App = () => (
       <TooltipProvider>
       <Toaster />
       <Sonner />
-      <CustomCursor />
+      
       <BrowserRouter>
         <SearchProvider>
           <SearchModal />

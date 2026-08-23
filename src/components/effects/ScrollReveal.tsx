@@ -21,7 +21,7 @@ export const ScrollReveal = ({ children, className = "", delay = 0, yOffset = 60
   const opacity = useTransform(progress, [0, 0.4, 0.8], [0, 0.5, 1]);
   const scale = useTransform(progress, [0, 1], [0.9, 1]);
   const y = useTransform(progress, [0, 1], [yOffset, 0]);
-  const blur = useTransform(progress, [0, 0.8], [10, 0]);
+  const blur = useTransform(progress, [0, 0.8], [4, 0]);
   const blurValue = useMotionTemplate`blur(${blur}px)`;
   
   if (reduced) return <div className={className}>{children}</div>;
