@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const GLYPHS = "01アイウエオカキクケコサシスセソタチツテトナニヌネノABCDEFGHIJKLMNOPQRSTUVWXYZ{}[]<>/*+-=$#";
+const GLYPHS = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ{}[]<>/*+-=$#";
 
 const MatrixRain = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -62,11 +62,11 @@ const MatrixRain = () => {
         const y = drops[i];
 
         // Electric Orange head
-        ctx.fillStyle = `hsl(21 100% ${60 + Math.min(boost * 1.2, 20)}% / ${0.6 + Math.min(boost * 0.01, 0.2)})`;
+        ctx.fillStyle = `hsl(21 100% ${60 + Math.min(boost * 1.2, 20)}% / ${0.5 + Math.min(boost * 0.01, 0.2)})`;
         ctx.fillText(char, x, y);
 
         // Body in muted orange
-        ctx.fillStyle = `hsl(21 100% 55% / ${0.15 + Math.min(boost * 0.015, 0.15)})`;
+        ctx.fillStyle = `hsl(21 100% 55% / ${0.08 + Math.min(boost * 0.01, 0.1)})`;
         ctx.fillText(GLYPHS[Math.floor(Math.random() * GLYPHS.length)], x, y - fontSize);
 
         drops[i] += (speeds[i] + boost * 0.5) * (prefersReduced ? 0.15 : 1) * fontSize * 0.35;
