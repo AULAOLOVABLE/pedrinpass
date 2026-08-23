@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { TrendingUp, Activity, AlertCircle, CheckCircle2, ChevronRight, Search, Bell } from "lucide-react";
 import WaveText from "@/components/ui/wave-text";
+import { LightSweep } from "../effects/LightSweep";
 
 const stats = [
   {
