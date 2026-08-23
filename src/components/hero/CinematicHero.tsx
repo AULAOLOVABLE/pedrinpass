@@ -66,7 +66,7 @@ export const CinematicHero = () => {
           <motion.div
             initial={{ opacity: 0, scale: 1.1, filter: "blur(20px)" }}
             animate={{ opacity: 0.15, scale: 1, filter: "blur(0px)" }}
-            transition={{ duration: 2, ease: "var(--ease-out-expo)" }}
+            transition={{ duration: 2, ease: [0.19, 1, 0.22, 1] }}
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15rem] md:text-[25rem] font-black text-primary pointer-events-none select-none opacity-10 whitespace-nowrap"
           >
             PEDRINTEC
@@ -75,7 +75,7 @@ export const CinematicHero = () => {
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2, ease: "var(--ease-out-expo)", delay: 0.2 }}
+            transition={{ duration: 1.2, ease: [0.19, 1, 0.22, 1], delay: 0.2 }}
             className="relative z-10"
           >
             <span className="text-[10px] font-black uppercase tracking-[0.5em] text-primary/80 block mb-6 animate-pulse">
@@ -86,7 +86,7 @@ export const CinematicHero = () => {
               <motion.span
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
-                transition={{ duration: 1, ease: "var(--ease-out-expo)", delay: 0.4 }}
+                transition={{ duration: 1, ease: [0.19, 1, 0.22, 1], delay: 0.4 }}
                 className="block"
               >
                 CONSTRUA.
@@ -94,7 +94,7 @@ export const CinematicHero = () => {
               <motion.span
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
-                transition={{ duration: 1, ease: "var(--ease-out-expo)", delay: 0.5 }}
+                transition={{ duration: 1, ease: [0.19, 1, 0.22, 1], delay: 0.5 }}
                 className="block text-primary"
               >
                 APRENDA.
@@ -102,7 +102,7 @@ export const CinematicHero = () => {
               <motion.span
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
-                transition={{ duration: 1, ease: "var(--ease-out-expo)", delay: 0.6 }}
+                transition={{ duration: 1, ease: [0.19, 1, 0.22, 1], delay: 0.6 }}
                 className="block"
               >
                 AUTOMATIZE.
