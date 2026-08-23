@@ -22,9 +22,9 @@ const Footer = () => {
                 <a 
                   key={i}
                   href="#" 
-                  className="w-10 h-10 rounded-full border border-ui-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 transition-all"
+                  className="w-12 h-12 rounded-xl border border-ui-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 hover:bg-primary/5 transition-all duration-500"
                 >
-                  <Icon className="w-4 h-4" />
+                  <Icon className="w-5 h-5" />
                 </a>
               ))}
             </div>
