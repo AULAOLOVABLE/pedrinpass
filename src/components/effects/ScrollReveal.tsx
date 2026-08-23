@@ -25,7 +25,7 @@ export const ScrollReveal = ({ children, className = "", delay = 0, yOffset = 40
   const y = useTransform(scrollYProgress, [0, 0.2], [yOffset, 0]);
   
   // Subtle Blur Exit (High-End feel)
-  const blur = useTransform(scrollYProgress, [0, 0.05, 0.9, 1], [10, 0, 0, 5]);
+  const blur = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [4, 0, 0, 2]);
   const blurValue = useMotionTemplate`blur(${blur}px)`;
   
   if (reduced) return <div className={className}>{children}</div>;
