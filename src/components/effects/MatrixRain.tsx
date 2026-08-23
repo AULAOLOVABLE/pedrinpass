@@ -50,7 +50,7 @@ const MatrixRain = () => {
 
     let raf = 0;
     const render = () => {
-      ctx.fillStyle = "rgba(1, 4, 9, 0.08)";
+      ctx.fillStyle = "rgba(5, 6, 7, 0.15)";
       ctx.fillRect(0, 0, width, height);
 
       const boost = boostRef.current;
@@ -61,15 +61,15 @@ const MatrixRain = () => {
         const x = i * fontSize;
         const y = drops[i];
 
-        // Midnight Cyan head
-        ctx.fillStyle = `hsl(199 89% ${68 + Math.min(boost * 1.5, 20)}% / ${0.75 + Math.min(boost * 0.015, 0.25)})`;
+        // Electric Orange head
+        ctx.fillStyle = `hsl(21 100% ${60 + Math.min(boost * 1.2, 20)}% / ${0.6 + Math.min(boost * 0.01, 0.2)})`;
         ctx.fillText(char, x, y);
 
-        // Body in muted cyan
-        ctx.fillStyle = `hsl(199 89% 60% / ${0.28 + Math.min(boost * 0.02, 0.3)})`;
+        // Body in muted orange
+        ctx.fillStyle = `hsl(21 100% 55% / ${0.15 + Math.min(boost * 0.015, 0.15)})`;
         ctx.fillText(GLYPHS[Math.floor(Math.random() * GLYPHS.length)], x, y - fontSize);
 
-        drops[i] += (speeds[i] + boost * 0.8) * (prefersReduced ? 0.2 : 1) * fontSize * 0.45;
+        drops[i] += (speeds[i] + boost * 0.5) * (prefersReduced ? 0.15 : 1) * fontSize * 0.35;
 
         if (drops[i] > height && Math.random() > 0.975) {
           drops[i] = Math.random() * -200;
@@ -91,7 +91,7 @@ const MatrixRain = () => {
 
   return (
     <div className="pointer-events-none fixed inset-0 z-0" aria-hidden="true">
-      <canvas ref={canvasRef} className="h-full w-full opacity-[0.08] will-change-transform" />
+      <canvas ref={canvasRef} className="h-full w-full opacity-[0.04] will-change-transform" />
       <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_0%,transparent_0%,hsl(var(--background)/0.9)_50%,hsl(var(--background)/0.99)_100%)]" />
     </div>
   );
