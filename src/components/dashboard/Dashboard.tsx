@@ -81,8 +81,9 @@ const Dashboard = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
                   viewport={{ once: true }}
-                  className="bento-card p-6 flex flex-col justify-between group active:scale-[0.98] transition-all"
+                  className="glass-premium p-8 flex flex-col justify-between group active:scale-[0.98] transition-all relative overflow-hidden"
                 >
+                  <LightSweep delay={i * 0.8} />
                   <div className="relative z-10">
                     <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.2em]">
                       {stat.label}
