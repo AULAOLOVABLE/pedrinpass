@@ -158,13 +158,17 @@ const Index = () => {
             </section>
 
             <ScrollReveal delay={0.4} yOffset={40}>
-              <section id="assistant" className="scroll-mt-32">
-                <AIAssistant />
+              <section id="assistant" className="scroll-mt-32 glass-premium p-8 md:p-16">
+                <div className="max-w-4xl mx-auto">
+                  <AIAssistant />
+                </div>
               </section>
             </ScrollReveal>
 
             <ScrollReveal delay={0.5} yOffset={40}>
-              <Support />
+              <div className="glass-premium p-8 md:p-16 border-primary/10">
+                <Support />
+              </div>
             </ScrollReveal>
           </div>
         </main>
