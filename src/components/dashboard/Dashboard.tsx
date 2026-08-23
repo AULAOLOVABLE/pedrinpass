@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { TrendingUp, Activity, AlertCircle, CheckCircle2, ChevronRight, Search, Bell } from "lucide-react";
 import WaveText from "@/components/ui/wave-text";
+import { LightSweep } from "../effects/LightSweep";
 
 const stats = [
   {
@@ -81,8 +82,9 @@ const Dashboard = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.1 }}
                   viewport={{ once: true }}
-                  className="bento-card p-6 flex flex-col justify-between group active:scale-[0.98] transition-all"
+                  className="glass-premium p-8 flex flex-col justify-between group active:scale-[0.98] transition-all relative overflow-hidden"
                 >
+                  <LightSweep delay={i * 0.8} />
                   <div className="relative z-10">
                     <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-[0.2em]">
                       {stat.label}
@@ -116,7 +118,7 @@ const Dashboard = () => {
 
             {/* Main Project Table / List */}
             <motion.div 
-              className="bento-card p-8 border-ui-border hover:border-primary/20 transition-colors"
+              className="glass-premium p-8 border-ui-border hover:border-primary/20 transition-colors relative overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -162,7 +164,7 @@ const Dashboard = () => {
 
           {/* Insights & Actions Side Panel */}
           <div className="space-y-6">
-             <div className="bento-card p-6 bg-primary/5 border-primary/20 relative overflow-hidden group">
+             <div className="glass-premium p-6 bg-primary/5 border-primary/20 relative overflow-hidden group">
                <div className="absolute top-0 right-0 p-4">
                  <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                </div>
@@ -191,8 +193,9 @@ const Dashboard = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2 + i * 0.1 }}
                     viewport={{ once: true }}
-                    className="bento-card p-5 group transition-all hover:border-primary/40"
+                    className="glass-premium p-5 group transition-all hover:border-primary/40 relative overflow-hidden"
                   >
+                    <LightSweep delay={i * 1.2} />
                     <div className="flex items-start gap-4">
                       <div className={`p-2 rounded-xl bg-background border border-border group-hover:border-primary/20`}>
                         <Icon className={`w-5 h-5 ${insight.color}`} />

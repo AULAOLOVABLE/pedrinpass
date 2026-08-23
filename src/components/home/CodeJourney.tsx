@@ -124,8 +124,8 @@ export const CodeJourney = () => {
               
               <div className="journey-step relative group">
                 <div className="absolute inset-0 bg-primary/20 blur-3xl group-hover:bg-primary/40 transition-all duration-700 rounded-full" />
-                <div className="relative w-20 h-20 md:w-28 md:h-28 rounded-[2rem] bg-primary flex items-center justify-center text-primary-foreground shadow-[0_0_50px_rgba(255,106,26,0.4)] transition-transform duration-500 group-hover:scale-105">
-                  <Rocket className="w-10 h-10 md:w-14 md:h-14" />
+                <div className="relative w-20 h-20 md:w-32 md:h-32 rounded-[3rem] bg-primary flex items-center justify-center text-primary-foreground shadow-[0_0_80px_-10px_rgba(255,106,26,0.5)] transition-transform duration-500 group-hover:scale-110">
+                  <Rocket className="w-10 h-10 md:w-16 md:h-16" />
                 </div>
               </div>
               

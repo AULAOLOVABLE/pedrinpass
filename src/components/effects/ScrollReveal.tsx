@@ -9,19 +9,23 @@ export interface ScrollRevealProps {
 }
 
 /** Seção que ganha vida no scroll: escala, blur e opacidade dopaminérgicas. */
-export const ScrollReveal = ({ children, className = "", delay = 0, yOffset = 60 }: ScrollRevealProps) => {
+export const ScrollReveal = ({ children, className = "", delay = 0, yOffset = 40 }: ScrollRevealProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const reduced = useReducedMotion();
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "center center"],
+    offset: ["start end", "end start"],
   });
 
-  const progress = useSpring(scrollYProgress, { stiffness: 70, damping: 20, mass: 0.5 });
-  const opacity = useTransform(progress, [0, 0.4, 0.8], [0, 0.5, 1]);
-  const scale = useTransform(progress, [0, 1], [0.9, 1]);
-  const y = useTransform(progress, [0, 1], [yOffset, 0]);
-  const blur = useTransform(progress, [0, 0.8], [4, 0]);
+  const progress = useSpring(scrollYProgress, { stiffness: 100, damping: 30, mass: 1 });
+  
+  // High-End Entrance
+  const opacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
+  const scale = useTransform(scrollYProgress, [0, 0.2], [0.98, 1]);
+  const y = useTransform(scrollYProgress, [0, 0.2], [yOffset, 0]);
+  
+  // Subtle Blur Exit (High-End feel)
+  const blur = useTransform(scrollYProgress, [0, 0.1, 0.9, 1], [4, 0, 0, 2]);
   const blurValue = useMotionTemplate`blur(${blur}px)`;
   
   if (reduced) return <div className={className}>{children}</div>;

@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Navbar } from "@/components/navbar";
 import { CinematicHero as Hero } from "@/components/hero/CinematicHero";
-import { EcosystemGrid } from "@/components/home/EcosystemGrid";
+import { NeuralGrid } from "@/components/home/NeuralGrid";
 import { CodeJourney } from "@/components/home/CodeJourney";
 import { ProductDemo } from "@/components/home/ProductDemo";
 import { Dashboard } from "@/components/dashboard";
@@ -40,7 +40,7 @@ const Index = () => {
     // GSAP ScrollTrigger for parallax and reveals
     const ctx = gsap.context(() => {
       // Parallax and Reveal for Bento cards
-      gsap.utils.toArray<HTMLElement>('.bento-card').forEach((card) => {
+      gsap.utils.toArray<HTMLElement>('.glass-premium').forEach((card) => {
         gsap.fromTo(card, 
           { 
             y: 100, 
@@ -117,7 +117,11 @@ const Index = () => {
           
           <CodeJourney />
           
-          <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-24 py-16">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-24 py-16 relative">
+            {/* Background Light Sources */}
+            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/5 blur-[150px] pointer-events-none -z-10" />
+            <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-primary/5 blur-[150px] pointer-events-none -z-10" />
+
             <ScrollReveal delay={0.3} yOffset={40}>
               <section id="marketplace" className="scroll-mt-32">
                 <div className="mb-12">
@@ -127,7 +131,7 @@ const Index = () => {
                     De prompts premium a workflows complexos, tudo o que você precisa para escalar sua produção com IA em um único lugar.
                   </p>
                 </div>
-                <EcosystemGrid />
+                <NeuralGrid />
               </section>
             </ScrollReveal>
 
@@ -154,13 +158,17 @@ const Index = () => {
             </section>
 
             <ScrollReveal delay={0.4} yOffset={40}>
-              <section id="assistant" className="scroll-mt-32">
-                <AIAssistant />
+              <section id="assistant" className="scroll-mt-32 glass-premium p-8 md:p-16">
+                <div className="max-w-4xl mx-auto">
+                  <AIAssistant />
+                </div>
               </section>
             </ScrollReveal>
 
             <ScrollReveal delay={0.5} yOffset={40}>
-              <Support />
+              <div className="glass-premium p-8 md:p-16 border-primary/10">
+                <Support />
+              </div>
             </ScrollReveal>
           </div>
         </main>
