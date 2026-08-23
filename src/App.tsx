@@ -14,6 +14,7 @@ const Changelog = lazy(() => import("./pages/Changelog"));
 const Documentation = lazy(() => import("./pages/Documentation"));
 const ApiReference = lazy(() => import("./pages/ApiReference"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const AuditPage = lazy(() => import("./routes/index"));
 
 const queryClient = new QueryClient();
 
