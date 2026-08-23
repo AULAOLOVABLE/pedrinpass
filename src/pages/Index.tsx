@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Navbar } from "@/components/navbar";
 import { CinematicHero as Hero } from "@/components/hero/CinematicHero";
-import { EcosystemGrid } from "@/components/home/EcosystemGrid";
+import { NeuralGrid } from "@/components/home/NeuralGrid";
 import { CodeJourney } from "@/components/home/CodeJourney";
 import { ProductDemo } from "@/components/home/ProductDemo";
 import { Dashboard } from "@/components/dashboard";
@@ -127,7 +127,7 @@ const Index = () => {
                     De prompts premium a workflows complexos, tudo o que você precisa para escalar sua produção com IA em um único lugar.
                   </p>
                 </div>
-                <EcosystemGrid />
+                <NeuralGrid />
               </section>
             </ScrollReveal>
 
