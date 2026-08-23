@@ -3,7 +3,7 @@ import React from "react";
 const AuditPage = () => {
   return (
     <div style={{ whiteSpace: "pre-wrap", padding: "2rem", fontFamily: "monospace" }}>
-      Agora continue a evolução da Home usando a identidade criada na etapa anterior.
+      {`Agora continue a evolução da Home usando a identidade criada na etapa anterior.
 
 Não refaça a identidade novamente.
 
@@ -13,7 +13,7 @@ Objetivo desta etapa: reorganizar o conteúdo e criar uma experiência de scroll
 
 A Home deve seguir esta narrativa:
 
-```text
+\`\`\`text
 IDEIA
 ↓
 CÓDIGO
@@ -23,7 +23,7 @@ IA
 AUTOMAÇÃO
 ↓
 PRODUTO
-```
+\`\`\`
 
 Cada seção deve avançar essa história.
 
@@ -33,13 +33,13 @@ Evitar blocos isolados sem relação entre si.
 
 Logo após o Hero, crie uma seção visual curta que represente:
 
-`Ideia → Código → API → IA → Deploy`
+\`Ideia → Código → API → IA → Deploy\`
 
 Ela pode usar scroll progress controlado.
 
 Exemplo conceitual:
 
-```text
+\`\`\`text
 [ IDEA ]
    ↓
 { code }
@@ -49,7 +49,7 @@ Exemplo conceitual:
 [ AI ]
    ↓
 DEPLOY ✓
-```
+\`\`\`
 
 A animação deve ser finita.
 
@@ -59,12 +59,12 @@ Não criar scroll infinito.
 
 Utilize aproximadamente:
 
-```text
+\`\`\`text
 0.00–0.25 = código aparece
 0.25–0.50 = conexões entre serviços
 0.50–0.75 = produto/interface se forma
 0.75–1.00 = deploy concluído
-```
+\`\`\`
 
 A seção externa pode ter algo entre aproximadamente 160vh e 220vh, desde que testado.
 
@@ -117,10 +117,10 @@ Reduza espaços excessivos.
 
 No projeto atual existem blocos como:
 
-```tsx
+\`\`\`tsx
 space-y-48
 py-32
-```
+\`\`\`
 
 Revise esses valores.
 
@@ -187,7 +187,7 @@ Teste:
 
 A Home deve contar uma história coerente:
 
-`Você tem uma ideia → aprende/constrói → usa IA → automatiza → transforma em produto.`
+\`Você tem uma ideia → aprende/constrói → usa IA → automatiza → transforma em produto.\`
 
 Nada deve parecer inserido apenas para preencher espaço.
 
@@ -197,7 +197,7 @@ Ao finalizar, informe:
 * componentes criados;
 * componentes reaproveitados;
 * causa de eventuais espaços vazios encontrados;
-* como o scroll foi limitado.
+* como o scroll foi limitado.`}
     </div>
   );
 };
