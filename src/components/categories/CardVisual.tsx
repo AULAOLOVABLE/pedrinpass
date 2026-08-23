@@ -108,7 +108,7 @@ const CardVisual = ({ variant, featured = false }: CardVisualProps) => {
       }`}
       style={{
         backgroundImage:
-          "radial-gradient(120% 120% at 50% 0%, hsl(var(--primary) / 0.25) 0%, transparent 60%), linear-gradient(180deg, hsl(var(--ui-surface)) 0%, hsl(var(--background)) 100%)",
+          "radial-gradient(120% 120% at 50% 0%, hsl(var(--primary) / 0.15) 0%, transparent 60%), linear-gradient(180deg, hsl(var(--ui-surface)) 0%, hsl(var(--background)) 100%)",
       }}
     >
       {variant === "docs" && <DocsVisual />}

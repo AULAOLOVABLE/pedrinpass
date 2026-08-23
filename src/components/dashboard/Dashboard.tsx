@@ -66,7 +66,7 @@ const Dashboard = () => {
                 <span className="absolute top-0 right-0 w-2 h-2 bg-primary rounded-full" />
               </button>
             </div>
-            <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-purple-500 shadow-lg shadow-primary/20" />
+            <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-primary to-orange-400 shadow-lg shadow-primary/20" />
           </div>
         </div>
 
