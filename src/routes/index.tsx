@@ -3,190 +3,201 @@ import React from "react";
 const AuditPage = () => {
   return (
     <div style={{ whiteSpace: "pre-wrap", padding: "2rem", fontFamily: "monospace" }}>
-      Analise o projeto atual antes de editar.
+      {`Agora continue a evolução da Home usando a identidade criada na etapa anterior.
 
-Objetivo desta etapa: unificar a identidade visual, remover excessos e reconstruir o Hero sem alterar funcionalidades internas, autenticação, rotas, banco, marketplace ou regras de negócio.
+Não refaça a identidade novamente.
 
-## 1. Auditoria visual
+Objetivo desta etapa: reorganizar o conteúdo e criar uma experiência de scroll curta, lógica e conectada ao propósito da plataforma.
 
-Localize e revise principalmente:
+## 1. Corrigir o storytelling
 
-* `src/pages/Index.tsx`
-* `src/components/hero/CinematicHero.tsx`
-* `src/components/hero/Hero3D.tsx`
-* `src/components/effects/MatrixRain.tsx`
-* `src/index.css`
-* efeitos globais de mouse, canvas, partículas e scroll
+A Home deve seguir esta narrativa:
 
-Hoje há excesso de efeitos simultâneos:
+\`\`\`text
+IDEIA
+↓
+CÓDIGO
+↓
+IA
+↓
+AUTOMAÇÃO
+↓
+PRODUTO
+\`\`\`
 
-* Matrix Rain global;
-* 3D com milhares de partículas;
-* esfera distorcida;
-* glow seguindo mouse;
-* grain;
-* cursor customizado;
-* GSAP;
-* Framer Motion.
+Cada seção deve avançar essa história.
 
-Simplifique.
+Evitar blocos isolados sem relação entre si.
 
-Não quero remover toda a personalidade visual, mas quero que cada efeito tenha função.
+## 2. Criar seção Code Journey
 
-## 2. Nova identidade principal
+Logo após o Hero, crie uma seção visual curta que represente:
 
-Padronize o projeto para:
+\`Ideia → Código → API → IA → Deploy\`
 
-* fundo Obsidian/preto profundo;
-* laranja elétrico como cor principal;
-* branco quebrado para textos;
-* cinza frio para elementos secundários;
-* evitar ciano como cor dominante;
-* estética premium, técnica e minimalista;
-* sem visual gamer exagerado.
+Ela pode usar scroll progress controlado.
 
-Sugestão de direção:
+Exemplo conceitual:
 
-```text
-Background: #050607
-Surface: #0B0D10
-Primary: #FF6A1A
-Primary hover: #FF7A2B
-Text: #F5F5F4
-Muted: #8B919A
-Border: rgba(255,255,255,0.08)
-```
+\`\`\`text
+[ IDEA ]
+   ↓
+{ code }
+   ↓
+[ API ]
+   ↓
+[ AI ]
+   ↓
+DEPLOY ✓
+\`\`\`
 
-Converta isso em tokens semânticos, não espalhe hex aleatório pelo projeto.
+A animação deve ser finita.
 
-## 3. Hero
+Não criar scroll infinito.
 
-Substitua a comunicação genérica atual como “NEURAL SYNC”.
+## 3. Estrutura da animação
 
-O Hero deve explicar imediatamente o projeto.
+Utilize aproximadamente:
 
-Direção de conteúdo:
+\`\`\`text
+0.00–0.25 = código aparece
+0.25–0.50 = conexões entre serviços
+0.50–0.75 = produto/interface se forma
+0.75–1.00 = deploy concluído
+\`\`\`
 
-Título:
-`CONSTRUA. APRENDA. AUTOMATIZE.`
+A seção externa pode ter algo entre aproximadamente 160vh e 220vh, desde que testado.
 
-Subtítulo:
-`Engenharia de software, IA, prompts, ferramentas e recursos para transformar ideias em produtos reais.`
+Não usar alturas absurdas como 500vh.
 
-CTAs:
+O conteúdo seguinte deve começar imediatamente depois.
 
-* `Explorar ecossistema`
-* `Ver recursos`
+## 4. Ecossistema
 
-Ajuste o texto se necessário, mas preserve esse posicionamento.
+Depois da animação, reorganize os recursos da plataforma em categorias claras:
 
-## 4. Visual do Hero
+* Prompts
+* Extensões
+* Templates
+* Automações
+* APIs
+* Conteúdo / Trilhas
 
-Não usar mais uma esfera 3D genérica como protagonista.
+Use cards premium, porém simples.
 
-Substitua por uma composição que remeta diretamente a desenvolvimento:
+Cada card deve comunicar utilidade real.
 
-* editor de código;
-* terminal;
-* snippets;
-* API;
-* banco;
-* componentes;
-* deploy;
-* pequenos nós conectados.
+Evitar cards apenas decorativos.
 
-Pode manter profundidade e movimento, porém com visual abstrato de software.
+## 5. Produto em ação
+
+Crie uma seção mostrando visualmente como o produto funciona.
+
+Pode usar preview de:
+
+* painel;
+* editor;
+* assistente IA;
+* marketplace;
+* automação.
+
+Essa seção deve parecer uma demonstração real da aplicação, não mockups aleatórios.
+
+## 6. Dashboard
+
+O dashboard não deve mais ser o primeiro grande conteúdo depois do Hero.
+
+Reposicione depois da apresentação do ecossistema ou do produto em ação.
+
+O visitante primeiro entende o que é a plataforma e depois vê métricas.
+
+## 7. Espaçamento
+
+Reduza espaços excessivos.
+
+No projeto atual existem blocos como:
+
+\`\`\`tsx
+space-y-48
+py-32
+\`\`\`
+
+Revise esses valores.
+
+Quero ritmo mais controlado e menos áreas pretas gigantescas.
+
+O scroll deve parecer proposital.
+
+## 8. Animações
+
+Padronize.
+
+Escolha uma abordagem principal para scroll:
+
+* GSAP ScrollTrigger
+
+OU
+
+* Framer Motion
+
+Não misturar tecnologias sem necessidade.
+
+Usar:
+
+* opacity;
+* translate;
+* scale leve;
+* line drawing;
+* stagger discreto.
 
 Evitar:
 
-* grandes formas geométricas aleatórias;
-* objeto central girando sem significado;
-* excesso de partículas;
-* chuva de caracteres ocupando toda a tela.
+* zoom excessivo;
+* rotação de cards;
+* elementos voando pela tela;
+* scrub em tudo.
 
-## 5. Background
+## 9. Mobile
 
-O fundo pode possuir:
+No mobile:
 
-* micro partículas muito sutis;
-* linhas de código quase imperceptíveis;
-* glow laranja discreto;
-* grain extremamente leve.
+* sem sticky prolongado;
+* animação Code Journey simplificada;
+* cards em fluxo natural;
+* zero scroll horizontal;
+* sem seções gigantes;
+* boa leitura com uma mão.
 
-Escolha poucos efeitos.
+## 10. Validação
 
-Não mantenha Matrix Rain em toda a aplicação se ela estiver competindo visualmente com o conteúdo.
+Teste:
 
-## 6. Cursor
-
-Remova `cursor: none` global.
-
-Se quiser manter cursor customizado, aplique somente em áreas especiais e apenas desktop.
-
-A navegação comum deve continuar usando cursor nativo.
-
-## 7. Performance
-
-Reduza custo gráfico.
-
-Se `Hero3D` permanecer:
-
-* reduzir drasticamente partículas;
-* pausar animações fora da viewport;
-* reduzir complexidade no mobile;
-* respeitar `prefers-reduced-motion`.
-
-Evitar múltiplos loops independentes de `requestAnimationFrame`.
-
-## 8. Responsividade
-
-Desktop:
-
-* Hero cinematográfico.
-
-Tablet:
-
-* reduzir elementos decorativos.
-
-Mobile:
-
-* remover 3D pesado;
-* manter composição simplificada;
-* CTA visível;
-* sem overflow horizontal.
-
-## Não alterar
-
-Não mexer nesta etapa em:
-
-* autenticação;
-* banco;
-* rotas;
-* planos;
-* dashboard interno;
-* checkout;
-* APIs;
-* conteúdo do marketplace.
+* scroll lento;
+* scroll rápido;
+* voltar para cima;
+* resize;
+* mobile;
+* tablet;
+* desktop;
+* conteúdo seguinte aparecendo normalmente;
+* ausência de área vazia;
+* ausência de seção presa.
 
 ## Resultado esperado
 
-A página deve parecer um único produto.
+A Home deve contar uma história coerente:
 
-Quero deixar de transmitir:
+\`Você tem uma ideia → aprende/constrói → usa IA → automatiza → transforma em produto.\`
 
-`template futurista cheio de efeitos`
-
-e passar a transmitir:
-
-`plataforma premium de código, IA e engenharia de software`.
+Nada deve parecer inserido apenas para preencher espaço.
 
 Ao finalizar, informe:
 
-* arquivos alterados;
-* efeitos removidos;
-* efeitos mantidos;
-* impacto de performance;
-* como o Hero ficou responsivo.
+* nova ordem das seções;
+* componentes criados;
+* componentes reaproveitados;
+* causa de eventuais espaços vazios encontrados;
+* como o scroll foi limitado.`}
     </div>
   );
 };
