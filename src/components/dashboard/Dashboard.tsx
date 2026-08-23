@@ -118,7 +118,7 @@ const Dashboard = () => {
 
             {/* Main Project Table / List */}
             <motion.div 
-              className="bento-card p-8 border-ui-border hover:border-primary/20 transition-colors"
+              className="glass-premium p-8 border-ui-border hover:border-primary/20 transition-colors relative overflow-hidden"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
