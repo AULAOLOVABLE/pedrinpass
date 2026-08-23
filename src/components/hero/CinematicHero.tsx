@@ -2,6 +2,7 @@ import React, { useRef, useMemo, Suspense, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Hero3D } from './Hero3D';
 import { MagneticButton } from '../motion';
+import { ArrowRight } from 'lucide-react';
 
 const FallbackBackground = () => (
   <div className="absolute inset-0 bg-[#0a0a0a] overflow-hidden">
@@ -61,43 +62,86 @@ export const CinematicHero = () => {
         style={{ y: y1, opacity, scale }}
         className="relative z-10 w-full h-full flex flex-col items-center justify-center text-center px-6"
       >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-5xl"
-        >
-          <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary block mb-8">PedrinTEC Technology Hub</span>
-          <h1 className="text-5xl md:text-7xl lg:text-[10rem] font-black tracking-tighter text-foreground leading-[0.8] mb-8 uppercase">
-            CONSTRUA.<br/>APRENDA.<br/>AUTOMATIZE.
-          </h1>
-          
-          <p className="text-[10px] md:text-xs text-muted-foreground font-bold tracking-[0.2em] uppercase max-w-2xl mx-auto leading-relaxed mb-12">
-            Engenharia de software, IA, prompts, ferramentas e recursos para <span className="text-primary italic">transformar ideias em produtos reais</span>.
-          </p>
+        <div className="max-w-7xl w-full relative">
+          <motion.div
+            initial={{ opacity: 0, scale: 1.1, filter: "blur(20px)" }}
+            animate={{ opacity: 0.15, scale: 1, filter: "blur(0px)" }}
+            transition={{ duration: 2, ease: "var(--ease-out-expo)" }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[15rem] md:text-[25rem] font-black text-primary pointer-events-none select-none opacity-10 whitespace-nowrap"
+          >
+            PEDRINTEC
+          </motion.div>
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-            <MagneticButton>
-              <button 
-                className="glass-button glass-button-primary group px-8 py-4 text-xs font-black tracking-widest uppercase active:scale-95"
-                onClick={() => document.getElementById('marketplace')?.scrollIntoView({ behavior: 'smooth' })}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1.2, ease: "var(--ease-out-expo)", delay: 0.2 }}
+            className="relative z-10"
+          >
+            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-primary/80 block mb-6 animate-pulse">
+              Engineered for Innovation
+            </span>
+            
+            <h1 className="text-6xl md:text-8xl lg:text-[11rem] font-black tracking-tighter text-foreground leading-[0.8] mb-8 uppercase overflow-hidden">
+              <motion.span
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                transition={{ duration: 1, ease: "var(--ease-out-expo)", delay: 0.4 }}
+                className="block"
               >
-                Explorar Ecossistema
-                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M5 12h14m-7-7 7 7-7 7"/>
-                </svg>
-              </button>
-            </MagneticButton>
-            <MagneticButton>
+                CONSTRUA.
+              </motion.span>
+              <motion.span
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                transition={{ duration: 1, ease: "var(--ease-out-expo)", delay: 0.5 }}
+                className="block text-primary"
+              >
+                APRENDA.
+              </motion.span>
+              <motion.span
+                initial={{ y: "100%" }}
+                animate={{ y: 0 }}
+                transition={{ duration: 1, ease: "var(--ease-out-expo)", delay: 0.6 }}
+                className="block"
+              >
+                AUTOMATIZE.
+              </motion.span>
+            </h1>
+            
+            <motion.p 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 1 }}
+              className="text-[10px] md:text-xs text-muted-foreground font-bold tracking-[0.3em] uppercase max-w-xl mx-auto leading-relaxed mb-12"
+            >
+              Arquitetando o futuro através de <span className="text-primary">IA Generativa</span> e <span className="text-primary">Engenharia Neural</span>.
+            </motion.p>
+
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 1.2 }}
+              className="flex flex-col md:flex-row items-center justify-center gap-4"
+            >
+              <MagneticButton>
+                <button 
+                  className="px-10 py-5 bg-primary text-primary-foreground text-[10px] font-black tracking-[0.2em] uppercase rounded-full shadow-[0_0_30px_rgba(255,106,26,0.3)] hover:shadow-[0_0_50px_rgba(255,106,26,0.5)] transition-all duration-500 active:scale-95 flex items-center gap-3 group"
+                  onClick={() => document.getElementById('marketplace')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  Start Journey
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </button>
+              </MagneticButton>
               <button 
-                className="glass-button group px-8 py-4 text-xs font-black tracking-widest uppercase active:scale-95"
+                className="px-10 py-5 border border-white/10 hover:border-white/20 text-[10px] font-black tracking-[0.2em] uppercase rounded-full transition-all duration-500 active:scale-95 text-muted-foreground hover:text-foreground"
                 onClick={() => window.open('/docs', '_blank')}
               >
-                <span className="opacity-70 group-hover:opacity-100 transition-opacity">Ver Recursos</span>
+                Documentation
               </button>
-            </MagneticButton>
-          </div>
-        </motion.div>
+            </motion.div>
+          </motion.div>
+        </div>
       </motion.div>
 
       {/* Scroll Indicator */}
