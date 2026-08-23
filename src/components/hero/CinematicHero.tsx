@@ -82,27 +82,27 @@ export const CinematicHero = () => {
               Engineered for Innovation
             </span>
             
-            <h1 className="text-6xl md:text-8xl lg:text-[11rem] font-black tracking-tighter text-foreground leading-[0.8] mb-8 uppercase overflow-hidden">
+            <h1 className="text-6xl md:text-8xl lg:text-[13rem] font-black tracking-tighter text-foreground leading-[0.75] mb-8 uppercase overflow-visible">
               <motion.span
-                initial={{ y: "100%" }}
-                animate={{ y: 0 }}
-                transition={{ duration: 1, ease: [0.19, 1, 0.22, 1], delay: 0.4 }}
+                initial={{ x: -100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1.5, ease: [0.19, 1, 0.22, 1], delay: 0.4 }}
                 className="block"
               >
                 CONSTRUA.
               </motion.span>
               <motion.span
-                initial={{ y: "100%" }}
-                animate={{ y: 0 }}
-                transition={{ duration: 1, ease: [0.19, 1, 0.22, 1], delay: 0.5 }}
-                className="block text-primary"
+                initial={{ x: 100, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ duration: 1.5, ease: [0.19, 1, 0.22, 1], delay: 0.5 }}
+                className="block text-primary text-glow"
               >
                 APRENDA.
               </motion.span>
               <motion.span
-                initial={{ y: "100%" }}
-                animate={{ y: 0 }}
-                transition={{ duration: 1, ease: [0.19, 1, 0.22, 1], delay: 0.6 }}
+                initial={{ y: 50, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 1.5, ease: [0.19, 1, 0.22, 1], delay: 0.6 }}
                 className="block"
               >
                 AUTOMATIZE.
