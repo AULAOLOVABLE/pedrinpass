@@ -193,8 +193,9 @@ const Dashboard = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.2 + i * 0.1 }}
                     viewport={{ once: true }}
-                    className="bento-card p-5 group transition-all hover:border-primary/40"
+                    className="glass-premium p-5 group transition-all hover:border-primary/40 relative overflow-hidden"
                   >
+                    <LightSweep delay={i * 1.2} />
                     <div className="flex items-start gap-4">
                       <div className={`p-2 rounded-xl bg-background border border-border group-hover:border-primary/20`}>
                         <Icon className={`w-5 h-5 ${insight.color}`} />
