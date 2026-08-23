@@ -14,6 +14,7 @@ const Changelog = lazy(() => import("./pages/Changelog"));
 const Documentation = lazy(() => import("./pages/Documentation"));
 const ApiReference = lazy(() => import("./pages/ApiReference"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+const AuditPage = lazy(() => import("./routes/index"));
 
 const queryClient = new QueryClient();
 
@@ -39,6 +40,7 @@ const App = () => (
               <Route path="/changelog" element={<Changelog />} />
               <Route path="/docs/*" element={<Documentation />} />
               <Route path="/api/*" element={<ApiReference />} />
+              <Route path="/audit" element={<AuditPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
