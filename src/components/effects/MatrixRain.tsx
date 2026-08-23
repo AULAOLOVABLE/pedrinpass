@@ -1,100 +1,71 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from 'react';
 
-const GLYPHS = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ{}[]<>/*+-=$#";
-
-const MatrixRain = () => {
+export const MatrixRain = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const boostRef = useRef(0);
-  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d");
+
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let width = canvas.width = window.innerWidth;
+    let height = canvas.height = window.innerHeight;
 
-    let width = 0;
-    let height = 0;
-    let columns = 0;
-    let drops: number[] = [];
-    let speeds: number[] = [];
-    const fontSize = 16;
+    const columns = Math.floor(width / 20);
+    const drops: number[] = new Array(columns).fill(1);
 
-    const setup = () => {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      width = window.innerWidth;
-      height = window.innerHeight;
-      canvas.width = width * dpr;
-      canvas.height = height * dpr;
-      canvas.style.width = `${width}px`;
-      canvas.style.height = `${height}px`;
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-      columns = Math.floor(width / fontSize);
-      drops = Array.from({ length: columns }, () => Math.random() * -height);
-      speeds = Array.from({ length: columns }, () => 0.5 + Math.random() * 1.1);
-    };
+    const chars = '01';
 
-    setup();
-
-    const onResize = () => setup();
-    window.addEventListener("resize", onResize);
-
-    const onScroll = () => {
-      const delta = Math.abs(window.scrollY - lastScrollY.current);
-      lastScrollY.current = window.scrollY;
-      boostRef.current = Math.min(boostRef.current + delta * 0.06, 14);
-    };
-    window.addEventListener("scroll", onScroll, { passive: true });
-
-    let raf = 0;
-    const render = () => {
-      ctx.fillStyle = "rgba(5, 6, 7, 0.15)";
+    const draw = () => {
+      // Usando a nova cor obsidian #050505
+      ctx.fillStyle = 'rgba(5, 5, 5, 0.05)';
       ctx.fillRect(0, 0, width, height);
 
-      const boost = boostRef.current;
-      ctx.font = `${fontSize}px "JetBrains Mono", ui-monospace, monospace`;
+      ctx.fillStyle = 'rgba(255, 106, 26, 0.04)';
+      ctx.font = '10px monospace';
 
-      for (let i = 0; i < columns; i++) {
-        const char = GLYPHS[Math.floor(Math.random() * GLYPHS.length)];
-        const x = i * fontSize;
-        const y = drops[i];
+      for (let i = 0; i < drops.length; i++) {
+        const text = chars.charAt(Math.floor(Math.random() * chars.length));
+        ctx.fillText(text, i * 20, drops[i] * 20);
 
-        // Electric Orange head
-        ctx.fillStyle = `hsl(21 100% ${60 + Math.min(boost * 1.2, 20)}% / ${0.5 + Math.min(boost * 0.01, 0.2)})`;
-        ctx.fillText(char, x, y);
-
-        // Body in muted orange
-        ctx.fillStyle = `hsl(21 100% 55% / ${0.08 + Math.min(boost * 0.01, 0.1)})`;
-        ctx.fillText(GLYPHS[Math.floor(Math.random() * GLYPHS.length)], x, y - fontSize);
-
-        drops[i] += (speeds[i] + boost * 0.5) * (prefersReduced ? 0.15 : 1) * fontSize * 0.35;
-
-        if (drops[i] > height && Math.random() > 0.975) {
-          drops[i] = Math.random() * -200;
+        if (drops[i] * 20 > height && Math.random() > 0.975) {
+          drops[i] = 0;
         }
+        drops[i]++;
       }
-
-      boostRef.current *= 0.94;
-      raf = requestAnimationFrame(render);
     };
 
-    raf = requestAnimationFrame(render);
+    let frameId: number;
+    const animate = () => {
+      draw();
+      frameId = requestAnimationFrame(animate);
+    };
+
+    animate();
+
+    const handleResize = () => {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      const newColumns = Math.floor(width / 20);
+      drops.length = newColumns;
+      drops.fill(1);
+    };
+
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      cancelAnimationFrame(raf);
-      window.removeEventListener("resize", onResize);
-      window.removeEventListener("scroll", onScroll);
+      cancelAnimationFrame(frameId);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-0" aria-hidden="true">
-      <canvas ref={canvasRef} className="h-full w-full opacity-[0.04] will-change-transform" />
-      <div className="absolute inset-0 bg-[radial-gradient(120%_90%_at_50%_0%,transparent_0%,hsl(var(--background)/0.9)_50%,hsl(var(--background)/0.99)_100%)]" />
-    </div>
+    <canvas
+      ref={canvasRef}
+      className="fixed inset-0 pointer-events-none z-0 opacity-40"
+      style={{ filter: 'blur(0.5px)' }}
+    />
   );
 };
-
-export default MatrixRain;
