@@ -6,9 +6,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-background border-t border-ui-border pt-24 pb-12 relative z-10">
+    <footer className="bg-background border-t border-ui-border pt-32 pb-16 relative z-10 overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-primary/5 blur-[150px] pointer-events-none -z-10" />
+      
       <div className="max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-20 mb-20">
           <div className="col-span-1 md:col-span-2 space-y-6">
             <Logo />
             <p className="text-muted-foreground text-[11px] max-w-sm leading-relaxed">
