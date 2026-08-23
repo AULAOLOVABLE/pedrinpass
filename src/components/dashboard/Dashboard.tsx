@@ -164,7 +164,7 @@ const Dashboard = () => {
 
           {/* Insights & Actions Side Panel */}
           <div className="space-y-6">
-             <div className="bento-card p-6 bg-primary/5 border-primary/20 relative overflow-hidden group">
+             <div className="glass-premium p-6 bg-primary/5 border-primary/20 relative overflow-hidden group">
                <div className="absolute top-0 right-0 p-4">
                  <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />
                </div>
