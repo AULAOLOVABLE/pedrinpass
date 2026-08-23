@@ -117,7 +117,11 @@ const Index = () => {
           
           <CodeJourney />
           
-          <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-24 py-16">
+          <div className="max-w-7xl mx-auto px-6 md:px-12 space-y-24 py-16 relative">
+            {/* Background Light Sources */}
+            <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/5 blur-[150px] pointer-events-none -z-10" />
+            <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-primary/5 blur-[150px] pointer-events-none -z-10" />
+
             <ScrollReveal delay={0.3} yOffset={40}>
               <section id="marketplace" className="scroll-mt-32">
                 <div className="mb-12">

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Terminal, Play, CheckCircle2, MessageSquare, Zap, Layers, Globe } from "lucide-react";
+import { Terminal, Play, CheckCircle2, MessageSquare, Zap, Layers, Globe, Cpu } from "lucide-react";
 import { LightSweep } from "../effects/LightSweep";
 
 export const ProductDemo = () => {
