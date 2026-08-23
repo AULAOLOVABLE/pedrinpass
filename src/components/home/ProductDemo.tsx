@@ -108,9 +108,9 @@ export const ProductDemo = () => {
             <motion.div 
               animate={{ y: [0, -15, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -top-12 -right-12 w-32 h-32 glass-premium flex items-center justify-center z-20"
+              className="absolute -top-12 -right-12 w-32 h-32 glass-premium flex items-center justify-center z-20 shadow-[0_0_50px_rgba(255,106,26,0.2)]"
             >
-              <Cpu className="w-10 h-10 text-primary/50" />
+              <Cpu className="w-10 h-10 text-primary animate-pulse" />
             </motion.div>
             
             <motion.div 
