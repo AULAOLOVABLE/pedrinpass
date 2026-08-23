@@ -116,7 +116,7 @@ export const ProductDemo = () => {
             <motion.div 
               animate={{ y: [0, 15, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute -bottom-8 -left-8 px-6 py-4 glass-premium z-20 flex items-center gap-3"
+              className="absolute -bottom-8 -left-8 px-6 py-4 glass-premium z-20 flex items-center gap-3 shadow-[0_0_50px_rgba(255,106,26,0.2)]"
             >
               <div className="w-2 h-2 rounded-full bg-primary animate-ping" />
               <span className="text-[8px] font-black uppercase tracking-widest">Global Sync Active</span>
