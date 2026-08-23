@@ -47,89 +47,97 @@ export const CodeJourney = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="relative w-full h-[200vh] bg-background/50">
+    <div ref={containerRef} className="relative w-full h-[220vh] bg-background">
       <div 
         ref={sectionRef} 
         className="h-screen w-full flex flex-col items-center justify-center overflow-hidden px-6"
       >
-        <div className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-5 gap-8 items-center relative">
+        <div className="max-w-5xl w-full relative">
           
-          {/* Step 1: Idea */}
-          <div className="journey-step flex flex-col items-center gap-4 text-center">
-            <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary glow-sm">
-              <Terminal className="w-8 h-8" />
-            </div>
-            <div>
-              <span className="text-[10px] font-black uppercase tracking-widest text-primary">Ideia</span>
-              <p className="text-xs text-muted-foreground mt-1">Concepção do Software</p>
-            </div>
-          </div>
-
-          <div className="hidden md:flex justify-center items-center">
-            <svg width="40" height="2" className="overflow-visible">
-              <line 
-                x1="0" y1="1" x2="40" y2="1" 
-                className="journey-line stroke-primary stroke-2"
-                style={{ strokeDasharray: 100, strokeDashoffset: 100 }}
-              />
-            </svg>
-          </div>
-
-          {/* Step 2: Code/API */}
-          <div className="journey-step flex flex-col items-center gap-4 text-center">
-            <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary glow-sm">
-              <Network className="w-8 h-8" />
-            </div>
-            <div>
-              <span className="text-[10px] font-black uppercase tracking-widest text-primary">Conexão</span>
-              <p className="text-xs text-muted-foreground mt-1">Integração de APIs</p>
-            </div>
-          </div>
-
-          <div className="hidden md:flex justify-center items-center">
-            <svg width="40" height="2" className="overflow-visible">
-              <line 
-                x1="0" y1="1" x2="40" y2="1" 
-                className="journey-line stroke-primary stroke-2"
-                style={{ strokeDasharray: 100, strokeDashoffset: 100 }}
-              />
-            </svg>
-          </div>
-
-          {/* Step 3: AI */}
-          <div className="journey-step flex flex-col items-center gap-4 text-center">
-            <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary glow-sm">
-              <Cpu className="w-8 h-8" />
-            </div>
-            <div>
-              <span className="text-[10px] font-black uppercase tracking-widest text-primary">IA</span>
-              <p className="text-xs text-muted-foreground mt-1">Inteligência Neural</p>
-            </div>
-          </div>
-
-          {/* Mobile Connectors (simplified) */}
-          <div className="md:hidden flex flex-col items-center gap-4">
-             <div className="w-px h-12 bg-primary/20" />
-          </div>
-
-          <div className="col-span-1 md:col-span-5 flex flex-col items-center mt-12">
-            <div className="journey-step flex flex-col items-center gap-6">
-              <div className="flex items-center gap-4">
-                <div className="w-px h-12 bg-gradient-to-b from-primary/50 to-transparent" />
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-8 items-center relative z-10">
+            {/* Step 1: Idea */}
+            <div className="journey-step flex flex-col items-center gap-4 text-center">
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary glow-sm">
+                <Terminal className="w-8 h-8" />
               </div>
+              <div>
+                <span className="text-[10px] font-black uppercase tracking-widest text-primary">Ideia</span>
+                <p className="text-[10px] text-muted-foreground mt-1 uppercase tracking-tighter">Concepção</p>
+              </div>
+            </div>
+
+            <div className="hidden md:flex justify-center items-center">
+              <svg width="60" height="2" className="overflow-visible">
+                <line 
+                  x1="0" y1="1" x2="60" y2="1" 
+                  className="journey-line stroke-primary stroke-2"
+                  style={{ strokeDasharray: 100, strokeDashoffset: 100 }}
+                />
+              </svg>
+            </div>
+
+            {/* Step 2: Code/API */}
+            <div className="journey-step flex flex-col items-center gap-4 text-center">
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary glow-sm">
+                <Network className="w-8 h-8" />
+              </div>
+              <div>
+                <span className="text-[10px] font-black uppercase tracking-widest text-primary">Conexão</span>
+                <p className="text-[10px] text-muted-foreground mt-1 uppercase tracking-tighter">API & Código</p>
+              </div>
+            </div>
+
+            <div className="hidden md:flex justify-center items-center">
+              <svg width="60" height="2" className="overflow-visible">
+                <line 
+                  x1="0" y1="1" x2="60" y2="1" 
+                  className="journey-line stroke-primary stroke-2"
+                  style={{ strokeDasharray: 100, strokeDashoffset: 100 }}
+                />
+              </svg>
+            </div>
+
+            {/* Step 3: AI */}
+            <div className="journey-step flex flex-col items-center gap-4 text-center">
+              <div className="w-16 h-16 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary glow-sm">
+                <Cpu className="w-8 h-8" />
+              </div>
+              <div>
+                <span className="text-[10px] font-black uppercase tracking-widest text-primary">IA</span>
+                <p className="text-[10px] text-muted-foreground mt-1 uppercase tracking-tighter">Inteligência</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-center mt-16 md:mt-24 relative z-10">
+            <div className="journey-step flex flex-col items-center gap-6">
+              <div className="flex flex-col items-center gap-2">
+                <svg width="2" height="60" className="overflow-visible hidden md:block">
+                  <line 
+                    x1="1" y1="0" x2="1" y2="60" 
+                    className="journey-line stroke-primary stroke-2"
+                    style={{ strokeDasharray: 100, strokeDashoffset: 100 }}
+                  />
+                </svg>
+                <div className="md:hidden w-px h-12 bg-primary/20" />
+              </div>
+              
               <div className="journey-step relative group">
-                <div className="absolute inset-0 bg-primary/20 blur-3xl group-hover:bg-primary/30 transition-all duration-500" />
-                <div className="relative w-24 h-24 rounded-3xl bg-primary flex items-center justify-center text-primary-foreground shadow-[0_0_50px_rgba(255,106,26,0.4)]">
-                  <Rocket className="w-10 h-10" />
+                <div className="absolute inset-0 bg-primary/20 blur-3xl group-hover:bg-primary/40 transition-all duration-700 rounded-full" />
+                <div className="relative w-20 h-20 md:w-28 md:h-28 rounded-[2rem] bg-primary flex items-center justify-center text-primary-foreground shadow-[0_0_50px_rgba(255,106,26,0.4)] transition-transform duration-500 group-hover:scale-105">
+                  <Rocket className="w-10 h-10 md:w-14 md:h-14" />
                 </div>
               </div>
-              <div className="text-center">
-                <span className="text-xs font-black uppercase tracking-[0.3em] text-primary mb-2 block">Deploy Completo</span>
-                <h3 className="text-2xl font-black uppercase tracking-tighter">Produto em Produção</h3>
+              
+              <div className="text-center mt-4">
+                <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary mb-2 block animate-pulse">Deploy Status: Active</span>
+                <h3 className="text-2xl md:text-4xl font-black uppercase tracking-tighter leading-none">Produto Finalizado</h3>
               </div>
             </div>
           </div>
 
+          {/* Background decoration for the journey */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-4xl max-h-[400px] border border-primary/5 rounded-[3rem] -z-10 pointer-events-none" />
         </div>
       </div>
     </div>
