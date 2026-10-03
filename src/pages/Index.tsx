@@ -38,7 +38,7 @@ const Index = () => {
   useEffect(() => {
     const load = async () => {
       setLoading(true);
-      const { data, error } = await supabase.from("pizzas").select("id,name,description,price,image_url").eq("is_available", true).order("created_at");
+      const { data, error } = await supabase.from("pizzas").select("id,name,description,price,image_url").eq("is_available", true).order("created_at").execute();
       if (error) toast.error("Não foi possível carregar o catálogo.");
       setPizzas((data || []) as PizzaItem[]);
       setLoading(false);
