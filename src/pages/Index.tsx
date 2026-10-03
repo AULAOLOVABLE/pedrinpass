@@ -9,7 +9,7 @@ type CartItem = PizzaItem & { quantity: number; observations: string };
 const FALLBACK_PIZZA_IMAGE = "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=80&fm=webp";
 
 const CART_KEY = "pedrinpass-cart";
-const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || "";
+const WHATSAPP_NUMBER = import.meta.env.VITE_WHATSAPP_NUMBER || "62982203854";
 
 const money = (value: number) => value.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 
