@@ -6,7 +6,7 @@ import { getAdminAuditLog, getAdminOrders, getAdminSession, isAdmin, signInAdmin
 
 type Order = {
   id: string; customer_name: string; customer_phone: string; items: Array<{ pizza_id: string; quantity: number; observations?: string }>;
-  total_amount: number; delivery_time: string; payment_method: string; status: string; created_at: string;
+  total_amount: number; delivery_time: string; order_type: "delivery" | "pickup"; payment_method: string; status: string; created_at: string;
 };
 type Audit = { id: string; action: string; target_table: string; target_id: string; created_at: string; actor_user_id: string };
 
@@ -82,7 +82,7 @@ export default function Admin() {
           {orders.length === 0 ? <div className="rounded-2xl border border-white/10 bg-white/5 p-8 text-white/60">Nenhum pedido recebido.</div> :
           orders.map(order => <article key={order.id} className="rounded-2xl border border-white/10 bg-white/5 p-5">
             <div className="flex flex-wrap items-start justify-between gap-3">
-              <div><h2 className="font-bold">{order.customer_name}</h2><p className="text-sm text-white/50">{order.customer_phone}</p></div>
+              <div><h2 className="font-bold">{order.customer_name}</h2><p className="text-sm text-white/50">{order.customer_phone}</p><p className="mt-1 text-xs font-bold text-orange-300">{order.order_type === "pickup" ? "🏪 Retirada no balcão" : "🛵 Entrega"}</p></div>
               <select value={order.status} onChange={async e=>{const next=e.target.value; const r=await updateOrderStatus(order.id,next); if(r.error){toast.error("Não foi possível atualizar.");return;} setOrders(xs=>xs.map(x=>x.id===order.id?{...x,status:next}:x)); toast.success("Status atualizado."); setAudit(await getAdminAuditLog().then(x=>(x.data||[]) as Audit[]));}} className="rounded-lg bg-slate-900 px-3 py-2 text-sm">
                 {statuses.map(s=><option key={s} value={s}>{s}</option>)}
               </select>
