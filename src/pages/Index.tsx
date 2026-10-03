@@ -3,7 +3,8 @@ import { ShoppingBag, Plus, Minus, Trash2, X, Clock, MessageCircle, Pizza, Loade
 import { toast } from "sonner";
 import { supabase } from "@/lib/supabase";
 
-type PizzaItem = { id: string; name: string; description: string; price: number; image_url?: string | null };\ntype DrinkItem = PizzaItem;
+type PizzaItem = { id: string; name: string; description: string; price: number; image_url?: string | null };
+type DrinkItem = PizzaItem;
 type CartItem = PizzaItem & { quantity: number; observations: string };
 
 const FALLBACK_PIZZA_IMAGE = "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=900&q=80&fm=webp";
@@ -20,7 +21,8 @@ const getMinDateTime = () => {
 };
 
 const Index = () => {
-  const [pizzas, setPizzas] = useState<PizzaItem[]>([]);\n  const [drinks, setDrinks] = useState<DrinkItem[]>([]);
+  const [pizzas, setPizzas] = useState<PizzaItem[]>([]);
+  const [drinks, setDrinks] = useState<DrinkItem[]>([]);
   const [cart, setCart] = useState<CartItem[]>(() => {
     try { return JSON.parse(localStorage.getItem(CART_KEY) || "[]"); } catch { return []; }
   });
@@ -86,6 +88,7 @@ const Index = () => {
       items,
       total_amount: Number(total.toFixed(2)),
       delivery_time: new Date(customer.deliveryTime).toISOString(),
+      order_type: customer.orderType,
       payment_method: customer.payment,
       status: "pending",
     });
@@ -149,6 +152,13 @@ const Index = () => {
           <div className="mb-8 flex items-end justify-between gap-4"><div><p className="text-xs font-black uppercase tracking-[.2em] text-orange-600">Cardápio</p><h2 className="mt-2 text-3xl font-black tracking-tight md:text-4xl">Escolha seu sabor</h2></div><span className="hidden text-sm text-[#806b5e] md:block">Feito na hora • ingredientes selecionados</span></div>
           {loading ? <div className="grid place-items-center py-20"><Loader2 className="animate-spin text-orange-500" /></div> : pizzas.length === 0 ? <div className="rounded-3xl border border-dashed border-orange-200 bg-white p-12 text-center"><Pizza className="mx-auto text-orange-400"/><p className="mt-3 font-bold">Nenhuma pizza disponível no momento.</p></div> : <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">{pizzas.map(pizza => <article key={pizza.id} className="overflow-hidden rounded-3xl border border-orange-100 bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-orange-100"><img src={pizza.image_url || FALLBACK_PIZZA_IMAGE} alt={pizza.name} loading="lazy" decoding="async" className="aspect-[4/3] w-full object-cover"/><div className="p-5"><div className="flex items-start justify-between gap-3"><h3 className="text-xl font-black">{pizza.name}</h3><span className="whitespace-nowrap text-lg font-black text-orange-600">{money(Number(pizza.price))}</span></div><p className="mt-2 min-h-12 text-sm leading-5 text-[#806b5e]">{pizza.description}</p><button onClick={()=>setSelected(pizza)} className="mt-5 flex w-full items-center justify-center gap-2 rounded-2xl bg-[#25160e] py-3.5 text-sm font-black text-white transition hover:bg-orange-500"><Plus size={17}/> Adicionar</button></div></article>)}</div>}
         </section>
+
+        {drinks.length > 0 && (
+          <section className="mx-auto max-w-6xl px-4 pb-16 md:px-6">
+            <div className="mb-8"><p className="text-xs font-black uppercase tracking-[.2em] text-orange-600">Bebidas</p><h2 className="mt-2 text-3xl font-black tracking-tight">Para acompanhar</h2></div>
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">{drinks.map(drink => <article key={drink.id} className="overflow-hidden rounded-3xl border border-orange-100 bg-white shadow-sm"><img src={drink.image_url || FALLBACK_PIZZA_IMAGE} alt={drink.name} loading="lazy" decoding="async" className="aspect-[4/3] w-full object-cover"/><div className="p-5"><div className="flex items-start justify-between gap-3"><h3 className="font-black">{drink.name}</h3><span className="whitespace-nowrap font-black text-orange-600">{money(Number(drink.price))}</span></div><p className="mt-2 text-sm text-[#806b5e]">{drink.description}</p><button onClick={()=>addToCart(drink,1,"")} className="mt-4 flex w-full items-center justify-center gap-2 rounded-2xl bg-[#25160e] py-3 font-black text-white hover:bg-orange-500"><Plus size={17}/> Adicionar</button></div></article>)}</div>
+          </section>
+        )}
       </main>
 
       {selected && <div className="fixed inset-0 z-50 grid place-items-center bg-black/50 p-4" onMouseDown={()=>setSelected(null)}><div className="w-full max-w-md rounded-3xl bg-white p-6 shadow-2xl" onMouseDown={e=>e.stopPropagation()}><div className="flex items-center justify-between"><h3 className="text-2xl font-black">{selected.name}</h3><button type="button" aria-label="Fechar produto" onClick={()=>setSelected(null)}><X/></button></div><p className="mt-2 text-sm text-[#806b5e]">{selected.description}</p><AddItemForm pizza={selected} onAdd={addToCart}/></div></div>}
