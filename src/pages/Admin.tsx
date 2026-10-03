@@ -1,4 +1,4 @@
-import { FormEvent, useEffect, useState } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { Navigate } from "react-router-dom";
 import { Loader2, LogOut, RefreshCw, ShieldCheck } from "lucide-react";
 import { toast } from "sonner";
