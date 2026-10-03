@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Toaster } from "sonner";
 import Index from "./pages/Index";
+import Admin from "./pages/Admin";
 import "./index.css";
 
 const App = () => (
@@ -8,6 +9,7 @@ const App = () => (
     <Toaster position="top-right" richColors />
     <Routes>
       <Route path="/" element={<Index />} />
+      <Route path="/admin" element={<Admin />} />
       <Route path="*" element={<Index />} />
     </Routes>
   </BrowserRouter>
